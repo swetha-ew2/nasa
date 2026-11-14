@@ -26,7 +26,7 @@ Install Node from https://nodejs.org (LTS). Any modern browser with WebGL works
 **No Earthdata login is needed for this globe.** The satellite imagery comes from
 NASA GIBS, which is open. See section 5 for when you will need the login.
 
-## 2. Run it on your machine
+## 2. Run it 
 
 ```bash
 # 1. unzip, then open a terminal in the project folder
@@ -79,38 +79,9 @@ To add a region, add an entry to `src/data/regions.ts`. To add a variable, add o
 
 The names, sources and record lengths in `variables.ts` are placeholders. Check them
 against the real NASA collections before presenting them as fact.
+he repo go to Settings, Pages, and choose the `gh-pages` branch.
 
-## 5. Earthdata login (needed later, for the data pipeline, not for this globe)
-
-When you start pulling real data (MERRA-2, GLDAS, GPM IMERG and so on):
-
-1. Create a free account at https://urs.earthdata.nasa.gov/users/new
-2. Sign in and authorize the data center that hosts your data in your Earthdata
-   profile (for MERRA-2 / GLDAS / GPM that is GES DISC). Downloads fail with
-   authorization errors if you skip this.
-3. In Python: `pip install earthaccess`, then `earthaccess.login()`. It prompts for
-   your username and password, or reads a `~/.netrc` file.
-4. Keep credentials on your own machine or server. Never put them in this front-end,
-   and never commit them to GitHub.
-
-## 6. Hosting later
-
-This is a static site. `vite.config.ts` uses `base: './'`, so the same build works on
-both hosts below.
-
-**Vercel (easiest)**
-1. Push the project to a GitHub repo.
-2. On vercel.com choose "Add New, Project", import the repo.
-3. Framework preset: Vite. Build command `npm run build`, output directory `dist`.
-4. Deploy. You get a public URL.
-
-**GitHub Pages**
-1. Push the project to a GitHub repo.
-2. `npm install --save-dev gh-pages`
-3. Add to `package.json` scripts: `"deploy": "npm run build && gh-pages -d dist"`
-4. `npm run deploy`, then in the repo go to Settings, Pages, and choose the `gh-pages` branch.
-
-## 7. Troubleshooting
+## Troubleshooting
 
 - **Blank or dark-blue globe with no imagery:** the NASA GIBS tiles did not load
   (offline, firewall, or a school/work network blocking the host). Pins and panels
