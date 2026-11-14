@@ -13,7 +13,7 @@ where, how much, and is it statistically significant?
 
 ---
 
-## 1. What you need installed
+## What you need installed
 
 | Tool | Version | Check with |
 |---|---|---|
@@ -26,7 +26,7 @@ Install Node from https://nodejs.org (LTS). Any modern browser with WebGL works
 **No Earthdata login is needed for this globe.** The satellite imagery comes from
 NASA GIBS, which is open. See section 5 for when you will need the login.
 
-## 2. Run it 
+## Run it 
 
 ```bash
 # 1. unzip, then open a terminal in the project folder
@@ -49,7 +49,7 @@ npm run build     # type-check and build the static site into dist/
 npm run preview   # serve the built dist/ locally to test it
 ```
 
-## 3. What to try
+## What to try
 
 1. Drag the globe, scroll to zoom. Any manual interaction stops auto-rotation.
 2. Click a variable in the left catalog. Matching pins glow, the rest dim.
@@ -57,7 +57,7 @@ npm run preview   # serve the built dist/ locally to test it
 4. Change the variable in the panel dropdown. The chart and info update.
 5. Toggle "Satellite imagery" and "Auto-rotate" in the top bar.
 
-## 4. Where things live
+## Where things live
 
 ```
 src/
@@ -91,7 +91,7 @@ he repo go to Settings, Pages, and choose the `gh-pages` branch.
 - **`npm install` fails:** check `node -v` is 18 or newer.
 - **Port already in use:** run `npm run dev -- --port 3000`.
 
-## 8. Credits
+## Credits
 
 Imagery: NASA Global Imagery Browse Services (GIBS), operated by NASA/GSFC/ESDIS.
 Globe rendering: MapLibre GL JS.
