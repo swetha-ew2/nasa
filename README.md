@@ -1,0 +1,124 @@
+# Earth System Trend Detective: globe prototype
+
+An interactive 3D globe for NASA Space Apps 2026 ("Be An Earth System Trend Detective").
+
+- Spinning globe (MapLibre GL JS, globe projection) with NASA GIBS satellite imagery
+- 11 region pins; click one to open a side panel
+- Variable catalog on the left; picking a variable highlights the regions it applies to
+- Region panel with a variable picker, placeholder chart and placeholder statistics
+
+**Everything shown is placeholder data.** No trend analysis is connected yet.
+
+---
+
+## 1. What you need installed
+
+| Tool | Version | Check with |
+|---|---|---|
+| Node.js | 18 or newer (20/22 recommended) | `node -v` |
+| npm | comes with Node | `npm -v` |
+
+Install Node from https://nodejs.org (LTS). Any modern browser with WebGL works
+(Chrome, Edge, Firefox, Safari).
+
+**No Earthdata login is needed for this globe.** The satellite imagery comes from
+NASA GIBS, which is open. See section 5 for when you will need the login.
+
+## 2. Run it on your machine
+
+```bash
+# 1. unzip, then open a terminal in the project folder
+cd earth-trend-detective
+
+# 2. install dependencies (first time only, takes about a minute)
+npm install
+
+# 3. start the dev server
+npm run dev
+```
+
+Open the address it prints (normally http://localhost:5173). Edits to files in
+`src/` reload the page automatically. Stop the server with `Ctrl + C`.
+
+Other commands:
+
+```bash
+npm run build     # type-check and build the static site into dist/
+npm run preview   # serve the built dist/ locally to test it
+```
+
+## 3. What to try
+
+1. Drag the globe, scroll to zoom. Any manual interaction stops auto-rotation.
+2. Click a variable in the left catalog. Matching pins glow, the rest dim.
+3. Click a pin. The camera flies there, the region box is outlined, and the panel opens.
+4. Change the variable in the panel dropdown. The chart and info update.
+5. Toggle "Satellite imagery" and "Auto-rotate" in the top bar.
+
+## 4. Where things live
+
+```
+src/
+  App.tsx                 page layout and shared state
+  components/
+    Globe.tsx             globe, pins, region outline, camera moves
+    Catalog.tsx           left sidebar: search, category filter, variable cards
+    RegionPanel.tsx       right panel: variable picker, chart, stats
+    TrendChart.tsx        placeholder SVG chart (swap for Plotly/ECharts later)
+  data/
+    regions.ts            the pins: name, lat/lon, bounding box, suggested variables
+    variables.ts          the catalog: definitions, units, source, status
+  lib/placeholder.ts      fake time-series generator (delete when real data arrives)
+  styles.css              all styling
+```
+
+To add a region, add an entry to `src/data/regions.ts`. To add a variable, add one to
+`src/data/variables.ts` and list its id in the regions it applies to.
+
+The names, sources and record lengths in `variables.ts` are placeholders. Check them
+against the real NASA collections before presenting them as fact.
+
+## 5. Earthdata login (needed later, for the data pipeline, not for this globe)
+
+When you start pulling real data (MERRA-2, GLDAS, GPM IMERG and so on):
+
+1. Create a free account at https://urs.earthdata.nasa.gov/users/new
+2. Sign in and authorize the data center that hosts your data in your Earthdata
+   profile (for MERRA-2 / GLDAS / GPM that is GES DISC). Downloads fail with
+   authorization errors if you skip this.
+3. In Python: `pip install earthaccess`, then `earthaccess.login()`. It prompts for
+   your username and password, or reads a `~/.netrc` file.
+4. Keep credentials on your own machine or server. Never put them in this front-end,
+   and never commit them to GitHub.
+
+## 6. Hosting later
+
+This is a static site. `vite.config.ts` uses `base: './'`, so the same build works on
+both hosts below.
+
+**Vercel (easiest)**
+1. Push the project to a GitHub repo.
+2. On vercel.com choose "Add New, Project", import the repo.
+3. Framework preset: Vite. Build command `npm run build`, output directory `dist`.
+4. Deploy. You get a public URL.
+
+**GitHub Pages**
+1. Push the project to a GitHub repo.
+2. `npm install --save-dev gh-pages`
+3. Add to `package.json` scripts: `"deploy": "npm run build && gh-pages -d dist"`
+4. `npm run deploy`, then in the repo go to Settings, Pages, and choose the `gh-pages` branch.
+
+## 7. Troubleshooting
+
+- **Blank or dark-blue globe with no imagery:** the NASA GIBS tiles did not load
+  (offline, firewall, or a school/work network blocking the host). Pins and panels
+  still work. Check your connection or try another network.
+- **Globe does not appear at all:** WebGL may be disabled. Enable hardware
+  acceleration in your browser settings.
+- **`npm install` fails:** check `node -v` is 18 or newer.
+- **Port already in use:** run `npm run dev -- --port 3000`.
+
+## 8. Credits
+
+Imagery: NASA Global Imagery Browse Services (GIBS), operated by NASA/GSFC/ESDIS.
+Globe rendering: MapLibre GL JS.

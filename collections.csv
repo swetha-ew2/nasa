@@ -1,0 +1,157 @@
+short_name,version,title,start,end,level,concept_id,matched_keyword
+ACOSMonthlyGriddedXCO2,3,Monthly Gridded Level 4 bias-corrected XCO2 and other select fields aggregated from ACOS as Level 4 monthly files V3 (ACOSMonthlyGriddedXCO2),2014-09-07,2020-06-28,4,C2219374316-GES_DISC,airs
+AER_DBDT_M10KM_L3_VIIRS_SNPP,001,"SNPP VIIRS High Resolution Level 3 monthly aerosol data, 0.1x0.1 degree grid Version 001 (AER_DBDT_M10KM_L3_VIIRS_SNPP)",2012-03-01,ongoing,3,C3616941450-GES_DISC,airs
+AIRH3QPM,006,AIRS/Aqua L3 Monthly Quantization in Physical Units (AIRS+AMSU+HSB) 5 degrees x 5 degrees V006 (AIRH3QPM),2002-09-01,2003-02-01,3,C1238517242-GES_DISC,airs
+AIRH3SPM,7.0,Aqua/AIRS L3 Monthly Support Monthly Product (AIRS+AMSU+HSB) 1 degree x 1 degree V7.0,2002-09-01,2003-03-01,3,C1701805707-GES_DISC,airs
+AIRH3SPM,006,AIRS/Aqua L3 Monthly Support Product (AIRS+AMSU+HSB) 1 degree x 1 degree V006 (AIRH3SPM),2002-09-01,2003-03-01,3,C1238517247-GES_DISC,airs
+AIRH3STM,7.0,Aqua/AIRS L3 Monthly Standard Physical Retrieval (AIRS+AMSU+HSB) 1 degree x 1 degree V7.0,2002-09-01,2003-03-01,3,C1701805701-GES_DISC,airs
+AIRH3STM,006,AIRS/Aqua L3 Monthly Standard Physical Retrieval (AIRS+AMSU+HSB) 1 degree x 1 degree V006 (AIRH3STM),2002-09-01,2003-03-01,3,C1238517238-GES_DISC,airs
+AIRS3C2M,005,AIRS/Aqua L3 Monthly CO2 in the free troposphere (AIRS-only) 2.5 degrees x 2 degrees V005 (AIRS3C2M),2010-01-01,2017-02-28,3,C1238517264-GES_DISC,airs
+AIRS3QPM,006,AIRS/Aqua L3 Monthly Quantization in Physical Units (AIRS-only) 5 degrees x 5 degrees V006 (AIRS3QPM),2002-09-01,ongoing,3,C1238517283-GES_DISC,airs
+AIRS3SPM,7.0,Aqua/AIRS L3 Monthly Support Product (AIRS-only) 1 degree x 1 degree V7.0,2002-09-01,ongoing,3,C1701805668-GES_DISC,airs
+AIRS3SPM,006,AIRS/Aqua L3 Monthly Support Product (AIRS-only) 1 degree x 1 degree V006 (AIRS3SPM),2002-09-01,ongoing,3,C1238517285-GES_DISC,airs
+AIRS3STM,7.0,Aqua/AIRS L3 Monthly Standard Physical Retrieval (AIRS-only) 1 degree x 1 degree V7.0,2002-09-01,ongoing,3,C1701805662-GES_DISC,airs
+AIRS3STM,006,AIRS/Aqua L3 Monthly Standard Physical Retrieval (AIRS-only) 1 degree x 1 degree V006 (AIRS3STM),2002-09-01,ongoing,3,C1238517301-GES_DISC,airs
+AIRSIL3MSOLR,6.1,Aqua AIRS Level 3 Spectral Outgoing Longwave Radiation (OLR) Monthly,2002-08-31,ongoing,3,C1697372449-GES_DISC,airs
+AIRX3C2M,005,AIRS/Aqua L3 Monthly CO2 in the free troposphere (AIRS+AMSU) 2.5 degrees x 2 degrees V005 (AIRX3C2M),2002-09-01,2012-02-29,3,C1238517293-GES_DISC,airs
+AIRX3QPM,006,AIRS/Aqua L3 Monthly Quantization in Physical Units (AIRS+AMSU) 5 degrees x 5 degrees V006 (AIRX3QPM),2002-09-01,2016-10-01,3,C1238517296-GES_DISC,airs
+AIRX3SPM,7.0,Aqua/AIRS L3 Monthly Support Product (AIRS+AMSU) 1 degree x 1 degree V7.0,2002-09-01,2016-10-01,3,C1701805687-GES_DISC,airs
+AIRX3SPM,006,AIRS/Aqua L3 Monthly Support Product (AIRS+AMSU) 1 degree x 1 degree V006 (AIRX3SPM),2002-09-01,2016-10-01,3,C1238517340-GES_DISC,airs
+AIRX3STM,7.0,Aqua/AIRS L3 Monthly Standard Physical Retrieval (AIRS+AMSU) 1 degree x 1 degree V7.0,2002-09-01,2016-10-01,3,C1701805681-GES_DISC,airs
+AIRX3STM,006,AIRS/Aqua L3 Monthly Standard Physical Retrieval (AIRS+AMSU) 1 degree x 1 degree V006 (AIRX3STM),2002-09-01,2016-10-01,3,C1238517346-GES_DISC,airs
+GPCPMON,3.3,GPCP Precipitation Level 3 Monthly 0.5-Degree V3.3 (GPCPMON),1983-01-01,2025-12-31,3,C3405935516-GES_DISC,airs
+GPCPMON,3.2,GPCP Precipitation Level 3 Monthly 0.5-Degree V3.2 (GPCPMON),1983-01-01,2023-12-31,3,C2211412414-GES_DISC,airs
+M2_AIRS_AQUA,1,MERRA-2 Monthly Gridded Innovations and Observations AIRS_AQUA 0.5 x 0.625 degree V1 (M2_AIRS_AQUA),2002-08-31,ongoing,4,C2028553203-GES_DISC,airs
+M2_MSU_N10,1,MERRA-2 Monthly Gridded Innovations and Observations MSU_N10 0.5 x 0.625 degree V1 (M2_MSU_N10),1986-11-30,1991-08-31,4,C3944483050-GES_DISC,airs
+SNDRAQIL3CMCCP,2,Sounder SIPS: AQUA AIRS IR-only Level 3 CLIMCAPS: Comprehensive Quality Control Gridded Monthly V2 (SNDRAQIL3CMCCP),2002-08-31,ongoing,3,C1693440801-GES_DISC,airs
+SNDRAQIL3SMCCP,2,Sounder SIPS: AQUA AIRS IR-only Level 3 CLIMCAPS: Specific Quality Control Gridded Monthly V2 (SNDRAQIL3SMCCP),2002-08-31,ongoing,3,C1693440803-GES_DISC,airs
+SNDRAQIL3SMCFSP,2,"Sounder SIPS: EOS-Aqua AIRS Level 3 Climate Fingerprinting Sounder Product (ClimFiSP) Monthly: Gridded Atmosphere, Cloud, and Surface Geophysical State V2",2002-08-30,2026-01-01,3,C3892818620-GES_DISC,airs
+SNDRAQIML3CMCCP,2,Sounder SIPS: AQUA AIRS IR + MW Level 3 CLIMCAPS : Comprehensive Quality Control Gridded Monthly V2 (SNDRAQIML3CMCCP),2002-08-31,2016-10-01,3,C1693440807-GES_DISC,airs
+SNDRAQIML3SMCCP,2,Sounder SIPS: AQUA AIRS IR + MW Level 3 CLIMCAPS: Specific Quality Control Gridded Monthly V2 (SNDRAQIML3SMCCP),2002-08-31,2016-10-01,3,C1693440838-GES_DISC,airs
+SNDRJ1IL3SMCFSP,2,"Sounder SIPS: JPSS-1/NOAA-20 CrIS Level 3 Climate Fingerprinting Sounder Product (ClimFiSP) Monthly: Gridded Atmosphere, Cloud, and Surface Geophysical State V2",2018-02-01,2026-01-01,3,C3892818753-GES_DISC,airs
+SNDRSNIL3SMCFSP,2,"Sounder SIPS: Suomi NPP CrIS Level 3 Climate Fingerprinting Sounder Product (ClimFiSP) Monthly: Gridded Atmosphere, Cloud, and Surface Geophysical State V2",2015-11-01,2021-06-01,3,C3892833504-GES_DISC,airs
+SNDRSNIML3CMCHTN,1,Sounder SIPS: Suomi NPP CrIMSS Level 3 Comprehensive Quality Control Gridded Monthly CHART Normal Spectral Resolution V1,2013-01-01,2015-11-01,3,C1633993919-GES_DISC,airs
+SNDRSNIML3SMCHTN,1,Sounder SIPS: Suomi NPP CrIMSS Level 3 Specific Quality Control Gridded Monthly CHART Normal Spectral Resolution V1,2013-01-01,2015-11-01,3,C1633993925-GES_DISC,airs
+SNDRSNIML3SMSFSP,2,Sounder SIPS: Suomi NPP CrIMSS Level 3 Specific Quality Control Gridded Monthly SiFSAP V2 (SNDRSNIML3SMSFSP),2015-11-01,ongoing,3,C2816205998-GES_DISC,airs
+GLDAS_CLSM10_M,2.1,GLDAS Catchment Land Surface Model L4 monthly 1.0 x 1.0 degree V2.1 (GLDAS_CLSM10_M),2000-01-01,ongoing,4,C1690022314-GES_DISC,gldas
+GLDAS_CLSM10_M,2.0,GLDAS Catchment Land Surface Model L4 monthly 1.0 x 1.0 degree V2.0 (GLDAS_CLSM10_M),1948-01-01,2014-12-31,4,C1933574465-GES_DISC,gldas
+GLDAS_CLSM10_M_EP,2.1,GLDAS Catchment Land Surface Model L4 monthly 1.0 x 1.0 degree Early Product V2.1 (GLDAS_CLSM10_M_EP),2019-12-01,ongoing,4,C1700900777-GES_DISC,gldas
+GLDAS_NOAH025_M,2.1,GLDAS Noah Land Surface Model L4 monthly 0.25 x 0.25 degree V2.1 (GLDAS_NOAH025_M),2000-01-01,ongoing,4,C1342986036-GES_DISC,gldas
+GLDAS_NOAH025_M,2.0,GLDAS Noah Land Surface Model L4 monthly 0.25 x 0.25 degree V2.0 (GLDAS_NOAH025_M),1948-01-01,2014-12-31,4,C1233767569-GES_DISC,gldas
+GLDAS_NOAH025_M_EP,2.1,GLDAS Noah Land Surface Model L4 monthly 0.25 x 0.25 degree Early Product V2.1 (GLDAS_NOAH025_M_EP),2019-12-01,ongoing,4,C1700900648-GES_DISC,gldas
+GLDAS_NOAH10_M,2.1,GLDAS Noah Land Surface Model L4 monthly 1.0 x 1.0 degree V2.1 (GLDAS_NOAH10_M),2000-01-01,ongoing,4,C1288937542-GES_DISC,gldas
+GLDAS_NOAH10_M,2.0,GLDAS Noah Land Surface Model L4 monthly 1.0 x 1.0 degree V2.0 (GLDAS_NOAH10_M),1948-01-01,2014-12-31,4,C1233767575-GES_DISC,gldas
+GLDAS_NOAH10_M_EP,2.1,GLDAS Noah Land Surface Model L4 monthly 1.0 x 1.0 degree Early Product V2.1 (GLDAS_NOAH10_M_EP),2019-12-01,ongoing,4,C1700900694-GES_DISC,gldas
+GLDAS_VIC10_M,2.1,GLDAS VIC Land Surface Model L4 monthly 1.0 x 1.0 degree V2.1 (GLDAS_VIC10_M),2000-01-01,ongoing,4,C1690022344-GES_DISC,gldas
+GLDAS_VIC10_M,2.0,GLDAS VIC Land Surface Model L4 monthly 1.0 x 1.0 degree V2.0 (GLDAS_VIC10_M),1948-01-01,2014-12-31,4,C1933574565-GES_DISC,gldas
+GLDAS_VIC10_M_EP,2.1,GLDAS VIC Land Surface Model L4 monthly 1.0 x 1.0 degree Early Product V2.1 (GLDAS_VIC10_M_EP),2019-12-01,ongoing,4,C1700900731-GES_DISC,gldas
+FLDAS_NOAH01_C_GL_M,001,FLDAS Noah Land Surface Model L4 Global Monthly 0.1 x 0.1 degree (MERRA-2 and CHIRPS) V001 (FLDAS_NOAH01_C_GL_M),1982-01-01,ongoing,4,C1563089663-GES_DISC,merra-2
+M2IMNPANA,5.12.4,"MERRA-2 instM_3d_ana_Np: 3d,Monthly mean,Instantaneous,Pressure-Level,Analysis,Analyzed Meteorological Fields 0.625 x 0.5 degree V5.12.4 (M2IMNPANA)",1980-01-01,ongoing,4,C1276812902-GES_DISC,merra-2
+M2IMNPASM,5.12.4,"MERRA-2 instM_3d_asm_Np: 3d,Monthly mean,Instantaneous,Pressure-Level,Assimilation,Assimilated Meteorological Fields 0.625 x 0.5 degree V5.12.4 (M2IMNPASM)",1980-01-01,ongoing,4,C1276812904-GES_DISC,merra-2
+M2IMNXASM,5.12.4,"MERRA-2 instM_2d_asm_Nx: 2d,Monthly mean,Single-Level,Assimilation,Single-Level Diagnostics 0.625 x 0.5 degree V5.12.4 (M2IMNXASM)",1980-01-01,ongoing,4,C1276812823-GES_DISC,merra-2
+M2IMNXGAS,5.12.4,"MERRA-2 instM_2d_gas_Nx: 2d,Monthly mean,Instantaneous,Single-Level,Assimilation,Aerosol Optical Depth Analysis 0.625 x 0.5 degree V5.12.4 (M2IMNXGAS)",1980-01-01,ongoing,4,C1276812824-GES_DISC,merra-2
+M2IMNXINT,5.12.4,"MERRA-2 instM_2d_int_Nx: 2d,Monthly mean,Instantaneous,Single-Level,Assimilation,Vertically Integrated Diagnostics 0.625 x 0.5 degree V5.12.4 (M2IMNXINT)",1980-01-01,ongoing,4,C1276812825-GES_DISC,merra-2
+M2IMNXLFO,5.12.4,"MERRA-2 instM_2d_lfo_Nx: 2d,Monthly mean,Instantaneous,Single-Level,Assimilation,Land Surface Forcings 0.625 x 0.5 degree V5.12.4 (M2IMNXLFO)",1980-01-01,ongoing,4,C1276812840-GES_DISC,merra-2
+M2SMNXEDI,2,"MERRA-2 statM_2d_edi_Nx: 2d, Single-Level, Monthly Extremes Detection Indices based on 1991-2020 V2 (M2SMNXEDI)",1980-01-01,ongoing,4,C2531963170-GES_DISC,merra-2
+M2SMNXEDI,1,"MERRA-2 statM_2d_edi_Nx: 2d, Single-Level, Monthly Extremes Detection Indices V1 (M2SMNXEDI)",1980-01-01,2022-12-31,4,C1949649168-GES_DISC,merra-2
+M2SMNXPCT,2,"MERRA-2 statM_2d_pct_Nx: 2d, Single-Level, Monthly Percentiles based on 1991-2020 V2 (M2SMNXPCT)",1980-01-01,ongoing,4,C2531963252-GES_DISC,merra-2
+M2SMNXPCT,1,"MERRA-2 statM_2d_pct_Nx: 2d, Single-Level, Monthly Percentiles V1 (M2SMNXPCT)",1980-01-01,2022-12-31,4,C1949649171-GES_DISC,merra-2
+M2SMNXSLV,5.12.4,"MERRA-2 statM_2d_slv_Nx: 2d,Monthly,Aggregated Statistics,Single-Level,Assimilation,Single-Level Diagnostics 0.625 x 0.5 degree V5.12.4 (M2SMNXSLV)",1980-01-01,ongoing,4,C1276812828-GES_DISC,merra-2
+M2TMNPCLD,5.12.4,"MERRA-2 tavgM_3d_cld_Np: 3d,Monthly mean,Time-Averaged,Pressure-Level,Assimilation,Cloud Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNPCLD)",1980-01-01,ongoing,4,C1276812942-GES_DISC,merra-2
+M2TMNPMST,5.12.4,"MERRA-2 tavgM_3d_mst_Np: 3d,Monthly mean,Time-Averaged,Pressure-Level,Assimilation,Moist Processes Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNPMST)",1980-01-01,ongoing,4,C1276812692-GES_DISC,merra-2
+M2TMNPODT,5.12.4,"MERRA-2 tavgM_3d_odt_Np: 3d,Monthly mean,Time-Averaged,Pressure-Level,Assimilation,Ozone Tendencies 0.625 x 0.5 degree V5.12.4 (M2TMNPODT)",1980-01-01,ongoing,4,C1276812929-GES_DISC,merra-2
+M2TMNPQDT,5.12.4,"MERRA-2 tavgM_3d_qdt_Np: 3d,Monthly mean,Time-Averaged,Pressure-Level,Assimilation,Moist Tendencies 0.625 x 0.5 degree V5.12.4 (M2TMNPQDT)",1980-01-01,ongoing,4,C1276812930-GES_DISC,merra-2
+M2TMNPRAD,5.12.4,"MERRA-2 tavgM_3d_rad_Np: 3d,Monthly mean,Time-Averaged,Pressure-Level,Assimilation,Radiation Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNPRAD)",1980-01-01,ongoing,4,C1276812931-GES_DISC,merra-2
+M2TMNPTDT,5.12.4,"MERRA-2 tavgM_3d_tdt_Np: 3d,Monthly mean,Time-Averaged,Pressure-Level,Assimilation,Temperature Tendencies 0.625 x 0.5 degree V5.12.4 (M2TMNPTDT)",1980-01-01,ongoing,4,C1276812693-GES_DISC,merra-2
+M2TMNPTRB,5.12.4,"MERRA-2 tavgM_3d_trb_Np: 3d,Monthly mean,Time-Averaged,Pressure-Level,Assimilation,Turbulence Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNPTRB)",1980-01-01,ongoing,4,C1276812943-GES_DISC,merra-2
+M2TMNPUDT,5.12.4,"MERRA-2 tavgM_3d_udt_Np: 3d,Monthly mean,Time-Averaged,Pressure-Level,Assimilation,Wind Tendencies 0.625 x 0.5 degree V5.12.4 (M2TMNPUDT)",1980-01-01,ongoing,4,C1276812944-GES_DISC,merra-2
+M2TMNXADG,5.12.4,"MERRA-2 tavgM_2d_adg_Nx: 2d,Monthly mean,Time-averaged,Single-Level,Assimilation,Aerosol Diagnostics (extended) 0.625 x 0.5 degree V5.12.4 (M2TMNXADG)",1980-01-01,ongoing,4,C1276812865-GES_DISC,merra-2
+M2TMNXAER,5.12.4,"MERRA-2 tavgM_2d_aer_Nx: 2d,Monthly mean,Time-averaged,Single-Level,Assimilation,Aerosol Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNXAER)",1980-01-01,ongoing,4,C1276812866-GES_DISC,merra-2
+M2TMNXCHM,5.12.4,"MERRA-2 tavgM_2d_chm_Nx: 2d,Monthly mean,Time-Averaged,Single-Level,Assimilation,Carbon Monoxide and Ozone Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNXCHM)",1980-01-01,ongoing,4,C1276812852-GES_DISC,merra-2
+M2TMNXCSP,5.12.4,"MERRA-2 tavgM_2d_csp_Nx: 2d,Monthly mean,Time-averaged,Single-Level,Assimilation,COSP Satellite Simulator 0.625 x 0.5 degree V5.12.4 (M2TMNXCSP)",1980-01-01,ongoing,4,C1276812867-GES_DISC,merra-2
+M2TMNXFLX,5.12.4,"MERRA-2 tavgM_2d_flx_Nx: 2d,Monthly mean,Time-Averaged,Single-Level,Assimilation,Surface Flux Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNXFLX)",1980-01-01,ongoing,4,C1276812868-GES_DISC,merra-2
+M2TMNXGLC,5.12.4,"MERRA-2 tavgM_2d_glc_Nx: 2d,Monthly mean,Time-Averaged,Single-Level,Assimilation,Land Ice Surface Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNXGLC)",1980-01-01,ongoing,4,C1276812853-GES_DISC,merra-2
+M2TMNXINT,5.12.4,"MERRA-2 tavgM_2d_int_Nx: 2d,Monthly mean,Time-Averaged,Single-Level,Assimilation,Vertically Integrated Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNXINT)",1980-01-01,ongoing,4,C1276812854-GES_DISC,merra-2
+M2TMNXLFO,5.12.4,"MERRA-2 tavgM_2d_lfo_Nx: 2d,Monthly mean,Time-Averaged,Single-Level,Assimilation,Land Surface Forcings 0.625 x 0.5 degree V5.12.4 (M2TMNXLFO)",1980-01-01,ongoing,4,C1276812855-GES_DISC,merra-2
+M2TMNXLND,5.12.4,"MERRA-2 tavgM_2d_lnd_Nx: 2d,Monthly mean,Time-Averaged,Single-Level,Assimilation,Land Surface Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNXLND)",1980-01-01,ongoing,4,C1276812856-GES_DISC,merra-2
+M2TMNXOCN,5.12.4,"MERRA-2 tavgM_2d_ocn_Nx: 2d,Monthly mean,Time-Averaged,Single-Level,Assimilation,Ocean Surface Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNXOCN)",1980-01-01,ongoing,4,C1276812857-GES_DISC,merra-2
+M2TMNXRAD,5.12.4,"MERRA-2 tavgM_2d_rad_Nx: 2d,Monthly mean,Time-Averaged,Single-Level,Assimilation,Radiation Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNXRAD)",1980-01-01,ongoing,4,C1276812858-GES_DISC,merra-2
+M2TMNXSLV,5.12.4,"MERRA-2 tavgM_2d_slv_Nx: 2d,Monthly mean,Time-Averaged,Single-Level,Assimilation,Single-Level Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNXSLV)",1980-01-01,ongoing,4,C1276812859-GES_DISC,merra-2
+M2_AMSUA_AQUA,1,MERRA-2 Monthly Gridded Innovations and Observations AMSUA_AQUA 0.5 x 0.625 degree V1 (M2_AMSUA_AQUA),2002-10-31,2016-08-31,4,C3944472327-GES_DISC,merra-2
+M2_AMSUA_METOP-A,1,MERRA-2 Monthly Gridded Innovations and Observations AMSUA_METOP-A 0.5 x 0.625 degree V1 (M2_AMSUA_METOP-A),2007-05-31,2021-11-30,4,C3944472431-GES_DISC,merra-2
+M2_AMSUA_METOP-B,1,MERRA-2 Monthly Gridded Innovations and Observations AMSUA_METOP-B 0.5 x 0.625 degree V1 (M2_AMSUA_METOP-B),2013-02-28,ongoing,4,C3944472563-GES_DISC,merra-2
+M2_AMSUA_N15,1,MERRA-2 Monthly Gridded Innovations and Observations AMSUA_N15 0.5 x 0.625 degree V1 (M2_AMSUA_N15),1998-10-31,ongoing,4,C3944472639-GES_DISC,merra-2
+M2_AMSUA_N16,1,MERRA-2 Monthly Gridded Innovations and Observations AMSUA_N16 0.5 x 0.625 degree V1 (M2_AMSUA_N16),2000-12-31,2007-01-31,4,C3944472696-GES_DISC,merra-2
+M2_AMSUA_N17,1,MERRA-2 Monthly Gridded Innovations and Observations AMSUA_N17 0.5 x 0.625 degree V1 (M2_AMSUA_N17),2002-08-31,2003-10-31,4,C3944472781-GES_DISC,merra-2
+M2_AMSUA_N18,1,MERRA-2 Monthly Gridded Innovations and Observations AMSUA_N18 0.5 x 0.625 degree V1 (M2_AMSUA_N18),2005-09-30,ongoing,4,C3944472795-GES_DISC,merra-2
+M2_AMSUA_N19,1,MERRA-2 Monthly Gridded Innovations and Observations AMSUA_N19 0.5 x 0.625 degree V1 (M2_AMSUA_N19),2009-04-30,ongoing,4,C3944472801-GES_DISC,merra-2
+M2_AMSUB_N15,1,MERRA-2 Monthly Gridded Innovations and Observations AMSUB_N15 0.5 x 0.625 degree V1 (M2_AMSUB_N15),1998-10-31,2006-01-31,4,C3944482296-GES_DISC,merra-2
+M2_AMSUB_N16,1,MERRA-2 Monthly Gridded Innovations and Observations AMSUB_N16 0.5 x 0.625 degree V1 (M2_AMSUB_N16),2000-11-30,2009-01-31,4,C3944482310-GES_DISC,merra-2
+M2_AMSUB_N17,1,MERRA-2 Monthly Gridded Innovations and Observations AMSUB_N17 0.5 x 0.625 degree V1 (M2_AMSUB_N17),2002-08-31,2009-12-31,4,C3944482317-GES_DISC,merra-2
+M2_ATMS_NPP,1,MERRA-2 Monthly Gridded Innovations and Observations ATMS_NPP 0.5 x 0.625 degree V1 (M2_ATMS_NPP),2011-12-31,2021-12-31,4,C3944482326-GES_DISC,merra-2
+M2_CONV,1,MERRA-2 Monthly Gridded Innovations and Observation CONV  V1 (M2_CONV),1979-12-31,ongoing,4,C4075292381-GES_DISC,merra-2
+M2_HIRS2_N06,1,MERRA-2 Monthly Gridded Innovations and Observations HIRS2_N06 0.5 x 0.625 degree V1 (M2_HIRS2_N06),1979-12-31,1983-04-30,4,C3944482354-GES_DISC,merra-2
+M2_HIRS2_N07,1,MERRA-2 Monthly Gridded Innovations and Observations HIRS2_N07 0.5 x 0.625 degree V1 (M2_HIRS2_N07),1981-07-31,1985-01-31,4,C3944482373-GES_DISC,merra-2
+M2_HIRS2_N08,1,MERRA-2 Monthly Gridded Innovations and Observations HIRS2_N08 0.5 x 0.625 degree V1 (M2_HIRS2_N08),1983-04-30,1984-06-30,4,C3944482386-GES_DISC,merra-2
+M2_HIRS2_N09,1,MERRA-2 Monthly Gridded Innovations and Observations HIRS2_N09 0.5 x 0.625 degree V1 (M2_HIRS2_N09),1984-12-31,1988-11-30,4,C3944482405-GES_DISC,merra-2
+M2_HIRS2_N10,1,MERRA-2 Monthly Gridded Innovations and Observations HIRS2_N10 0.5 x 0.625 degree V1 (M2_HIRS2_N10),1986-12-31,1991-08-31,4,C3944482412-GES_DISC,merra-2
+M2_HIRS2_N11,1,MERRA-2 Monthly Gridded Innovations and Observations HIRS2_N11 0.5 x 0.625 degree V1 (M2_HIRS2_N11),1988-10-31,1999-01-31,4,C3944482420-GES_DISC,merra-2
+M2_HIRS2_N12,1,MERRA-2 Monthly Gridded Innovations and Observations HIRS2_N12 0.5 x 0.625 degree V1 (M2_HIRS2_N12),1991-12-31,1997-06-30,4,C3944482429-GES_DISC,merra-2
+M2_HIRS2_N14,1,MERRA-2 Monthly Gridded Innovations and Observations HIRS2_N14 0.5 x 0.625 degree V1 (M2_HIRS2_N14),1994-12-31,2006-09-30,4,C3944482455-GES_DISC,merra-2
+M2_HIRS3_N15,1,MERRA-2 Monthly Gridded Innovations and Observations HIRS3_N15 0.5 x 0.625 degree V1 (M2_HIRS3_N15),1998-07-31,2000-05-31,4,C3944482498-GES_DISC,merra-2
+M2_HIRS3_N16,1,MERRA-2 Monthly Gridded Innovations and Observations HIRS3_N16 0.5 x 0.625 degree V1 (M2_HIRS3_N16),2000-11-30,2004-04-30,4,C3944482512-GES_DISC,merra-2
+M2_HIRS3_N17,1,MERRA-2 Monthly Gridded Innovations and Observations HIRS3_N17 0.5 x 0.625 degree V1 (M2_HIRS3_N17),2002-07-31,2011-11-30,4,C3944482531-GES_DISC,merra-2
+M2_HIRS4_METOP-A,1,MERRA-2 Monthly Gridded Innovations and Observations HIRS4_METOP-A 0.5 x 0.625 degree V1 (M2_HIRS4_METOP-A),2009-03-31,2015-10-31,4,C3944482550-GES_DISC,merra-2
+M2_HIRS4_N19,1,MERRA-2 Monthly Gridded Innovations and Observations HIRS4_N19 0.5 x 0.625 degree V1 (M2_HIRS4_N19),2009-04-30,2013-08-31,4,C3944482584-GES_DISC,merra-2
+M2_IASI_METOP-A,1,MERRA-2 Monthly Gridded Innovations and Observations IASI_METOP-A 0.5 x 0.625 degree V1 (M2_IASI_METOP-A),2008-08-31,2021-08-31,4,C3944482634-GES_DISC,merra-2
+M2_IASI_METOP-B,1,MERRA-2 Monthly Gridded Innovations and Observations IASI_METOP-B 0.5 x 0.625 degree V1 (M2_IASI_METOP-B),2013-07-31,ongoing,4,C3944482680-GES_DISC,merra-2
+M2_MHS_METOP-A,1,MERRA-2 Monthly Gridded Innovations and Observations MHS_METOP-A 0.5 x 0.625 degree V1 (M2_MHS_METOP-A),2008-05-31,2019-10-31,4,C3944482755-GES_DISC,merra-2
+M2_MHS_METOP-B,1,MERRA-2 Monthly Gridded Innovations and Observations MHS_METOP-B 0.5 x 0.625 degree V1 (M2_MHS_METOP-B),2013-02-28,ongoing,4,C3944482880-GES_DISC,merra-2
+M2_MHS_N18,1,MERRA-2 Monthly Gridded Innovations and Observations MHS_N18 0.5 x 0.625 degree V1 (M2_MHS_N18),2005-10-31,2023-09-01,4,C4075288614-GES_DISC,merra-2
+M2_MSU_N06,1,MERRA-2 Monthly Gridded Innovations and Observations MSU_N06 0.5 x 0.625 degree V1 (M2_MSU_N06),1979-12-31,1986-11-30,4,C3944482952-GES_DISC,merra-2
+M2_MSU_N07,1,MERRA-2 Monthly Gridded Innovations and Observations MSU_N07 0.5 x 0.625 degree V1 (M2_MSU_N07),1981-06-30,1985-02-28,4,C3944483007-GES_DISC,merra-2
+M2_MSU_N08,1,MERRA-2 Monthly Gridded Innovations and Observations MSU_N08 0.5 x 0.625 degree V1 (M2_MSU_N08),1983-04-30,1984-05-31,4,C3944483031-GES_DISC,merra-2
+M2_MSU_N09,1,MERRA-2 Monthly Gridded Innovations and Observations MSU_N09 0.5 x 0.625 degree V1 (M2_MSU_N09),1984-12-31,1987-02-28,4,C3944483042-GES_DISC,merra-2
+M2_MSU_N11,1,MERRA-2 Monthly Gridded Innovations and Observations MSU_N11 0.5 x 0.625 degree V1 (M2_MSU_N11),1988-11-30,1999-01-31,4,C3944483056-GES_DISC,merra-2
+M2_MSU_N12,1,MERRA-2 Monthly Gridded Innovations and Observations MSU_N12 0.5 x 0.625 degree V1 (M2_MSU_N12),1991-08-31,1997-12-31,4,C3944483069-GES_DISC,merra-2
+M2_MSU_N14,1,MERRA-2 Monthly Gridded Innovations and Observations MSU_N14 0.5 x 0.625 degree V1 (M2_MSU_N14),1995-04-30,2006-10-01,4,C4075285589-GES_DISC,merra-2
+M2_SEVIRI_M09,1,MERRA-2 Monthly Gridded Innovations and Observations SEVIRI_M09 0.5 x 0.625 degree V1 (M2_SEVIRI_M09),2012-02-28,2012-12-31,4,C3944483118-GES_DISC,merra-2
+M2_SEVIRI_M10,1,MERRA-2 Monthly Gridded Innovations and Observations SEVIRI_M10 0.5 x 0.625 degree V1 (M2_SEVIRI_M10),2013-01-31,2018-02-28,4,C3944483155-GES_DISC,merra-2
+M2_SNDRD1_G11,1,MERRA-2 Monthly Gridded Innovations and Observations SNDRD1_G11 0.5 x 0.625 degree V1 (M2_SNDRD1_G11),2007-03-31,2011-11-30,4,C3944483199-GES_DISC,merra-2
+M2_SNDRD1_G12,1,MERRA-2 Monthly Gridded Innovations and Observations SNDRD1_G12 0.5 x 0.625 degree V1 (M2_SNDRD1_G12),2007-02-28,2009-01-31,4,C3944483307-GES_DISC,merra-2
+M2_SNDRD1_G13,1,MERRA-2 Monthly Gridded Innovations and Observations SNDRD1_G13 0.5 x 0.625 degree V1 (M2_SNDRD1_G13),2010-04-30,2015-11-30,4,C3944483526-GES_DISC,merra-2
+M2_SNDRD1_G15,1,MERRA-2 Monthly Gridded Innovations and Observations SNDRD1_G15 0.5 x 0.625 degree V1 (M2_SNDRD1_G15),2011-12-31,2020-03-31,4,C3944483542-GES_DISC,merra-2
+M2_SNDRD2_G11,1,MERRA-2 Monthly Gridded Innovations and Observations SNDRD2_G11 0.5 x 0.625 degree V1 (M2_SNDRD2_G11),2007-03-31,2011-11-30,4,C3944483549-GES_DISC,merra-2
+M2_SNDRD2_G12,1,MERRA-2 Monthly Gridded Innovations and Observations SNDRD2_G12 0.5 x 0.625 degree V1 (M2_SNDRD2_G12),2007-02-28,2010-03-31,4,C3944483589-GES_DISC,merra-2
+M2_SNDRD2_G13,1,MERRA-2 Monthly Gridded Innovations and Observations SNDRD2_G13 0.5 x 0.625 degree V1 (M2_SNDRD2_G13),2010-04-30,2015-11-30,4,C3944483590-GES_DISC,merra-2
+M2_SNDRD2_G15,1,MERRA-2 Monthly Gridded Innovations and Observations SNDRD2_G15 0.5 x 0.625 degree V1 (M2_SNDRD2_G15),2011-12-31,2020-03-31,4,C3944483591-GES_DISC,merra-2
+M2_SNDRD3_G11,1,MERRA-2 Monthly Gridded Innovations and Observations SNDRD3_G11 0.5 x 0.625 degree V1 (M2_SNDRD3_G11),2007-03-31,2011-11-30,4,C3944483592-GES_DISC,merra-2
+M2_SNDRD3_G12,1,MERRA-2 Monthly Gridded Innovations and Observations SNDRD3_G12 0.5 x 0.625 degree V1 (M2_SNDRD3_G12),2007-02-28,2010-04-30,4,C3944483594-GES_DISC,merra-2
+M2_SNDRD3_G13,1,MERRA-2 Monthly Gridded Innovations and Observations SNDRD3_G13 0.5 x 0.625 degree V1 (M2_SNDRD3_G13),2010-04-30,2015-11-30,4,C3944483596-GES_DISC,merra-2
+M2_SNDRD3_G15,1,MERRA-2 Monthly Gridded Innovations and Observations SNDRD3_G15 0.5 x 0.625 degree V1 (M2_SNDRD3_G15),2011-12-31,2020-03-31,4,C3944483626-GES_DISC,merra-2
+M2_SNDRD4_G11,1,MERRA-2 Monthly Gridded Innovations and Observations SNDRD4_G11 0.5 x 0.625 degree V1 (M2_SNDRD4_G11),2007-03-31,2011-12-31,4,C3944483908-GES_DISC,merra-2
+M2_SNDRD4_G12,1,MERRA-2 Monthly Gridded Innovations and Observations SNDRD4_G12 0.5 x 0.625 degree V1 (M2_SNDRD4_G12),2007-02-28,2010-03-31,4,C3944483916-GES_DISC,merra-2
+M2_SNDRD4_G13,1,MERRA-2 Monthly Gridded Innovations and Observations SNDRD4_G13 0.5 x 0.625 degree V1 (M2_SNDRD4_G13),2010-04-30,2015-11-30,4,C3944483920-GES_DISC,merra-2
+M2_SNDRD4_G15,1,MERRA-2 Monthly Gridded Innovations and Observations SNDRD4_G15 0.5 x 0.625 degree V1 (M2_SNDRD4_G15),2011-12-31,2020-03-31,4,C3944483923-GES_DISC,merra-2
+M2_SNDR_G08_PREP,1,MERRA-2 Monthly Gridded Innovations and Observations SNDR_G08_PREP 0.5 x 0.625 degree V1 (M2_SNDR_G08_PREP),2001-04-30,2003-04-30,4,C3944483926-GES_DISC,merra-2
+M2_SNDR_G10_PREP,1,MERRA-2 Monthly Gridded Innovations and Observations SNDR_G10_PREP 0.5 x 0.625 degree V1 (M2_SNDR_G10_PREP),2001-05-31,2006-06-30,4,C3944483929-GES_DISC,merra-2
+M2_SNDR_G11_PREP,1,MERRA-2 Monthly Gridded Innovations and Observations SNDR_G11_PREP 0.5 x 0.625 degree V1 (M2_SNDR_G11_PREP),2006-06-30,2007-03-31,4,C3944483939-GES_DISC,merra-2
+M2_SNDR_G12_PREP,1,MERRA-2 Monthly Gridded Innovations and Observations SNDR_G12_PREP 0.5 x 0.625 degree V1 (M2_SNDR_G12_PREP),2003-04-30,2007-12-31,4,C3944483942-GES_DISC,merra-2
+M2_SSMI_F08,1,MERRA-2 Monthly Gridded Innovations and Observations SSMI_F08 0.5 x 0.625 degree V1 (M2_SSMI_F08),1987-07-31,1991-11-30,4,C3944483948-GES_DISC,merra-2
+M2_SSMI_F10,1,MERRA-2 Monthly Gridded Innovations and Observations SSMI_F10 0.5 x 0.625 degree V1 (M2_SSMI_F10),1991-02-28,1997-07-31,4,C3944483957-GES_DISC,merra-2
+M2_SSMI_F11,1,MERRA-2 Monthly Gridded Innovations and Observations SSMI_F11 0.5 x 0.625 degree V1 (M2_SSMI_F11),1991-12-31,1999-12-31,4,C3944483969-GES_DISC,merra-2
+M2_SSMI_F13,1,MERRA-2 Monthly Gridded Innovations and Observations SSMI_F13 0.5 x 0.625 degree V1 (M2_SSMI_F13),1995-05-31,2009-11-30,4,C3944483975-GES_DISC,merra-2
+M2_SSMI_F14,1,MERRA-2 Monthly Gridded Innovations and Observations SSMI_F14 0.5 x 0.625 degree V1 (M2_SSMI_F14),1997-05-31,2008-08-31,4,C3944484010-GES_DISC,merra-2
+M2_SSMI_F15,1,MERRA-2 Monthly Gridded Innovations and Observations SSMI_F15 0.5 x 0.625 degree V1 (M2_SSMI_F15),1999-12-31,2006-08-31,4,C3944484105-GES_DISC,merra-2
+M2_SSU_N06,1,MERRA-2 Monthly Gridded Innovations and Observations SSU_N06 0.5 x 0.625 degree V1 (M2_SSU_N06),1979-12-31,1986-11-30,4,C3944484155-GES_DISC,merra-2
+M2_SSU_N07,1,MERRA-2 Monthly Gridded Innovations and Observations SSU_N07 0.5 x 0.625 degree V1 (M2_SSU_N07),1981-07-31,1985-02-28,4,C3944484207-GES_DISC,merra-2
+M2_SSU_N08,1,MERRA-2 Monthly Gridded Innovations and Observations SSU_N08 0.5 x 0.625 degree V1 (M2_SSU_N08),1983-04-30,1984-06-30,4,C3944484217-GES_DISC,merra-2
+M2_SSU_N09,1,MERRA-2 Monthly Gridded Innovations and Observations SSU_N09 0.5 x 0.625 degree V1 (M2_SSU_N09),1984-12-31,1988-11-30,4,C3944484218-GES_DISC,merra-2
+M2_SSU_N11,1,MERRA-2 Monthly Gridded Innovations and Observations SSU_N11 0.5 x 0.625 degree V1 (M2_SSU_N11),1987-09-30,1999-02-28,4,C3944484219-GES_DISC,merra-2
+M2_SSU_N14,1,MERRA-2 Monthly Gridded Innovations and Observations SSU_N14 0.5 x 0.625 degree V1 (M2_SSU_N14),1995-01-31,2006-06-30,4,C3944484220-GES_DISC,merra-2
+M2_SSU_TIROSN,1,MERRA-2 Monthly Gridded Innovations and Observations SSU_TIROSN 0.5 x 0.625 degree V1 (M2_SSU_TIROSN),1979-12-31,1981-01-31,4,C3944486418-GES_DISC,merra-2
+M2_TMAX_PM25,1,"MERRA-2 avgM_2d_pm25_admin0, 2d, Single-Level, Country-Level Surface PM2.5 Monthly Mean Products V1 (M2_TMAX_PM25)",1980-01-01,ongoing,4,C2184005745-GES_DISC,merra-2
+TrCO3_Monthly_EPIC,1,GSFC EPIC/MERRA2 L3 1x1deg Monthly Tropospheric Column Ozone V1 (TrCO3_Monthly_EPIC),2015-01-01,2024-12-31,3,C3944464114-GES_DISC,merra-2
+TrCO3_Monthly_OMPS,1,GSFC OMPS/MERRA2 L3 1x1deg Monthly Tropospheric Column Ozone V1 (TrCO3_Monthly_OMPS),2012-01-01,ongoing,3,C3944673660-GES_DISC,merra-2
+GMAO_M2SCREAM_MONTH_UNCERT,1,"M2-SCREAM: Monthly,Model-Level,Assimilated Constituent Fields uncertainties",2004-09-01,2024-12-31,4,C2311994359-GES_DISC,omi
+TrCO3_Monthly_OMIMLS,2,GSFC OMI/MLS L3 1x1deg Monthly Tropospheric Column Ozone V2 (TrCO3_Monthly_OMIMLS),2004-10-01,ongoing,3,C3944629134-GES_DISC,omi

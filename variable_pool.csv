@@ -1,0 +1,202 @@
+var_id,product,variable,long_name,units,family,product_group,hdf_group,dims,reduce,catalog_status
+M2TMNXSLV.CLDPRS,M2TMNXSLV,CLDPRS,cloud_top_pressure,Pa,Humidity & clouds,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.CLDTMP,M2TMNXSLV,CLDTMP,cloud_top_temperature,K,Humidity & clouds,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.H500,M2TMNXSLV,H500,height_at_500_hPa,m,Pressure & circulation,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.OMEGA500,M2TMNXSLV,OMEGA500,omega_at_500_hPa,Pa s-1,Pressure & circulation,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.PS,M2TMNXSLV,PS,surface_pressure,Pa,Pressure & circulation,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.QV2M,M2TMNXSLV,QV2M,2-meter_specific_humidity,kg kg-1,Humidity & clouds,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.SLP,M2TMNXSLV,SLP,sea_level_pressure,Pa,Pressure & circulation,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.T250,M2TMNXSLV,T250,air_temperature_at_250_hPa,K,Temperature,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.T2M,M2TMNXSLV,T2M,2-meter_air_temperature,K,Temperature,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.T500,M2TMNXSLV,T500,air_temperature_at_500_hPa,K,Temperature,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.T850,M2TMNXSLV,T850,air_temperature_at_850_hPa,K,Temperature,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.TO3,M2TMNXSLV,TO3,total_column_ozone,Dobsons,Ozone,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.TQI,M2TMNXSLV,TQI,total_precipitable_ice_water,kg m-2,Humidity & clouds,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.TQL,M2TMNXSLV,TQL,total_precipitable_liquid_water,kg m-2,Humidity & clouds,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.TQV,M2TMNXSLV,TQV,total_precipitable_water_vapor,kg m-2,Humidity & clouds,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.TROPPB,M2TMNXSLV,TROPPB,tropopause_pressure_based_on_blended_estimate,Pa,Pressure & circulation,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.TROPT,M2TMNXSLV,TROPT,tropopause_temperature_using_blended_TROPP_estimate,K,Temperature,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.TS,M2TMNXSLV,TS,surface_skin_temperature,K,Temperature,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.U10M,M2TMNXSLV,U10M,10-meter_eastward_wind,m s-1,Pressure & circulation,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXSLV.V10M,M2TMNXSLV,V10M,10-meter_northward_wind,m s-1,Pressure & circulation,Atmosphere state,,time x lat x lon,,KEEP
+MOD11C3.LST_Day_CMG,MOD11C3,LST_Day_CMG,Monthly daytime 3min CMG Land-surface Temperature,K,Land surface temperature,Land surface temperature,,YDim:MODIS_MONTHLY_0.05DEG_CMG_LST x XDim:MODIS_MONTHLY_0.05DEG_CMG_LST,,KEEP
+MOD11C3.LST_Night_CMG,MOD11C3,LST_Night_CMG,Monthly nighttime 3min CMG Land-surface Temperature,K,Land surface temperature,Land surface temperature,,YDim:MODIS_MONTHLY_0.05DEG_CMG_LST x XDim:MODIS_MONTHLY_0.05DEG_CMG_LST,,KEEP
+GPM_3IMERGM.precipitation,GPM_3IMERGM,precipitation,,mm/hr,Precipitation,Precipitation,Grid,time x lon x lat,,KEEP
+M2TMNXADG.DUAERIDX,M2TMNXADG,DUAERIDX,Dust TOMS UV Aerosol Index,1,Aerosol indices,Aerosols,,time x lat x lon,,KEEP
+M2TMNXADG.SSAERIDX,M2TMNXADG,SSAERIDX,Sea Salt TOMS UV Aerosol Index,1,Aerosol indices,Aerosols,,time x lat x lon,,KEEP
+M2TMNXAER.BCCMASS,M2TMNXAER,BCCMASS,Black Carbon Column Mass Density,kg m-2,Aerosol mass,Aerosols,,time x lat x lon,,KEEP
+M2TMNXAER.BCEXTTAU,M2TMNXAER,BCEXTTAU,Black Carbon Extinction AOT [550 nm],1,Aerosol optical depth,Aerosols,,time x lat x lon,,KEEP
+M2TMNXAER.DUCMASS,M2TMNXAER,DUCMASS,Dust Column Mass Density,kg m-2,Aerosol mass,Aerosols,,time x lat x lon,,KEEP
+M2TMNXAER.DUEXTTAU,M2TMNXAER,DUEXTTAU,Dust Extinction AOT [550 nm],1,Aerosol optical depth,Aerosols,,time x lat x lon,,KEEP
+M2TMNXAER.OCCMASS,M2TMNXAER,OCCMASS,Organic Carbon Column Mass Density __ENSEMBLE__,kg m-2,Aerosol mass,Aerosols,,time x lat x lon,,KEEP
+M2TMNXAER.OCEXTTAU,M2TMNXAER,OCEXTTAU,Organic Carbon Extinction AOT [550 nm] __ENSEMBLE__,1,Aerosol optical depth,Aerosols,,time x lat x lon,,KEEP
+M2TMNXAER.SO4CMASS,M2TMNXAER,SO4CMASS,SO4 Column Mass Density __ENSEMBLE__,kg m-2,Aerosol mass,Aerosols,,time x lat x lon,,KEEP
+M2TMNXAER.SSCMASS,M2TMNXAER,SSCMASS,Sea Salt Column Mass Density,kg m-2,Aerosol mass,Aerosols,,time x lat x lon,,KEEP
+M2TMNXAER.SSEXTTAU,M2TMNXAER,SSEXTTAU,Sea Salt Extinction AOT [550 nm],1,Aerosol optical depth,Aerosols,,time x lat x lon,,KEEP
+M2TMNXAER.SUEXTTAU,M2TMNXAER,SUEXTTAU,SO4 Extinction AOT [550 nm] __ENSEMBLE__,1,Aerosol optical depth,Aerosols,,time x lat x lon,,KEEP
+M2TMNXAER.TOTANGSTR,M2TMNXAER,TOTANGSTR,Total Aerosol Angstrom parameter [470-870 nm],1,Aerosol optical depth,Aerosols,,time x lat x lon,,KEEP
+M2TMNXAER.TOTEXTTAU,M2TMNXAER,TOTEXTTAU,Total Aerosol Extinction AOT [550 nm],1,Aerosol optical depth,Aerosols,,time x lat x lon,,KEEP
+M2TMNXCHM.COCL,M2TMNXCHM,COCL,CO Column Burden __ENSEMBLE__,kg m-2,Carbon monoxide,Air-quality gases & ozone,,time x lat x lon,,KEEP
+M2TMNXCHM.COSC,M2TMNXCHM,COSC,CO Surface Concentration in ppbv __ENSEMBLE__,1e-9,Carbon monoxide,Air-quality gases & ozone,,time x lat x lon,,KEEP
+TrCO3_Monthly_OMIMLS.TropoO3,TrCO3_Monthly_OMIMLS,TropoO3,,,Ozone,Air-quality gases & ozone,,Time x Latitude x Longitude,,KEEP
+M2TMNXFLX.EFLUX,M2TMNXFLX,EFLUX,total_latent_energy_flux,W m-2,Surface fluxes,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXFLX.EVAP,M2TMNXFLX,EVAP,evaporation_from_turbulence,kg m-2 s-1,Surface fluxes,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXFLX.HFLUX,M2TMNXFLX,HFLUX,sensible_heat_flux_from_turbulence,W m-2,Surface fluxes,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXFLX.PBLH,M2TMNXFLX,PBLH,planetary_boundary_layer_height,m,Boundary layer,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXFLX.PRECSNO,M2TMNXFLX,PRECSNO,snowfall,kg m-2 s-1,Precipitation,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXFLX.PRECTOTCORR,M2TMNXFLX,PRECTOTCORR,total_precipitation,kg m-2 s-1,Precipitation,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXFLX.SPEED,M2TMNXFLX,SPEED,surface_wind_speed,m s-1,Surface fluxes,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXINT.PRECCU,M2TMNXINT,PRECCU,convective_rainfall,kg m-2 s-1,Precipitation,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXINT.PRECLS,M2TMNXINT,PRECLS,large_scale_rainfall,kg m-2 s-1,Precipitation,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXINT.UFLXQV,M2TMNXINT,UFLXQV,eastward_flux_of_atmospheric_water_vapor,kg m-1 s-1,Moisture transport,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXINT.VFLXQV,M2TMNXINT,VFLXQV,northward_flux_of_atmospheric_water_vapor,kg m-1 s-1,Moisture transport,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXOCN.EFLUXWTR,M2TMNXOCN,EFLUXWTR,open_water_latent_energy_flux,W m-2,Ocean & sea ice,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXOCN.FRSEAICE,M2TMNXOCN,FRSEAICE,ice_covered_fraction_of_tile,1,Ocean & sea ice,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXOCN.HFLUXWTR,M2TMNXOCN,HFLUXWTR,open_water_upward_sensible_heat_flux,W m-2,Ocean & sea ice,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXOCN.RAINOCN,M2TMNXOCN,RAINOCN,ocean_rainfall,kg m-2 s-1,Ocean & sea ice,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXOCN.TSKINICE,M2TMNXOCN,TSKINICE,sea_ice_skin_temperature,K,Ocean & sea ice,Atmosphere state,,time x lat x lon,,KEEP
+M2TMNXOCN.TSKINWTR,M2TMNXOCN,TSKINWTR,open_water_skin_temperature,K,Ocean & sea ice,Atmosphere state,,time x lat x lon,,KEEP
+AIRS3SPM.bndry_lyr_top_A,AIRS3SPM,bndry_lyr_top_A,,,Boundary layer,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3SPM.ice_cld_opt_dpth_A,AIRS3SPM,ice_cld_opt_dpth_A,,,Clouds,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3SPM.ice_cld_eff_diam_A,AIRS3SPM,ice_cld_eff_diam_A,,,Clouds,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3SPM.IR_Precip_Est_A,AIRS3SPM,IR_Precip_Est_A,,,Precipitation,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3SPM.MWSST_A,AIRS3SPM,MWSST_A,,,Ocean,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3STM.SurfSkinTemp_A,AIRS3STM,SurfSkinTemp_A,,,Temperature,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3STM.SurfAirTemp_A,AIRS3STM,SurfAirTemp_A,,,Temperature,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3STM.TropPres_A,AIRS3STM,TropPres_A,,,Pressure & circulation,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3STM.TropTemp_A,AIRS3STM,TropTemp_A,,,Temperature,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3STM.TotH2OVap_A,AIRS3STM,TotH2OVap_A,,,Humidity & clouds,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3STM.H2O_MMR_Surf_A,AIRS3STM,H2O_MMR_Surf_A,,,Humidity & clouds,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3STM.RelHumSurf_A,AIRS3STM,RelHumSurf_A,,,Humidity & clouds,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3STM.TropHeight_A,AIRS3STM,TropHeight_A,,,Pressure & circulation,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3STM.CloudFrc_A,AIRS3STM,CloudFrc_A,,,Humidity & clouds,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3STM.CloudTopPres_A,AIRS3STM,CloudTopPres_A,,,Humidity & clouds,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3STM.CloudTopTemp_A,AIRS3STM,CloudTopTemp_A,,,Humidity & clouds,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3STM.TotO3_A,AIRS3STM,TotO3_A,,,Ozone,Atmosphere state,,YDim:ascending x XDim:ascending,,KEEP
+AIRS3STM.TotCldLiqH2O_MW_A,AIRS3STM,TotCldLiqH2O_MW_A,,,Humidity & clouds,Atmosphere state,,YDim:ascending_MW_only x XDim:ascending_MW_only,,KEEP
+FLDAS_NOAH01_C_GL_M.Evap_tavg,FLDAS_NOAH01_C_GL_M,Evap_tavg,total evapotranspiration,kg m-2 s-1,Land water & energy fluxes,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.Lwnet_tavg,FLDAS_NOAH01_C_GL_M,Lwnet_tavg,net downward longwave radiation,W m-2,Land water & energy fluxes,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.Qh_tavg,FLDAS_NOAH01_C_GL_M,Qh_tavg,sensible heat flux,W m-2,Land water & energy fluxes,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.Qle_tavg,FLDAS_NOAH01_C_GL_M,Qle_tavg,latent heat flux,W m-2,Land water & energy fluxes,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.Qs_tavg,FLDAS_NOAH01_C_GL_M,Qs_tavg,surface runoff,kg m-2 s-1,Runoff,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.Qsb_tavg,FLDAS_NOAH01_C_GL_M,Qsb_tavg,subsurface runoff amount,kg m-2 s-1,Runoff,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.RadT_tavg,FLDAS_NOAH01_C_GL_M,RadT_tavg,surface radiative temperature,K,Land temperature,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.Rainf_f_tavg,FLDAS_NOAH01_C_GL_M,Rainf_f_tavg,rainfall flux,kg m-2 s-1,Precipitation,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.SWE_inst,FLDAS_NOAH01_C_GL_M,SWE_inst,snow water equivalent,kg m-2,Snow,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.SnowCover_inst,FLDAS_NOAH01_C_GL_M,SnowCover_inst,snow cover,-,Snow,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.SnowDepth_inst,FLDAS_NOAH01_C_GL_M,SnowDepth_inst,snow depth,m,Snow,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.Snowf_tavg,FLDAS_NOAH01_C_GL_M,Snowf_tavg,snowfall rate,kg m-2 s-1,Precipitation,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.Swnet_tavg,FLDAS_NOAH01_C_GL_M,Swnet_tavg,net downward shortwave radiation,W m-2,Land water & energy fluxes,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.SoilMoi00_10cm_tavg,FLDAS_NOAH01_C_GL_M,SoilMoi00_10cm_tavg,soil moisture content,m^3 m-3,Soil moisture,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.SoilMoi10_40cm_tavg,FLDAS_NOAH01_C_GL_M,SoilMoi10_40cm_tavg,soil moisture content,m^3 m-3,Soil moisture,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.SoilMoi40_100cm_tavg,FLDAS_NOAH01_C_GL_M,SoilMoi40_100cm_tavg,soil moisture content,m^3 m-3,Soil moisture,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.SoilMoi100_200cm_tavg,FLDAS_NOAH01_C_GL_M,SoilMoi100_200cm_tavg,soil moisture content,m^3 m-3,Soil moisture,Land models & water balance,,time x Y x X,,KEEP
+FLDAS_NOAH01_C_GL_M.SoilTemp00_10cm_tavg,FLDAS_NOAH01_C_GL_M,SoilTemp00_10cm_tavg,soil temperature,K,Land temperature,Land models & water balance,,time x Y x X,,KEEP
+M2SMNXSLV.HOURNORAIN,M2SMNXSLV,HOURNORAIN,time-during_an_hour_with_no_precipitation,s,Precipitation,Land models & water balance,,time x lat x lon,,KEEP
+M2SMNXSLV.T2MMAX,M2SMNXSLV,T2MMAX,2-meter_air_temperature,K,Temperature extremes,Land models & water balance,,time x lat x lon,,KEEP
+M2SMNXSLV.T2MMIN,M2SMNXSLV,T2MMIN,2-meter_air_temperature,K,Temperature extremes,Land models & water balance,,time x lat x lon,,KEEP
+M2SMNXSLV.TPRECMAX,M2SMNXSLV,TPRECMAX,total_precipitation,kg m-2 s-1,Precipitation,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXGLC.SNICEALB,M2TMNXGLC,SNICEALB,aggregated_snow_ice_broadband_albedo,1,Land ice,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXGLC.SNOMAS_GL,M2TMNXGLC,SNOMAS_GL,snow_mass_over_glaciated_surface,kg m-2,Land ice,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXGLC.SNOWDP_GL,M2TMNXGLC,SNOWDP_GL,snow_depth_over_glaciated_surface,m,Land ice,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXLND.BASEFLOW,M2TMNXLND,BASEFLOW,baseflow_flux,kg m-2 s-1,Runoff,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXLND.EVPTRNS,M2TMNXLND,EVPTRNS,transpiration_energy_flux,W m-2,Land energy,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXLND.FRSNO,M2TMNXLND,FRSNO,fractional_area_of_land_snowcover,1,Snow,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXLND.GRN,M2TMNXLND,GRN,greeness_fraction,1,Vegetation,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXLND.GWETPROF,M2TMNXLND,GWETPROF,ave_prof_soil_moisture,1,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXLND.GWETROOT,M2TMNXLND,GWETROOT,root_zone_soil_wetness,1,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXLND.GWETTOP,M2TMNXLND,GWETTOP,surface_soil_wetness,1,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXLND.LAI,M2TMNXLND,LAI,leaf_area_index,1,Vegetation,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXLND.RUNOFF,M2TMNXLND,RUNOFF,overland_runoff_including_throughflow,kg m-2 s-1,Runoff,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXLND.SNODP,M2TMNXLND,SNODP,snow_depth,m,Snow,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXLND.SNOMAS,M2TMNXLND,SNOMAS,Total_snow_storage_land,kg m-2,Snow,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXLND.TSOIL1,M2TMNXLND,TSOIL1,soil_temperatures_layer_1,K,Land energy,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXLND.TSURF,M2TMNXLND,TSURF,surface_temperature_of_land_incl_snow,K,Land energy,Land models & water balance,,time x lat x lon,,KEEP
+M2TMNXLND.TWLAND,M2TMNXLND,TWLAND,Avail_water_storage_land,kg m-2,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.Swnet_tavg,GLDAS_CLSM10_M,Swnet_tavg,Net short wave radiation flux,W m-2,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.Lwnet_tavg,GLDAS_CLSM10_M,Lwnet_tavg,Net long-wave radiation flux,W m-2,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.Qle_tavg,GLDAS_CLSM10_M,Qle_tavg,Latent heat net flux,W m-2,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.Qh_tavg,GLDAS_CLSM10_M,Qh_tavg,Sensible heat net flux,W m-2,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.Snowf_tavg,GLDAS_CLSM10_M,Snowf_tavg,Snow precipitation rate,kg m-2 s-1,Precipitation,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.Rainf_tavg,GLDAS_CLSM10_M,Rainf_tavg,Rain precipitation rate,kg m-2 s-1,Precipitation,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.Evap_tavg,GLDAS_CLSM10_M,Evap_tavg,Evapotranspiration,kg m-2 s-1,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.Qs_acc,GLDAS_CLSM10_M,Qs_acc,Storm surface runoff,kg m-2,Runoff,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.Qsb_acc,GLDAS_CLSM10_M,Qsb_acc,Baseflow-groundwater runoff,kg m-2,Runoff,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.Qsm_acc,GLDAS_CLSM10_M,Qsm_acc,Snow melt,kg m-2,Snow,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.AvgSurfT_inst,GLDAS_CLSM10_M,AvgSurfT_inst,Average Surface Skin temperature,K,Land temperature,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.Albedo_inst,GLDAS_CLSM10_M,Albedo_inst,Albedo,%,Snow,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.SWE_inst,GLDAS_CLSM10_M,SWE_inst,Snow depth water equivalent,kg m-2,Snow,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.SnowDepth_inst,GLDAS_CLSM10_M,SnowDepth_inst,Snow depth,m,Snow,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.SoilMoist_S_inst,GLDAS_CLSM10_M,SoilMoist_S_inst,Surface Soil moisture,kg m-2,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.SoilMoist_RZ_inst,GLDAS_CLSM10_M,SoilMoist_RZ_inst,Root Zone Soil moisture,kg m-2,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.SoilMoist_P_inst,GLDAS_CLSM10_M,SoilMoist_P_inst,Profile Soil moisture,kg m-2,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.SoilTMP0_10cm_inst,GLDAS_CLSM10_M,SoilTMP0_10cm_inst,Soil temperature,K,Land temperature,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.TVeg_tavg,GLDAS_CLSM10_M,TVeg_tavg,Transpiration,W m-2,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_CLSM10_M.TWS_inst,GLDAS_CLSM10_M,TWS_inst,Terrestrial water storage,mm,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.Swnet_tavg,GLDAS_NOAH025_M,Swnet_tavg,Net short wave radiation flux,W m-2,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.Lwnet_tavg,GLDAS_NOAH025_M,Lwnet_tavg,Net long-wave radiation flux,W m-2,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.Qle_tavg,GLDAS_NOAH025_M,Qle_tavg,Latent heat net flux,W m-2,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.Qh_tavg,GLDAS_NOAH025_M,Qh_tavg,Sensible heat net flux,W m-2,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.Snowf_tavg,GLDAS_NOAH025_M,Snowf_tavg,Snow precipitation rate,kg m-2 s-1,Precipitation,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.Rainf_tavg,GLDAS_NOAH025_M,Rainf_tavg,Rain precipitation rate,kg m-2 s-1,Precipitation,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.Evap_tavg,GLDAS_NOAH025_M,Evap_tavg,Evapotranspiration,kg m-2 s-1,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.Qs_acc,GLDAS_NOAH025_M,Qs_acc,Storm surface runoff,kg m-2,Runoff,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.Qsb_acc,GLDAS_NOAH025_M,Qsb_acc,Baseflow-groundwater runoff,kg m-2,Runoff,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.Qsm_acc,GLDAS_NOAH025_M,Qsm_acc,Snow melt,kg m-2,Snow,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.AvgSurfT_inst,GLDAS_NOAH025_M,AvgSurfT_inst,Average Surface Skin temperature,K,Land temperature,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.Albedo_inst,GLDAS_NOAH025_M,Albedo_inst,Albedo,%,Snow,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.SWE_inst,GLDAS_NOAH025_M,SWE_inst,Snow depth water equivalent,kg m-2,Snow,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.SnowDepth_inst,GLDAS_NOAH025_M,SnowDepth_inst,Snow depth,m,Snow,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.SoilMoi0_10cm_inst,GLDAS_NOAH025_M,SoilMoi0_10cm_inst,Soil moisture,kg m-2,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.SoilMoi10_40cm_inst,GLDAS_NOAH025_M,SoilMoi10_40cm_inst,Soil moisture,kg m-2,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.SoilMoi40_100cm_inst,GLDAS_NOAH025_M,SoilMoi40_100cm_inst,Soil moisture,kg m-2,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.SoilMoi100_200cm_inst,GLDAS_NOAH025_M,SoilMoi100_200cm_inst,Soil moisture,kg m-2,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.SoilTMP0_10cm_inst,GLDAS_NOAH025_M,SoilTMP0_10cm_inst,Soil temperature,K,Land temperature,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.Tveg_tavg,GLDAS_NOAH025_M,Tveg_tavg,Transpiration,W m-2,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_NOAH025_M.RootMoist_inst,GLDAS_NOAH025_M,RootMoist_inst,Root zone soil moisture,kg m-2,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.Swnet_tavg,GLDAS_VIC10_M,Swnet_tavg,Net short wave radiation flux,W m-2,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.Lwnet_tavg,GLDAS_VIC10_M,Lwnet_tavg,Net long-wave radiation flux,W m-2,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.Qle_tavg,GLDAS_VIC10_M,Qle_tavg,Latent heat net flux,W m-2,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.Qh_tavg,GLDAS_VIC10_M,Qh_tavg,Sensible heat net flux,W m-2,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.Snowf_tavg,GLDAS_VIC10_M,Snowf_tavg,Snow precipitation rate,kg m-2 s-1,Precipitation,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.Rainf_tavg,GLDAS_VIC10_M,Rainf_tavg,Rain precipitation rate,kg m-2 s-1,Precipitation,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.Evap_tavg,GLDAS_VIC10_M,Evap_tavg,Evapotranspiration,kg m-2 s-1,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.Qs_acc,GLDAS_VIC10_M,Qs_acc,Storm surface runoff,kg m-2,Runoff,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.Qsb_acc,GLDAS_VIC10_M,Qsb_acc,Baseflow-groundwater runoff,kg m-2,Runoff,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.Qsm_acc,GLDAS_VIC10_M,Qsm_acc,Snow melt,kg m-2,Snow,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.AvgSurfT_inst,GLDAS_VIC10_M,AvgSurfT_inst,Average Surface Skin temperature,K,Land temperature,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.Albedo_inst,GLDAS_VIC10_M,Albedo_inst,Albedo,1,Snow,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.SWE_inst,GLDAS_VIC10_M,SWE_inst,Snow depth water equivalent,kg m-2,Snow,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.SnowDepth_inst,GLDAS_VIC10_M,SnowDepth_inst,Snow depth,m,Snow,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.SoilMoi0_30cm_inst,GLDAS_VIC10_M,SoilMoi0_30cm_inst,Soil moisture,kg m-2,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.SoilMoi_depth2_inst,GLDAS_VIC10_M,SoilMoi_depth2_inst,Soil moisture,kg m-2,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.SoilMoi_depth3_inst,GLDAS_VIC10_M,SoilMoi_depth3_inst,Soil moisture,kg m-2,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.TVeg_tavg,GLDAS_VIC10_M,TVeg_tavg,Transpiration,W m-2,Land water & energy fluxes,Land models & water balance,,time x lat x lon,,KEEP
+GLDAS_VIC10_M.RootMoist_inst,GLDAS_VIC10_M,RootMoist_inst,Root zone soil moisture,kg m-2,Soil moisture,Land models & water balance,,time x lat x lon,,KEEP
+MOD21C3.LST_Day,MOD21C3,LST_Day,Average Daytime Land Surface Temperature,K,Land surface temperature,Land surface temperature,,YDim:MODIS_MONTHLY_CMG_LST x XDim:MODIS_MONTHLY_CMG_LST,,KEEP
+MOD21C3.LST_Night,MOD21C3,LST_Night,Average Nighttime Land Surface Temperature,K,Land surface temperature,Land surface temperature,,YDim:MODIS_MONTHLY_CMG_LST x XDim:MODIS_MONTHLY_CMG_LST,,KEEP
+GPCPMON.sat_gauge_precip,GPCPMON,sat_gauge_precip,combined satellite-gauge precipitation,mm/day,Precipitation,Precipitation,,time x lat x lon,,KEEP
+MICASA_FLUX_M.NPP,MICASA_FLUX_M,NPP,Net primary productivity,kg m-2 s-1,Carbon fluxes,Productivity & water use,,time x lat x lon,,KEEP
+MICASA_FLUX_M.Rh,MICASA_FLUX_M,Rh,Heterotrophic respiration,kg m-2 s-1,Carbon fluxes,Productivity & water use,,time x lat x lon,,KEEP
+MICASA_FLUX_M.FIRE,MICASA_FLUX_M,FIRE,Fire emission,kg m-2 s-1,Carbon fluxes,Productivity & water use,,time x lat x lon,,KEEP
+MICASA_FLUX_M.NEE,MICASA_FLUX_M,NEE,Net ecosystem exchange,kg m-2 s-1,Carbon fluxes,Productivity & water use,,time x lat x lon,,KEEP
+M2TMNXRAD.ALBEDO,M2TMNXRAD,ALBEDO,surface_albedo,1,Radiation,Radiation & albedo,,time x lat x lon,,KEEP
+M2TMNXRAD.CLDHGH,M2TMNXRAD,CLDHGH,cloud_area_fraction_for_high_clouds,1,Clouds,Radiation & albedo,,time x lat x lon,,KEEP
+M2TMNXRAD.CLDLOW,M2TMNXRAD,CLDLOW,cloud_area_fraction_for_low_clouds,1,Clouds,Radiation & albedo,,time x lat x lon,,KEEP
+M2TMNXRAD.CLDMID,M2TMNXRAD,CLDMID,cloud_area_fraction_for_middle_clouds,1,Clouds,Radiation & albedo,,time x lat x lon,,KEEP
+M2TMNXRAD.CLDTOT,M2TMNXRAD,CLDTOT,total_cloud_area_fraction,1,Clouds,Radiation & albedo,,time x lat x lon,,KEEP
+M2TMNXRAD.LWGNT,M2TMNXRAD,LWGNT,surface_net_downward_longwave_flux,W m-2,Radiation,Radiation & albedo,,time x lat x lon,,KEEP
+M2TMNXRAD.LWTUP,M2TMNXRAD,LWTUP,upwelling_longwave_flux_at_toa,W m-2,Radiation,Radiation & albedo,,time x lat x lon,,KEEP
+M2TMNXRAD.LWTUPCLR,M2TMNXRAD,LWTUPCLR,upwelling_longwave_flux_at_toa_assuming_clear_sky,W m-2,Radiation,Radiation & albedo,,time x lat x lon,,KEEP
+M2TMNXRAD.SWGDN,M2TMNXRAD,SWGDN,surface_incoming_shortwave_flux,W m-2,Radiation,Radiation & albedo,,time x lat x lon,,KEEP
+M2TMNXRAD.SWGNT,M2TMNXRAD,SWGNT,surface_net_downward_shortwave_flux,W m-2,Radiation,Radiation & albedo,,time x lat x lon,,KEEP
+M2TMNXRAD.SWTNT,M2TMNXRAD,SWTNT,toa_net_downward_shortwave_flux,W m-2,Radiation,Radiation & albedo,,time x lat x lon,,KEEP
+M2TMNXRAD.SWTNTCLR,M2TMNXRAD,SWTNTCLR,toa_net_downward_shortwave_flux_assuming_clear_sky,W m-2,Radiation,Radiation & albedo,,time x lat x lon,,KEEP
+M2TMNXRAD.TAUTOT,M2TMNXRAD,TAUTOT,in_cloud_optical_thickness_of_all_clouds,1,Clouds,Radiation & albedo,,time x lat x lon,,KEEP
+AIRSIL3MSOLR.olr,AIRSIL3MSOLR,olr,outgoing longwave radiation,W / m2,Radiation,Radiation & albedo,,orbit_pass x lat x lon,mean over orbit_pass,REVIEW
+AIRSIL3MSOLR.olr_clr,AIRSIL3MSOLR,olr_clr,clear outgoing longwave radiation,W / m2,Radiation,Radiation & albedo,,orbit_pass x lat x lon,mean over orbit_pass,REVIEW
+MOD13C2.CMG 0.05 Deg Monthly NDVI,MOD13C2,CMG 0.05 Deg Monthly NDVI,CMG 0.05 Deg Monthly NDVI,NDVI,Vegetation,Vegetation greenness,,YDim:MOD_Grid_monthly_CMG_VI x XDim:MOD_Grid_monthly_CMG_VI,,KEEP
+MOD13C2.CMG 0.05 Deg Monthly EVI,MOD13C2,CMG 0.05 Deg Monthly EVI,CMG 0.05 Deg Monthly EVI,EVI,Vegetation,Vegetation greenness,,YDim:MOD_Grid_monthly_CMG_VI x XDim:MOD_Grid_monthly_CMG_VI,,KEEP
+REYNOLDS_NCDC_L4_MONTHLY_V5.sst,REYNOLDS_NCDC_L4_MONTHLY_V5,sst,Extended reconstructed sea surface temperature,degree_C,Ocean & sea ice,Ocean & sea ice,,time x lev x lat x lon,,KEEP
+NASA_SSH_REF_SIMPLE_GRID_V11.ssha,NASA_SSH_REF_SIMPLE_GRID_V11,ssha,sea surface height anomaly,m,Ocean & sea ice,Ocean & sea ice,,latitude x longitude,,KEEP
+MOD10CM.Snow_Cover_Monthly_CMG,MOD10CM,Snow_Cover_Monthly_CMG,"Monthly snow cover extent, 5km",none,Snow,Snow,,YDim:MOD_CMG_Snow_5km x XDim:MOD_CMG_Snow_5km,,KEEP

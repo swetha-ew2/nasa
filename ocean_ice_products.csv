@@ -1,0 +1,4 @@
+short_name,concept_id,group,note
+REYNOLDS_NCDC_L4_MONTHLY_V5,C2036878116-POCLOUD,Ocean & sea ice,sea surface temperature (ERSST v5; 2 degree grid)
+NASA_SSH_REF_SIMPLE_GRID_V11,C4155232533-POCLOUD,Ocean & sea ice,sea surface height (time step to verify)
+MOD10CM,C3050353608-NSIDC_CPRD,Snow,MODIS/Terra snow cover monthly 0.05 deg CMG

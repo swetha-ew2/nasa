@@ -1,0 +1,986 @@
+short_name,version,title,start,end,level,concept_id,matched_keyword
+GPCPDAY,3.2,GPCP Precipitation Level 3 Daily 0.5-Degree V3.2 (GPCPDAY),2000-06-01,2021-09-30,3,C2211141201-GES_DISC,IMERG
+GPCPDAY,3.3,GPCP Precipitation Level 3 Daily 0.5-Degree V3.3 (GPCPDAY),1998-01-01,2025-12-31,3,C3405928682-GES_DISC,IMERG
+GPM_3IMERGDE,07,GPM IMERG Early Precipitation L3 1 day 0.1 degree x 0.1 degree V07 (GPM_3IMERGDE),1998-01-01,ongoing,3,C2723754850-GES_DISC,IMERG
+GPM_3IMERGDF,07,GPM IMERG Final Precipitation L3 1 day 0.1 degree x 0.1 degree V07 (GPM_3IMERGDF),1998-01-01,2025-09-30,3,C2723754864-GES_DISC,IMERG
+GPM_3IMERGDL,07,GPM IMERG Late Precipitation L3 1 day 0.1 degree x 0.1 degree V07 (GPM_3IMERGDL),1998-01-01,ongoing,3,C2723754859-GES_DISC,IMERG
+GPM_3IMERGHH,07,GPM IMERG Final Precipitation L3 Half Hourly 0.1 degree x 0.1 degree V07 (GPM_3IMERGHH),1998-01-01,2025-09-30,3,C2723754847-GES_DISC,IMERG
+GPM_3IMERGHHE,07,GPM IMERG Early Precipitation L3 Half Hourly 0.1 degree x 0.1 degree V07 (GPM_3IMERGHHE),1998-01-01,ongoing,3,C2723758340-GES_DISC,IMERG
+GPM_3IMERGHHL,07,GPM IMERG Late Precipitation L3 Half Hourly 0.1 degree x 0.1 degree V07 (GPM_3IMERGHHL),1998-01-01,ongoing,3,C2723754845-GES_DISC,IMERG
+GPM_3IMERGM,07,GPM IMERG Final Precipitation L3 1 month 0.1 degree x 0.1 degree V07 (GPM_3IMERGM),1998-01-01,2025-09-30,3,C2723754851-GES_DISC,IMERG
+GPM_IMERG_LandSeaMask,2,Land/Sea static mask relevant to IMERG precipitation 0.1x0.1 degree V2 (GPM_IMERG_LandSeaMask),1998-01-01,ongoing,4,C1617332035-GES_DISC,IMERG
+GPM_MERGIR,1,NCEP/CPC L3 Half Hourly 4km Global (60S - 60N) Merged IR V1 (GPM_MERGIR),1998-01-01,ongoing,3,C1432254058-GES_DISC,IMERG
+Global_Landslide_Exposure_Maps,1.0,IMERG and LHASA Global Landslide Exposure Maps 1.0,2001-01-01,ongoing,4,C2670410720-GES_DISC,IMERG
+M2TUNXLND,5.12.4,"MERRA-2 tavgU_2d_lnd_Nx: 2d,diurnal,Time-Averaged,Single-Level,Assimilation,Land Surface Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TUNXLND)",1980-01-01,ongoing,4,C1276812876-GES_DISC,IMERG
+TRMM_3B40RT,7,TRMM (TMPA-RT) Near Real-Time Microwave precipitation estimate L3 3 hour 0.25 degree x 0.25 degree V7 (TRMM_3B40RT),2000-02-29,2019-12-31,3,C1282032617-GES_DISC,IMERG
+TRMM_3B41RT,7,TRMM (TMPA-RT) Near Real-Time IR precipitation estimate L3 1-hour 0.25 degree x 0.25 degree V7 (TRMM_3B41RT),2000-02-29,2019-12-31,3,C1282032567-GES_DISC,IMERG
+TRMM_3B42,7,TRMM (TMPA) Rainfall Estimate L3 3 hour 0.25 degree x 0.25 degree V7 (TRMM_3B42),1997-12-31,2019-12-31,3,C1281704371-GES_DISC,IMERG
+TRMM_3B42RT,7,TRMM (TMPA-RT) Near Real-Time Precipitation L3 3 hour 0.25 degree x 0.25 degree V7 (TRMM_3B42RT),2000-02-29,2020-01-01,3,C1231627223-GES_DISC,IMERG
+TRMM_3B42RT_Daily,7,TRMM (TMPA-RT) Near Real-Time Precipitation L3 1 day 0.25 degree x 0.25 degree V7 (TRMM_3B42RT_Daily),2000-03-01,2020-01-01,3,C1276795284-GES_DISC,IMERG
+TRMM_3B42_Daily,7,TRMM (TMPA) Precipitation L3 1 day 0.25 degree x 0.25 degree V7 (TRMM_3B42_Daily),1998-01-01,2019-12-31,3,C1239536905-GES_DISC,IMERG
+TRMM_3B43,7,TRMM (TMPA/3B43) Rainfall Estimate L3 1 month 0.25 degree x 0.25 degree V7 (TRMM_3B43),1998-01-01,2019-12-31,3,C1282032631-GES_DISC,IMERG
+TRMM_TMPA_LandSeaMask,2,Land/Sea static mask relevant to TMPA precipitation 0.25x0.25 degree V2 (TRMM_TMPA_LandSeaMask),1998-01-01,ongoing,4,C1617332036-GES_DISC,IMERG
+ACOSMonthlyGriddedXCO2,3,Monthly Gridded Level 4 bias-corrected XCO2 and other select fields aggregated from ACOS as Level 4 monthly files V3 (ACOSMonthlyGriddedXCO2),2014-09-07,2020-06-28,4,C2219374316-GES_DISC,dioxide
+ACOS_L2_Lite_FP,11.0,ACOS GOSAT/TANSO-FTS Level 2 bias-corrected XCO2 and other select fields from the full-physics retrieval aggregated as daily files v11.0,2009-04-18,ongoing,2,C4106152863-GES_DISC,dioxide
+AIRH2RET,7.0,Aqua/AIRS L2 Standard Physical Retrieval (AIRS+AMSU+HSB) V7.0,2002-08-30,2003-02-06,2,C1701805647-GES_DISC,dioxide
+AIRH2RET,006,AIRS/Aqua L2 Standard Physical Retrieval (AIRS+AMSU+HSB) V006 (AIRH2RET),2002-08-30,2003-02-05,2,C1243477376-GES_DISC,dioxide
+AIRH2SUP,7.0,Aqua/AIRS L2 Support Retrieval (AIRS+AMSU+HSB) V7.0,2002-08-30,2003-02-06,2,C1701828239-GES_DISC,dioxide
+AIRH2SUP,006,AIRS/Aqua L2 Support Retrieval (AIRS+AMSU+HSB) V006 (AIRH2SUP),2002-08-30,2003-02-05,2,C1243477377-GES_DISC,dioxide
+AIRIBRAD,005,AIRS/Aqua L1B Infrared (IR) geolocated and calibrated radiances V005 (AIRIBRAD),2002-08-30,ongoing,1B,C1243477369-GES_DISC,dioxide
+AIRIBRAD_NRT,005,AIRS/Aqua L1B Near Real Time (NRT) Infrared (IR) geolocated and calibrated radiances V005 (AIRIBRAD_NRT),2015-12-15,ongoing,1B,C1233768982-GES_DISC,dioxide
+AIRIBRAD_NRT_BUFR,005,AIRS/Aqua L1B Near Real Time (NRT) Infrared (IR) geolocated and calibrated radiances in BUFR format V005 (AIRIBRAD_NRT_BUFR),2015-12-15,ongoing,1B,C1233769001-GES_DISC,dioxide
+AIRICRAD,6.7,AIRS/Aqua L1C Infrared (IR) resampled and corrected radiances V6.7 (AIRICRAD),2002-08-30,ongoing,1,C1675477037-GES_DISC,dioxide
+AIRICRAD_NRT,6.7,AIRS/Aqua L1C Near Real Time (NRT) Infrared (IR) resampled and corrected radiances V6.7 (AIRICRAD_NRT),2002-09-06,ongoing,1,C1712047294-GES_DISC,dioxide
+AIRS2RET,7.0,Aqua/AIRS L2 Standard Physical Retrieval (AIRS-only) V7.0,2002-08-30,ongoing,2,C1701805619-GES_DISC,dioxide
+AIRS2RET,006,AIRS/Aqua L2 Standard Physical Retrieval (AIRS-only) V006 (AIRS2RET),2002-08-30,ongoing,2,C1243477381-GES_DISC,dioxide
+AIRS2RET_NRT,006,AIRS/Aqua L2 Near Real Time (NRT) Standard Physical Retrieval (AIRS-only) V006 (AIRS2RET_NRT),2016-10-15,ongoing,2,C1345119345-GES_DISC,dioxide
+AIRS2SPC,005,AIRS/Aqua L2 CO2 support retrieval (AIRS-only) V005 (AIRS2SPC),2010-01-01,2017-03-01,2,C1243477370-GES_DISC,dioxide
+AIRS2STC,005,AIRS/Aqua L2 CO2 in the free troposphere (AIRS-only) V005 (AIRS2STC),2010-01-01,2017-03-01,2,C1243477371-GES_DISC,dioxide
+AIRS2SUP,7.0,Aqua/AIRS L2 Support Retrieval (AIRS-only) V7.0,2002-08-30,ongoing,2,C1701805630-GES_DISC,dioxide
+AIRS2SUP,006,AIRS/Aqua L2 Support Retrieval (AIRS-only) V006 (AIRS2SUP),2002-08-30,ongoing,2,C1243477382-GES_DISC,dioxide
+AIRS2SUP_NRT,006,AIRS/Aqua L2 Near Real Time (NRT) Support Retrieval (AIRS-only) V006 (AIRS2SUP_NRT),2016-10-15,ongoing,2,C1345119372-GES_DISC,dioxide
+AIRS2SUP_NRT,7.0,Aqua/AIRS L2 Near Real Time (NRT) Support Retrieval (AIRS-only) V7.0,2002-08-30,ongoing,2,C1701805636-GES_DISC,dioxide
+AIRS3C28,005,AIRS/Aqua L3 8-day CO2 in the free troposphere (AIRS-only) 2.5 degrees x 2 degrees V005 (AIRS3C28),2009-12-25,2017-02-21,3,C1238517256-GES_DISC,dioxide
+AIRS3C2D,005,AIRS/Aqua L3 daily CO2 in the free troposphere (AIRS-only) 2.5 degrees x 2 degrees V005 (AIRS3C2D),2010-01-01,2017-02-28,3,C1238517258-GES_DISC,dioxide
+AIRS3C2M,005,AIRS/Aqua L3 Monthly CO2 in the free troposphere (AIRS-only) 2.5 degrees x 2 degrees V005 (AIRS3C2M),2010-01-01,2017-02-28,3,C1238517264-GES_DISC,dioxide
+AIRSAQIRL1B,8.0,AIRS/Aqua L1B Infrared (IR) geolocated and calibrated radiances V8.0 (AIRSAQIRL1B),2002-08-30,ongoing,1B,C3173400482-GES_DISC,dioxide
+AIRSAQIRL1B_NRT,8.0,AIRS/Aqua L1B Near Real Time (NRT) Infrared (IR) geolocated and calibrated radiances V8.0 (AIRSAQIRL1B_NRT),2002-08-30,ongoing,1B,C3173404183-GES_DISC,dioxide
+AIRX2RET,7.0,Aqua/AIRS  L2 Standard Physical Retrieval (AIRS+AMSU) V7.0,2002-08-30,2016-09-25,2,C1701805641-GES_DISC,dioxide
+AIRX2RET,006,AIRS/Aqua L2 Standard Physical Retrieval (AIRS+AMSU) V006 (AIRX2RET),2002-08-30,2016-09-24,2,C1243477383-GES_DISC,dioxide
+AIRX2SPC,005,AIRS/Aqua L2 CO2 support retrieval (AIRS+AMSU) V005 (AIRX2SPC),2002-09-01,2012-03-01,2,C1243477374-GES_DISC,dioxide
+AIRX2STC,005,AIRS/Aqua L2 CO2 in the free troposphere (AIRS+AMSU) V005 (AIRX2STC),2002-09-01,2012-03-01,2,C1243477314-GES_DISC,dioxide
+AIRX2SUP,7.0,Aqua/AIRS  L2 Support Retrieval (AIRS+AMSU) V7.0,2002-08-30,2016-09-25,2,C1701828243-GES_DISC,dioxide
+AIRX2SUP,006,AIRS/Aqua L2 Support Retrieval (AIRS+AMSU) V006 (AIRX2SUP),2002-08-30,2016-09-25,2,C1243477317-GES_DISC,dioxide
+AIRX3C28,005,AIRS/Aqua L3 8-day CO2 in the free troposphere (AIRS+AMSU) 2.5 degrees x 2 degrees V005 (AIRX3C28),2002-09-01,2012-02-24,3,C1238517303-GES_DISC,dioxide
+AIRX3C2D,005,AIRS/Aqua L3 daily CO2 in the free troposphere (AIRS+AMSU) 2.5 degrees x 2 degrees V005 (AIRX3C2D),2002-09-01,2012-02-29,3,C1238517305-GES_DISC,dioxide
+AIRX3C2M,005,AIRS/Aqua L3 Monthly CO2 in the free troposphere (AIRS+AMSU) 2.5 degrees x 2 degrees V005 (AIRX3C2M),2002-09-01,2012-02-29,3,C1238517293-GES_DISC,dioxide
+ATMOSL2AF,3,"ATMOS L2 Trace Gases on Altitude Grid, Fixed Field Format V3 (ATMOSL2AF)",1985-04-30,1994-11-12,2,C2227249604-GES_DISC,dioxide
+ATMOSL2AT,3,"ATMOS L2 Trace Gases on Altitude Grid, Tab Delimited Format V3 (ATMOSL2AT)",1985-04-30,1994-11-12,2,C2227249510-GES_DISC,dioxide
+ATMOSL2PF,3,"ATMOS L2 Trace Gases on Pressure Grid, Fixed Field Format V3 (ATMOSL2PF)",1985-04-30,1994-11-12,2,C2227249678-GES_DISC,dioxide
+ATMOSL2PT,3,"ATMOS L2 Trace Gases on Pressure Grid, Tab Delimited Format V3 (ATMOSL2PT)",1985-04-30,1994-11-12,2,C2227249634-GES_DISC,dioxide
+ATMOSL2TF,3,"ATMOS L2 Trace Gases on Potential Temperature Grid, Fixed Field Format V3 (ATMOSL2TF)",1985-04-30,1994-11-12,2,C2227249723-GES_DISC,dioxide
+ATMOSL2TT,3,"ATMOS L2 Trace Gases on Potential Temperature Grid, Tab Delimited Format V3 (ATMOSL2TT)",1985-04-30,1994-11-12,2,C2227249691-GES_DISC,dioxide
+CMSFluxFire,2,Carbon Monitoring System Carbon Flux for Fire L4 V2 (CMSFluxFire),2010-01-01,2017-01-01,4,C1945851681-GES_DISC,dioxide
+CMSFluxFire,1,Carbon Monitoring System Carbon Flux for Fire L4 V1 (CMSFluxFire),2010-01-01,2013-01-01,4,C1424798922-GES_DISC,dioxide
+CMSFluxFirepost,1,Carbon Monitoring System Flux for Posterior Fire Carbon L4 V1 (CMSFluxFirepost),2010-01-01,2013-01-01,4,C1424798923-GES_DISC,dioxide
+CMSFluxFossilFuelPrior,3,Carbon Monitoring System Carbon Flux FossilFuel Prior L4 V3 (CMSFluxFossilFuelPrior),2010-01-01,2022-12-31,4,C3005726524-GES_DISC,dioxide
+CMSFluxFossilFuelPrior,2,Carbon Monitoring System Carbon Flux for Fossil Fuel Prior L4 V2 (CMSFluxFossilFuelPrior),2010-01-01,2017-01-01,4,C1945851812-GES_DISC,dioxide
+CMSFluxFossilfuel,1,Carbon Monitoring System Flux for Fossil Fuel L4 V1 (CMSFluxFossilfuel),2010-01-01,2013-01-01,4,C1424798924-GES_DISC,dioxide
+CMSFluxLandPrior,3,Carbon Monitoring System Carbon Flux Land Prior L4 V3 (CMSFluxLandPrior),2010-01-01,2022-12-31,4,C3005726562-GES_DISC,dioxide
+CMSFluxMISC,1,"Carbon Monitoring System Flux for Shipping, Aviation, and Chemical Sources L4 V1 (CMSFluxMISC)",2000-01-01,2001-01-01,4,C1424798925-GES_DISC,dioxide
+CMSFluxNBE,3,Carbon Monitoring System Carbon Flux NBE L4 V3 (CMSFluxNBE),2010-01-01,2022-12-31,4,C3005726585-GES_DISC,dioxide
+CMSFluxNBE,2,Carbon Monitoring System Carbon Flux from the Net Biome Exchange L4 V2 (CMSFluxNBE),2010-01-01,2017-01-01,4,C1945851870-GES_DISC,dioxide
+CMSFluxNBEPrior,2,Carbon Monitoring System Carbon Flux from the Net Biome Exchange Prior L4 V2 (CMSFluxNBEPrior),2010-01-01,2017-01-01,4,C1945851924-GES_DISC,dioxide
+CMSFluxNEE,1,Carbon Monitoring System Flux from the Net Ecosystem Exchange L4 V1 (CMSFluxNEE),2010-01-01,2013-01-01,4,C1424798926-GES_DISC,dioxide
+CMSFluxOcean,3,Carbon Monitoring System Carbon Flux Ocean L4 V3 (CMSFluxOcean),2010-01-01,2022-12-31,4,C3005726450-GES_DISC,dioxide
+CMSFluxOcean,1,Carbon Monitoring System Flux for Ocean Carbon L4 V1 (CMSFluxOcean),2010-01-01,2013-01-01,4,C1424798927-GES_DISC,dioxide
+CMSFluxOceanPrior,3,Carbon Monitoring System Carbon Flux Ocean Prior L4 V3 (CMSFluxOceanPrior),2010-01-01,2022-12-31,4,C3005726600-GES_DISC,dioxide
+CMSFluxOceanPrior,2,Carbon Monitoring System Carbon Flux for Ocean Prior L4 V2 (CMSFluxOceanPrior),2010-01-01,2017-01-01,4,C1945851993-GES_DISC,dioxide
+CMSFluxTotal,3,Carbon Monitoring System Carbon Flux Total L4 V3 (CMSFluxTotal),2010-01-01,2022-12-31,4,C3005726621-GES_DISC,dioxide
+CMSFluxTotal,2,Carbon Monitoring System Carbon Flux Total L4 V2 (CMSFluxTotal),2010-01-01,2017-01-01,4,C1945852056-GES_DISC,dioxide
+CMSFluxTotalPrior,3,Carbon Monitoring System Carbon Flux Total Prior L4 V3 (CMSFluxTotalPrior),2010-01-01,2022-12-31,4,C3005726644-GES_DISC,dioxide
+CMSFluxTotalpost,1,Carbon Monitoring System Flux for Posterior Total Carbon L4 V1 (CMSFluxTotalpost),2010-01-01,2013-01-01,4,C1424798928-GES_DISC,dioxide
+CMSFluxTotalprior,1,Carbon Monitoring System Flux for Prior Total Carbon L4 V1 (CMSFluxTotalprior),2010-01-01,2013-01-01,4,C1424798929-GES_DISC,dioxide
+CMS_CTL_NA_GOSAT_FOOTPRINTS,1,CarbonTracker-Lagrange North America GOSAT Vertical Profile of Footprints V1 (CMS_CTL_NA_GOSAT_FOOTPRINTS),2009-06-21,2010-12-31,4,C2467903005-GES_DISC,dioxide
+CMS_CTL_NA_OCO2_FOOTPRINTS,1,CarbonTracker-Lagrange North America OCO-2 Vertical Profile of Footprints V1 (CMS_CTL_NA_OCO2_FOOTPRINTS),2014-08-27,2016-01-31,4,C2467863601-GES_DISC,dioxide
+CMS_CTL_NA_TCCON_FOOTPRINTS,1,CarbonTracker-Lagrange North America TCCON Vertical Profile of Footprints V1 (CMS_CTL_NA_TCCON_FOOTPRINTS),2006-12-11,2016-08-31,4,C2467917764-GES_DISC,dioxide
+CMS_CTL_SA_OCO2_FOOTPRINTS,1,CarbonTracker-Lagrange South America OCO-2 Vertical Profile of Footprints V1 (CMS_CTL_SA_OCO2_FOOTPRINTS),2015-08-22,2016-05-31,4,C2467880659-GES_DISC,dioxide
+CMS_OCE_BGC_CCS,1,Ocean Biogeochemistry in the California Current System 2007-2010 L4 Monthly,2007-01-01,2010-12-31,4,C1439146826-GES_DISC,dioxide
+ECOCO3,2.0,ECOSTRESS/OCO-3 Co-Located Observations Version 2.0,2019-08-06,ongoing,3,C4293822248-GES_DISC,dioxide
+GEOS_CASAGFED_3H_NEE,3,GEOS-Carb CASA-GFED 3-hourly Ecosystem Exchange Fluxes 0.5 degree x 0.625 degree V3 (GEOS_CASAGFED_3H_NEE),2003-01-01,2017-12-31,4,C1701034775-GES_DISC,dioxide
+GEOS_CASAGFED_3H_NEE,2,GEOS-Carb CASA-GFED 3-hourly Ecosystem Exchange Fluxes 0.5 degree x 0.625 degree V2 (GEOS_CASAGFED_3H_NEE),2003-01-01,2016-12-31,4,C1701034748-GES_DISC,dioxide
+GEOS_CASAGFED_D_FIRE,3,GEOS-Carb CASA-GFED Daily Fire and Fuel Emissions 0.5 degree x 0.5 degree V3 (GEOS_CASAGFED_D_FIRE),2003-01-01,2017-12-31,4,C1701034766-GES_DISC,dioxide
+GEOS_CASAGFED_D_FIRE,2,GEOS-Carb CASA-GFED Daily Fire and Fuel Emissions 0.5 degree x 0.5 degree V2 (GEOS_CASAGFED_D_FIRE),2003-01-01,2016-12-31,4,C1701034739-GES_DISC,dioxide
+GEOS_CASAGFED_M_FLUX,3,GEOS-Carb CASA-GFED Monthly Fire Fuel NPP Rh NEE Fluxes 0.5 degree x 0.5 degree V3 (GEOS_CASAGFED_M_FLUX),2003-01-01,2017-12-31,4,C1701034757-GES_DISC,dioxide
+GEOS_CASAGFED_M_FLUX,2,GEOS-Carb CASA-GFED Monthly Fire Fuel NPP Rh NEE Fluxes 0.5 degree x 0.5 degree V2 (GEOS_CASAGFED_M_FLUX),2003-01-01,2016-12-31,4,C1701034725-GES_DISC,dioxide
+GOME_MINDS_NO2,1.1,"GOME/ERS-2 NO2 Tropospheric, Stratospheric and Total Columns MINDS 1-Orbit L2 Swath 40 km x 320 km V1.1 (GOME_MINDS_NO2)",1995-06-30,2003-06-22,2,C2539362687-GES_DISC,dioxide
+GlobFireCarbon,1,Global Fire carbon emissions from CMS-Flux inversions assimilating atmospheric carbon monoxide observations,2010-01-01,2023-12-31,4,C3278574317-GES_DISC,dioxide
+H3ZFCNO2,007,HIRDLS/Aura Level 3 Nitrogen Dioxide (NO2) 1deg Lat Zonal Fourier Coefficients V007 (H3ZFCNO2),2005-01-22,2008-03-17,3,C1251101003-GES_DISC,dioxide
+HAQ_TROPOMI_NO2_CONUS_A_L3,2.4,HAQAST Sentinel-5P TROPOMI Nitrogen Dioxide (NO2) CONUS Annual Level 3 0.01 x 0.01 Degree Gridded Data V2.4 (HAQ_TROPOMI_NO2_CONUS_A_L3),2019-01-01,ongoing,3,C2839237129-GES_DISC,dioxide
+HAQ_TROPOMI_NO2_CONUS_M_L3,2.4,HAQAST Sentinel-5P TROPOMI Nitrogen Dioxide (NO2) CONUS Monthly Level 3 0.01 x 0.01 Degree Gridded Data V2.4 (HAQ_TROPOMI_NO2_CONUS_M_L3),2018-05-01,ongoing,3,C2839237275-GES_DISC,dioxide
+HAQ_TROPOMI_NO2_CONUS_S_L3,2.4,HAQAST Sentinel-5P TROPOMI Nitrogen Dioxide (NO2) CONUS Seasonal Level 3 0.01 x 0.01 Degree Gridded Data V2.4 (HAQ_TROPOMI_NO2_CONUS_S_L3),2018-06-01,ongoing,3,C2839237223-GES_DISC,dioxide
+HAQ_TROPOMI_NO2_GLOBAL_A_L3,2.4,HAQAST Sentinel-5P TROPOMI Nitrogen Dioxide (NO2) GLOBAL Annual Level 3 0.1 x 0.1 Degree Gridded Data Version 2.4  (HAQ_TROPOMI_NO2_GLOBAL_A_L3),2019-01-01,ongoing,3,C3087325001-GES_DISC,dioxide
+HAQ_TROPOMI_NO2_GLOBAL_M_L3,2.4,HAQAST Sentinel-5P TROPOMI Nitrogen Dioxide (NO2) GLOBAL Monthly Level 3 0.1 x 0.1 Degree Gridded Data Version 2.4 (HAQ_TROPOMI_NO2_GLOBAL_M_L3),2019-01-01,ongoing,3,C3087325222-GES_DISC,dioxide
+HIR3SCOL,007,HIRDLS/Aura Level 3 Daily Gridded 1 x 1 deg Stratospheric Columns of NO2 V007 (HIR3SCOL),2005-01-22,2008-03-17,3,C1251101014-GES_DISC,dioxide
+HIRDLS2,007,HIRDLS/Aura Level 2 Daily Geophysical Parameters V007 (HIRDLS2),2005-01-29,2008-03-17,2,C1251101072-GES_DISC,dioxide
+LIMSN7L2,006,"LIMS/Nimbus-7 Level 2 Vertical Profiles of O3, NO2, H2O, HNO3, Geopotential Height, and Temperature V006 (LIMSN7L2)",1978-10-25,1979-05-28,2,C1273652156-GES_DISC,dioxide
+LIMSN7L3,006,"LIMS/Nimbus-7 Level 3 Daily 2 deg Latitude Zonal Fourier Coefficients of O3, NO2, H2O, HNO3, Geopotential Height, and Temperature V006 (LIMSN7L3)",1978-10-25,1979-05-28,3,C1273652193-GES_DISC,dioxide
+LRIRN6L2IPAT,001,LRIR/Nimbus-6 Level 2 Inverted Profiles of Temperature and Ozone V001 (LRIRN6L2IPAT),1975-06-20,1976-01-06,1,C1513197201-GES_DISC,dioxide
+M2I3NVAER,5.12.4,"MERRA-2 inst3_3d_aer_Nv: 3d,3-Hourly,Instantaneous,Model-Level,Assimilation,Aerosol Mixing Ratio 0.625 x 0.5 degree V5.12.4 (M2I3NVAER)",1980-01-01,ongoing,4,C1276812882-GES_DISC,dioxide
+M2T1NXADG,5.12.4,"MERRA-2 tavg1_2d_adg_Nx: 2d,1-Hourly,Time-averaged,Single-Level,Assimilation,Aerosol Diagnostics (extended) 0.625 x 0.5 degree V5.12.4 (M2T1NXADG)",1980-01-01,ongoing,4,C1276812829-GES_DISC,dioxide
+M2T1NXAER,5.12.4,"MERRA-2 tavg1_2d_aer_Nx: 2d,1-Hourly,Time-averaged,Single-Level,Assimilation,Aerosol Diagnostics 0.625 x 0.5 degree V5.12.4 (M2T1NXAER)",1980-01-01,ongoing,4,C1276812830-GES_DISC,dioxide
+M2TMNXADG,5.12.4,"MERRA-2 tavgM_2d_adg_Nx: 2d,Monthly mean,Time-averaged,Single-Level,Assimilation,Aerosol Diagnostics (extended) 0.625 x 0.5 degree V5.12.4 (M2TMNXADG)",1980-01-01,ongoing,4,C1276812865-GES_DISC,dioxide
+M2TMNXAER,5.12.4,"MERRA-2 tavgM_2d_aer_Nx: 2d,Monthly mean,Time-averaged,Single-Level,Assimilation,Aerosol Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNXAER)",1980-01-01,ongoing,4,C1276812866-GES_DISC,dioxide
+M2TUNXADG,5.12.4,"MERRA-2 tavgU_2d_adg_Nx: 2d,diurnal,Time-averaged,Single-Level,Assimilation,Aerosol Diagnostics (extended) 0.625 x 0.5 degree V5.12.4 (M2TUNXADG)",1980-01-01,ongoing,4,C1276812880-GES_DISC,dioxide
+M2TUNXAER,5.12.4,"MERRA-2 tavgU_2d_aer_Nx: 2d,diurnal,Time-averaged,Single-Level,Assimilation,Aerosol Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TUNXAER)",1980-01-01,ongoing,4,C1276812869-GES_DISC,dioxide
+ML2DGG,005,"MLS/Aura Level 2 Diagnostics, Geophysical Parameter Grid V005 (ML2DGG)",2004-08-02,ongoing,2,C1729925131-GES_DISC,dioxide
+ML2DGG,006,"MLS/Aura Level 2 Diagnostics, Geophysical Parameter Grid V006 (ML2DGG)",2004-08-02,ongoing,2,C3127197337-GES_DISC,dioxide
+ML2SO2,006,MLS/Aura Level 2 Sulfur Dioxide (SO2) Mixing Ratio V006 (ML2SO2),2004-08-02,ongoing,2,C3127198420-GES_DISC,dioxide
+ML2SO2,005,MLS/Aura Level 2 Sulfur Dioxide (SO2) Mixing Ratio V005 (ML2SO2),2004-08-02,ongoing,2,C1729926699-GES_DISC,dioxide
+ML2SO2_NRT,005,MLS/Aura Near-Real-Time L2 Sulfur Dioxide (SO2) Mixing Ratio V005 (ML2SO2_NRT),2021-09-21,ongoing,2,C2131772275-GES_DISC,dioxide
+ML3DBSO2,005,MLS/Aura Level 3 Daily Binned Sulfur Dioxide (SO2) Mixing Ratio on Assorted Grids V005 (ML3DBSO2),2004-08-02,ongoing,3,C2042566261-GES_DISC,dioxide
+ML3DZSO2,005,MLS/Aura Level 3 Daily Binned Sulfur Dioxide (SO2) Mixing Ratio on Zonal and Similar Grids V005 (ML3DZSO2),2004-08-02,ongoing,3,C2042567405-GES_DISC,dioxide
+ML3MBSO2,005,MLS/Aura Level 3 Monthly Binned Sulfur Dioxide (SO2) Mixing Ratio on Assorted Grids V005 (ML3MBSO2),2004-08-02,ongoing,3,C2042569148-GES_DISC,dioxide
+MSAQSO2L4,2,Multi-Satellite Air Quality Sulfur Dioxide (SO2) Database Long-Term L4 Global V2 (MSAQSO2L4),2005-01-01,2025-12-31,4,C2503251631-GES_DISC,dioxide
+MSVOLSO2L4,4,Multi-Satellite Volcanic Sulfur Dioxide L4 Long-Term Global Database V4 (MSVOLSO2L4),1978-10-31,ongoing,4,C2027429276-GES_DISC,dioxide
+MultiInstrumentFusedXCO2,4,Multi-Instrument Fused bias-corrected XCO2 and other select fields aggregated as Level 3 daily files V4 (MultiInstrumentFusedXCO2),2014-09-06,2021-05-20,3,C3278456754-GES_DISC,dioxide
+MultiInstrumentFusedXCO2,3,Multi-Instrument Fused bias-corrected XCO2 and other select fields aggregated as Level 4 daily files V3 (MultiInstrumentFusedXCO2),2014-09-06,2020-07-31,4,C2219373930-GES_DISC,dioxide
+OCO2GriddedXCO2,4,OCO-2 Gridded bias-corrected XCO2 and other select fields aggregated as Level 3 daily files V4 (OCO2GriddedXCO2),2014-09-06,2024-03-31,3,C3278456736-GES_DISC,dioxide
+OCO2GriddedXCO2,3,OCO-2 Gridded bias-corrected XCO2 and other select fields aggregated as Level 4 daily files V3 (OCO2GriddedXCO2),2014-09-06,2022-02-13,4,C2219374142-GES_DISC,dioxide
+OCO2GriddedXCO2_SIF,4,"OCO-2 Gridded bias-corrected XCO2, SIF, and other select fields aggregated as Level 3 daily files V4 (OCO2GriddedXCO2_SIF)",2014-09-06,2024-03-30,3,C3278456620-GES_DISC,dioxide
+OCO2_Eph,11,OCO-2 Level 0 spacecraft ephemerides V11 (OCO2_Eph),2019-11-30,2024-04-01,0,C2237418345-GES_DISC,dioxide
+OCO2_Eph,11r,"OCO-2 Level 0 spacecraft ephemerides, Retrospective Processing V11r (OCO2_Eph)",2014-07-02,2022-03-01,0,C2248663220-GES_DISC,dioxide
+OCO2_Eph,11.2,OCO-2 Level 0 spacecraft ephemerides V11.2 (OCO2_Eph),2024-04-01,ongoing,0,C2951292138-GES_DISC,dioxide
+OCO2_GEOS_L3CO2_DAY,10r,"OCO-2 GEOS Level 3 daily, 0.5x0.625 assimilated CO2 V10r (OCO2_GEOS_L3CO2_DAY)",2014-06-01,2022-02-28,3,C2240248762-GES_DISC,dioxide
+OCO2_GEOS_L3CO2_MONTH,10r,"OCO-2 GEOS Level 3 monthly, 0.5x0.625 assimilated CO2 V10r (OCO2_GEOS_L3CO2_MONTH)",2014-06-01,2022-02-01,3,C2240248790-GES_DISC,dioxide
+OCO2_L1B_Calibration,11.2r,"OCO-2 Level 1B calibrated, geolocated calibration spectra Retrospective Processing V11.2r (OCO2_L1B_Calibration)",2019-11-30,ongoing,1B,C3090453484-GES_DISC,dioxide
+OCO2_L1B_Calibration,11.2,"OCO-2 Level 1B calibrated, geolocated calibration spectra V11.2 (OCO2_L1B_Calibration)",2019-11-30,ongoing,1B,C2913031060-GES_DISC,dioxide
+OCO2_L1B_Calibration,11r,"OCO-2 Level 1B calibrated, geolocated calibration spectra, Retrospective Processing V11r (OCO2_L1B_Calibration)",2014-09-06,2024-04-01,1B,C2248663235-GES_DISC,dioxide
+OCO2_L1B_Science,11r,"OCO-2 Level 1B calibrated, geolocated science spectra, Retrospective Processing V11r (OCO2_L1B_Science)",2014-09-06,2024-04-01,1B,C2248652600-GES_DISC,dioxide
+OCO2_L1B_Science,11.2r,"OCO-2 Level 1B calibrated, geolocated science spectra Retrospective Processing V11.2r (OCO2_L1B_Science)",2019-11-30,ongoing,1B,C3090438902-GES_DISC,dioxide
+OCO2_L1B_Science,11.2,"OCO-2 Level 1B calibrated, geolocated science spectra V11.2 (OCO2_L1B_Science)",2019-11-30,ongoing,1B,C2913032028-GES_DISC,dioxide
+OCO2_L1aIn_Pixel,11r,"OCO-2 Level 1A collated, parsed, calibration data, Retrospective Processing V11r (OCO2_L1aIn_Pixel)",2014-07-21,2022-02-28,1A,C2248663248-GES_DISC,dioxide
+OCO2_L1aIn_Pixel,11.2,"OCO-2 Level 1A collated, parsed, calibration data V11.2 (OCO2_L1aIn_Pixel)",2019-11-30,ongoing,1A,C2913020272-GES_DISC,dioxide
+OCO2_L1aIn_Pixel,11,"OCO-2 Level 1A collated, parsed, calibration data V11 (OCO2_L1aIn_Pixel)",2019-11-30,2024-03-31,1A,C2237419212-GES_DISC,dioxide
+OCO2_L1aIn_Sample,11.2,"OCO-2 Level 1A collated, parsed, science or calibration data V11.2 (OCO2_L1aIn_Sample)",2019-11-30,ongoing,1A,C2913021415-GES_DISC,dioxide
+OCO2_L1aIn_Sample,11,"OCO-2 Level 1A collated, parsed, science or calibration data V11 (OCO2_L1aIn_Sample)",2019-11-30,2024-04-01,1A,C2237419562-GES_DISC,dioxide
+OCO2_L1aIn_Sample,11r,"OCO-2 Level 1A collated, parsed, science or calibration data, Retrospective Processing V11r (OCO2_L1aIn_Sample)",2014-07-03,2022-03-01,1A,C2248663267-GES_DISC,dioxide
+OCO2_L2_ABand,11r,"OCO-2 Level 2 spatially ordered geolocated retrievals screened using the A-band Preprocessor, Retrospective Processing V11r (OCO2_L2_ABand)",2014-09-01,2024-04-01,2,C2248652681-GES_DISC,dioxide
+OCO2_L2_ABand,11.2r,OCO-2 Level 2 spatially ordered geolocated retrievals screened using the A-band Preprocessor Retrospective Processing V11.2r (OCO2_L2_ABand),2019-11-30,ongoing,2,C3133987494-GES_DISC,dioxide
+OCO2_L2_ABand,11.2,OCO-2 Level 2 spatially ordered geolocated retrievals screened using the A-band Preprocessor V11.2 (OCO2_L2_ABand),2019-11-30,ongoing,2,C2913024412-GES_DISC,dioxide
+OCO2_L2_CO2Prior,11r,"OCO-2 Level 2 CO2 prior based on CO2 monthly flask record, global meteorology, and age of air, Retrospective Processing V11r (OCO2_L2_CO2Prior)",2014-09-01,2024-04-01,2,C2248652595-GES_DISC,dioxide
+OCO2_L2_CO2Prior,11.2r,"OCO-2 Level 2 CO2 prior based on CO2 monthly flask record, global meteorology, and age of air Retrospective Processing V11.2r (OCO2_L2_CO2Prior)",2019-11-30,ongoing,2,C3090475443-GES_DISC,dioxide
+OCO2_L2_CO2Prior,11.2,"OCO-2 Level 2 CO2 prior based on CO2 monthly flask record, global meteorology, and age of air V11.2 (OCO2_L2_CO2Prior)",2019-11-30,ongoing,2,C2913025334-GES_DISC,dioxide
+OCO2_L2_Diagnostic,11r,"OCO-2 Level 2 geolocated XCO2 retrieval results and algorithm diagnostic information, Retrospective Processing V11r (OCO2_L2_Diagnostic)",2014-09-01,2024-04-01,2,C2248652598-GES_DISC,dioxide
+OCO2_L2_Diagnostic,11.2r,OCO-2 Level 2 geolocated XCO2 retrieval results and algorithm diagnostic information Retrospective Processing V11.2r (OCO2_L2_Diagnostic),2019-11-30,ongoing,2,C3090472506-GES_DISC,dioxide
+OCO2_L2_Diagnostic,11.2,OCO-2 Level 2 geolocated XCO2 retrieval results and algorithm diagnostic information V11.2 (OCO2_L2_Diagnostic),2019-11-30,ongoing,2,C2913027533-GES_DISC,dioxide
+OCO2_L2_Fwd_FP,11.3,"OCO-2 Level 2 bias-corrected XCO2 and other select fields from the full-physics retrieval, Forward processing V11.3 (OCO2_L2_Fwd_FP_11.3)",2025-02-02,ongoing,2,C4203038223-GES_DISC,dioxide
+OCO2_L2_Fwd_FP,11.2,"OCO-2 Level 2 bias-corrected XCO2 and other select fields from the full-physics retrieval, Forward processing V11.2 (OCO2_L2_Fwd_FP_11.2)",2025-02-02,ongoing,2,C3518656426-GES_DISC,dioxide
+OCO2_L2_Fwd_SIF,11.2,"OCO-2 Level 2 bias-corrected solar-induced fluorescence and other select fields from the IMAP-DOAS algorithm, Forward processing V11.2 (OCO2_L2_Fwd_SIF_11.2)",2014-09-01,ongoing,2,C3518656691-GES_DISC,dioxide
+OCO2_L2_Fwd_SIF,11.4,"OCO-2 Level 2 bias-corrected solar-induced fluorescence and other select fields from the IMAP-DOAS algorithm, Forward processing V11.4 (OCO2_L2_Fwd_SIF_11.4)",2014-09-01,ongoing,2,C4367819793-GES_DISC,dioxide
+OCO2_L2_IMAPDOAS,11r,"OCO-2 Level 2 spatially ordered geolocated retrievals screened using the IMAP-DOAS Preprocessor (IDP), Retrospective Processing V11r (OCO2_L2_IMAPDOAS)",2014-09-01,2024-04-01,2,C2248652608-GES_DISC,dioxide
+OCO2_L2_IMAPDOAS,11.2r,OCO-2 Level 2 spatially ordered geolocated retrievals screened using the IMAP-DOAS Preprocessor (IDP) Retrospective Processing V11.2r (OCO2_L2_IMAPDOAS),2019-11-30,ongoing,2,C3090466573-GES_DISC,dioxide
+OCO2_L2_IMAPDOAS,11.2,OCO-2 Level 2 spatially ordered geolocated retrievals screened using the IMAP-DOAS Preprocessor (IDP) V11.2 (OCO2_L2_IMAPDOAS),2019-11-30,ongoing,2,C2913029029-GES_DISC,dioxide
+OCO2_L2_Lite_FP,11.2r,"OCO-2 Level 2 bias-corrected XCO2 and other select fields from the full-physics retrieval aggregated as daily files, Retrospective processing V11.2r (OCO2_L2_Lite_FP)",2014-06-01,ongoing,2,C2912085112-GES_DISC,dioxide
+OCO2_L2_Lite_FP,11.3r,"OCO-2 Level 2 bias-corrected XCO2 and other select fields from the full-physics retrieval aggregated as daily files, Retrospective processing V11.3r (OCO2_L2_Lite_FP)",2014-06-01,ongoing,2,C4203038017-GES_DISC,dioxide
+OCO2_L2_Lite_SIF,11r,"OCO-2 Level 2 bias-corrected solar-induced fluorescence and other select fields from the IMAP-DOAS algorithm aggregated as daily files, Retrospective processing V11r (OCO2_L2_Lite_SIF)",2014-09-01,2024-03-31,2,C2248652649-GES_DISC,dioxide
+OCO2_L2_Lite_SIF,11.2r,"OCO-2 Level 2 bias-corrected solar-induced fluorescence and other select fields from the IMAP-DOAS algorithm aggregated as daily files, Retrospective processing V11.2r (OCO2_L2_Lite_SIF)",2014-09-01,ongoing,2,C2912084771-GES_DISC,dioxide
+OCO2_L2_Met,11r,"OCO-2 Level 2 meteorological parameters interpolated from global assimilation model for each sounding, Retrospective Processing V11r (OCO2_L2_Met)",2014-09-01,2024-04-01,2,C2248652634-GES_DISC,dioxide
+OCO2_L2_Met,11.2r,OCO-2 Level 2 meteorological parameters interpolated from global assimilation model for each sounding Retrospective Processing V11.2r (OCO2_L2_Met),2014-06-01,ongoing,2,C3090460016-GES_DISC,dioxide
+OCO2_L2_Met,11.2,OCO-2 Level 2 meteorological parameters interpolated from global assimilation model for each sounding V11.2 (OCO2_L2_Met),2019-11-30,ongoing,2,C2913029880-GES_DISC,dioxide
+OCO2_L2_Standard,11r,"OCO-2 Level 2 geolocated XCO2 retrievals results, physical model, Retrospective Processing V11r (OCO2_L2_Standard)",2014-09-01,2024-04-01,2,C2248652620-GES_DISC,dioxide
+OCO2_L2_Standard,11.2r,"OCO-2 Level 2 geolocated XCO2 retrievals results, physical model Retrospective Processing V11.2r (OCO2_L2_Standard)",2019-11-30,ongoing,2,C3090432546-GES_DISC,dioxide
+OCO2_L2_Standard,11.2,"OCO-2 Level 2 geolocated XCO2 retrievals results, physical model V11.2 (OCO2_L2_Standard)",2019-11-30,ongoing,2,C2913033111-GES_DISC,dioxide
+OCO3_L1B_Calibration,11,"OCO-3 Level 1B calibrated, geolocated calibration spectra, Forward Processing V11 (OCO3_L1B_Calibration)",2019-12-17,ongoing,1B,C3272764534-GES_DISC,dioxide
+OCO3_L1B_Calibration,11r,"OCO-3 Level 1B calibrated, geolocated calibration spectra, Retrospective Processing V11r (OCO3_L1B_Calibration)",2019-08-06,ongoing,1B,C2916548539-GES_DISC,dioxide
+OCO3_L1B_Science,11r,"OCO-3 Level 1B calibrated, geolocated science spectra, Retrospective Processing V11r (OCO3_L1B_Science)",2019-08-06,ongoing,1B,C2910091100-GES_DISC,dioxide
+OCO3_L1B_Science,11,"OCO-3 Level 1B calibrated, geolocated science spectra, Forward Processing V11 (OCO3_L1B_Science)",2019-08-06,ongoing,1B,C3272764389-GES_DISC,dioxide
+OCO3_L1aAE,11r,"OCO-3 Instrument Attitude and Ephemeris Data for One Specific Solar Day, Retrospective Processing V11r (OCO3_L1aAE)",2014-07-03,ongoing,1A,C3268263050-GES_DISC,dioxide
+OCO3_L1aAE,11,"OCO-3 Instrument Attitude and Ephemeris Data for One Specific Solar Day, Forward Processing V11 (OCO3_L1aAE)",2014-07-03,ongoing,1A,C3277749779-GES_DISC,dioxide
+OCO3_L1aIn_Pixel,11r,"OCO-3 Level 1A collated, parsed, science or calibration data, Retrospective Processing V11r (OCO3_L1aIn_Pixel)",2014-07-03,ongoing,1A,C3268215274-GES_DISC,dioxide
+OCO3_L1aIn_Pixel,11,"OCO-3 Level 1A collated, parsed, calibration data V11 (OCO3_L1aIn_Pixel)",2019-11-30,ongoing,1A,C3277752333-GES_DISC,dioxide
+OCO3_L1aIn_Sample,11r,"OCO-3 Level 1A collated, parsed, science or calibration data, Retrospective Processing V11r (OCO3_L1aIn_Sample)",2014-07-03,ongoing,1A,C3268212607-GES_DISC,dioxide
+OCO3_L1aIn_Sample,11,"OCO-3 Level 1A collated, parsed, science or calibration data V11 (OCO3_L1aIn_Sample)",2019-11-30,ongoing,1A,C3277756057-GES_DISC,dioxide
+OCO3_L2_ABand,11r,"OCO-3 Level 2 spatially ordered geolocated retrievals screened using the A-band Preprocessor, Retrospective Processing V11r (OCO3_L2_ABand)",2019-08-06,ongoing,2,C2910090703-GES_DISC,dioxide
+OCO3_L2_ABand,11,"OCO-3 Level 2 spatially ordered geolocated retrievals screened using the A-band Preprocessor, Forward Processing V11 (OCO3_L2_ABand)",2019-08-06,ongoing,2,C3272764592-GES_DISC,dioxide
+OCO3_L2_CO2Prior,11r,"OCO-3 Level 2 CO2 prior based on CO2 monthly flask record, global meteorology, and age of air, Retrospective Processing V11r (OCO3_L2_CO2Prior)",2019-08-06,ongoing,2,C2910091433-GES_DISC,dioxide
+OCO3_L2_CO2Prior,11,"OCO-3 Level 2 CO2 prior based on CO2 monthly flask record, global meteorology, and age of air, Forward Processing V11 (OCO3_L2_CO2Prior)",2019-08-06,ongoing,2,C3272764606-GES_DISC,dioxide
+OCO3_L2_Diagnostic,11r,"OCO-3 Level 2 geolocated XCO2 retrieval results and algorithm diagnostic information, Retrospective Processing V11r (OCO3_L2_Diagnostic)",2019-08-06,ongoing,2,C2910090458-GES_DISC,dioxide
+OCO3_L2_Diagnostic,11,"OCO-3 Level 2 geolocated XCO2 retrieval results and algorithm diagnostic information, Forward Processing V11 (OCO3_L2_Diagnostic)",2019-08-06,ongoing,2,C3272764658-GES_DISC,dioxide
+OCO3_L2_Fwd_FP,11,"OCO-3 Level 2 bias-corrected XCO2 and other select fields from the full-physics retrieval aggregated as daily files, Forward Processing V11 (OCO3_L2_Fwd_FP)",2019-08-06,ongoing,2,C3432441186-GES_DISC,dioxide
+OCO3_L2_Fwd_SIF,11,"OCO-3 Level 2 bias-corrected solar-induced fluorescence and other select fields from the IMAP-DOAS algorithm aggregated as daily files, Forward Processing V11 (OCO3_L2_Fwd_SIF)",2019-08-06,ongoing,2,C3432442992-GES_DISC,dioxide
+OCO3_L2_IMAPDOAS,11r,"OCO-3 Level 2 spatially ordered geolocated retrievals screened using the IMAP-DOAS Preprocessor (IDP), Retrospective Processing V11r (OCO3_L2_IMAPDOAS)",2019-08-06,ongoing,2,C2910089793-GES_DISC,dioxide
+OCO3_L2_IMAPDOAS,11,"OCO-3 Level 2 spatially ordered geolocated retrievals screened using the IMAP-DOAS Preprocessor (IDP), Forward Processing V11 (OCO3_L2_IMAPDOAS)",2019-08-06,ongoing,2,C3272764615-GES_DISC,dioxide
+OCO3_L2_Lite_FP,11r,"OCO-3 Level 2 bias-corrected XCO2 and other select fields from the full-physics retrieval aggregated as daily files, Retrospective processing V11r (OCO3_L2_Lite_FP)",2019-08-06,ongoing,2,C2910086168-GES_DISC,dioxide
+OCO3_L2_Lite_SIF,11r,"OCO-3 Level 2 bias-corrected solar-induced fluorescence and other select fields from the IMAP-DOAS algorithm aggregated as daily files, Retrospective processing V11r (OCO3_L2_Lite_SIF)",2019-08-06,ongoing,2,C2910085832-GES_DISC,dioxide
+OCO3_L2_Met,11r,"OCO-3 Level 2 meteorological parameters interpolated from global assimilation model for each sounding, Retrospective Processing V11r (OCO3_L2_Met)",2019-08-06,ongoing,2,C2910089375-GES_DISC,dioxide
+OCO3_L2_Met,11,"OCO-3 Level 2 meteorological parameters interpolated from global assimilation model for each sounding, Forward Processing V11 (OCO3_L2_Met)",2019-08-06,ongoing,2,C3272764634-GES_DISC,dioxide
+OCO3_L2_Standard,11,"OCO-3 Level 2 geolocated XCO2 retrievals results, physical model, Forward Processing V11 (OCO3_L2_Standard)",2019-08-06,ongoing,2,C3272764617-GES_DISC,dioxide
+OCO3_L2_Standard,11r,"OCO-3 Level 2 geolocated XCO2 retrievals results, physical model, Retrospective Processing V11r (OCO3_L2_Standard)",2019-08-06,ongoing,2,C2910086890-GES_DISC,dioxide
+OMI_MINDS_NO2,2,"OMI/Aura NO2 Tropospheric, Stratospheric and Total Columns MINDS 1-Orbit L2 Swath 13 km x 24 km V2 (OMI_MINDS_NO2)",2004-10-01,ongoing,2,C4128585682-GES_DISC,dioxide
+OMI_MINDS_NO2G,1.1,"OMI/Aura NO2 Tropospheric, Stratospheric & Total Columns MINDS Daily L2 Global Gridded 0.25 degree x 0.25 degree V1.1 (OMI_MINDS_NO2G)",2004-10-01,ongoing,2G,C2232479983-GES_DISC,dioxide
+OMI_MINDS_NO2d,1.1,"OMI/Aura NO2 Tropospheric, Stratospheric & Total Columns MINDS Daily L3 Global Gridded 0.25 degree x 0.25 degree V1.1 (OMI_MINDS_NO2d)",2004-10-01,ongoing,3,C2215175232-GES_DISC,dioxide
+OMNO2,004,"OMI/Aura Nitrogen Dioxide (NO2) Total and Tropospheric Column 1-orbit L2 Swath 13x24 km Ver 5.0, Col 004 (OMNO2)",2004-10-01,ongoing,2,C3333494968-GES_DISC,dioxide
+OMNO2,003,OMI/Aura Nitrogen Dioxide (NO2) Total and Tropospheric Column 1-orbit L2 Swath 13x24 km V003 (OMNO2),2004-10-01,ongoing,2,C1239966842-GES_DISC,dioxide
+OMNO2A,004,OMI/Aura Nitrogen Dioxide (NO2) Slant Column 1-orbit L2 Swath 13x24 km V004 (OMNO2A),2004-10-01,ongoing,2,C4067384397-GES_DISC,dioxide
+OMNO2AZ,004,OMI/Aura Nitrogen Dioxide (NO2) Slant Column Zoomed 1-orbit L2 Swath 13x12 km2 V004 (OMNO2AZ),2004-10-01,ongoing,2,C4140090370-GES_DISC,dioxide
+OMNO2G,003,OMI/Aura NO2 Total and Tropospheric Column Daily L2 Global Gridded 0.25 degree x 0.25 degree V3 (OMNO2G),2004-10-01,ongoing,2G,C1266136121-GES_DISC,dioxide
+OMNO2G,004,"OMI/Aura NO2 Total and Tropospheric Column Daily L2 Global Gridded 0.25 degree x 0.25 degree  Ver 5.0, Col 004 (OMNO2G)",2004-10-01,ongoing,2G,C4284660742-GES_DISC,dioxide
+OMNO2_CPR,003,OMI/Aura Level 2 Nitrogen Dioxide (NO2) Trace Gas Column Data 1-Orbit subset Swath along CloudSat track 1-Orbit Swath 13x24 km,2006-06-02,2018-03-02,2,C1236350981-GES_DISC,dioxide
+OMNO2d,004,"OMI/Aura NO2 Cloud-Screened Total and Tropospheric Column L3 Global Gridded 0.25 degree x 0.25 degree Ver 5.0, Col 004 (OMNO2d)",2004-10-01,ongoing,3,C3333493715-GES_DISC,dioxide
+OMNO2d,003,OMI/Aura NO2 Cloud-Screened Total and Tropospheric Column L3 Global Gridded 0.25 degree x 0.25 degree V3 (OMNO2d),2004-10-01,ongoing,3,C1266136111-GES_DISC,dioxide
+OMOCLO,004,OMI/Aura Chlorine Dioxide (OClO) Total Column 1-orbit L2 Swath 13x24 km V004 (OMOCLO),2004-10-01,ongoing,2,C3583092146-GES_DISC,dioxide
+OMOCLO,003,OMI/Aura Chlorine Dioxide (OClO) Total Column 1-orbit L2 Swath 13x24 km V003 (OMOCLO),2004-10-01,ongoing,2,C1239966829-GES_DISC,dioxide
+OMOCNUV,004,OMI/Aura Hyperspectral UV Irradiance and Underwater Attenuation Coefficient 1-Orbit L2 Swath 13x24km V004 (OMOCNUV),2004-10-01,ongoing,2,C3581236998-GES_DISC,dioxide
+OMPS_N20_NMSO2_PCA_L2_Step1,1,OMPS-N20 NM PCA SO2 Step 1 Total Column 1-Orbit L2 Swath 17x13km,2018-01-16,ongoing,2,C2808692512-GES_DISC,dioxide
+OMPS_NPP_NMNO2_L2,2,OMPS-NPP L2 NM Nitrogen Dioxide (NO2) Total and Tropospheric Column swath orbital V2 (OMPS_NPP_NMNO2_L2),2012-01-26,ongoing,2,C1396070100-GES_DISC,dioxide
+OMPS_NPP_NMSO2_L2,2,OMPS-NPP L2 NM Sulfur Dioxide (SO2) Total and Tropospheric Column swath orbital V2 (OMPS_NPP_NMSO2_L2),2012-01-26,ongoing,2,C1396070103-GES_DISC,dioxide
+OMPS_NPP_NMSO2_PCA_L2,2,OMPS/NPP PCA SO2 Total Column 1-Orbit L2 Swath 50x50km V2 (OMPS_NPP_NMSO2_PCA_L2),2012-01-26,ongoing,2,C1917909223-GES_DISC,dioxide
+OMPS_NPP_NMSO2_PCA_L3_DAILY,1,OMPS/NPP L3 NM PCA Sulfur Dioxide (SO2) Total Column Daily Best Pixel Global Gridded 0.25 degree x 0.25 degree V1 (OMPS_NPP_NMSO2_PCA_L3_DAILY),2012-01-26,ongoing,3,C2567923363-GES_DISC,dioxide
+OMSO2,004,OMI/Aura Sulphur Dioxide (SO2) Total Column 1-orbit L2 Swath 13x24 km V004 (OMSO2),2004-10-01,ongoing,2,C3454342607-GES_DISC,dioxide
+OMSO2,003,OMI/Aura Sulphur Dioxide (SO2) Total Column 1-orbit L2 Swath 13x24 km V003 (OMSO2),2004-10-01,ongoing,2,C1239966837-GES_DISC,dioxide
+OMSO2G,003,OMI/Aura Sulphur Dioxide (SO2) Total Column Daily L2 Global Gridded 0.125 degree x 0.125 degree V3 (OMSO2G),2004-10-01,ongoing,2G,C1266136113-GES_DISC,dioxide
+OMSO2G,004,OMI/Aura Sulphur Dioxide (SO2) Total Column Daily L2 Global Gridded 0.125 degree x 0.125 degree V004 (OMSO2G),2004-10-01,ongoing,2G,C3685693295-GES_DISC,dioxide
+OMSO2NR,004,OMI/Aura Sulphur Dioxide (SO2) Noise Reduced Total Column 1-orbit L2 Swath 13x24 km V004 (OMSO2NR),2004-10-01,ongoing,2,C4217517896-GES_DISC,dioxide
+OMSO2_CPR,003,OMI/Aura Level 2 Sulphur Dioxide (SO2) Trace Gas Column Data 1-Orbit Subset and Collocated Swath along CloudSat V003 (OMSO2_CPR),2006-06-01,2018-03-02,2,C1236350970-GES_DISC,dioxide
+OMSO2e,004,OMI/Aura Sulfur Dioxide (SO2) Total Column Daily L3 1 day Best Pixel in 0.25 degree x 0.25 degree V4 (OMSO2e),2004-10-01,ongoing,3,C3756242136-GES_DISC,dioxide
+OMSO2e,003,OMI/Aura Sulfur Dioxide (SO2) Total Column Daily L3 1 day Best Pixel in 0.25 degree x 0.25 degree V3 (OMSO2e),2004-10-01,ongoing,3,C1266136112-GES_DISC,dioxide
+S5P_L2__CH4____HiR_NRT,2,Sentinel-5P TROPOMI Near-Real-Time (NRT) Methane CH4 1-Orbit L2 5.5km x 7km V2 (S5P_L2__CH4____HiR_NRT),2025-11-26,ongoing,2,C3882784699-GES_DISC,dioxide
+S5P_L2__CH4____HiR_NRT,3,Sentinel-5P TROPOMI Near-Real-Time (NRT) Methane CH4 1-Orbit L2 5.5km x 7km V3 (S5P_L2__CH4____HiR_NRT),2025-11-26,ongoing,2,C4392195685-GES_DISC,dioxide
+S5P_L2__CLOUD__HiR,2,Sentinel-5P TROPOMI Cloud 1-Orbit L2 5.5km x 3.5km V2 (S5P_L2__CLOUD__HiR),2018-04-30,ongoing,2,C1918209669-GES_DISC,dioxide
+S5P_L2__HCHO___HiR,2,Sentinel-5P TROPOMI Tropospheric Formaldehyde HCHO 1-Orbit L2 5.5km x 3.5km V2 (S5P_L2__HCHO___HiR),2018-04-30,ongoing,2,C1918210023-GES_DISC,dioxide
+S5P_L2__NO2____HiR,2,Sentinel-5P TROPOMI Tropospheric NO2 1-Orbit L2 5.5km x 3.5km V2 (S5P_L2__NO2____HiR),2018-04-30,ongoing,2,C2089270961-GES_DISC,dioxide
+S5P_L2__NO2____HiR,3,Sentinel-5P TROPOMI Tropospheric NO2 1-Orbit L2 5.5km x 3.5km V3 (S5P_L2__NO2____HiR),2018-04-30,ongoing,2,C4392195862-GES_DISC,dioxide
+S5P_L2__NO2____HiR_NRT,2,Sentinel-5P TROPOMI Near-Real-Time (NRT) Tropospheric NO2 1-Orbit L2 5.5km x 3.5km V2 (S5P_L2__NO2____HiR_NRT),2025-01-27,ongoing,2,C3412185684-GES_DISC,dioxide
+S5P_L2__NO2____HiR_NRT,3,Sentinel-5P TROPOMI Near-Real-Time (NRT) Tropospheric NO2 1-Orbit L2 5.5km x 3.5km V3 (S5P_L2__NO2____HiR_NRT),2025-01-27,ongoing,2,C4392195910-GES_DISC,dioxide
+S5P_L2__O3_TCL,2,Sentinel-5P TROPOMI Tropospheric Ozone Column V2 (S5P_L2__O3_TCL),2018-04-30,ongoing,2,C1918211535-GES_DISC,dioxide
+S5P_L2__O3_TCL,1,Sentinel-5P TROPOMI Tropospheric Ozone Column V1 (S5P_L2__O3_TCL),2018-04-30,2020-07-07,2,C1442068507-GES_DISC,dioxide
+S5P_L2__O3_TOT_HiR,2,Sentinel-5P TROPOMI Total Ozone Column 1-Orbit L2 5.5km x 3.5km V2 (S5P_L2__O3_TOT_HiR),2018-04-30,ongoing,2,C1918209846-GES_DISC,dioxide
+S5P_L2__SO2____HiR,2,Sentinel-5P TROPOMI Sulphur Dioxide SO2 1-Orbit L2 5.5km x 3.5km V2 (S5P_L2__SO2____HiR),2018-04-30,ongoing,2,C1918210292-GES_DISC,dioxide
+S5P_L2__SO2____HiR,3,Sentinel-5P TROPOMI Sulphur Dioxide SO2 1-Orbit L2 5.5km x 3.5km V3 (S5P_L2__SO2____HiR),2018-04-30,ongoing,2,C4392196254-GES_DISC,dioxide
+S5P_L2__SO2____HiR_NRT,2,Sentinel-5P TROPOMI Near-Real-Time (NRT) Sulphur Dioxide SO2 1-Orbit L2 5.5km x 3.5km V2 (S5P_L2__SO2____HiR_NRT),2025-01-27,ongoing,2,C3412185765-GES_DISC,dioxide
+S5P_L2__SO2____HiR_NRT,3,Sentinel-5P TROPOMI Near-Real-Time (NRT) Sulphur Dioxide SO2 1-Orbit L2 5.5km x 3.5km V3 (S5P_L2__SO2____HiR_NRT),2025-01-27,ongoing,2,C4392196377-GES_DISC,dioxide
+SFC_NITROGEN_DIOXIDE_CONC,1,Nitrogen Dioxide Surface-Level Annual Average Concentrations V1 (SFC_NITROGEN_DIOXIDE_CONC),1990-01-01,2020-12-31,4,C2622658960-GES_DISC,dioxide
+SIRSN3L1,001,SIRS/Nimbus-3 Level 1 Radiance Data V001 (SIRSN3L1),1969-04-14,1970-06-19,1,C1622768257-GES_DISC,dioxide
+SIRSN4L1,001,SIRS/Nimbus-4 Level 1 Radiance Data V001 (SIRSN4L1),1970-04-08,1971-04-08,1,C1622768259-GES_DISC,dioxide
+SNDR13CHRP1,2,"Sounder SIPS: Sun Synchronous 13:30 orbit Climate Hyperspectral InfraRed Product (CHIRP): Calibrated Radiances from EOS-Aqua, S-NPP, JPSS-1/NOAA-20, V2 (SNDR13CHRP1)",2002-09-01,ongoing,1,C2011289787-GES_DISC,dioxide
+SNDR13CHRP1AQCal,2,"Sounder SIPS: Sun Synchronous 13:30 orbit Climate Hyperspectral InfraRed Product (CHIRP): Calibrated Radiances from EOS-Aqua, V2 (SNDR13CHRP1AQCal)",2016-09-01,ongoing,1,C2011289898-GES_DISC,dioxide
+SNDR13CHRP1J1Cal,2,"Sounder SIPS: Sun Synchronous 13:30 orbit Climate Hyperspectral InfraRed Product (CHIRP): Calibrated Radiances from JPSS-1/NOAA-20, V2 (SNDR13CHRP1J1Cal)",2018-02-17,ongoing,1,C2011290109-GES_DISC,dioxide
+SNDR13CHRP1SNCal,2,"Sounder SIPS: Sun Synchronous 13:30 orbit Climate Hyperspectral InfraRed Product (CHIRP): Calibrated Radiances from S-NPP, V2 (SNDR13CHRP1SNCal)",2015-11-02,ongoing,1,C2011289954-GES_DISC,dioxide
+SNDRAQIL2CCPCCR,2,Sounder SIPS: AQUA AIRS IR-only Level 2 CLIMCAPS: Cloud Cleared Radiances V2 (SNDRAQIL2CCPCCR),2002-08-30,ongoing,2,C1693440794-GES_DISC,dioxide
+SNDRAQIL2CCPRET,2,"Sounder SIPS: AQUA AIRS IR-only Level 2 CLIMCAPS : Atmosphere, cloud and surface geophysical state V2 (SNDRAQIL2CCPRET)",2002-08-30,ongoing,2,C1693440795-GES_DISC,dioxide
+SNDRAQIL2CPS,2.1,Sounder SIPS: AQUA AIRS IR-only Level 2 CLIMCAPS: retrieved atmospheric state V2.1 (SNDRAQIL2CPS),2002-08-31,ongoing,2,C2790952275-GES_DISC,dioxide
+SNDRAQIL2JSFRET,2,Aqua AIRS Level 2 JoSFRA Retrieval Standard: Atmosphere cloud and surface geophysical state per footprint V2,2002-08-30,ongoing,2,C2788811366-GES_DISC,dioxide
+SNDRAQIL3CDCCP,2,Sounder SIPS: AQUA AIRS IR-only Level 3 CLIMCAPS : Comprehensive Quality Control Gridded Daily V2 (SNDRAQIL3CDCCP),2002-08-31,ongoing,3,C1693440800-GES_DISC,dioxide
+SNDRAQIL3CMCCP,2,Sounder SIPS: AQUA AIRS IR-only Level 3 CLIMCAPS: Comprehensive Quality Control Gridded Monthly V2 (SNDRAQIL3CMCCP),2002-08-31,ongoing,3,C1693440801-GES_DISC,dioxide
+SNDRAQIL3SDCCP,2,Sounder SIPS: AQUA AIRS IR-only Level 3 CLIMCAPS: Specific Quality Control Gridded Daily V2 (SNDRAQIL3SDCCP),2002-08-31,ongoing,3,C1693440802-GES_DISC,dioxide
+SNDRAQIL3SMCCP,2,Sounder SIPS: AQUA AIRS IR-only Level 3 CLIMCAPS: Specific Quality Control Gridded Monthly V2 (SNDRAQIL3SMCCP),2002-08-31,ongoing,3,C1693440803-GES_DISC,dioxide
+SNDRAQIML2CCPRET,2,"Sounder SIPS: AQUA AIRS IR + MW Level 2 CLIMCAPS: Atmosphere, cloud and surface geophysical state V2 (SNDRAQIML2CCPRET)",2002-08-30,2016-09-25,2,C1693440798-GES_DISC,dioxide
+SNDRAQIML2CPS,2.1,Sounder SIPS: AQUA AIRS IR + MW Level 2 CLIMCAPS: Retrieved atmospheric state V2.1 (SNDRAQIML2CPS),2002-08-31,2016-09-25,2,C2790934208-GES_DISC,dioxide
+SNDRAQIML3CDCCP,2,Sounder SIPS: AQUA AIRS IR + MW Level 3 CLIMCAPS : Comprehensive Quality Control Gridded Daily V2 (SNDRAQIML3CDCCP),2002-08-31,2016-09-26,3,C1693440804-GES_DISC,dioxide
+SNDRAQIML3CMCCP,2,Sounder SIPS: AQUA AIRS IR + MW Level 3 CLIMCAPS : Comprehensive Quality Control Gridded Monthly V2 (SNDRAQIML3CMCCP),2002-08-31,2016-10-01,3,C1693440807-GES_DISC,dioxide
+SNDRAQIML3SDCCP,2,Sounder SIPS: AQUA AIRS IR MW Level 3 CLIMCAPS : Specific Quality Control Gridded Daily V2 (SNDRAQIML3SDCCP),2002-08-31,2016-09-26,3,C1693440821-GES_DISC,dioxide
+SNDRAQIML3SMCCP,2,Sounder SIPS: AQUA AIRS IR + MW Level 3 CLIMCAPS: Specific Quality Control Gridded Monthly V2 (SNDRAQIML3SMCCP),2002-08-31,2016-10-01,3,C1693440838-GES_DISC,dioxide
+SNDRJ1CrISL1BPCARED,3.0,JPSS-1 CrIS Level 1B Principal Component Analysis / Rapid Event Detection V3.0 (SNDRJ1CrISL1BPCARED),2018-01-05,ongoing,1B,C2939921214-GES_DISC,dioxide
+SNDRJ1IML2CCPRET,2,Sounder SIPS: JPSS-1 CrIS Level 2 CLIMCAPS: Atmosphere cloud and surface geophysical state V2 (SNDRJ1IML2CCPRET),2018-02-17,ongoing,2,C1692982090-GES_DISC,dioxide
+SNDRJ1IML2CPS,2.1,Sounder SIPS: JPSS-1 CrIMSS Level 2 CLIMCAPS: retrieved atmospheric state V2.1 (SNDRJ1IML2CPS),2015-11-02,ongoing,2,C2790945504-GES_DISC,dioxide
+SNDRJ1IML3CDCCP,2,Sounder SIPS: JPSS-1 CrIS Level 3 Comprehensive Quality Control Gridded Daily CLIMCAPS V2 (SNDRJ1IML3CDCCP),2018-02-17,ongoing,3,C1692982094-GES_DISC,dioxide
+SNDRJ1IML3CMCCP,2,Sounder SIPS: JPSS-1 CrIS Level 3 Comprehensive Quality Control Gridded Monthly CLIMCAPS V2 (SNDRJ1IML3CMCCP),2018-02-01,ongoing,3,C1692982095-GES_DISC,dioxide
+SNDRJ1IML3SDCCP,2,Sounder SIPS: JPSS-1 CrIS Level 3 Specific Quality Control Gridded Daily CLIMCAPS V2 (SNDRJ1IML3SDCCP),2018-02-17,ongoing,3,C1692982096-GES_DISC,dioxide
+SNDRJ1IML3SMCCP,2,Sounder SIPS: JPSS-1 CrIS Level 3 Specific Quality Control Gridded Monthly CLIMCAPS V2 (SNDRJ1IML3SMCCP),2018-02-01,ongoing,3,C1692982099-GES_DISC,dioxide
+SNDRSNIML2CCPRET,2,Sounder SIPS: Suomi NPP CrIMSS Level 2 CLIMCAPS Full Spectral Resolution: Atmosphere cloud and surface geophysical state V2 (SNDRSNIML2CCPRET),2015-11-02,2021-05-21,2,C1692982075-GES_DISC,dioxide
+SNDRSNIML2CCPRETN,2,Sounder SIPS: Suomi NPP CrIMSS Level 2 CLIMCAPS Normal Spectral Resolution: Atmosphere cloud and surface geophysical state V2 (SNDRSNIML2CCPRETN),2012-01-20,ongoing,2,C1692982070-GES_DISC,dioxide
+SNDRSNIML2CPS,2.1,Sounder SIPS: Suomi NPP CrIMSS Level 2 CLIMCAPS Full Spectral Resolution: retrieved atmospheric state V2.1 (SNDRSNIML2CPS),2015-11-02,ongoing,2,C2790892760-GES_DISC,dioxide
+SNDRSNIML2CPSN,2.1,Sounder SIPS: Suomi NPP CrIMSS Level 2 CLIMCAPS Normal Spectral Resolution: retrieved atmospheric state V2.1 (SNDRSNIML2CPSN),2012-01-20,ongoing,2,C2790909464-GES_DISC,dioxide
+SNDRSNIML3CDCCP,2,Sounder SIPS: Suomi NPP CrIMSS Level 3 Comprehensive Quality Control Gridded Daily CLIMCAPS Full Spectral Resolution V2 (SNDRSNIML3CDCCP),2015-11-02,ongoing,3,C1692982085-GES_DISC,dioxide
+SNDRSNIML3CDCCPN,2,Sounder SIPS: Suomi NPP CrIMSS Level 3 Comprehensive Quality Control Gridded Daily CLIMCAPS Normal Spectral Resolution V2 (SNDRSNIML3CDCCPN),2012-04-19,ongoing,3,C1692982078-GES_DISC,dioxide
+SNDRSNIML3CMCCP,2,Sounder SIPS: Suomi NPP CrIMSS Level 3 Comprehensive Quality Control Gridded Monthly CLIMCAPS Full Spectral Resolution V2 (SNDRSNIML3CMCCP),2015-11-01,ongoing,3,C1692982087-GES_DISC,dioxide
+SNDRSNIML3CMCCPN,2,Sounder SIPS: Suomi NPP CrIMSS Level 3 Comprehensive Quality Control Gridded Monthly CLIMCAPS Normal Spectral Resolution V2 (SNDRSNIML3CMCCPN),2012-04-01,ongoing,3,C1692982080-GES_DISC,dioxide
+SNDRSNIML3SDCCP,2,Sounder SIPS: Suomi NPP CrIMSS Level 3 Specific Quality Control Gridded Daily CLIMCAPS Full Spectral Resolution V2 (SNDRSNIML3SDCCP),2015-11-02,ongoing,3,C1692982088-GES_DISC,dioxide
+SNDRSNIML3SDCCPN,2,Sounder SIPS: Suomi NPP CrIMSS Level 3 Specific Quality Control Gridded Daily CLIMCAPS Normal Spectral Resolution V2 (SNDRSNIML3SDCCPN),2012-04-19,ongoing,3,C1692982081-GES_DISC,dioxide
+SNDRSNIML3SMCCP,2,Sounder SIPS: Suomi NPP CrIMSS Level 3 Specific Quality Control Gridded Monthly CLIMCAPS Full Spectral Resolution V2 (SNDRSNIML3SMCCP),2015-11-01,ongoing,3,C1692982089-GES_DISC,dioxide
+SNDRSNIML3SMCCPN,2,Sounder SIPS: Suomi NPP CrIMSS Level 3 Specific Quality Control Gridded Monthly CLIMCAPS Normal Spectral Resolution V2 (SNDRSNIML3SMCCPN),2012-04-01,ongoing,3,C1692982082-GES_DISC,dioxide
+TIROS7L1FMRT,001,TIROS-7 Medium-Resolution Scanning Radiometer Level 1 Final Meteorological Radiation Data V001 (TIROS7L1FMRT),1963-06-19,1965-06-19,1,C2020911863-GES_DISC,dioxide
+TOMSEPOVP,008,TOMS Earth Probe Ground Station Overpass Data V008 (TOMSEPOVP),1996-07-22,2005-12-13,3,C1237114206-GES_DISC,dioxide
+TOMSM3OVP,008,TOMS Meteor-3 Ground Station Overpass Data V008 (TOMSM3OVP),1991-08-22,1994-07-05,3,C1237114210-GES_DISC,dioxide
+TOMSN7OVP,008,TOMS Nimbus-7 Ground Station Overpass Data V008 (TOMSN7OVP),1978-11-01,1993-05-06,3,C1266857231-GES_DISC,dioxide
+TOMSN7SO2,3,TOMS/N7 MS SO2 Vertical Column 1-Orbit L2 Swath 50x50 km V3 (TOMSN7SO2),1978-11-01,1993-05-06,2,C1615905582-GES_DISC,dioxide
+TROPOMI_MINDS_NO2,1.1,"TROPOMI/S5P NO2 Tropospheric, Stratospheric and Total Columns MINDS 1-Orbit L2 Swath 5.5 km  x 3.5 km V1.1 (TROPOMI_MINDS_NO2)",2018-05-01,ongoing,2,C2263977000-GES_DISC,dioxide
+TRPSCRESO2TM2D,1,TROPESS Chemical Reanalysis Surface Total SO2 emissions Monthly 2-dimensional Product V1 (TRPSCRESO2TM2D),2005-01-01,ongoing,4,C2837624992-GES_DISC,dioxide
+TRPSCRNO22H2D,1,TROPESS Chemical Reanalysis Surface NO2 2-Hourly 2-dimensional Product V1 (TRPSCRNO22H2D),2005-01-01,2021-12-31,4,C2816184419-GES_DISC,dioxide
+TRPSCRNO26H3D,1,TROPESS Chemical Reanalysis NO2 6-Hourly 3-dimensional Product V1 (TRPSCRNO26H3D),2005-01-01,ongoing,4,C2837624929-GES_DISC,dioxide
+TRPSCRNO2M3D,1,TROPESS Chemical Reanalysis NO2 Monthly 3-dimensional Product V1 (TRPSCRNO2M3D),2005-01-01,ongoing,4,C2837626422-GES_DISC,dioxide
+TRPSCRNO2S6H3D,1,TROPESS Chemical Reanalysis NO2 Spread 6-Hourly 3-dimensional Product V1 (TRPSCRNO2S6H3D),2005-01-01,ongoing,4,C2837624932-GES_DISC,dioxide
+TRPSCRNO2SM3D,1,TROPESS Chemical Reanalysis NO2 Spread Monthly 3-dimensional Product V1 (TRPSCRNO2SM3D),2005-01-01,ongoing,4,C2837626440-GES_DISC,dioxide
+TRPSCRSO22H2D,1,TROPESS Chemical Reanalysis Surface SO2 2-Hourly 2-dimensional Product V1 (TRPSCRSO22H2D),2005-01-01,2021-12-31,4,C2816184438-GES_DISC,dioxide
+TRPSCRSO26H3D,1,TROPESS Chemical Reanalysis SO2 6-Hourly 3-dimensional Product V1 (TRPSCRSO26H3D),2005-01-01,ongoing,4,C2837624947-GES_DISC,dioxide
+TRPSCRSO2M3D,1,TROPESS Chemical Reanalysis SO2 Monthly 3-dimensional Product V1 (TRPSCRSO2M3D),2005-01-01,ongoing,4,C2837626709-GES_DISC,dioxide
+UARCL3AL,009,UARS Cryogenic Limb Array Etalon Spectrometer (CLAES) Level 3AL V009 (UARCL3AL) at GES DISC,1991-10-25,1993-05-05,3,C1273348582-GES_DISC,dioxide
+UARCL3AT,009,UARS Cryogenic Limb Array Etalon Spectrometer (CLAES) Level 3AT V009 (UARCL3AT) at GES DISC,1991-10-25,1993-05-05,3,C1273348583-GES_DISC,dioxide
+UARHA2FN,019,UARS Halogen Occultation Experiment (HALOE) Level 2 V019 (UARHA2FN) at GES DISC,1991-10-11,2005-11-21,2,C1273348497-GES_DISC,dioxide
+UARHA3AT,019,UARS Halogen Occultation Experiment (HALOE) Level 3AT V019 (UARHA3AT) at GES DISC,1991-10-11,2001-09-24,3,C1273348584-GES_DISC,dioxide
+UARIS3AL,010,UARS Improved Stratospheric and Mesospheric Sounder (ISAMS) Level 3AL V010 (UARIS3AL) at GES DISC,1991-09-26,1992-07-29,3,C1273348587-GES_DISC,dioxide
+UARIS3AT,010,UARS Improved Stratospheric and Mesospheric Sounder (ISAMS) Level 3AT V010 (UARIS3AT) at GES DISC,1991-09-26,1992-07-29,3,C1273348588-GES_DISC,dioxide
+UARML3AL,005,UARS Microwave Limb Sounder (MLS) Level 3AL V005 (UARML3AL) at GES DISC,1991-09-18,1999-07-27,3,C1273348589-GES_DISC,dioxide
+UARML3AT,005,UARS Microwave Limb Sounder (MLS) Level 3AT V005 (UARML3AT) at GES DISC,1991-09-18,1999-07-28,3,C1273348590-GES_DISC,dioxide
+AIRSAC3MNH3,3,Atmospheric Composition Ammonia Volume Mixing Ratio L3 (AIRSAC3MNH3 V3) from AIRS/AMSU on NASA Aqua,2002-09-01,2016-08-31,3,C1619004533-GES_DISC,nitrogen
+GozMmlpHNO3,1,GOZCARDS Merged Nitric Acid 1 month L3 10 degree Zonal Means on a Vertical Pressure Grid V1 (GozMmlpHNO3),2004-08-01,2012-12-31,3,C1251051235-GES_DISC,nitrogen
+GozMmlpN2O,1,GOZCARDS Merged Nitrous Oxide 1 month L3 10 degree Zonal Means on a Vertical Pressure Grid V1 (GozMmlpN2O),2004-08-01,2012-12-31,3,C1251051239-GES_DISC,nitrogen
+GozSmlpHNO3,1,GOZCARDS Source Nitric Acid 1 month L3 10 degree Zonal Means on a Vertical Pressure Grid V1 (GozSmlpHNO3),2004-03-01,2012-12-31,3,C1251051329-GES_DISC,nitrogen
+GozSmlpN2O,1,GOZCARDS Source Nitrous Oxide 1 month L3 10 degree Zonal Means on a Vertical Pressure Grid V1 (GozSmlpN2O),2004-03-01,2012-12-31,3,C1251051333-GES_DISC,nitrogen
+H3ZFCHNO3,007,HIRDLS/Aura Level 3 Nitric Acid (HNO3) 1deg Lat Zonal Fourier Coefficients V007 (H3ZFCHNO3),2005-01-22,2008-03-17,3,C1251100929-GES_DISC,nitrogen
+H3ZFCN2O,007,HIRDLS/Aura Level 3 Nitrous Oxide (N2O) 1deg Lat Zonal Fourier Coefficients V007 (H3ZFCN2O),2005-01-22,2008-03-17,3,C1251100984-GES_DISC,nitrogen
+H3ZFCN2O5,007,HIRDLS/Aura Level 3 Dinitrogen Pentoxide (N2O5) 1deg Lat Zonal Fourier Coefficients V007 (H3ZFCN2O5),2005-01-22,2008-03-17,3,C1251100988-GES_DISC,nitrogen
+ML2HNO3,006,MLS/Aura Level 2 Nitric Acid (HNO3) Mixing Ratio V006 (ML2HNO3),2004-08-02,ongoing,2,C3127197968-GES_DISC,nitrogen
+ML2HNO3,005,MLS/Aura Level 2 Nitric Acid (HNO3) Mixing Ratio V005 (ML2HNO3),2004-08-02,ongoing,2,C1729925263-GES_DISC,nitrogen
+ML2HNO3_NRT,005,MLS/Aura Near-Real-Time L2 Nitric Acid (HNO3) Mixing Ratio V005 (ML2HNO3_NRT),2021-09-21,ongoing,2,C2131771772-GES_DISC,nitrogen
+ML2N2O,005,MLS/Aura Level 2 Nitrous Oxide (N2O) Mixing Ratio V005 (ML2N2O),2004-08-02,ongoing,2,C1729925686-GES_DISC,nitrogen
+ML2N2O,006,MLS/Aura Level 2 Nitrous Oxide (N2O) Mixing Ratio V006 (ML2N2O),2004-08-02,ongoing,2,C3127198240-GES_DISC,nitrogen
+ML2N2O_NRT,005,MLS/Aura Near-Real-Time L2 Nitrous Oxide (N2O) Mixing Ratio V005 (ML2N2O_NRT),2021-09-21,ongoing,2,C2131771775-GES_DISC,nitrogen
+ML3DBHNO3,005,MLS/Aura Level 3 Daily Binned Nitric Acid (HNO3) Mixing Ratio on Assorted Grids V005 (ML3DBHNO3),2004-08-02,ongoing,3,C2042565887-GES_DISC,nitrogen
+ML3DBN2O,005,MLS/Aura Level 3 Daily Binned Nitrous Oxide (N2O) Mixing Ratio on Assorted Grids V005 (ML3DBN2O),2004-08-02,ongoing,3,C2042566037-GES_DISC,nitrogen
+ML3DZHNO3,005,MLS/Aura Level 3 Daily Binned Nitric Acid (HNO3) Mixing Ratio on Zonal and Similar Grids V005 (ML3DZHNO3),2004-08-02,ongoing,3,C2042566751-GES_DISC,nitrogen
+ML3DZN2O,005,MLS/Aura Level 3 Daily Binned Nitrous Oxide (N2O) Mixing Ratio on Zonal and Similar Grids V005 (ML3DZN2O),2004-08-02,ongoing,3,C2042567101-GES_DISC,nitrogen
+ML3MBHNO3,005,MLS/Aura Level 3 Monthly Binned Nitric Acid (HNO3) Mixing Ratio on Assorted Grids V005 (ML3MBHNO3),2004-08-02,ongoing,3,C2042568418-GES_DISC,nitrogen
+ML3MBN2O,005,MLS/Aura Level 3 Monthly Binned Nitrous Oxide (N2O) Mixing Ratio on Assorted Grids V005 (ML3MBN2O),2004-08-02,ongoing,3,C2042568728-GES_DISC,nitrogen
+SAMSN7L3ZMTG,001,SAMS/Nimbus-7 Level 3 Zonal Means Composition Data V001 (SAMSN7L3ZMTG),1979-01-01,1981-12-30,3,C1959158938-GES_DISC,nitrogen
+SNDRSNIL2ESPNH3,1,Cross-track Infrared Sounder (CrIS) Level 2 Earth System Science Profiling Algorithm Ammonia Retrieval Algorithm (ESSPA-NH3) V1 (SNDRSNIL2ESPNH3),2013-01-01,2015-11-01,2,C1921638441-GES_DISC,nitrogen
+TRPSCRENOXAM2D,1,TROPESS Chemical Reanalysis Surface Anthropogenic NOx emissions Monthly 2-dimensional Product V1 (TRPSCRENOXAM2D),2005-01-01,ongoing,4,C2837624964-GES_DISC,nitrogen
+TRPSCRENOXBM2D,1,TROPESS Chemical Reanalysis Surface Biomass Burning NOx emissions Monthly 2-dimensional Product V1 (TRPSCRENOXBM2D),2005-01-01,ongoing,4,C2837624972-GES_DISC,nitrogen
+TRPSCRENOXLM2D,1,TROPESS Chemical Reanalysis Lightning NOx emissions Monthly 2-dimensional Product V1 (TRPSCRENOXLM2D),2005-01-01,ongoing,4,C2837624975-GES_DISC,nitrogen
+TRPSCRENOXSM2D,1,TROPESS Chemical Reanalysis Surface Soil NOx emissions Monthly 2-dimensional Product V1 (TRPSCRENOXSM2D),2005-01-01,ongoing,4,C2837624980-GES_DISC,nitrogen
+TRPSCRENOXTM2D,1,TROPESS Chemical Reanalysis Surface Total NOx emissions Monthly 2-dimensional Product V1 (TRPSCRENOXTM2D),2005-01-01,ongoing,4,C2837624983-GES_DISC,nitrogen
+TRPSCRHNO32H2D,1,TROPESS Chemical Reanalysis Surface HNO3 2-Hourly 2-dimensional Product V1 (TRPSCRHNO32H2D),2005-01-01,2021-12-31,4,C2816184416-GES_DISC,nitrogen
+TRPSCRHNO36H3D,1,TROPESS Chemical Reanalysis HNO3 6-Hourly 3-dimensional Product V1 (TRPSCRHNO36H3D),2005-01-01,ongoing,4,C2837624925-GES_DISC,nitrogen
+TRPSCRHNO3M3D,1,TROPESS Chemical Reanalysis HNO3 Monthly 3-dimensional Product V1 (TRPSCRHNO3M3D),2005-01-01,ongoing,4,C2837626150-GES_DISC,nitrogen
+TRPSCRNO2H2D,1,TROPESS Chemical Reanalysis Surface NO 2-Hourly 2-dimensional Product V1 (TRPSCRNO2H2D),2005-01-01,2021-12-31,4,C2816184422-GES_DISC,nitrogen
+TRPSCRNO6H3D,1,TROPESS Chemical Reanalysis NO 6-Hourly 3-dimensional Product V1 (TRPSCRNO6H3D),2005-01-01,ongoing,4,C2837624933-GES_DISC,nitrogen
+TRPSCRNOM3D,1,TROPESS Chemical Reanalysis NO Monthly 3-dimensional Product V1 (TRPSCRNOM3D),2005-01-01,ongoing,4,C2837626448-GES_DISC,nitrogen
+TRPSCRPAN2H2D,1,TROPESS Chemical Reanalysis Surface PAN 2-Hourly 2-dimensional Product V1 (TRPSCRPAN2H2D),2005-01-01,2021-12-31,4,C2816184431-GES_DISC,nitrogen
+TRPSCRPAN6H3D,1,TROPESS Chemical Reanalysis PAN 6-Hourly 3-dimensional Product V1 (TRPSCRPAN6H3D),2005-01-01,ongoing,4,C2837624944-GES_DISC,nitrogen
+TRPSCRPANM3D,1,TROPESS Chemical Reanalysis PAN Monthly 3-dimensional Product V1 (TRPSCRPANM3D),2005-01-01,ongoing,4,C2837626550-GES_DISC,nitrogen
+TRPSDL2ALLCRS1MGLOS,2,"TROPESS CrIS-JPSS1 L2 for Los Angeles Megacity, Standard Product V2 (TRPSDL2ALLCRS1MGLOS) at GES DISC",2021-04-01,ongoing,2,C3523576754-GES_DISC,nitrogen
+TRPSDL2ALLCRSMGBEI,1,"TROPESS CrIS-SNPP L2 for Beijing Megacity, Standard Product V1 (TRPSDL2ALLCRSMGBEI) at GES DISC",2016-01-02,2021-05-21,2,C2569833418-GES_DISC,nitrogen
+TRPSDL2ALLCRSMGDEL,1,"TROPESS CrIS-SNPP L2 for Delhi Megacity, Standard Product V1 (TRPSDL2ALLCRSMGDEL) at GES DISC",2016-01-02,2021-05-21,2,C2569835155-GES_DISC,nitrogen
+TRPSDL2ALLCRSMGKAR,1,"TROPESS CrIS-SNPP L2 for Karachi Megacity, Standard Product V1 (TRPSDL2ALLCRSMGKAR) at GES DISC",2016-01-02,2021-05-21,2,C2747542330-GES_DISC,nitrogen
+TRPSDL2ALLCRSMGLAG,1,"TROPESS CrIS-SNPP L2 for Lagos Megacity, Standard Product V1 (TRPSDL2ALLCRSMGLAG) at GES DISC",2016-01-02,2021-05-21,2,C2569837035-GES_DISC,nitrogen
+TRPSDL2ALLCRSMGLOS,1,"TROPESS CrIS-SNPP L2 for Los Angeles Megacity, Standard Product V1 (TRPSDL2ALLCRSMGLOS) at GES DISC",2016-01-02,2021-05-21,2,C2569838553-GES_DISC,nitrogen
+TRPSDL2ALLCRSMGMEX,1,"TROPESS CrIS-SNPP L2 for Mexico City Megacity, Standard Product V1 (TRPSDL2ALLCRSMGMEX) at GES DISC",2016-01-02,2021-05-21,2,C2569840361-GES_DISC,nitrogen
+TRPSDL2ALLCRSMGSAO,1,"TROPESS CrIS-SNPP L2 for Sao Paulo Megacity, Standard Product V1 (TRPSDL2ALLCRSMGSAO) at GES DISC",2016-01-02,2021-05-21,2,C2569841367-GES_DISC,nitrogen
+TRPSDL2ALLCRSMGTOK,1,"TROPESS CrIS-SNPP L2 for Tokyo Megacity, Standard Product V1 (TRPSDL2ALLCRSMGTOK) at GES DISC",2016-01-02,2021-05-21,2,C2569842902-GES_DISC,nitrogen
+TRPSDL2NH3AIRSFS,1,"TROPESS AIRS-Aqua L2 Ammonia for Forward Stream, Standard Product V1 (TRPSDL2NH3AIRSFS) at GES DISC",2021-02-01,ongoing,2,C2041965834-GES_DISC,nitrogen
+TRPSDL2NH3AIRSFS,2,"TROPESS AIRS-Aqua L2 Ammonia for Forward Stream, Standard Product V2 (TRPSDL2NH3AIRSFS) at GES DISC",2026-06-01,ongoing,2,C4170965896-GES_DISC,nitrogen
+TRPSDL2NH3AIRSORS,1,"TROPESS AIRS-Aqua L2 Ammonia for Reanalysis Stream, Standard Product V1 (TRPSDL2NH3AIRSORS) at GES DISC",2002-08-30,ongoing,2,C4169241998-GES_DISC,nitrogen
+TRPSDL2NH3CRS1FS,1,"TROPESS CrIS-JPSS1 L2 Ammonia for Forward Stream, Standard Product V1 (TRPSDL2NH3CRS1FS) at GES DISC",2021-04-01,ongoing,2,C2088007559-GES_DISC,nitrogen
+TRPSDL2NH3CRS1FS,2,"TROPESS CrIS-JPSS1 L2 Ammonia for Forward Stream, Standard Product V2 (TRPSDL2NH3CRS1FS) at GES DISC",2026-06-01,ongoing,2,C4170967261-GES_DISC,nitrogen
+TRPSDL2NH3CRSAUS,1,"TROPESS CrIS-SNPP L2 Ammonia for Australian Fires, Standard Product V1 (TRPSDL2NH3CRSAUS) at GES DISC",2019-11-01,2020-01-31,2,C2041965954-GES_DISC,nitrogen
+TRPSDL2NH3CRSFS,1,"TROPESS CrIS-SNPP L2 Ammonia for Forward Stream, Standard Product V1 (TRPSDL2NH3CRSFS) at GES DISC",2021-02-01,2023-05-18,2,C2041966092-GES_DISC,nitrogen
+TRPSDL2NH3CRSWCF,1,"TROPESS CrIS-SNPP L2 Ammonia for West Coast Fires, Standard Product V1 (TRPSDL2NH3CRSWCF) at GES DISC",2020-08-02,2020-10-26,2,C1980429433-GES_DISC,nitrogen
+TRPSDL2NH3CRSWCFHI,1,"TROPESS CrIS-SNPP L2 Ammonia for West Coast Fires HiRes, Standard Product V1 (TRPSDL2NH3CRSWCFHI) at GES DISC",2020-08-02,2020-10-26,2,C2054599702-GES_DISC,nitrogen
+TRPSDL2PANCRS1FS,2,"TROPESS CrIS-JPSS1 L2 Peroxyacetyl Nitrate for Forward Stream, Standard Product V2 (TRPSDL2PANCRS1FS) at GES DISC",2026-06-01,ongoing,2,C4170967281-GES_DISC,nitrogen
+TRPSDL2PANCRS1FS,1,"TROPESS CrIS-JPSS1 L2 Peroxyacetyl Nitrate for Forward Stream, Standard Product V1 (TRPSDL2PANCRS1FS) at GES DISC",2021-04-01,ongoing,2,C2088007569-GES_DISC,nitrogen
+TRPSDL2PANCRSAUS,1,"TROPESS CrIS-SNPP L2 Peroxyacetyl Nitrate for Australian Fires, Standard Product V1 (TRPSDL2PANCRSAUS) at GES DISC",2019-11-01,2020-01-31,2,C2041967844-GES_DISC,nitrogen
+TRPSDL2PANCRSFS,1,"TROPESS CrIS-SNPP L2 Peroxyacetyl Nitrate for Forward Stream, Standard Product V1 (TRPSDL2PANCRSFS) at GES DISC",2021-02-01,2023-05-18,2,C2041968030-GES_DISC,nitrogen
+TRPSDL2PANCRSWCF,1,"TROPESS CrIS-SNPP L2 Peroxyacetyl Nitrate for West Coast Fires, Standard Product V1 (TRPSDL2PANCRSWCF) at GES DISC",2020-08-02,2020-10-26,2,C1980429450-GES_DISC,nitrogen
+TRPSDL2PANCRSWCFHI,1,"TROPESS CrIS-SNPP L2 Peroxyacetyl Nitrate for West Coast Fires HiRes, Standard Product V1 (TRPSDL2PANCRSWCFHI) at GES DISC",2020-08-02,2020-10-26,2,C2054599713-GES_DISC,nitrogen
+TRPSFL2NH3AIRSFS,2,"TROPESS AIRS-Aqua L2 Ammonia for Forward Stream, Full Product V2 (TRPSFL2NH3AIRSFS) at GES DISC",2021-02-01,ongoing,2,C4173720414-GES_DISC,nitrogen
+TRPSFL2NH3CRS1FS,2,"TROPESS CrIS-JPSS1 L2 Ammonia for Forward Stream, Full Product V2 (TRPSFL2NH3CRS1FS) at GES DISC",2026-06-01,ongoing,2,C4173720444-GES_DISC,nitrogen
+TRPSFL2PANCRS1FS,2,"TROPESS CrIS-JPSS1 L2 Peroxyacetyl Nitrate for Forward Stream, Full Product V2 (TRPSFL2PANCRS1FS) at GES DISC",2026-06-01,ongoing,2,C4173720528-GES_DISC,nitrogen
+TRPSYL2ALLCRS1MGLOS,2,"TROPESS CrIS-JPSS1 L2 for Los Angeles Megacity, Summary Product V2 (TRPSYL2ALLCRS1MGLOS) at GES DISC",2021-04-01,ongoing,2,C3523618647-GES_DISC,nitrogen
+TRPSYL2ALLCRSMGBEI,1,"TROPESS CrIS-SNPP L2 for Beijing Megacity, Summary Product V1 (TRPSYL2ALLCRSMGBEI) at GES DISC",2016-01-02,2021-05-21,2,C2569844139-GES_DISC,nitrogen
+TRPSYL2ALLCRSMGDEL,1,"TROPESS CrIS-SNPP L2 for Delhi Megacity, Summary Product V1 (TRPSYL2ALLCRSMGDEL) at GES DISC",2016-01-02,2021-05-21,2,C2569845305-GES_DISC,nitrogen
+TRPSYL2ALLCRSMGKAR,1,"TROPESS CrIS-SNPP L2 for Karachi Megacity, Summary Product V1 (TRPSYL2ALLCRSMGKAR) at GES DISC",2016-01-02,2021-05-21,2,C2747542378-GES_DISC,nitrogen
+TRPSYL2ALLCRSMGLAG,1,"TROPESS CrIS-SNPP L2 for Lagos Megacity, Summary Product V1 (TRPSYL2ALLCRSMGLAG) at GES DISC",2016-01-02,2021-05-21,2,C2569846528-GES_DISC,nitrogen
+TRPSYL2ALLCRSMGLOS,1,"TROPESS CrIS-SNPP L2 for Los Angeles Megacity, Summary Product V1 (TRPSYL2ALLCRSMGLOS) at GES DISC",2016-01-02,2021-05-21,2,C2569847612-GES_DISC,nitrogen
+TRPSYL2ALLCRSMGMEX,1,"TROPESS CrIS-SNPP L2 for Mexico City Megacity, Summary Product V1 (TRPSYL2ALLCRSMGMEX) at GES DISC",2016-01-02,ongoing,2,C2569848799-GES_DISC,nitrogen
+TRPSYL2ALLCRSMGSAO,1,"TROPESS CrIS-SNPP L2 for Sao Paulo Megacity, Summary Product V1 (TRPSYL2ALLCRSMGSAO) at GES DISC",2016-01-02,2021-05-21,2,C2569849797-GES_DISC,nitrogen
+TRPSYL2ALLCRSMGTOK,1,"TROPESS CrIS-SNPP L2 for Tokyo Megacity, Summary Product V1 (TRPSYL2ALLCRSMGTOK) at GES DISC",2016-01-02,2021-05-21,2,C2569851296-GES_DISC,nitrogen
+TRPSYL2NH3AIRSFS,1,"TROPESS AIRS-Aqua L2 Ammonia for Forward Stream, Summary Product V1 (TRPSYL2NH3AIRSFS) at GES DISC",2002-08-30,ongoing,2,C2247040407-GES_DISC,nitrogen
+TRPSYL2NH3AIRSFS,2,"TROPESS AIRS-Aqua L2 Ammonia for Forward Stream, Summary Product V2 (TRPSYL2NH3AIRSFS) at GES DISC",2002-08-30,ongoing,2,C4173958853-GES_DISC,nitrogen
+TRPSYL2NH3AIRSORS,1,"TROPESS AIRS-Aqua L2 Ammonia for Reanalysis Stream, Summary Product V1 (TRPSYL2NH3AIRSORS) at GES DISC",2002-09-01,ongoing,2,C4318866527-GES_DISC,nitrogen
+TRPSYL2NH3CRS1FS,1,"TROPESS CrIS-JPSS1 L2 Ammonia for Forward Stream, Summary Product V1 (TRPSYL2NH3CRS1FS) at GES DISC",2021-02-01,ongoing,2,C2247040461-GES_DISC,nitrogen
+TRPSYL2NH3CRS1FS,2,"TROPESS CrIS-JPSS1 L2 Ammonia for Forward Stream, Summary Product V2 (TRPSYL2NH3CRS1FS) at GES DISC",2026-06-01,ongoing,2,C4173959026-GES_DISC,nitrogen
+TRPSYL2NH3CRSFS,1,"TROPESS CrIS-SNPP L2 Ammonia for Forward Stream, Summary Product V1 (TRPSYL2NH3CRSFS) at GES DISC",2021-02-01,2023-05-18,2,C2247040567-GES_DISC,nitrogen
+TRPSYL2NH3CRSRS,1,"TROPESS CrIS-SNPP L2 Ammonia for Reanalysis Stream, Summary Product V1 (TRPSYL2NH3CRSRS) at GES DISC",2015-12-01,ongoing,2,C2756346595-GES_DISC,nitrogen
+TRPSYL2PANCRS1FS,2,"TROPESS CrIS-JPSS1 L2 Peroxyacetyl Nitrate for Forward Stream, Summary Product V2 (TRPSYL2PANCRS1FS) at GES DISC",2026-06-01,ongoing,2,C4173959035-GES_DISC,nitrogen
+TRPSYL2PANCRS1FS,1,"TROPESS CrIS-JPSS1 L2 Peroxyacetyl Nitrate for Forward Stream, Summary Product V1 (TRPSYL2PANCRS1FS) at GES DISC",2021-02-01,ongoing,2,C2247040959-GES_DISC,nitrogen
+TRPSYL2PANCRSFS,1,"TROPESS CrIS-SNPP L2 Peroxyacetyl Nitrate for Forward Stream, Summary Product V1 (TRPSYL2PANCRSFS) at GES DISC",2021-02-01,2023-05-18,2,C2247040984-GES_DISC,nitrogen
+TRPSYL2PANCRSRS,1,"TROPESS CrIS-SNPP L2 Peroxyacetyl Nitrate for Reanalysis Stream, Summary Product V1 (TRPSYL2PANCRSRS) at GES DISC",2015-12-01,ongoing,2,C2756348390-GES_DISC,nitrogen
+AIRG2SSD,006,AIRS/Aqua L2G Precipitation Estimate V006 (AIRG2SSD),2002-08-30,2016-09-25,2G,C1243477375-GES_DISC,precipitation
+AIRG2SSD_IRonly,7.0,AIRS/Aqua L2G Precipitation Estimate (AIRS-only) V7.0,2002-08-30,ongoing,2G,C1702050366-GES_DISC,precipitation
+AIRG2SSD_IRonly,006,AIRS/Aqua L2G Precipitation Estimate (AIRS-only) V006 (AIRG2SSD_IRonly),2002-08-30,ongoing,2G,C1618076955-GES_DISC,precipitation
+AIRH3SP8,006,AIRS/Aqua L3 8-day Support Multiday Product (AIRS+AMSU+HSB) 1 degree x 1 degree V006 (AIRH3SP8),2002-09-01,2003-02-08,3,C1238517226-GES_DISC,precipitation
+AIRH3SPD,7.0,Aqua/AIRS L3 Daily Support Daily Product (AIRS+AMSU+HSB) 1 degree x 1 degree V7.0,2002-08-31,2003-02-06,3,C1701805696-GES_DISC,precipitation
+AIRH3SPD,006,AIRS/Aqua L3 Daily Support Daily Product (AIRS+AMSU+HSB) 1 degree x 1 degree V006 (AIRH3SPD),2002-08-31,2003-02-06,3,C1238517230-GES_DISC,precipitation
+AIRH3SPM,7.0,Aqua/AIRS L3 Monthly Support Monthly Product (AIRS+AMSU+HSB) 1 degree x 1 degree V7.0,2002-09-01,2003-03-01,3,C1701805707-GES_DISC,precipitation
+AIRH3SPM,006,AIRS/Aqua L3 Monthly Support Product (AIRS+AMSU+HSB) 1 degree x 1 degree V006 (AIRH3SPM),2002-09-01,2003-03-01,3,C1238517247-GES_DISC,precipitation
+AIRHBRAD,005,AIRS/Aqua L1B HSB geolocated and calibrated brightness temperatures V005 (AIRHBRAD),2002-05-24,2003-11-20,1B,C1243477367-GES_DISC,precipitation
+AIRS3SP8,006,AIRS/Aqua L3 8-day Support Product (AIRS-only) 1 degree X 1 degree V006 (AIRS3SP8),2002-09-01,ongoing,3,C1238517268-GES_DISC,precipitation
+AIRS3SPD,7.0,Aqua/AIRS L3 Daily Support Product (AIRS-only) 1 degree x 1 degree V7.0,2002-08-31,ongoing,3,C1701805657-GES_DISC,precipitation
+AIRS3SPD,006,AIRS/Aqua L3 Daily Support Product (AIRS-only) 1 degree x 1 degree V006 (AIRS3SPD),2002-08-31,ongoing,3,C1238517272-GES_DISC,precipitation
+AIRS3SPM,7.0,Aqua/AIRS L3 Monthly Support Product (AIRS-only) 1 degree x 1 degree V7.0,2002-09-01,ongoing,3,C1701805668-GES_DISC,precipitation
+AIRS3SPM,006,AIRS/Aqua L3 Monthly Support Product (AIRS-only) 1 degree x 1 degree V006 (AIRS3SPM),2002-09-01,ongoing,3,C1238517285-GES_DISC,precipitation
+AIRX3SP8,006,AIRS/Aqua L3 8-day Support Multiday Product (AIRS+AMSU) 1 degree x 1 degree V006 (AIRX3SP8),2002-09-01,2016-10-01,3,C1238517314-GES_DISC,precipitation
+AIRX3SPD,7.0,Aqua/AIRS L3 Daily Support Product (AIRS+AMSU) 1 degree x 1 degree V7.0,2002-08-31,2016-09-25,3,C1701805677-GES_DISC,precipitation
+AIRX3SPD,006,AIRS/Aqua L3 Daily Support Product (AIRS+AMSU) 1 degree x 1 degree V006 (AIRX3SPD),2002-08-31,2016-09-25,3,C1238517317-GES_DISC,precipitation
+AIRX3SPM,7.0,Aqua/AIRS L3 Monthly Support Product (AIRS+AMSU) 1 degree x 1 degree V7.0,2002-09-01,2016-10-01,3,C1701805687-GES_DISC,precipitation
+AIRX3SPM,006,AIRS/Aqua L3 Monthly Support Product (AIRS+AMSU) 1 degree x 1 degree V006 (AIRX3SPM),2002-09-01,2016-10-01,3,C1238517340-GES_DISC,precipitation
+AMSRERR_CPR,002,"AMSR-E L2 Rainfall Subset, collocated with CloudSat track V002 (AMSERR_CPR)",2006-06-01,2011-07-12,2,C1236350984-GES_DISC,precipitation
+FLDAS_NOAH01_CP_GL_M,001,FLDAS Noah Land Surface Model L4 Global Monthly 0.1 x 0.1 degree (GDAS and CHIRPS-PRELIM) V001 (FLDAS_NOAH01_CP_GL_M),2019-01-01,ongoing,4,C2020765110-GES_DISC,precipitation
+FLDAS_NOAH01_C_GL_M,001,FLDAS Noah Land Surface Model L4 Global Monthly 0.1 x 0.1 degree (MERRA-2 and CHIRPS) V001 (FLDAS_NOAH01_C_GL_M),1982-01-01,ongoing,4,C1563089663-GES_DISC,precipitation
+FLDAS_NOAH01_C_GL_MA,001,FLDAS Noah Land Surface Model L4 Global Monthly Anomaly 0.1 x 0.1 degree (MERRA-2 and CHIRPS) V001 (FLDAS_NOAH01_C_GL_MA),1982-01-01,ongoing,4,C1563092281-GES_DISC,precipitation
+FLDAS_NOAH01_C_GL_MC,001,FLDAS Noah Land Surface Model L4 Global Monthly Climatology 0.1 x 0.1 degree (MERRA-2 and CHIRPS) V001 (FLDAS_NOAH01_C_GL_MC),1982-01-01,2016-12-31,4,C1563092283-GES_DISC,precipitation
+FLDAS_NOAHMP001_G_CA_D,001,FLDAS2 Noah-MP GDAS Land Surface Model L4 Central Asia Daily 0.01 degree x 0.01 degree V001 (FLDAS_NOAHMP001_G_CA_D),2000-10-01,ongoing,4,C2773858780-GES_DISC,precipitation
+GLDAS_CLSM025_D,2.0,GLDAS Catchment Land Surface Model L4 daily 0.25 x 0.25 degree V2.0 (GLDAS_CLSM025_D),1948-01-01,2014-12-30,4,C1453188197-GES_DISC,precipitation
+GLDAS_CLSM025_DA1_D,2.2,GLDAS Catchment Land Surface Model L4 daily 0.25 x 0.25 degree GRACE-DA1 V2.2 (GLDAS_CLSM025_DA1_D),2003-02-01,ongoing,4,C1700900796-GES_DISC,precipitation
+GLDAS_CLSM025_DA1_D_EP,2.2,GLDAS Catchment Land Surface Model L4 daily 0.25 x 0.25 degree GRACE-DA1 V2.2 (GLDAS_CLSM025_DA1_D_EP),2020-01-01,ongoing,4,C1700900822-GES_DISC,precipitation
+GLDAS_CLSM10_3H,2.1,GLDAS Catchment Land Surface Model L4 3 hourly 1.0 x 1.0 degree V2.1 (GLDAS_CLSM10_3H),2000-01-01,ongoing,4,C1690022359-GES_DISC,precipitation
+GLDAS_CLSM10_3H,2.0,GLDAS Catchment Land Surface Model L4 3 hourly 1.0 x 1.0 degree V2.0 (GLDAS_CLSM10_3H),1948-01-01,2014-12-31,4,C1933574500-GES_DISC,precipitation
+GLDAS_CLSM10_3H_EP,2.1,GLDAS Catchment Land Surface Model L4 3 hourly 1.0 x 1.0 degree Early Product V2.1 (GLDAS_CLSM10_3H_EP),2019-12-01,ongoing,4,C1700900748-GES_DISC,precipitation
+GLDAS_CLSM10_M,2.1,GLDAS Catchment Land Surface Model L4 monthly 1.0 x 1.0 degree V2.1 (GLDAS_CLSM10_M),2000-01-01,ongoing,4,C1690022314-GES_DISC,precipitation
+GLDAS_CLSM10_M,2.0,GLDAS Catchment Land Surface Model L4 monthly 1.0 x 1.0 degree V2.0 (GLDAS_CLSM10_M),1948-01-01,2014-12-31,4,C1933574465-GES_DISC,precipitation
+GLDAS_CLSM10_M_EP,2.1,GLDAS Catchment Land Surface Model L4 monthly 1.0 x 1.0 degree Early Product V2.1 (GLDAS_CLSM10_M_EP),2019-12-01,ongoing,4,C1700900777-GES_DISC,precipitation
+GLDAS_NOAH025_3H,2.1,GLDAS Noah Land Surface Model L4 3 hourly 0.25 x 0.25 degree V2.1 (GLDAS_NOAH025_3H),2000-01-01,ongoing,4,C1342986035-GES_DISC,precipitation
+GLDAS_NOAH025_3H,2.0,GLDAS Noah Land Surface Model L4 3 hourly 0.25 x 0.25 degree V2.0 (GLDAS_NOAH025_3H),1948-01-01,2014-12-31,4,C1233767545-GES_DISC,precipitation
+GLDAS_NOAH025_3H_EP,2.1,GLDAS Noah Land Surface Model L4 3 hourly 0.25 x 0.25 degree Early Product V2.1 (GLDAS_NOAH025_3H_EP),2019-12-01,ongoing,4,C1700900626-GES_DISC,precipitation
+GLDAS_NOAH025_M,2.1,GLDAS Noah Land Surface Model L4 monthly 0.25 x 0.25 degree V2.1 (GLDAS_NOAH025_M),2000-01-01,ongoing,4,C1342986036-GES_DISC,precipitation
+GLDAS_NOAH025_M,2.0,GLDAS Noah Land Surface Model L4 monthly 0.25 x 0.25 degree V2.0 (GLDAS_NOAH025_M),1948-01-01,2014-12-31,4,C1233767569-GES_DISC,precipitation
+GLDAS_NOAH025_M_EP,2.1,GLDAS Noah Land Surface Model L4 monthly 0.25 x 0.25 degree Early Product V2.1 (GLDAS_NOAH025_M_EP),2019-12-01,ongoing,4,C1700900648-GES_DISC,precipitation
+GLDAS_NOAH10_3H,2.1,GLDAS Noah Land Surface Model L4 3 hourly 1.0 x 1.0 degree V2.1 (GLDAS_NOAH10_3H),2000-01-01,ongoing,4,C1288937556-GES_DISC,precipitation
+GLDAS_NOAH10_3H,2.0,GLDAS Noah Land Surface Model L4 3 hourly 1.0 x 1.0 degree V2.0 (GLDAS_NOAH10_3H),1948-01-01,2014-12-31,4,C1233767548-GES_DISC,precipitation
+GLDAS_NOAH10_3H_EP,2.1,GLDAS Noah Land Surface Model L4 3 hourly 1.0 x 1.0 degree Early Product V2.1 (GLDAS_NOAH10_3H_EP),2019-12-01,ongoing,4,C1700900671-GES_DISC,precipitation
+GLDAS_NOAH10_M,2.1,GLDAS Noah Land Surface Model L4 monthly 1.0 x 1.0 degree V2.1 (GLDAS_NOAH10_M),2000-01-01,ongoing,4,C1288937542-GES_DISC,precipitation
+GLDAS_NOAH10_M,2.0,GLDAS Noah Land Surface Model L4 monthly 1.0 x 1.0 degree V2.0 (GLDAS_NOAH10_M),1948-01-01,2014-12-31,4,C1233767575-GES_DISC,precipitation
+GLDAS_NOAH10_M_EP,2.1,GLDAS Noah Land Surface Model L4 monthly 1.0 x 1.0 degree Early Product V2.1 (GLDAS_NOAH10_M_EP),2019-12-01,ongoing,4,C1700900694-GES_DISC,precipitation
+GLDAS_VIC10_3H,2.1,GLDAS VIC Land Surface Model L4 3 hourly 1.0 x 1.0 degree V2.1 (GLDAS_VIC10_3H),2000-01-01,ongoing,4,C1690022329-GES_DISC,precipitation
+GLDAS_VIC10_3H,2.0,GLDAS VIC Land Surface Model L4 3 hourly 1.0 x 1.0 degree V2.0 (GLDAS_VIC10_3H),1948-01-01,2014-12-31,4,C1933574580-GES_DISC,precipitation
+GLDAS_VIC10_3H_EP,2.1,GLDAS VIC Land Surface Model L4 3 hourly 1.0 x 1.0 degree Early Product V2.1 (GLDAS_VIC10_3H_EP),2019-12-01,ongoing,4,C1700900711-GES_DISC,precipitation
+GLDAS_VIC10_M,2.1,GLDAS VIC Land Surface Model L4 monthly 1.0 x 1.0 degree V2.1 (GLDAS_VIC10_M),2000-01-01,ongoing,4,C1690022344-GES_DISC,precipitation
+GLDAS_VIC10_M,2.0,GLDAS VIC Land Surface Model L4 monthly 1.0 x 1.0 degree V2.0 (GLDAS_VIC10_M),1948-01-01,2014-12-31,4,C1933574565-GES_DISC,precipitation
+GLDAS_VIC10_M_EP,2.1,GLDAS VIC Land Surface Model L4 monthly 1.0 x 1.0 degree Early Product V2.1 (GLDAS_VIC10_M_EP),2019-12-01,ongoing,4,C1700900731-GES_DISC,precipitation
+GPCPMON,3.3,GPCP Precipitation Level 3 Monthly 0.5-Degree V3.3 (GPCPMON),1983-01-01,2025-12-31,3,C3405935516-GES_DISC,precipitation
+GPCPMON,3.2,GPCP Precipitation Level 3 Monthly 0.5-Degree V3.2 (GPCPMON),1983-01-01,2023-12-31,3,C2211412414-GES_DISC,precipitation
+GPM_1AGMI,07,GPM GMI unpacked data L1A 1.5 hours 13 km V07 (GPM_1AGMI),2014-03-04,2026-03-01,1A,C2259345379-GES_DISC,precipitation
+GPM_1AGMI,08,GPM GMI unpacked data L1A 1.5 hours 13 km V08 (GPM_1AGMI),2014-03-04,ongoing,1A,C4054953981-GES_DISC,precipitation
+GPM_1ATMI,08,GPM TMI on TRMM unpacked data L1A 1.5 hours 13 km V08 (GPM_1ATMI),1997-12-07,2015-04-08,1A,C4054954341-GES_DISC,precipitation
+GPM_1ATMI,07,GPM TMI on TRMM unpacked data L1A 1.5 hours 13 km V07 (GPM_1ATMI),1997-12-07,2015-04-08,1A,C2264132558-GES_DISC,precipitation
+GPM_1AVIRS,08,GPM VIRS on TRMM unpacked data L1A 1.5 hours 2 km V08 (GPM_1AVIRS),1997-12-20,2014-03-21,1A,C4054953935-GES_DISC,precipitation
+GPM_1AVIRS,07,GPM VIRS on TRMM unpacked data L1A 1.5 hours 2 km V07 (GPM_1AVIRS),1997-12-20,2014-03-21,1A,C2264132582-GES_DISC,precipitation
+GPM_1BGMI,07,GPM GMI Brightness Temperatures L1B 1.5 hours 13 km V07 (GPM_1BGMI),2014-03-04,2026-03-01,1B,C2259345403-GES_DISC,precipitation
+GPM_1BGMI,08,GPM GMI Brightness Temperatures L1B 1.5 hours 13 km V08 (GPM_1BGMI),2014-03-04,ongoing,1B,C4054954064-GES_DISC,precipitation
+GPM_1BPR,07,GPM PR on TRMM Echo Power L1B 1.5 hours 5 km V07 (GPM_1BPR),1997-12-07,2015-04-01,1B,C2264132201-GES_DISC,precipitation
+GPM_1BTMI,07,GPM TMI on TRMM Brightness Temperatures L1B 1.5 hours 13 km V07 (GPM_1BTMI),1997-12-07,2015-04-08,1B,C2264132608-GES_DISC,precipitation
+GPM_1BVIRS,07,GPM VIRS on TRMM Radiance L1B 1.5 hours 2 km V07 (GPM_1BVIRS),1997-12-20,2014-03-21,1B,C2264132644-GES_DISC,precipitation
+GPM_1CAQUAAMSRE,08,GPM AMSR-E on AQUA Common Calibrated Brightness Temperatures L1C 1.5 hours 10.5 km V08 (GPM_1CAQUAAMSRE),2002-06-01,2011-10-04,1,C4054954448-GES_DISC,precipitation
+GPM_1CAQUAAMSRE,07,GPM AMSR-E on AQUA Common Calibrated Brightness Temperatures L1C 1.5 hours 10.5 km V07 (GPM_1CAQUAAMSRE),2002-06-01,2011-10-04,1,C2264132692-GES_DISC,precipitation
+GPM_1CF08SSMI,07,GPM SSMI on F08 Common Calibrated Brightness Temperatures L1C 1.5 hours 13 km V07 (GPM_1CF08SSMI),1987-07-09,1991-12-31,1,C2264132714-GES_DISC,precipitation
+GPM_1CF08SSMI,08,GPM SSMI on F08 Common Calibrated Brightness Temperatures L1C 1.5 hours 13 km V08 (GPM_1CF08SSMI),1987-07-09,1991-12-31,1,C4054954058-GES_DISC,precipitation
+GPM_1CF10SSMI,07,GPM SSMI on F10 Common Calibrated Brightness Temperatures L1C 1.5 hours 13 km V07 (GPM_1CF10SSMI),1990-12-08,1997-11-14,1,C2264132748-GES_DISC,precipitation
+GPM_1CF10SSMI,08,GPM SSMI on F10 Common Calibrated Brightness Temperatures L1C 1.5 hours 13 km V08 (GPM_1CF10SSMI),1990-12-08,1997-11-14,1,C4054953974-GES_DISC,precipitation
+GPM_1CF11SSMI,07,GPM SSMI on F11 Common Calibrated Brightness Temperatures L1C 1.5 hours 13 km V07 (GPM_1CF11SSMI),1991-12-03,2000-05-16,1,C2264132779-GES_DISC,precipitation
+GPM_1CF11SSMI,08,GPM SSMI on F11 Common Calibrated Brightness Temperatures L1C 1.5 hours 13 km V08 (GPM_1CF11SSMI),1991-12-03,2000-05-16,1,C4054954033-GES_DISC,precipitation
+GPM_1CF13SSMI,08,GPM SSMI on F13 Common Calibrated Brightness Temperatures L1C 1.5 hours 13 km V08 (GPM_1CF13SSMI),1995-05-03,2009-11-20,1,C4054953963-GES_DISC,precipitation
+GPM_1CF13SSMI,07,GPM SSMI on F13 Common Calibrated Brightness Temperatures L1C 1.5 hours 13 km V07 (GPM_1CF13SSMI),1995-05-03,2009-11-20,1,C2264132810-GES_DISC,precipitation
+GPM_1CF14SSMI,08,GPM SSMI on F14 Common Calibrated Brightness Temperatures L1C 1.5 hours 13 km V08 (GPM_1CF14SSMI),1997-05-07,2008-08-24,1,C4054954500-GES_DISC,precipitation
+GPM_1CF14SSMI,07,GPM SSMI on F14 Common Calibrated Brightness Temperatures L1C 1.5 hours 13 km V07 (GPM_1CF14SSMI),1997-05-07,2008-08-24,1,C2264132837-GES_DISC,precipitation
+GPM_1CF15SSMI,07,GPM SSMI on F15 Common Calibrated Brightness Temperatures L1C 1.5 hours 13 km V07 (GPM_1CF15SSMI),2000-02-23,2006-08-14,1,C2264132856-GES_DISC,precipitation
+GPM_1CF15SSMI,08,GPM SSMI on F15 Common Calibrated Brightness Temperatures L1C 1.5 hours 13 km V08 (GPM_1CF15SSMI),2000-02-23,2006-08-14,1,C4054953971-GES_DISC,precipitation
+GPM_1CF16SSMIS,07,GPM SSMIS on F16 Common Calibrated Brightness Temperatures L1C 1.5 hours 12 km V07 (GPM_1CF16SSMIS),2005-11-20,2026-03-01,1,C2264132881-GES_DISC,precipitation
+GPM_1CF16SSMIS,08,GPM SSMIS on F16 Common Calibrated Brightness Temperatures L1C 1.5 hours 12 km V08 (GPM_1CF16SSMIS),2005-11-20,ongoing,1,C4054954066-GES_DISC,precipitation
+GPM_1CF17SSMIS,07,GPM SSMIS on F17 Common Calibrated Brightness Temperatures L1C 1.5 hours 12 km V07 (GPM_1CF17SSMIS),2008-03-19,2026-03-01,1,C2264132902-GES_DISC,precipitation
+GPM_1CF17SSMIS,08,GPM SSMIS on F17 Common Calibrated Brightness Temperatures L1C 1.5 hours 12 km V08 (GPM_1CF17SSMIS),2006-12-14,ongoing,1,C4054954498-GES_DISC,precipitation
+GPM_1CF18SSMIS,07,GPM SSMIS on F18 Common Calibrated Brightness Temperatures L1C 1.5 hours 12 km V07 (GPM_1CF18SSMIS),2010-03-08,2026-03-01,1,C2264132936-GES_DISC,precipitation
+GPM_1CF18SSMIS,08,GPM SSMIS on F18 Common Calibrated Brightness Temperatures L1C 1.5 hours 12 km V08 (GPM_1CF18SSMIS),2009-12-31,ongoing,1,C4054954449-GES_DISC,precipitation
+GPM_1CF19SSMIS,07,GPM SSMIS on F19 Common Calibrated Brightness Temperatures L1C 1.5 hours 12 km V07 (GPM_1CF19SSMIS),2014-12-18,2016-02-11,1,C2264132955-GES_DISC,precipitation
+GPM_1CF19SSMIS,08,GPM SSMIS on F19 Common Calibrated Brightness Temperatures L1C 1.5 hours 12 km V08 (GPM_1CF19SSMIS),2014-12-18,2016-02-11,1,C4054954143-GES_DISC,precipitation
+GPM_1CGCOMW1AMSR2,07,GPM AMSR-2 on GCOM-W1 Common Calibrated Brightness Temperature L1C 1.5 hours 10 km V07 (GPM_1CGCOMW1AMSR2),2012-07-02,2026-03-01,1,C2264132976-GES_DISC,precipitation
+GPM_1CGCOMW1AMSR2,08,GPM AMSR-2 on GCOM-W1 Common Calibrated Brightness Temperature L1C 1.5 hours 10 km V08 (GPM_1CGCOMW1AMSR2),2012-07-02,ongoing,1,C4054954559-GES_DISC,precipitation
+GPM_1CGPMGMI,07,GPM GMI Common Calibrated Brightness Temperatures Collocated L1C 1.5 hours 13 km V07 (GPM_1CGPMGMI),2014-03-04,2026-03-01,1,C2259345484-GES_DISC,precipitation
+GPM_1CGPMGMI,08,GPM GMI Common Calibrated Brightness Temperatures Collocated L1C 1.5 hours 13 km V08 (GPM_1CGPMGMI),2014-03-04,ongoing,1,C4054954550-GES_DISC,precipitation
+GPM_1CGPMGMI_R,07,GPM GMI_R Common Calibrated Brightness Temperatures Collocated L1C 1.5 hours 13 km V07 (GPM_1CGPMGMI_R),2014-03-04,2026-03-01,1,C2259345519-GES_DISC,precipitation
+GPM_1CGPMGMI_R,08,GPM GMI_R Common Calibrated Brightness Temperatures Collocated L1C 1.5 hours 13 km V08 (GPM_1CGPMGMI_R),2014-03-04,ongoing,1,C4054954370-GES_DISC,precipitation
+GPM_1CMETOPAMHS,07,GPM MHS on METOP-A Common Calibrated Brightness Temperature L1C 1.5 hours 17 km V07 (GPM_1CMETOPAMHS),2006-11-23,2019-12-23,1,C2264133025-GES_DISC,precipitation
+GPM_1CMETOPAMHS,08,GPM MHS on METOP-A Common Calibrated Brightness Temperature L1C 1.5 hours 17 km V08 (GPM_1CMETOPAMHS),2006-11-23,2019-12-23,1,C4054954067-GES_DISC,precipitation
+GPM_1CMETOPBMHS,07,GPM MHS on METOP-B Common Calibrated Brightness Temperature L1C 1.5 hours 17 km V07 (GPM_1CMETOPBMHS),2012-09-25,2026-03-01,1,C2264133072-GES_DISC,precipitation
+GPM_1CMETOPBMHS,08,GPM MHS on METOP-B Common Calibrated Brightness Temperature L1C 1.5 hours 17 km V08 (GPM_1CMETOPBMHS),2012-09-25,ongoing,1,C4054954886-GES_DISC,precipitation
+GPM_1CMETOPCMHS,08,GPM MHS on METOP-C Common Calibrated Brightness Temperature L1C 1.5 hours 17 km V08 (GPM_1CMETOPCMHS),2018-11-16,ongoing,1,C4054954662-GES_DISC,precipitation
+GPM_1CMETOPCMHS,07,GPM MHS on METOP-C Common Calibrated Brightness Temperature L1C 1.5 hours 17 km V07 (GPM_1CMETOPCMHS),2018-11-16,2026-03-01,1,C2264133127-GES_DISC,precipitation
+GPM_1CMT1SAPHIR,07,GPM SAPHIR on MT1 Common Calibrated Brightness Temperature L1C 1.5 hours 10 km V07 (GPM_1CMT1SAPHIR),2011-10-13,2021-12-31,1,C2264133181-GES_DISC,precipitation
+GPM_1CMT1SAPHIR,08,GPM SAPHIR on MT1 Common Calibrated Brightness Temperature L1C 1.5 hours 10 km V08 (GPM_1CMT1SAPHIR),2011-10-13,2021-12-31,1,C4054954435-GES_DISC,precipitation
+GPM_1CNOAA15AMSUB,07,GPM AMSU-B on NOAA 15 Common Calibrated Brightness Temperatures L1C 1.5 hours 16 km V07 (GPM_1CNOAA15AMSUB),2000-01-01,2010-09-15,1,C2264133240-GES_DISC,precipitation
+GPM_1CNOAA15AMSUB,08,GPM AMSU-B on NOAA 15 Common Calibrated Brightness Temperatures L1C 1.5 hours 16 km V08 (GPM_1CNOAA15AMSUB),2000-01-01,2010-09-15,1,C4054954504-GES_DISC,precipitation
+GPM_1CNOAA16AMSUB,07,GPM AMSU-B on NOAA 16 Common Calibrated Brightness Temperatures L1C 1.5 hours 16 km V07 (GPM_1CNOAA16AMSUB),2000-10-04,2010-05-01,1,C2264133295-GES_DISC,precipitation
+GPM_1CNOAA16AMSUB,08,GPM AMSU-B on NOAA 16 Common Calibrated Brightness Temperatures L1C 1.5 hours 16 km V08 (GPM_1CNOAA16AMSUB),2000-10-04,2010-05-01,1,C4054954585-GES_DISC,precipitation
+GPM_1CNOAA17AMSUB,07,GPM AMSU-B on NOAA 17 Common Calibrated Brightness Temperatures L1C 1.5 hours 16 km V07 (GPM_1CNOAA17AMSUB),2002-06-28,2009-12-18,1,C2264133344-GES_DISC,precipitation
+GPM_1CNOAA17AMSUB,08,GPM AMSU-B on NOAA 17 Common Calibrated Brightness Temperatures L1C 1.5 hours 16 km V08 (GPM_1CNOAA17AMSUB),2002-06-28,2009-12-18,1,C4054954555-GES_DISC,precipitation
+GPM_1CNOAA18MHS,07,GPM MHS on NOAA-18 Common Calibrated Brightness Temperature L1C 1.5 hours 17 km V07 (GPM_1CNOAA18MHS),2005-05-25,2018-10-20,1,C2264133406-GES_DISC,precipitation
+GPM_1CNOAA18MHS,08,GPM MHS on NOAA-18 Common Calibrated Brightness Temperature L1C 1.5 hours 17 km V08 (GPM_1CNOAA18MHS),2005-05-25,2018-10-20,1,C4054954833-GES_DISC,precipitation
+GPM_1CNOAA19MHS,07,GPM MHS on NOAA-19 Common Calibrated Brightness Temperatures L1C 1.5 hours 17 km V07 (GPM_1CNOAA19MHS),2009-02-12,2025-06-16,1,C2264133458-GES_DISC,precipitation
+GPM_1CNOAA19MHS,08,GPM MHS on NOAA-19 Common Calibrated Brightness Temperatures L1C 1.5 hours 17 km V08 (GPM_1CNOAA19MHS),2009-02-12,ongoing,1,C4054954982-GES_DISC,precipitation
+GPM_1CNOAA20ATMS,08,GPM ATMS on NOAA-20 Common Calibrated Brightness Temperatures L1C 1.5 hours 17 km V08 (GPM_1CNOAA20ATMS),2017-11-29,ongoing,1,C4054954664-GES_DISC,precipitation
+GPM_1CNOAA20ATMS,07,GPM ATMS on NOAA-20 Common Calibrated Brightness Temperatures L1C 1.5 hours 17 km V07 (GPM_1CNOAA20ATMS),2017-11-29,2026-03-01,1,C2264133522-GES_DISC,precipitation
+GPM_1CNOAA21ATMS,07,GPM ATMS on NOAA-21 Common Calibrated Brightness Temperatures L1C 1.5 hours 17 km V07 (GPM_1CNOAA21ATMS),2023-02-01,2026-03-01,1,C2712827633-GES_DISC,precipitation
+GPM_1CNOAA21ATMS,08,GPM ATMS on NOAA-21 Common Calibrated Brightness Temperatures L1C 1.5 hours 17 km V08 (GPM_1CNOAA21ATMS),2023-02-01,ongoing,1,C4054954531-GES_DISC,precipitation
+GPM_1CNPPATMS,08,GPM ATMS on SUOMI-NPP Common Calibrated Brightness Temperature L1C 1.5 hours 16 km V08 (GPM_1CNPPATMS),2011-11-08,ongoing,1,C4054954526-GES_DISC,precipitation
+GPM_1CNPPATMS,07,GPM ATMS on SUOMI-NPP Common Calibrated Brightness Temperature L1C 1.5 hours 16 km V07 (GPM_1CNPPATMS),2011-11-08,2026-03-01,1,C2264133568-GES_DISC,precipitation
+GPM_1CTRMMTMI,08,GPM TMI on TRMM Common Calibrated Brightness Temperatures L1C 1.5 hours 13 km V08 (GPM_1CTRMMTMI),1997-12-07,2015-04-08,1,C4054954869-GES_DISC,precipitation
+GPM_1CTRMMTMI,07,GPM TMI on TRMM Common Calibrated Brightness Temperatures L1C 1.5 hours 13 km V07 (GPM_1CTRMMTMI),1997-12-07,2015-04-08,1,C2264133616-GES_DISC,precipitation
+GPM_2ADPR,07,GPM DPR Precipitation Profile L2A 1.5 hours 5 km V07 (GPM_2ADPR),2014-03-08,2026-03-01,2,C2179081499-GES_DISC,precipitation
+GPM_2ADPR,08,GPM DPR Precipitation Profile L2A 1.5 hours 5 km V08 (GPM_2ADPR),2014-03-08,ongoing,2,C4054954501-GES_DISC,precipitation
+GPM_2ADPRENV,07,GPM DPR L2A Environment 1.5 hours 5 km V07 (GPM_2ADPRENV),2014-03-08,2026-03-01,2,C2179081510-GES_DISC,precipitation
+GPM_2ADPRENV,08,GPM DPR L2A Environment 1.5 hours 5 km V08 (GPM_2ADPRENV),2014-03-08,ongoing,2,C4054954582-GES_DISC,precipitation
+GPM_2AGPROFAQUAAMSRE_CLIM,07,GPM AMSR-E on Aqua (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 5 km V07 (GPM_2AGPROFAQUAAMSRE_CLIM),2002-06-01,2011-10-04,2,C2264133950-GES_DISC,precipitation
+GPM_2AGPROFF08SSMI_CLIM,07,GPM SSM/I on F08 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 12 km V07 (GPM_2AGPROFF08SSMI_CLIM),1987-07-09,1991-12-31,2,C2264133957-GES_DISC,precipitation
+GPM_2AGPROFF08SSMI_CLIM,08,GPM SSM/I on F08 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 12 km V08 (GPM_2AGPROFF08SSMI_CLIM),1987-07-09,1991-12-31,2,C4054954520-GES_DISC,precipitation
+GPM_2AGPROFF10SSMI_CLIM,07,GPM SSM/I on F10 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 12 km V07 (GPM_2AGPROFF10SSMI_CLIM),1990-12-08,1997-11-14,2,C2264133962-GES_DISC,precipitation
+GPM_2AGPROFF10SSMI_CLIM,08,GPM SSM/I on F10 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 12 km V08 (GPM_2AGPROFF10SSMI_CLIM),1990-12-08,1997-11-14,2,C4054954946-GES_DISC,precipitation
+GPM_2AGPROFF11SSMI_CLIM,07,GPM SSM/I on F11 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 13 km V07 (GPM_2AGPROFF11SSMI_CLIM),1991-12-03,2000-05-16,2,C2264133965-GES_DISC,precipitation
+GPM_2AGPROFF11SSMI_CLIM,08,GPM SSM/I on F11 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 13 km V08 (GPM_2AGPROFF11SSMI_CLIM),1991-12-03,2000-05-16,2,C4054954932-GES_DISC,precipitation
+GPM_2AGPROFF13SSMI_CLIM,07,GPM SSM/I on F13 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 12 km V07 (GPM_2AGPROFF13SSMI_CLIM),1995-05-03,2009-11-18,2,C2264133990-GES_DISC,precipitation
+GPM_2AGPROFF13SSMI_CLIM,08,GPM SSM/I on F13 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 12 km V08 (GPM_2AGPROFF13SSMI_CLIM),1995-05-03,2009-11-20,2,C4054954554-GES_DISC,precipitation
+GPM_2AGPROFF14SSMI_CLIM,07,GPM SSM/I on F14 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 12 km V07 (GPM_2AGPROFF14SSMI_CLIM),1997-05-07,2008-08-24,2,C2264134011-GES_DISC,precipitation
+GPM_2AGPROFF14SSMI_CLIM,08,GPM SSM/I on F14 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 12 km V08 (GPM_2AGPROFF14SSMI_CLIM),1997-05-07,2008-08-24,2,C4054954558-GES_DISC,precipitation
+GPM_2AGPROFF15SSMI_CLIM,07,GPM SSM/I on F15 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 12 km V07 (GPM_2AGPROFF15SSMI_CLIM),2000-02-23,2006-08-14,2,C2264134016-GES_DISC,precipitation
+GPM_2AGPROFF15SSMI_CLIM,08,GPM SSM/I on F15 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 12 km V08 (GPM_2AGPROFF15SSMI_CLIM),2000-02-23,2006-08-14,2,C4054954885-GES_DISC,precipitation
+GPM_2AGPROFF16SSMIS,07,GPM SSMIS on F16 (GPROF) Radiometer Precipitation Profiling L2 1.5 hours 12 km V07 (GPM_2AGPROFF16SSMIS),2022-04-30,2026-03-01,2,C2264133638-GES_DISC,precipitation
+GPM_2AGPROFF16SSMIS,08,GPM SSMIS on F16 (GPROF) Radiometer Precipitation Profiling L2 1.5 hours 12 km V08 (GPM_2AGPROFF16SSMIS),2014-01-31,ongoing,2,C4054954578-GES_DISC,precipitation
+GPM_2AGPROFF16SSMIS_CLIM,08,GPM SSMIS on F16 (GPROF) Climate-based Radiometer Precipitation Profiling 1.5 hours 12 km V08 (GPM_2AGPROFF16SSMIS_CLIM),2005-11-20,ongoing,2,C4054954873-GES_DISC,precipitation
+GPM_2AGPROFF16SSMIS_CLIM,07,GPM SSMIS on F16 (GPROF) Climate-based Radiometer Precipitation Profiling 1.5 hours 12 km V07 (GPM_2AGPROFF16SSMIS_CLIM),2005-11-20,2025-12-01,2,C2264134019-GES_DISC,precipitation
+GPM_2AGPROFF17SSMIS,07,GPM SSMIS on F17 (GPROF) Radiometer Precipitation Profiling L2 1.5 hours 12 km V07 (GPM_2AGPROFF17SSMIS),2022-04-30,2026-03-01,2,C2264133661-GES_DISC,precipitation
+GPM_2AGPROFF17SSMIS,08,GPM SSMIS on F17 (GPROF) Radiometer Precipitation Profiling L2 1.5 hours 12 km V08 (GPM_2AGPROFF17SSMIS),2014-01-31,ongoing,2,C4054954979-GES_DISC,precipitation
+GPM_2AGPROFF17SSMIS_CLIM,08,GPM SSMIS on F17 (GPROF) Climate-based Radiometer Precipitation Profiling 1.5 hours 12 km V08 (GPM_2AGPROFF17SSMIS_CLIM),2006-12-14,ongoing,2,C4054954729-GES_DISC,precipitation
+GPM_2AGPROFF17SSMIS_CLIM,07,GPM SSMIS on F17 (GPROF) Climate-based Radiometer Precipitation Profiling 1.5 hours 12 km V07 (GPM_2AGPROFF17SSMIS_CLIM),2008-03-19,2025-12-01,2,C2264134035-GES_DISC,precipitation
+GPM_2AGPROFF18SSMIS,07,GPM SSMIS on F18 (GPROF) Radiometer Precipitation Profiling L2 1.5 hours 12 km V07 (GPM_2AGPROFF18SSMIS),2022-04-30,2026-03-01,2,C2264133688-GES_DISC,precipitation
+GPM_2AGPROFF18SSMIS,08,GPM SSMIS on F18 (GPROF) Radiometer Precipitation Profiling L2 1.5 hours 12 km V08 (GPM_2AGPROFF18SSMIS),2014-01-31,ongoing,2,C4054954727-GES_DISC,precipitation
+GPM_2AGPROFF18SSMIS_CLIM,08,GPM SSMIS on F18 (GPROF) Climate-based Radiometer Precipitation Profiling 1.5 hours 12 km V08 (GPM_2AGPROFF18SSMIS_CLIM),2009-12-01,ongoing,2,C4054954846-GES_DISC,precipitation
+GPM_2AGPROFF18SSMIS_CLIM,07,GPM SSMIS on F18 (GPROF) Climate-based Radiometer Precipitation Profiling 1.5 hours 12 km V07 (GPM_2AGPROFF18SSMIS_CLIM),2010-03-08,2025-12-01,2,C2264134059-GES_DISC,precipitation
+GPM_2AGPROFF19SSMIS_CLIM,08,GPM SSMIS on F19 (GPROF) Climate-based Radiometer Precipitation Profiling 1.5 hours 12 km V08 (GPM_2AGPROFF19SSMIS_CLIM),2014-12-18,2016-02-11,2,C4054954988-GES_DISC,precipitation
+GPM_2AGPROFF19SSMIS_CLIM,07,GPM SSMIS on F19 (GPROF) Climate-based Radiometer Precipitation Profiling 1.5 hours 12 km V07 (GPM_2AGPROFF19SSMIS_CLIM),2014-12-18,2016-02-11,2,C2264134106-GES_DISC,precipitation
+GPM_2AGPROFGCOMW1AMSR2,07,GPM AMSR-2 on GCOM-W1 (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 10 km V07 (GPM_2AGPROFGCOMW1AMSR2),2022-04-30,2026-03-01,2,C2264133757-GES_DISC,precipitation
+GPM_2AGPROFGCOMW1AMSR2,08,GPM AMSR-2 on GCOM-W1 (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 10 km V08 (GPM_2AGPROFGCOMW1AMSR2),2014-01-31,ongoing,2,C4054954781-GES_DISC,precipitation
+GPM_2AGPROFGCOMW1AMSR2_CLIM,07,GPM AMSR-2 on GCOM-W1 (GPROF) Climate-based Radiometer Precipitation Profiling L2A 1.5 hours 10 km V07 (GPM_2AGPROFGCOMW1AMSR2_CLIM),2012-07-02,2025-12-01,2,C2264134168-GES_DISC,precipitation
+GPM_2AGPROFGCOMW1AMSR2_CLIM,08,GPM AMSR-2 on GCOM-W1 (GPROF) Climate-based Radiometer Precipitation Profiling L2A 1.5 hours 10 km V08 (GPM_2AGPROFGCOMW1AMSR2_CLIM),2012-07-02,ongoing,2,C4054955011-GES_DISC,precipitation
+GPM_2AGPROFGPMGMI,07,GPM GMI (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 13 km V07 (GPM_2AGPROFGPMGMI),2014-03-04,2026-03-01,2,C2259345545-GES_DISC,precipitation
+GPM_2AGPROFGPMGMI,08,GPM GMI (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 13 km V08 (GPM_2AGPROFGPMGMI),2014-03-04,ongoing,2,C4054955013-GES_DISC,precipitation
+GPM_2AGPROFGPMGMI_CLIM,08,GPM GMI (GPROF) Climate-based Radiometer Precipitation Profiling L2A 1.5 hours 4 km x 4 km V08 (GPM_2AGPROFGPMGMI_CLIM),2014-03-04,ongoing,2,C4054954995-GES_DISC,precipitation
+GPM_2AGPROFGPMGMI_CLIM,07,GPM GMI (GPROF) Climate-based Radiometer Precipitation Profiling L2A 1.5 hours 4 km x 4 km V07 (GPM_2AGPROFGPMGMI_CLIM),2014-03-04,2025-12-01,2,C2259345563-GES_DISC,precipitation
+GPM_2AGPROFMETOPAMHS_CLIM,07,GPM MHS on METOP-A (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 17 km V07 (GPM_2AGPROFMETOPAMHS_CLIM),2006-11-23,2019-12-23,2,C2264134196-GES_DISC,precipitation
+GPM_2AGPROFMETOPAMHS_CLIM,08,GPM MHS on METOP-A (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 17 km V08 (GPM_2AGPROFMETOPAMHS_CLIM),2006-11-23,2019-12-23,2,C4054954930-GES_DISC,precipitation
+GPM_2AGPROFMETOPBMHS,07,GPM MHS on METOP-B (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 17 km V07 (GPM_2AGPROFMETOPBMHS),2022-04-30,2026-03-01,2,C2264133816-GES_DISC,precipitation
+GPM_2AGPROFMETOPBMHS,08,GPM MHS on METOP-B (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 17 km V08 (GPM_2AGPROFMETOPBMHS),2014-01-31,ongoing,2,C4054955012-GES_DISC,precipitation
+GPM_2AGPROFMETOPBMHS_CLIM,07,GPM MHS on METOP-B (GPROF) Climate-based Radiometer Precipitation Profiling L2A 1.5 hours 17 km V07 (GPM_2AGPROFMETOPBMHS_CLIM),2012-09-25,2025-12-01,2,C2264134219-GES_DISC,precipitation
+GPM_2AGPROFMETOPBMHS_CLIM,08,GPM MHS on METOP-B (GPROF) Climate-based Radiometer Precipitation Profiling L2A 1.5 hours 17 km V08 (GPM_2AGPROFMETOPBMHS_CLIM),2012-09-25,ongoing,2,C4054955009-GES_DISC,precipitation
+GPM_2AGPROFMETOPCMHS,07,GPM MHS on METOP-C (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 17 km V07 (GPM_2AGPROFMETOPCMHS),2022-04-30,2026-03-01,2,C2264133834-GES_DISC,precipitation
+GPM_2AGPROFMETOPCMHS,08,GPM MHS on METOP-C (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 17 km V08 (GPM_2AGPROFMETOPCMHS),2019-07-02,ongoing,2,C4054954925-GES_DISC,precipitation
+GPM_2AGPROFMETOPCMHS_CLIM,07,GPM MHS on METOP-C (GPROF) Climate-based Radiometer Precipitation Profiling L2A 1.5 hours 17 km V07 (GPM_2AGPROFMETOPCMHS_CLIM),2018-11-16,2025-12-01,2,C2264134246-GES_DISC,precipitation
+GPM_2AGPROFMETOPCMHS_CLIM,08,GPM MHS on METOP-C (GPROF) Climate-based Radiometer Precipitation Profiling L2A 1.5 hours 17 km V08 (GPM_2AGPROFMETOPCMHS_CLIM),2018-11-16,ongoing,2,C4054955042-GES_DISC,precipitation
+GPM_2AGPROFNOAA15AMSUB_CLIM,07,GPM AMSU-B on NOAA15 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 16 km V07 (GPM_2AGPROFNOAA15AMSUB),2000-01-01,2009-01-01,2,C2264134264-GES_DISC,precipitation
+GPM_2AGPROFNOAA15AMSUB_CLIM,08,GPM AMSU-B on NOAA15 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 16 km V08 (GPM_2AGPROFNOAA15AMSUB),2000-01-01,2010-09-15,2,C4054955060-GES_DISC,precipitation
+GPM_2AGPROFNOAA16AMSUB_CLIM,07,GPM AMSU-B on NOAA16 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 16 km V07 (GPM_2AGPROFNOAA16AMSUB),2000-10-04,2008-01-01,2,C2264134296-GES_DISC,precipitation
+GPM_2AGPROFNOAA16AMSUB_CLIM,08,GPM AMSU-B on NOAA16 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 16 km V08 (GPM_2AGPROFNOAA16AMSUB),2000-10-04,2010-05-01,2,C4054954917-GES_DISC,precipitation
+GPM_2AGPROFNOAA17AMSUB_CLIM,07,GPM AMSU-B on NOAA17 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 16 km V07 (GPM_2AGPROFNOAA17AMSUB),2002-06-28,2009-12-17,2,C2264134325-GES_DISC,precipitation
+GPM_2AGPROFNOAA17AMSUB_CLIM,08,GPM AMSU-B on NOAA17 (GPROF) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 16 km V08 (GPM_2AGPROFNOAA17AMSUB),2002-06-28,2009-12-18,2,C4054954994-GES_DISC,precipitation
+GPM_2AGPROFNOAA18MHS_CLIM,07,GPM MHS on NOAA-18 (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 17 km V07 (GPM_2AGPROFNOAA18MHS_CLIM),2005-05-26,2018-10-20,2,C2264134345-GES_DISC,precipitation
+GPM_2AGPROFNOAA18MHS_CLIM,08,GPM MHS on NOAA-18 (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 17 km V08 (GPM_2AGPROFNOAA18MHS_CLIM),2005-05-25,2018-10-20,2,C4054954931-GES_DISC,precipitation
+GPM_2AGPROFNOAA19MHS,07,GPM MHS on NOAA-19 (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 17 km V07 (GPM_2AGPROFNOAA19MHS),2022-04-30,2025-06-16,2,C2264133875-GES_DISC,precipitation
+GPM_2AGPROFNOAA19MHS_CLIM,07,GPM MHS on NOAA-19 (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 17 km V07 (GPM_2AGPROFNOAA19MHS_CLIM),2009-02-12,2025-06-16,2,C2264134366-GES_DISC,precipitation
+GPM_2AGPROFNOAA19MHS_CLIM,08,GPM MHS on NOAA-19 (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 17 km V08 (GPM_2AGPROFNOAA19MHS_CLIM),2009-02-12,2025-06-16,2,C4054955044-GES_DISC,precipitation
+GPM_2AGPROFNOAA20ATMS,07,GPM ATMS on NOAA-20 (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 17 km V07 (GPM_2AGPROFNOAA20ATMS),2022-04-30,2026-03-01,2,C2264133891-GES_DISC,precipitation
+GPM_2AGPROFNOAA20ATMS,08,GPM ATMS on NOAA-20 (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 17 km V08 (GPM_2AGPROFNOAA20ATMS),2017-11-29,ongoing,2,C4054954986-GES_DISC,precipitation
+GPM_2AGPROFNOAA20ATMS_CLIM,07,GPM ATMS on NOAA-20 (GPROF) Climate-based Radiometer Precipitation Profiling L2A 1.5 hours 17 km V07 (GPM_2AGPROFNOAA20ATMS_CLIM),2017-11-29,2025-12-01,2,C2264134395-GES_DISC,precipitation
+GPM_2AGPROFNOAA20ATMS_CLIM,08,GPM ATMS on NOAA-20 (GPROF) Climate-based Radiometer Precipitation Profiling L2A 1.5 hours 17 km V08 (GPM_2AGPROFNOAA20ATMS_CLIM),2017-11-29,ongoing,2,C4054954947-GES_DISC,precipitation
+GPM_2AGPROFNOAA21ATMS,07,GPM ATMS on NOAA-21 (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 17 km V07 (GPM_2AGPROFNOAA21ATMS),2023-02-01,2026-03-01,2,C2712827634-GES_DISC,precipitation
+GPM_2AGPROFNOAA21ATMS,08,GPM ATMS on NOAA-21 (GPROF) Radiometer Precipitation Profiling L2A 1.5 hours 17 km V08 (GPM_2AGPROFNOAA21ATMS),2023-02-01,ongoing,2,C4054954955-GES_DISC,precipitation
+GPM_2AGPROFNOAA21ATMS_CLIM,07,GPM ATMS on NOAA-21 (GPROF) Climate-based Radiometer Precipitation Profiling L2A 1.5 hours 17 km V07 (GPM_2AGPROFNOAA21ATMS_CLIM),2023-02-01,2025-12-01,2,C2712827635-GES_DISC,precipitation
+GPM_2AGPROFNOAA21ATMS_CLIM,08,GPM ATMS on NOAA-21 (GPROF) Climate-based Radiometer Precipitation Profiling L2A 1.5 hours 17 km V08 (GPM_2AGPROFNOAA21ATMS_CLIM),2023-02-01,ongoing,2,C4054955063-GES_DISC,precipitation
+GPM_2AGPROFNPPATMS,07,GPM ATMS on SUOMI-NPP (GPROF) Radiometer Precipitation Profiling L2 1.5 hours 16 km V07 (GPM_2AGPROFNPPATMS),2022-04-30,2026-03-01,2,C2264133914-GES_DISC,precipitation
+GPM_2AGPROFNPPATMS,08,GPM ATMS on SUOMI-NPP (GPROF) Radiometer Precipitation Profiling L2 1.5 hours 16 km V08 (GPM_2AGPROFNPPATMS),2026-02-28,ongoing,2,C4054955078-GES_DISC,precipitation
+GPM_2AGPROFNPPATMS_CLIM,07,GPM ATMS on SUOMI-NPP (GPROF) Radiometer Precipitation Profiling L2 1.5 hours 16 km V07 (GPM_2AGPROFNPPATMS_CLIM),2011-11-08,2025-12-01,2,C2264134428-GES_DISC,precipitation
+GPM_2AGPROFNPPATMS_CLIM,08,GPM ATMS on SUOMI-NPP (GPROF) Radiometer Precipitation Profiling L2 1.5 hours 16 km V08 (GPM_2AGPROFNPPATMS_CLIM),2011-11-08,ongoing,2,C4054955067-GES_DISC,precipitation
+GPM_2AGPROFTRMMTMI_CLIM,07,GPM TMI on TRMM (GPROF) Climate-based Radiometer Precipitation Profiling L2A 1.5 hours 13 km V07 (GPM_2AGPROFTRMMTMI_CLIM),1997-12-07,2015-04-08,2,C2264134452-GES_DISC,precipitation
+GPM_2AGPROFTRMMTMI_CLIM,08,GPM TMI on TRMM (GPROF) Climate-based Radiometer Precipitation Profiling L2A 1.5 hours 13 km V08 (GPM_2AGPROFTRMMTMI_CLIM),1997-12-07,2015-04-08,2,C4054955010-GES_DISC,precipitation
+GPM_2AKa,07,GPM DPR Ka Precipitation Profile 2A 1.5 hours 5 km V07 (GPM_2AKa),2014-03-08,2026-03-01,2,C2179081525-GES_DISC,precipitation
+GPM_2AKa,08,GPM DPR Ka Precipitation Profile 2A 1.5 hours 5 km V08 (GPM_2AKa),2014-03-08,ongoing,2,C4054955113-GES_DISC,precipitation
+GPM_2AKaENV,07,GPM DPR Ka Environment L2A 1.5 hours 5 km V07 (GPM_2AKaENV),2014-03-08,2026-03-01,2,C2179301732-GES_DISC,precipitation
+GPM_2AKaENV,08,GPM DPR Ka Environment L2A 1.5 hours 5 km V08 (GPM_2AKaENV),2014-03-08,ongoing,2,C4054955038-GES_DISC,precipitation
+GPM_2AKu,07,GPM DPR Ku Precipitation Profile 2A 1.5 hours 5 km V07 (GPM_2AKu),2014-03-08,2026-03-01,2,C2179081538-GES_DISC,precipitation
+GPM_2AKu,08,GPM DPR Ku Precipitation Profile 2A 1.5 hours 5 km V08 (GPM_2AKu),2014-03-08,ongoing,2,C4054955082-GES_DISC,precipitation
+GPM_2AKuENV,07,GPM DPR Ku Environment L2A 1.5 hours 5 km V07 (GPM_2AKuENV),2014-03-08,2026-03-01,2,C2179301740-GES_DISC,precipitation
+GPM_2AKuENV,08,GPM DPR Ku Environment L2A 1.5 hours 5 km V08 (GPM_2AKuENV),2014-03-08,ongoing,2,C4054955085-GES_DISC,precipitation
+GPM_2APR,07,"GPM PR on TRMM Reflectivity, Precipitation Characteristics and Rate, at Surface and Profile L2 1.5 hours V07 (GPM_2APR)",1997-12-07,2015-04-01,2,C2264132215-GES_DISC,precipitation
+GPM_2APRPSMT1SAPHIR,06,GPM SAPHIR on MT1 (PRPS) Radiometer Precipitation Profiling L2 1.5 hours 10 km V06 (GPM_2APRPSMT1SAPHIR),2014-01-31,2021-12-31,2,C1596594714-GES_DISC,precipitation
+GPM_2APRPSMT1SAPHIR_CLIM,06,GPM SAPHIR on MT1 (PRPS) Climate-based Radiometer Precipitation Profiling L2 1.5 hours 10 km V06 (GPM_2APRPSMT1SAPHIR_CLIM),2011-10-13,2021-12-31,2,C1596594715-GES_DISC,precipitation
+GPM_2BCMB,07,GPM DPR and GMI Combined Precipitation L2B 1.5 hours 5 km V07 (GPM_2BCMB),2014-03-08,2026-03-01,2,C2179081553-GES_DISC,precipitation
+GPM_2BCMB_TRMM,07,GPM PR and TMI on TRMM Combined Precipitation L2B 1.5 hours 5 km V07 (GPM_2BCMB_TRMM),1997-12-07,2015-04-01,2,C2264132362-GES_DISC,precipitation
+GPM_2HCSH,07,GPM DPR and GMI Combined Stratiform Heating L2 1.5 hours 5 km V07 (GPM_2HCSH),2014-03-08,2026-03-01,2,C2179081566-GES_DISC,precipitation
+GPM_2HCSH_TRMM,07,GPM PR and TMI on TRMM Combined Convective-Stratiform Latent Heating Profiles L2 1.5 hours 5 km V07 (GPM_2HCSH_TRMM),1997-12-07,2015-04-01,2,C2264132377-GES_DISC,precipitation
+GPM_2HSLH,08,GPM DPR Spectral Latent Heating Profiles L2 1.5 hours 5 km V08 (GPM_2HSLH),2014-03-08,ongoing,2,C4054955045-GES_DISC,precipitation
+GPM_2HSLH,07,GPM DPR Spectral Latent Heating Profiles L2 1.5 hours 5 km V07 (GPM_2HSLH),2014-03-08,2026-03-01,2,C2179081549-GES_DISC,precipitation
+GPM_2HSLH_TRMM,07,GPM PR on TRMM Spectral Latent Heating Profiles L2 1.5 hours 5 km V07 (GPM_2HSLH_TRMM),1997-12-07,2015-04-01,2,C2264132245-GES_DISC,precipitation
+GPM_3CMB,07,GPM DPR and GMI (Combined Precipitation) L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3CMB),2014-03-08,2026-02-28,3,C2179081668-GES_DISC,precipitation
+GPM_3CMB_DAY,07,GPM DPR and GMI (Combined Precipitation) L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3CMB_DAY),2014-03-08,2026-02-28,3,C2179081680-GES_DISC,precipitation
+GPM_3CMB_TRMM,07,GPM PR and TMI on TRMM (Combined Precipitation) L3 1 month 0.25x0.25 degree V07 (GPM_3CMB_TRMM),1997-12-01,2015-04-01,3,C2264132450-GES_DISC,precipitation
+GPM_3CMB_TRMM_DAY,07,GPM PR and TMI on TRMM (Combined Precipitation) L3 1 day 0.25x0.25 degree V07 (GPM_3CMB_TRMM_DAY),1997-12-07,2015-04-01,3,C2264132469-GES_DISC,precipitation
+GPM_3DPR,08,GPM DPR Precipitation Profile 1 month 0.25 degree x 0.25 degree V08 (GPM_3DPR),2014-03-08,ongoing,3,C4054955139-GES_DISC,precipitation
+GPM_3DPR,07,GPM DPR Precipitation Profile 1 month 0.25 degree x 0.25 degree V07 (GPM_3DPR),2014-03-09,2026-02-28,3,C2179081580-GES_DISC,precipitation
+GPM_3DPRD,07,GPM DPR Precipitation Profile 1 Day 0.25 degree x 0.25 degree V07 (GPM_3DPRD),2014-03-09,2026-02-28,3,C2179081590-GES_DISC,precipitation
+GPM_3DPRD,08,GPM DPR Precipitation Profile 1 Day 0.25 degree x 0.25 degree V08 (GPM_3DPRD),2014-03-08,ongoing,3,C4054955176-GES_DISC,precipitation
+GPM_3DPR_ASC,07,GPM DPR Precipitation Profile 1 Day Ascending 0.25 degree x 0.25 degree V07 (GPM_3DPR_ASC),2014-03-09,2026-02-28,3,C2179081652-GES_DISC,precipitation
+GPM_3DPR_ASC,08,GPM DPR Precipitation Profile 1 Day Ascending 0.25 degree x 0.25 degree V08 (GPM_3DPR_ASC),2014-03-08,ongoing,3,C4054955204-GES_DISC,precipitation
+GPM_3DPR_DES,07,GPM DPR Precipitation Profile 1 Day Descending 0.25 degree x 0.25 degree V07 (GPM_3DPR_DES),2014-03-09,2026-02-28,3,C2179081663-GES_DISC,precipitation
+GPM_3DPR_DES,08,GPM DPR Precipitation Profile 1 Day Descending 0.25 degree x 0.25 degree V08 (GPM_3DPR_DES),2014-03-08,ongoing,3,C4054955116-GES_DISC,precipitation
+GPM_3GCSH,07,GPM DPR (Gridded Convective Stratiform Heating) L3 1.5 hours 0.5 degree x 0.5 degree V07 (GPM_3GCSH),2014-03-08,2026-03-01,3,C2179081683-GES_DISC,precipitation
+GPM_3GCSH_TRMM,07,GPM PR and TMI on TRMM Combined Gridded Orbital Convective-Stratiform Latent Heating Profiles L3 1.5 hours 0.25x0.25 degree V07 (GPM_3GCSH_TRMM),1997-12-07,2015-04-01,3,C2264132506-GES_DISC,precipitation
+GPM_3GPROFAQUAAMSRE_CLIM,07,GPM AMSR-E on Aqua (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFAQUAAMSRE_CLIM),2002-06-01,2011-10-31,3,C2264134954-GES_DISC,precipitation
+GPM_3GPROFAQUAAMSRE_DAY_CLIM,07,GPM AMSR-E on Aqua (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFAQUAAMSRE_DAY_CLIM),2002-06-01,2011-10-04,3,C2264134971-GES_DISC,precipitation
+GPM_3GPROFF08SSMI_CLIM,07,GPM SSMI on F08 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFF08SSMI_CLIM),1987-07-01,1991-12-31,3,C2264135006-GES_DISC,precipitation
+GPM_3GPROFF08SSMI_DAY_CLIM,07,GPM SSMI on F08 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFF08SSMI_DAY_CLIM),1987-07-09,1991-12-31,3,C2264135026-GES_DISC,precipitation
+GPM_3GPROFF10SSMI_CLIM,07,GPM SSMI on F10 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFF10SSMI_CLIM),1990-12-01,1997-11-30,3,C2264135047-GES_DISC,precipitation
+GPM_3GPROFF10SSMI_DAY_CLIM,07,GPM SSMI on F10 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFF10SSMI_DAY_CLIM),1990-12-08,1997-11-14,3,C2264135079-GES_DISC,precipitation
+GPM_3GPROFF11SSMI_CLIM,07,GPM SSMI on F11 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFF11SSMI_CLIM),1991-12-01,2000-05-31,3,C2264135111-GES_DISC,precipitation
+GPM_3GPROFF11SSMI_DAY_CLIM,07,GPM SSMI on F11 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFF11SSMI_DAY_CLIM),1991-12-03,2000-05-16,3,C2264135158-GES_DISC,precipitation
+GPM_3GPROFF13SSMI_CLIM,07,GPM SSMI on F13 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFF13SSMI_CLIM),1995-05-01,2009-11-30,3,C2264135190-GES_DISC,precipitation
+GPM_3GPROFF13SSMI_DAY_CLIM,07,GPM SSMI on F13 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFF13SSMI_DAY_CLIM),1995-05-01,2009-11-18,3,C2264135209-GES_DISC,precipitation
+GPM_3GPROFF14SSMI_CLIM,07,GPM SSMI on F14 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFF14SSMI_CLIM),1997-05-01,2008-08-31,3,C2264135224-GES_DISC,precipitation
+GPM_3GPROFF14SSMI_DAY_CLIM,07,GPM SSMI on F14 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFF14SSMI_DAY_CLIM),1997-05-01,2008-08-23,3,C2264135246-GES_DISC,precipitation
+GPM_3GPROFF15SSMI_CLIM,07,GPM SSMI on F15 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFF15SSMI_CLIM),2000-02-01,2006-08-31,3,C2264135273-GES_DISC,precipitation
+GPM_3GPROFF15SSMI_DAY_CLIM,07,GPM SSMI on F15 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFF15SSMI_DAY_CLIM),2000-02-23,2006-08-13,3,C2264135294-GES_DISC,precipitation
+GPM_3GPROFF16SSMIS,07,GPM SSMIS on F16 (GPROF) Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFF16SSMIS),2022-05-01,2026-02-28,3,C2264134492-GES_DISC,precipitation
+GPM_3GPROFF16SSMIS_CLIM,07,GPM SSMIS on F16 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFF16SSMIS_CLIM),2005-11-01,2025-11-30,3,C2264135319-GES_DISC,precipitation
+GPM_3GPROFF16SSMIS_DAY,07,GPM SSMIS on F16 (GPROF) Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFF16SSMIS_DAY),2022-05-01,2026-02-28,3,C2264134526-GES_DISC,precipitation
+GPM_3GPROFF16SSMIS_DAY_CLIM,07,GPM SSMIS on F16 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFF16SSMIS_DAY_CLIM),2005-11-20,2025-11-30,3,C2264135339-GES_DISC,precipitation
+GPM_3GPROFF17SSMIS,07,GPM SSMIS on F17 (GPROF) Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFF17SSMIS),2022-05-01,2026-02-28,3,C2264134547-GES_DISC,precipitation
+GPM_3GPROFF17SSMIS_CLIM,07,GPM SSMIS on F17 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFF17SSMIS_CLIM),2008-03-01,2025-11-30,3,C2264135360-GES_DISC,precipitation
+GPM_3GPROFF17SSMIS_DAY,07,GPM SSMIS on F17 (GPROF) Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFF17SSMIS_DAY),2022-05-01,2026-02-28,3,C2264134565-GES_DISC,precipitation
+GPM_3GPROFF17SSMIS_DAY_CLIM,07,GPM SSMIS on F17 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFF17SSMIS_DAY_CLIM),2008-03-19,2025-11-30,3,C2264135388-GES_DISC,precipitation
+GPM_3GPROFF18SSMIS,07,GPM SSMIS on F18 (GPROF) Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFF18SSMIS),2022-05-01,2026-02-28,3,C2264134592-GES_DISC,precipitation
+GPM_3GPROFF18SSMIS_CLIM,07,GPM SSMIS on F18 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFF18SSMIS_CLIM),2010-03-01,2025-11-30,3,C2264135411-GES_DISC,precipitation
+GPM_3GPROFF18SSMIS_DAY,07,GPM SSMIS on F18 (GPROF) Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFF18SSMIS_DAY),2022-05-01,2026-02-28,3,C2264134615-GES_DISC,precipitation
+GPM_3GPROFF18SSMIS_DAY_CLIM,07,GPM SSMIS on F18 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFF18SSMIS_DAY_CLIM),2010-03-08,2025-11-30,3,C2264135441-GES_DISC,precipitation
+GPM_3GPROFF19SSMIS_CLIM,07,GPM SSMIS on F19 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFF19SSMIS_CLIM),2014-12-01,2016-02-29,3,C2264135475-GES_DISC,precipitation
+GPM_3GPROFF19SSMIS_DAY_CLIM,07,GPM SSMIS on F19 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFF19SSMIS_DAY_CLIM),2014-12-18,2016-02-11,3,C2264135505-GES_DISC,precipitation
+GPM_3GPROFGCOMW1AMSR2,07,GPM AMSR-2 on GCOM-W1 (GPROF) Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFGCOMW1AMSR2),2022-05-01,2026-02-28,3,C2264134680-GES_DISC,precipitation
+GPM_3GPROFGCOMW1AMSR2_CLIM,07,GPM AMSR-2 on GCOM-W1 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFGCOMW1AMSR2_CLIM),2012-07-01,2025-11-30,3,C2264135524-GES_DISC,precipitation
+GPM_3GPROFGCOMW1AMSR2_DAY,07,GPM AMSR-2 on GCOM-W1 (GPROF) Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFGCOMW1AMSR2_DAY),2022-05-01,2026-02-28,3,C2264134685-GES_DISC,precipitation
+GPM_3GPROFGCOMW1AMSR2_DAY_CLIM,07,GPM AMSR-2 on GCOM-W1 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFGCOMW1AMSR2_DAY_CLIM),2012-07-02,2025-11-30,3,C2264135548-GES_DISC,precipitation
+GPM_3GPROFGPMGMI,07,GPM GMI (GPROF) Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFGPMGMI),2014-03-01,2026-02-28,3,C2259345585-GES_DISC,precipitation
+GPM_3GPROFGPMGMI_CLIM,07,GPM GMI (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFGPMGMI_CLIM),2014-03-01,2025-11-30,3,C2259345631-GES_DISC,precipitation
+GPM_3GPROFGPMGMI_DAY,07,GPM GMI (GPROF) Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFGPMGMI_DAY),2014-03-04,2026-02-28,3,C2259345611-GES_DISC,precipitation
+GPM_3GPROFGPMGMI_DAY_CLIM,07,GPM GMI (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree  V07 (GPM_3GPROFGPMGMI_DAY_CLIM),2014-03-04,2025-11-30,3,C2259345664-GES_DISC,precipitation
+GPM_3GPROFMETOPAMHS_CLIM,07,GPM MHS on METOP-A (GPROF) Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFMETOPAMHS_CLIM),2006-11-01,2019-12-31,3,C2264135573-GES_DISC,precipitation
+GPM_3GPROFMETOPAMHS_DAY_CLIM,07,GPM MHS on METOP-A (GPROF) Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFMETOPAMHS_DAY_CLIM),2006-11-23,2019-12-23,3,C2264135591-GES_DISC,precipitation
+GPM_3GPROFMETOPBMHS,07,GPM MHS on METOP-B (GPROF) Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFMETOPBMHS),2022-05-01,2026-02-28,3,C2264134767-GES_DISC,precipitation
+GPM_3GPROFMETOPBMHS_CLIM,07,GPM MHS on METOP-B (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFMETOPBMHS_CLIM),2012-09-01,2025-11-30,3,C2264135677-GES_DISC,precipitation
+GPM_3GPROFMETOPBMHS_DAY,07,GPM MHS on METOP-B (GPROF) Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFMETOPBMHS_DAY),2022-05-01,2026-02-28,3,C2264134788-GES_DISC,precipitation
+GPM_3GPROFMETOPBMHS_DAY_CLIM,07,GPM MHS on METOP-B (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFMETOPBMHS_DAY_CLIM),2012-09-25,2025-11-30,3,C2264135750-GES_DISC,precipitation
+GPM_3GPROFMETOPCMHS,07,GPM MHS on METOP-C (GPROF) Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFMETOPCMHS),2022-05-01,2026-02-28,3,C2264134803-GES_DISC,precipitation
+GPM_3GPROFMETOPCMHS_CLIM,07,GPM MHS on METOP-C (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFMETOPCMHS_CLIM),2018-11-01,2025-11-30,3,C2264135766-GES_DISC,precipitation
+GPM_3GPROFMETOPCMHS_DAY,07,GPM MHS on METOP-C (GPROF) Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFMETOPCMHS_DAY),2022-05-01,2026-02-28,3,C2264134822-GES_DISC,precipitation
+GPM_3GPROFMETOPCMHS_DAY_CLIM,07,GPM MHS on METOP-C (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFMETOPCMHS_DAY_CLIM),2018-11-16,2025-11-30,3,C2264135780-GES_DISC,precipitation
+GPM_3GPROFNOAA15AMSUB_CLIM,07,GPM AMSUB on NOAA15 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree  V07 (GPM_3GPROFNOAA15AMSUB_CLIM),2000-01-01,2009-01-31,3,C2264135808-GES_DISC,precipitation
+GPM_3GPROFNOAA15AMSUB_DAY_CLIM,07,GPM AMSUB on NOAA15 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree  V07 (GPM_3GPROFNOAA15AMSUB_DAY_CLIM),2000-01-01,2009-01-01,3,C2264135823-GES_DISC,precipitation
+GPM_3GPROFNOAA16AMSUB_CLIM,07,GPM AMSUB on NOAA16 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree  V07 (GPM_3GPROFNOAA16AMSUB_CLIM),2000-10-01,2008-01-31,3,C2264135852-GES_DISC,precipitation
+GPM_3GPROFNOAA16AMSUB_DAY_CLIM,07,GPM AMSUB on NOAA16 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree  V07 (GPM_3GPROFNOAA16AMSUB_DAY_CLIM),2000-10-04,2008-01-01,3,C2264135870-GES_DISC,precipitation
+GPM_3GPROFNOAA17AMSUB_CLIM,07,GPM AMSUB on NOAA17 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree  V07 (GPM_3GPROFNOAA17AMSUB_CLIM),2002-06-01,2009-12-31,3,C2264135904-GES_DISC,precipitation
+GPM_3GPROFNOAA17AMSUB_DAY_CLIM,07,GPM AMSUB on NOAA17 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree  V07 (GPM_3GPROFNOAA17AMSUB_DAY_CLIM),2002-06-28,2009-12-17,3,C2264135925-GES_DISC,precipitation
+GPM_3GPROFNOAA18MHS_CLIM,07,GPM MHS on NOAA18 (GPROF) Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFNOAA18MHS_CLIM),2005-05-01,2018-10-31,3,C2264135951-GES_DISC,precipitation
+GPM_3GPROFNOAA18MHS_DAY_CLIM,07,GPM MHS on NOAA18 (GPROF) Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFNOAA18MHS_DAY_CLIM),2005-05-25,2018-10-20,3,C2264135974-GES_DISC,precipitation
+GPM_3GPROFNOAA19MHS,07,GPM MHS on NOAA19 (GPROF) Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFNOAA19MHS),2022-05-01,2025-05-31,3,C2264134845-GES_DISC,precipitation
+GPM_3GPROFNOAA19MHS_CLIM,07,GPM MHS on NOAA19 (GPROF) Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFNOAA19MHS_CLIM),2009-02-01,2025-05-31,3,C2264135995-GES_DISC,precipitation
+GPM_3GPROFNOAA19MHS_DAY,07,GPM MHS on NOAA19 (GPROF) Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree  V07 (GPM_3GPROFNOAA19MHS_DAY),2022-05-01,2025-06-15,3,C2264134857-GES_DISC,precipitation
+GPM_3GPROFNOAA19MHS_DAY_CLIM,07,GPM MHS on NOAA19 (GPROF) Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree  V07 (GPM_3GPROFNOAA19MHS_DAY_CLIM),2009-02-12,2025-06-16,3,C2264136015-GES_DISC,precipitation
+GPM_3GPROFNOAA20ATMS,07,GPM ATMS on NOAA-20 (GPROF) Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFNOAA20ATMS),2022-05-01,2026-02-28,3,C2264134864-GES_DISC,precipitation
+GPM_3GPROFNOAA20ATMS_CLIM,07,GPM ATMS on NOAA-20 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFNOAA20ATMS_CLIM),2017-11-01,2025-11-30,3,C2264136034-GES_DISC,precipitation
+GPM_3GPROFNOAA20ATMS_DAY,07,GPM ATMS on NOAA-20 (GPROF) Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree  V07 (GPM_3GPROFNOAA20ATMS_DAY),2022-05-01,2026-02-28,3,C2264134877-GES_DISC,precipitation
+GPM_3GPROFNOAA20ATMS_DAY_CLIM,07,GPM ATMS on NOAA-20 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree  V07 (GPM_3GPROFNOAA20ATMS_DAY_CLIM),2017-11-29,2025-11-30,3,C2264136066-GES_DISC,precipitation
+GPM_3GPROFNOAA21ATMS,07,GPM ATMS on NOAA-21 (GPROF) Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFNOAA21ATMS),2023-02-01,2026-02-28,3,C2712827638-GES_DISC,precipitation
+GPM_3GPROFNOAA21ATMS_CLIM,07,GPM ATMS on NOAA-21 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFNOAA21ATMS_CLIM),2023-02-01,2025-11-30,3,C2712827637-GES_DISC,precipitation
+GPM_3GPROFNOAA21ATMS_DAY,07,GPM ATMS on NOAA-21 (GPROF) Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree  V07 (GPM_3GPROFNOAA21ATMS_DAY),2023-02-01,2026-02-28,3,C2712827642-GES_DISC,precipitation
+GPM_3GPROFNOAA21ATMS_DAY_CLIM,07,GPM ATMS on NOAA-21 (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree  V07 (GPM_3GPROFNOAA21ATMS_DAY_CLIM),2023-02-01,2025-11-30,3,C2712827639-GES_DISC,precipitation
+GPM_3GPROFNPPATMS,07,GPM ATMS on SUOMI-NPP (GPROF) Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFNPPATMS),2022-05-01,2026-02-28,3,C2264134880-GES_DISC,precipitation
+GPM_3GPROFNPPATMS_CLIM,07,GPM ATMS on SUOMI-NPP (GPROF) Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFNPPATMS_CLIM),2011-11-01,2025-11-30,3,C2264136081-GES_DISC,precipitation
+GPM_3GPROFNPPATMS_DAY,07,GPM ATMS on SUOMI-NPP (GPROF) Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFNPPATMS_DAY),2022-05-01,2026-02-28,3,C2264134888-GES_DISC,precipitation
+GPM_3GPROFNPPATMS_DAY_CLIM,07,GPM ATMS on SUOMI-NPP (GPROF) Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFNPPATMS_DAY_CLIM),2011-11-08,2025-11-30,3,C2264136106-GES_DISC,precipitation
+GPM_3GPROFTRMMTMI_CLIM,07,GPM TMI on TRMM (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 degree x 0.25 degree V07 (GPM_3GPROFTRMMTMI_CLIM),1997-12-01,2015-04-30,3,C2264136122-GES_DISC,precipitation
+GPM_3GPROFTRMMTMI_DAY_CLIM,07,GPM TMI on TRMM (GPROF) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 degree x 0.25 degree V07 (GPM_3GPROFTRMMTMI_DAY_CLIM),1997-12-07,2015-04-08,3,C2264136142-GES_DISC,precipitation
+GPM_3GSLH,07,GPM DPR Gridded Orbital Spectral Latent Heating Profiles L3 1.5 hours 0.5 degree x 0.5 degree V07 (GPM_3GSLH),2014-03-08,2026-03-01,3,C2179081604-GES_DISC,precipitation
+GPM_3GSLH,08,GPM DPR Gridded Orbital Spectral Latent Heating Profiles L3 1.5 hours 0.5 degree x 0.5 degree V08 (GPM_3GSLH),2014-03-08,ongoing,3,C4054955559-GES_DISC,precipitation
+GPM_3GSLH_TRMM,07,GPM PR on TRMM Gridded Orbital Spectral Latent Heating Profiles L3 1.5 hours 0.5x0.5 degree V07 (GPM_3GSLH_TRMM),1997-12-07,2015-04-01,3,C2264132393-GES_DISC,precipitation
+GPM_3HCSH,07,GPM DPR and GMI Combined Convective Stratiform Heating L3 1 month 0.5 degree x 0.5 degree V07 (GPM_3HCSH),2014-03-01,2026-02-28,3,C2179081704-GES_DISC,precipitation
+GPM_3HCSH_TRMM,07,GPM PR and TMI on TRMM Combined Convective-Stratiform Latent Heating Profiles L3 1 month 0.25x0.25 degree V07 (GPM_3HCSH_TRMM),1997-12-01,2015-04-30,3,C2264132528-GES_DISC,precipitation
+GPM_3HSLH,08,GPM DPR Spectral Latent Heating Profiles L3 1 month 0.5 degree x 0.5 degree V08 (GPM_3HSLH),2014-03-01,ongoing,3,C4054955580-GES_DISC,precipitation
+GPM_3HSLH,07,GPM DPR Spectral Latent Heating Profiles L3 1 month 0.5 degree x 0.5 degree V07 (GPM_3HSLH),2014-03-01,2026-02-28,3,C2179081611-GES_DISC,precipitation
+GPM_3HSLH_DAY,08,GPM DPR Spectral Latent Heating Profiles L3 1 day 0.5 degree x 0.5 degree V08 (GPM_3HSLH_DAY),2014-03-08,ongoing,3,C4054955646-GES_DISC,precipitation
+GPM_3HSLH_DAY,07,GPM DPR Spectral Latent Heating Profiles L3 1 day 0.5 degree x 0.5 degree V07 (GPM_3HSLH_DAY),2014-03-09,2026-02-28,3,C2179081641-GES_DISC,precipitation
+GPM_3HSLH_TRMM,07,GPM PR on TRMM Spectral Latent Heating L3 1 month 0.5 degree x 0.5 degree V07 (GPM_3HSLH_TRMM),1997-12-01,2015-04-30,3,C2264132394-GES_DISC,precipitation
+GPM_3HSLH_TRMM_DAY,07,GPM PR on TRMM Spectral Latent Heating Profiles L3 1 Day 0.5x0.5 degree V07 (GPM_3HSLH_TRMM_DAY),1997-12-07,2015-04-01,3,C2264132414-GES_DISC,precipitation
+GPM_3PR,07,"GPM PR on TRMM Reflectivity, Precipitation Statistics, Histograms, at Surface and Fixed Heights, 1 month 5x5 and 0.25x0.25 degree V07 (GPM_3PR)",1997-12-01,2015-04-01,3,C2264132415-GES_DISC,precipitation
+GPM_3PRD,07,"GPM PR on TRMM Precipitation Statistics, at Surface and Fixed Heights 1 day 0.25x0.25 degree V07 (GPM_3PRD)",1997-12-07,2015-04-01,3,C2264132424-GES_DISC,precipitation
+GPM_3PRPSMT1SAPHIR,06,GPM SAPHIR on MT1 (PRPS) Radiometer Precipitation Profiling L3 1 month 0.25 x 0.25 degree V06 (GPM_3PRPSMT1SAPHIR),2014-02-01,2021-12-31,3,C1596594716-GES_DISC,precipitation
+GPM_3PRPSMT1SAPHIR_CLIM,06,GPM SAPHIR on MT1 (PRPS) Climate-based Radiometer Precipitation Profiling L3 1 month 0.25 x 0.25 degree V06 (GPM_3PRPSMT1SAPHIR_CLIM),2011-10-01,2021-12-31,3,C1596594717-GES_DISC,precipitation
+GPM_3PRPSMT1SAPHIR_DAY,06,GPM SAPHIR on MT1 (PRPS) Radiometer Precipitation Profiling L3 1 day 0.25 x 0.25 degree V06 (GPM_3PRPSMT1SAPHIR_DAY),2014-02-01,2021-12-31,3,C1596594718-GES_DISC,precipitation
+GPM_3PRPSMT1SAPHIR_DAY_CLIM,06,GPM SAPHIR on MT1 (PRPS) Climate-based Radiometer Precipitation Profiling L3 1 day 0.25 x 0.25 degree V06 (GPM_3PRPSMT1SAPHIR_DAY_CLIM),2011-10-13,2021-12-31,3,C1596594719-GES_DISC,precipitation
+GPM_3PR_ASC,07,"GPM PR on TRMM Reflectivity, Precipitation Statistics, Histograms, at Surface and Fixed Heights, Ascending, 1 day 5x5 and 0.25x0.25 degree V07 (GPM_3PR_ASC)",1997-12-07,2015-04-01,3,C2264132435-GES_DISC,precipitation
+GPM_3PR_DES,07,"GPM PR on TRMM Reflectivity, Precipitation Statistics, Histograms, at Surface and Fixed Heights, Descending, 1 day 5x5 and 0.25x0.25 degree V07 (GPM_3PR_DES)",1997-12-07,2015-04-01,3,C2264132441-GES_DISC,precipitation
+GPM_BASEGPMGMI,07,GPM GMI Antenna Temperatures L1BASE 1.5 hours 13 km V07 (GPM_BASEGPMGMI),2014-03-04,2026-03-01,1,C2259345423-GES_DISC,precipitation
+GPM_BASEGPMGMI,08,GPM GMI Antenna Temperatures L1BASE 1.5 hours 13 km V08 (GPM_BASEGPMGMI),2014-03-04,ongoing,1,C4054953887-GES_DISC,precipitation
+GPM_BASEGPMGMI_RSS,07,GPM GMI RSS Common Calibrated Brightness Temperatures L1BASE 1.5 hours 13 km V07 (GPM_BASEGPMGMI_RSS),2014-03-04,2026-03-01,1,C2259345441-GES_DISC,precipitation
+GPM_BASEGPMGMI_RSS,08,GPM GMI RSS Common Calibrated Brightness Temperatures L1BASE 1.5 hours 13 km V08 (GPM_BASEGPMGMI_RSS),2014-03-04,ongoing,1,C4054953976-GES_DISC,precipitation
+GPM_BASEGPMGMI_XCAL,07,GPM GMI XCAL Common Calibrated Brightness Temperatures L1BASE 1.5 hours 13 km V07 (GPM_BASEGPMGMI_XCAL),2014-03-04,2026-03-01,1,C2259345466-GES_DISC,precipitation
+GPM_BASEGPMGMI_XCAL,08,GPM GMI XCAL Common Calibrated Brightness Temperatures L1BASE 1.5 hours 13 km V08 (GPM_BASEGPMGMI_XCAL),2014-03-04,ongoing,1,C4054953871-GES_DISC,precipitation
+GPM_BASETRMMTMI,08,GPM TMI on TRMM Antenna Temperatures L1BASE 1.5 hours 13 km V08 (GPM_BASETRMMTMI),1997-12-07,2015-04-08,1,C4054953886-GES_DISC,precipitation
+GPM_BASETRMMTMI,07,GPM TMI on TRMM Antenna Temperatures L1BASE 1.5 hours 13 km V07 (GPM_BASETRMMTMI),1997-12-07,2015-04-08,1,C2264132669-GES_DISC,precipitation
+GPM_PRL1KA,07,GPM DPR Ka-band Received Power L1B 1.5 hours 5 km V07 (GPM_PRL1KA),2014-03-08,2026-03-01,1,C2179064667-GES_DISC,precipitation
+GPM_PRL1KA,08,GPM DPR Ka-band Received Power L1B 1.5 hours 5 km V08 (GPM_PRL1KA),2014-03-08,ongoing,1,C4054953914-GES_DISC,precipitation
+GPM_PRL1KU,07,GPM DPR Ku-band Received Power L1B 1.5 hours 5 km V07 (GPM_PRL1KU),2014-03-08,2026-03-01,1,C2179064680-GES_DISC,precipitation
+GPM_PRL1KU,08,GPM DPR Ku-band Received Power L1B 1.5 hours 5 km V08 (GPM_PRL1KU),2014-03-08,ongoing,1,C4054953916-GES_DISC,precipitation
+Global_Landslide_Nowcast,2.0.0,Global Landslide Nowcast from LHASA L4 1 day 1 km x 1 km version 2.0.0 (Global_Landslide_Nowcast),2015-04-03,2021-02-10,4,C2654319036-GES_DISC,precipitation
+Global_Landslide_Nowcast,1.1,Global Landslide Nowcast from LHASA L4  1 day 1 km x 1 km version 1.1 (Global_Landslide_Nowcast),2000-06-14,2020-12-31,4,C2036912694-GES_DISC,precipitation
+HRAC_Precip,1,High Resolution Altitude Corrected Precipitation based on TMPA and other sources L4 Monthly 1 km x 1 km V1 (HRAC_Precip),1998-01-01,2014-12-31,4,C1626994625-GES_DISC,precipitation
+LANDMET,1,Land Surface Atmospheric Boundary Interaction Product L3 V1(LANDMET),1998-01-01,2007-12-31,3,C1374187813-GES_DISC,precipitation
+M2SDNXSLV,5.12.4,"MERRA-2 statD_2d_slv_Nx: 2d,Daily,Aggregated Statistics,Single-Level,Assimilation,Single-Level Diagnostics 0.625 x 0.5 degree V5.12.4 (M2SDNXSLV)",1980-01-01,ongoing,4,C1276812843-GES_DISC,precipitation
+M2SMNXEDI,2,"MERRA-2 statM_2d_edi_Nx: 2d, Single-Level, Monthly Extremes Detection Indices based on 1991-2020 V2 (M2SMNXEDI)",1980-01-01,ongoing,4,C2531963170-GES_DISC,precipitation
+M2SMNXEDI,1,"MERRA-2 statM_2d_edi_Nx: 2d, Single-Level, Monthly Extremes Detection Indices V1 (M2SMNXEDI)",1980-01-01,2022-12-31,4,C1949649168-GES_DISC,precipitation
+M2SMNXPCT,2,"MERRA-2 statM_2d_pct_Nx: 2d, Single-Level, Monthly Percentiles based on 1991-2020 V2 (M2SMNXPCT)",1980-01-01,ongoing,4,C2531963252-GES_DISC,precipitation
+M2SMNXPCT,1,"MERRA-2 statM_2d_pct_Nx: 2d, Single-Level, Monthly Percentiles V1 (M2SMNXPCT)",1980-01-01,2022-12-31,4,C1949649171-GES_DISC,precipitation
+M2SMNXSLV,5.12.4,"MERRA-2 statM_2d_slv_Nx: 2d,Monthly,Aggregated Statistics,Single-Level,Assimilation,Single-Level Diagnostics 0.625 x 0.5 degree V5.12.4 (M2SMNXSLV)",1980-01-01,ongoing,4,C1276812828-GES_DISC,precipitation
+M2T1NXFLX,5.12.4,"MERRA-2 tavg1_2d_flx_Nx: 2d,1-Hourly,Time-Averaged,Single-Level,Assimilation,Surface Flux Diagnostics 0.625 x 0.5 degree V5.12.4 (M2T1NXFLX)",1980-01-01,ongoing,4,C1276812838-GES_DISC,precipitation
+M2T1NXINT,5.12.4,"MERRA-2 tavg1_2d_int_Nx: 2d,1-Hourly,Time-Averaged,Single-Level,Assimilation,Vertically Integrated Diagnostics 0.625 x 0.5 degree V5.12.4 (M2T1NXINT)",1980-01-01,ongoing,4,C1276812846-GES_DISC,precipitation
+M2T1NXLFO,5.12.4,"MERRA-2 tavg1_2d_lfo_Nx: 2d,1-Hourly,Time-Averaged,Single-Level,Assimilation,Land Surface Forcings 0.625 x 0.5 degree V5.12.4 (M2T1NXLFO)",1980-01-01,ongoing,4,C1276812850-GES_DISC,precipitation
+M2T1NXLND,5.12.4,"MERRA-2 tavg1_2d_lnd_Nx: 2d,1-Hourly,Time-Averaged,Single-Level,Assimilation,Land Surface Diagnostics 0.625 x 0.5 degree V5.12.4 (M2T1NXLND)",1980-01-01,ongoing,4,C1276812861-GES_DISC,precipitation
+M2T1NXOCN,5.12.4,"MERRA-2 tavg1_2d_ocn_Nx: 2d,1-Hourly,Time-Averaged,Single-Level,Assimilation,Ocean Surface Diagnostics 0.625 x 0.5 degree V5.12.4 (M2T1NXOCN)",1980-01-01,ongoing,4,C1276812862-GES_DISC,precipitation
+M2T3NEMST,5.12.4,"MERRA-2 tavg3_3d_mst_Ne: 3d,3-Hourly,Time-Averaged,Model-Level Edge,Assimilation,Moist Processes Diagnostics 0.625 x 0.5 degree V5.12.4 (M2T3NEMST)",1980-01-01,ongoing,4,C1276812912-GES_DISC,precipitation
+M2T3NPMST,5.12.4,"MERRA-2 tavg3_3d_mst_Np: 3d,3-Hourly,Time-Averaged,Pressure-Level,Assimilation,Moist Processes Diagnostics 0.625 x 0.5 degree V5.12.4 (M2T3NPMST)",1980-01-01,ongoing,4,C1276812688-GES_DISC,precipitation
+M2T3NVMST,5.12.4,"MERRA-2 tavg3_3d_mst_Nv: 3d,3-Hourly,Time-Averaged,Model-Level,Assimilation,Moist Processes Diagnostics 0.625 x 0.5 degree V5.12.4 (M2T3NVMST)",1980-01-01,ongoing,4,C1276812927-GES_DISC,precipitation
+M2TCNXLTM,1,"MERRA-2 tavgC_2d_ltm_Nx: 2d, Single-Level, Long Term Mean Diagnostics V1 (M2TCNXLTM)",1981-01-01,2010-12-31,4,C1949650995-GES_DISC,precipitation
+M2TCNXLTM,2,"MERRA-2 tavgC_2d_ltm_Nx: 2d, Single-Level, Long Term Mean Diagnostics based on 1991-2020 V2 (M2TCNXLTM)",1991-01-01,2020-12-31,4,C2531963528-GES_DISC,precipitation
+M2TMNPMST,5.12.4,"MERRA-2 tavgM_3d_mst_Np: 3d,Monthly mean,Time-Averaged,Pressure-Level,Assimilation,Moist Processes Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNPMST)",1980-01-01,ongoing,4,C1276812692-GES_DISC,precipitation
+M2TMNXFLX,5.12.4,"MERRA-2 tavgM_2d_flx_Nx: 2d,Monthly mean,Time-Averaged,Single-Level,Assimilation,Surface Flux Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNXFLX)",1980-01-01,ongoing,4,C1276812868-GES_DISC,precipitation
+M2TMNXINT,5.12.4,"MERRA-2 tavgM_2d_int_Nx: 2d,Monthly mean,Time-Averaged,Single-Level,Assimilation,Vertically Integrated Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNXINT)",1980-01-01,ongoing,4,C1276812854-GES_DISC,precipitation
+M2TMNXLFO,5.12.4,"MERRA-2 tavgM_2d_lfo_Nx: 2d,Monthly mean,Time-Averaged,Single-Level,Assimilation,Land Surface Forcings 0.625 x 0.5 degree V5.12.4 (M2TMNXLFO)",1980-01-01,ongoing,4,C1276812855-GES_DISC,precipitation
+M2TMNXLND,5.12.4,"MERRA-2 tavgM_2d_lnd_Nx: 2d,Monthly mean,Time-Averaged,Single-Level,Assimilation,Land Surface Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNXLND)",1980-01-01,ongoing,4,C1276812856-GES_DISC,precipitation
+M2TMNXOCN,5.12.4,"MERRA-2 tavgM_2d_ocn_Nx: 2d,Monthly mean,Time-Averaged,Single-Level,Assimilation,Ocean Surface Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TMNXOCN)",1980-01-01,ongoing,4,C1276812857-GES_DISC,precipitation
+M2TUNPMST,5.12.4,"MERRA-2 tavgU_3d_mst_Np: 3d,diurnal,Time-Averaged,Pressure-Level,Assimilation,Moist Processes Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TUNPMST)",1980-01-01,ongoing,4,C1276812933-GES_DISC,precipitation
+M2TUNXFLX,5.12.4,"MERRA-2 tavgU_2d_flx_Nx: 2d,diurnal,Time-Averaged,Single-Level,Assimilation,Surface Flux Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TUNXFLX)",1980-01-01,ongoing,4,C1276812872-GES_DISC,precipitation
+M2TUNXINT,5.12.4,"MERRA-2 tavgU_2d_int_Nx: 2d,diurnal,Time-Averaged,Single-Level,Assimilation,Vertically Integrated Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TUNXINT)",1980-01-01,ongoing,4,C1276812874-GES_DISC,precipitation
+M2TUNXLFO,5.12.4,"MERRA-2 tavgU_2d_lfo_Nx: 2d,diurnal,Time-Averaged,Single-Level,Assimilation,Land Surface Forcings 0.625 x 0.5 degree V5.12.4 (M2TUNXLFO)",1980-01-01,ongoing,4,C1276812875-GES_DISC,precipitation
+M2TUNXOCN,5.12.4,"MERRA-2 tavgU_2d_ocn_Nx: 2d,diurnal,Time-Averaged,Single-Level,Assimilation,Ocean Surface Diagnostics 0.625 x 0.5 degree V5.12.4 (M2TUNXOCN)",1980-01-01,ongoing,4,C1276812877-GES_DISC,precipitation
+MACLWP_diurnal,1,Multisensor Advanced Climatology Mean Liquid Water Path Diurnal Cycle L3 Monthly 1 degree x 1 degree V1 (MACLWP_diurnal),1988-01-01,2016-12-31,3,C1368521972-GES_DISC,precipitation
+MACLWP_mean,1,Multisensor Advanced Climatology Mean Liquid Water Path L3 Monthly 1 degree X 1 degree V1 (MACLWP_mean),1988-01-01,2016-12-31,3,C1368521971-GES_DISC,precipitation
+MACTWP_mean,1,Multisensor Advanced Climatology Total Liquid Water Path L3 Monthly 1 degree x 1 degree V1 (MACTWP_mean),1988-01-01,2016-12-31,3,C1368522053-GES_DISC,precipitation
+MICASA_FLUX_3H,1,MiCASA 3-hourly NPP NEE Fluxes 0.1 degree x 0.1 degree,2001-01-01,2024-12-31,4,C3273640138-GES_DISC,precipitation
+MICASA_FLUX_D,1,MiCASA Daily NPP Rh ATMC NEE FIRE FUEL Fluxes 0.1 degree x 0.1 degree,2001-01-01,2024-12-31,4,C3273639213-GES_DISC,precipitation
+MICASA_FLUX_M,1,MiCASA Monthly NPP Rh ATMC NEE FIRE FUEL Fluxes 0.1 degree x 0.1 degree,2001-01-01,2024-12-31,4,C3273638632-GES_DISC,precipitation
+MSUOP,001,MSU Daily Oceanic Precipitation with Limb93 Correction L3 1 day 2.5 degree x 2.5 degree V001 (MSUOP),1979-01-01,1994-12-31,3,C1261530370-GES_DISC,precipitation
+NCALDAS_NOAH0125_D,2.0,NCA-LDAS Noah-3.3 Land Surface Model L4 Daily 0.125 x 0.125 degree V2.0 (NCALDAS_NOAH0125_D),1979-01-02,2016-12-31,4,C1454297282-GES_DISC,precipitation
+NCALDAS_NOAH0125_Trends,2.0,NCA-LDAS Noah-3.3 Land Surface Model L4 Trends 0.125 x 0.125 degree V2.0 (NCALDAS_NOAH0125_Trends),1979-10-01,2015-09-30,4,C1646132439-GES_DISC,precipitation
+NEWS_WEB_ACLIM,1.0,NASA Energy and Water cycle Study (NEWS) Annual Climatology of the 1st decade of the 21st Century V1.0 (NEWS_WEB_ACLIM),1998-01-01,2010-12-31,4,C1233781718-GES_DISC,precipitation
+NEWS_WEB_MCLIM,1.0,NASA Energy and Water cycle Study (NEWS) Monthly Climatology of the 1st decade of the 21st Century V1.0 (NEWS_WEB_MCLIM),1998-01-01,2010-12-31,4,C1233781717-GES_DISC,precipitation
+NLDAS_FORA0125_H,2.0,NLDAS Primary Forcing Data L4 Hourly 0.125 x 0.125 degree V2.0 (NLDAS_FORA0125_H),1979-01-01,ongoing,4,C2033151148-GES_DISC,precipitation
+NLDAS_FORA0125_M,2.0,NLDAS Primary Forcing Data L4 Monthly 0.125 x 0.125 degree V2.0 (NLDAS_FORA0125_M),1979-01-01,ongoing,4,C1887583680-GES_DISC,precipitation
+NLDAS_FORA0125_MC,2.0,NLDAS Primary Forcing Data L4 Monthly Climatology 0.125 x 0.125 degree V2.0 (NLDAS_FORA0125_MC),1981-01-01,2020-12-31,4,C1889390708-GES_DISC,precipitation
+NLDAS_FORB0125_H,2.0,NLDAS Secondary Forcing Data L4 Hourly 0.125 x 0.125 degree V2.0 (NLDAS_FORB0125_H),1979-01-01,ongoing,4,C2033167496-GES_DISC,precipitation
+NLDAS_FORB0125_M,2.0,NLDAS Secondary Forcing Data L4 Monthly 0.125 x 0.125 degree V2.0 (NLDAS_FORB0125_M),1979-01-01,ongoing,4,C1887991357-GES_DISC,precipitation
+NLDAS_FORB0125_MC,2.0,NLDAS Secondary Forcing Data L4 Monthly Climatology 0.125 x 0.125 degree V2.0 (NLDAS_FORB0125_MC),1981-01-01,2020-12-31,4,C1889391073-GES_DISC,precipitation
+NLDAS_MOS0125_H,2.0,NLDAS Mosaic Land Surface Model L4 Hourly 0.125 x 0.125 degree V2.0 (NLDAS_MOS0125_H),1979-01-02,ongoing,4,C2069247178-GES_DISC,precipitation
+NLDAS_MOS0125_M,2.0,NLDAS Mosaic Land Surface Model L4 Monthly 0.125 x 0.125 degree V2.0 (NLDAS_MOS0125_M),1979-01-01,ongoing,4,C1887990159-GES_DISC,precipitation
+NLDAS_MOS0125_MC,2.0,NLDAS Mosaic Land Surface Model L4 Monthly Climatology 0.125 x 0.125 degree V2.0 (NLDAS_MOS0125_MC),1981-01-01,2020-12-31,4,C1888969742-GES_DISC,precipitation
+NLDAS_NOAH0125_H,2.0,NLDAS Noah Land Surface Model L4 Hourly 0.125 x 0.125 degree V2.0 (NLDAS_NOAH0125_H),1979-01-02,ongoing,4,C2069246977-GES_DISC,precipitation
+NLDAS_NOAH0125_M,2.0,NLDAS Noah Land Surface Model L4 Monthly 0.125 x 0.125 degree V2.0 (NLDAS_NOAH0125_M),1979-01-01,ongoing,4,C1887990023-GES_DISC,precipitation
+NLDAS_NOAH0125_MC,2.0,NLDAS Noah Land Surface Model L4 Monthly Climatology 0.125 x 0.125 degree V2.0 (NLDAS_NOAH0125_MC),1981-01-01,2020-12-31,4,C1888969640-GES_DISC,precipitation
+NLDAS_VIC0125_H,2.0,NLDAS VIC Land Surface Model L4 Hourly 0.125 x 0.125 degree V2.0 (NLDAS_VIC0125_H),1979-01-02,ongoing,4,C2069247359-GES_DISC,precipitation
+NLDAS_VIC0125_M,2.0,NLDAS VIC Land Surface Model L4 Monthly 0.125 x 0.125 degree V2.0 (NLDAS_VIC0125_M),1979-01-01,ongoing,4,C1887995922-GES_DISC,precipitation
+NLDAS_VIC0125_MC,2.0,NLDAS VIC Land Surface Model L4 Monthly Climatology 0.125 x 0.125 degree V2.0 (NLDAS_VIC0125_MC),1981-01-01,2020-12-31,4,C1888969053-GES_DISC,precipitation
+PRECIP_AMSR2_GCOMW1,1,NASA MEASURES Precipitation Ensemble based on AMSR2 GCOMW1 NASA PPS L1C V05 TBs 1-orbit L2 Swath 10x10km V1 (PRECIP_AMSR2_GCOMW1),2012-07-02,2021-01-01,2,C2368305620-GES_DISC,precipitation
+PRECIP_AMSRE_AQUA,1,NASA MEASURES Precipitation Ensemble based on AMSRE AQUA NASA PPS L1C V05 Tbs 1-orbit L2 Swath 12x12km V1 (PRECIP_AMSRE_AQUA),2002-06-01,2011-10-04,2,C2368306433-GES_DISC,precipitation
+PRECIP_GMI_GPM,1,NASA MEASURES Precipitation Ensemble based on GMI GPM NASA PPS L1C V05 Tbs 1-orbit L2 Swath 10x10km V1 (PRECIP_GMI_GPM),2014-03-04,2021-01-01,2,C2368306937-GES_DISC,precipitation
+PRECIP_SMMR_NIMBUS7,1,NASA MEASURES Precipitation Ensemble based on SMMR Nimbus-7 NSIDC L1B Tbs 1-orbit L2 Swath 25x25km V1 (PRECIP_SMMR_NIMBUS7),1979-01-02,1987-08-20,2,C2368307664-GES_DISC,precipitation
+PRECIP_SSMIS_F16,1,NASA MEASURES Precipitation Ensemble based on SSMIS DMSP F16 NASA PPS L1C V05 Tbs 1-orbit L2 Swath 12x12km V1 (PRECIP_SSMIS_F16),2005-11-20,2021-01-01,2,C2368310204-GES_DISC,precipitation
+PRECIP_SSMIS_F17,1,NASA MEASURES Precipitation Ensemble based on SSMIS DMSP F17 NASA PPS L1C V05 Tbs 1-orbit L2 Swath 12x12km V1 (PRECIP_SSMIS_F17),2008-03-09,2021-01-01,2,C2368310484-GES_DISC,precipitation
+PRECIP_SSMIS_F18,1,NASA MEASURES Precipitation Ensemble based on SSMIS DMSP F18 NASA PPS L1C V05 Tbs 1-orbit L2 Swath 12x12km V1 (PRECIP_SSMIS_F18),2010-03-08,2021-01-01,2,C2368311020-GES_DISC,precipitation
+PRECIP_SSMIS_F19,1,NASA MEASURES Precipitation Ensemble based on SSMIS DMSP F19 NASA PPS L1C V05 Tbs 1-orbit L2 Swath 12x12km V1 (PRECIP_SSMIS_F19),2014-12-18,2016-02-11,2,C2368311435-GES_DISC,precipitation
+PRECIP_SSMI_F08,1,NASA MEASURES Precipitation Ensemble based on SSM/I DMSP F08 NASA PPS L1C V06 Tbs 1-orbit L2 Swath 12x12km V1 (PRECIP_SSMI_F08),1987-07-09,1991-12-31,2,C2368307993-GES_DISC,precipitation
+PRECIP_SSMI_F10,1,NASA MEASURES Precipitation Ensemble based on SSM/I DMSP F10 NASA PPS L1C V06 Tbs 1-orbit L2 Swath 12x12km V1 (PRECIP_SSMI_F10),1990-12-08,1997-11-14,2,C2368308287-GES_DISC,precipitation
+PRECIP_SSMI_F11,1,NASA MEASURES Precipitation Ensemble based on SSM/I DMSP F11 NASA PPS L1C V06 Tbs 1-orbit L2 Swath 12x12km V1 (PRECIP_SSMI_F11),1991-12-03,2000-05-16,2,C2368308779-GES_DISC,precipitation
+PRECIP_SSMI_F13,1,NASA MEASURES Precipitation Ensemble based on SSM/I DMSP F13 NASA PPS L1C V06 Tbs 1-orbit L2 Swath 12x12km V1 (PRECIP_SSMI_F13),1995-05-03,2009-11-20,2,C2368309102-GES_DISC,precipitation
+PRECIP_SSMI_F14,1,NASA MEASURES Precipitation Ensemble based on SSM/I DMSP F14 NASA PPS L1C V06 Tbs 1-orbit L2 Swath 12x12km V1 (PRECIP_SSMI_F14),1997-05-07,2008-08-24,2,C2368309429-GES_DISC,precipitation
+PRECIP_SSMI_F15,1,NASA MEASURES Precipitation Ensemble based on SSM/I DMSP F15 NASA PPS L1C V06 Tbs 1-orbit L2 Swath 12x12km V1 (PRECIP_SSMI_F15),2000-02-03,2006-08-14,2,C2368309823-GES_DISC,precipitation
+PRECIP_TMI_TRMM,1,NASA MEASURES Precipitation Ensemble based on TMI TRMM NASA PPS L1C V05 Tbs 1-orbit L2 Swath 5x5km V1 (PRECIP_TMI_TRMM),1997-12-07,2015-04-08,2,C2368307239-GES_DISC,precipitation
+RAIN_JAEGER,1,Jaeger Monthly Mean Global Precipitation Climatology 2.5 x 5.0 degree V1 (RAIN_JEAGER),1931-01-01,1965-12-31,3,C1280859301-GES_DISC,precipitation
+RAIN_LEGATES,1,Legates Surface and Ship Observations of Precipitation Climatology 0.5 x 0.5 degree V1 (RAIN_LEGATES),1920-01-01,1980-12-31,3,C1280859287-GES_DISC,precipitation
+SCAMSN6IM,001,"SCAMS/Nimbus-6 Images of Brightness Temperatures, Water Vapor and Temperature on 70-mm Film V001 (SCAMSN6IM)",1975-06-15,1976-05-31,2,C2563801376-GES_DISC,precipitation
+SNDRAQIL3SDCFSP,2,"Sounder SIPS: EOS-Aqua AIRS Level 3 Climate Fingerprinting Sounder Product (ClimFiSP) Daily: Gridded Atmosphere, Cloud, and Surface Geophysical State V2",2002-08-30,2026-01-01,3,C3593823023-GES_DISC,precipitation
+SNDRAQIL3SMCFSP,2,"Sounder SIPS: EOS-Aqua AIRS Level 3 Climate Fingerprinting Sounder Product (ClimFiSP) Monthly: Gridded Atmosphere, Cloud, and Surface Geophysical State V2",2002-08-30,2026-01-01,3,C3892818620-GES_DISC,precipitation
+SNDRAQIML2PLEVCPS,2.1,Sounder SIPS: AQUA AIRS IR + MW Level 2: Atmospheric state at Standard Pressure Levels derived from CLIMCAPS V2.1 (SNDRAQIML2PLEVCPS),2002-08-31,2016-09-25,2,C2791404157-GES_DISC,precipitation
+SNDRJ1IL3SDCFSP,2,"Sounder SIPS: JPSS-1/NOAA-20 CrIS Level 3 Climate Fingerprinting Sounder Product (ClimFiSP) Daily: Gridded Atmosphere, Cloud, and Surface Geophysical State V2",2018-02-17,2026-01-01,3,C3594929831-GES_DISC,precipitation
+SNDRJ1IL3SMCFSP,2,"Sounder SIPS: JPSS-1/NOAA-20 CrIS Level 3 Climate Fingerprinting Sounder Product (ClimFiSP) Monthly: Gridded Atmosphere, Cloud, and Surface Geophysical State V2",2018-02-01,2026-01-01,3,C3892818753-GES_DISC,precipitation
+SNDRJ1IML2PLEVCPS,2.1,Sounder SIPS: JPSS-1 CrIMSS Level 2: Atmospheric state at Standard Pressure Levels derived from CLIMCAPS V2.1 (SNDRJ1IML2PLEVCPS),2015-11-02,ongoing,2,C2791421549-GES_DISC,precipitation
+SNDRJ1ML2RMS,3,"Sounder SIPS: JPSS-1 ATMS Level 2 RAMSES2 Standard: Atmosphere, precipitation and surface geophysical state V3 (SNDRJ1ML2RMS)",2017-12-01,ongoing,2,C2560862624-GES_DISC,precipitation
+SNDRJ1ML2RMSSUP,3,Sounder SIPS: JPSS-1 ATMS Level 2 RAMSES2 Support V3 (SNDRJ1ML2RMSSUP),2017-12-01,ongoing,2,C2560852594-GES_DISC,precipitation
+SNDRJ1ML3DRMS,3,Sounder SIPS: JPSS-1 ATMS Level 3 RAMSES2 Standard Gridded Daily V3,2017-12-11,ongoing,3,C2560858503-GES_DISC,precipitation
+SNDRJ1ML3MRMS,3,Sounder SIPS: JPSS-1 ATMS Level 3 RAMSES2 Standard Gridded Monthly V3,2017-12-01,ongoing,3,C2560856981-GES_DISC,precipitation
+SNDRSNIL3SDCFSP,2,"Sounder SIPS: Suomi NPP CrIS Level 3 Climate Fingerprinting Sounder Product (ClimFiSP) Daily: Gridded Atmosphere, Cloud, and Surface Geophysical State V2",2015-11-02,2021-05-22,3,C3594923652-GES_DISC,precipitation
+SNDRSNIL3SMCFSP,2,"Sounder SIPS: Suomi NPP CrIS Level 3 Climate Fingerprinting Sounder Product (ClimFiSP) Monthly: Gridded Atmosphere, Cloud, and Surface Geophysical State V2",2015-11-01,2021-06-01,3,C3892833504-GES_DISC,precipitation
+SNDRSNIML2CHTRETN,1,"Sounder SIPS: Suomi NPP CrIMSS Level 2 CHART Normal Spectral Resolution: Atmosphere, cloud and surface geophysical state V1",2013-01-01,2015-11-01,2,C1633993908-GES_DISC,precipitation
+SNDRSNIML2SFSPRET,2,Sounder SIPS: Suomi NPP CrIMSS Level 2 SiFSAP Standard: Atmosphere cloud and surface geophysical state per footprint V2 (at GESDISC),2015-11-02,2021-05-21,2,C2782356281-GES_DISC,precipitation
+SNDRSNIML2SFSPSUP,2,Sounder SIPS: Suomi NPP CrIMSS Level 2 SiFSAP Support: Atmosphere cloud and surface geophysical state per footprint V2,2015-11-02,2021-05-21,2,C2782339991-GES_DISC,precipitation
+SNDRSNIML3CDCHTN,1,Sounder SIPS: Suomi NPP CrIMSS Level 3 Comprehensive Quality Control Gridded Daily CHART Normal Spectral Resolution V1,2013-01-01,2015-11-01,3,C1633993917-GES_DISC,precipitation
+SNDRSNIML3CMCHTN,1,Sounder SIPS: Suomi NPP CrIMSS Level 3 Comprehensive Quality Control Gridded Monthly CHART Normal Spectral Resolution V1,2013-01-01,2015-11-01,3,C1633993919-GES_DISC,precipitation
+SNDRSNIML3SDCHTN,1,Sounder SIPS: Suomi NPP CrIMSS Level 3 Specific Quality Control Gridded Daily CHART Normal Spectral Resolution V1,2013-01-01,2015-11-01,3,C1633993922-GES_DISC,precipitation
+SNDRSNIML3SMCHTN,1,Sounder SIPS: Suomi NPP CrIMSS Level 3 Specific Quality Control Gridded Monthly CHART Normal Spectral Resolution V1,2013-01-01,2015-11-01,3,C1633993925-GES_DISC,precipitation
+SNDRSNML2RMS,3,"Sounder SIPS: Suomi NPP ATMS Level 2 RAMSES2 Standard: Atmosphere, precipitation and surface geophysical state,  V3 (SNDRSNML2RMS )",2011-12-10,ongoing,2,C2559919298-GES_DISC,precipitation
+SNDRSNML2RMS,1,"Sounder SIPS: Suomi NPP ATMS Level 2 RAMSES II: Atmosphere, cloud and surface geophysical state V1 (SNDRSNML2RMS)",2013-01-01,2015-11-01,2,C2099190126-GES_DISC,precipitation
+SNDRSNML2RMSSUP,3,Sounder SIPS: Suomi NPP ATMS Level 2 RAMSES2 Support V3 (SNDRSNML2RMSSUP),2011-12-10,ongoing,2,C2560854342-GES_DISC,precipitation
+SNDRSNML3DRMS,3,Sounder SIPS: Suomi NPP ATMS Level 3 RAMSES2 Standard Gridded Daily V3,2011-12-10,ongoing,3,C2560864430-GES_DISC,precipitation
+SNDRSNML3MRMS,3,Sounder SIPS: Suomi NPP ATMS Level 3 RAMSES2 Standard Gridded Monthly V3,2011-12-01,ongoing,3,C2560865554-GES_DISC,precipitation
+TOVSA5ND,01,TOVS GLA 5 DAY GRIDS from NOAA-12 V01 (TOVSA5ND),1991-07-04,1994-06-30,3,C1274625652-GES_DISC,precipitation
+TOVSA5NF,01,TOVS GLA 5 DAY GRIDS from NOAA-9 V01 (TOVSA5NF),1984-12-31,1987-01-01,3,C1274625637-GES_DISC,precipitation
+TOVSA5NG,01,TOVS GLA 5 DAY GRIDS from NOAA-10 V01 (TOVSA5NG),1986-11-26,1991-08-29,3,C1274625653-GES_DISC,precipitation
+TOVSA5NH,01,TOVS GLA 5 DAY GRIDS from NOAA-11 V01 (TOVSA5NH),1988-10-12,1994-06-30,3,C1274625638-GES_DISC,precipitation
+TOVSA5TN,01,TOVS GLA 5 DAY GRIDS from TIROSN V01 (TOVSA5TN ),1978-12-01,1979-06-30,3,C1274625654-GES_DISC,precipitation
+TOVSADND,01,TOVS GLA DAILY GRIDS from NOAA-12 V01 (TOVSADND),1991-07-04,1994-07-01,3,C1274625670-GES_DISC,precipitation
+TOVSADNF,01,TOVS GLA DAILY GRIDS from NOAA-9 V01 (TOVSADNF),1984-12-27,1987-01-01,3,C1274625639-GES_DISC,precipitation
+TOVSADNG,01,TOVS GLA DAILY GRIDS from NOAA-10 V01 (TOVSADNG),1986-11-25,1991-09-01,3,C1274625680-GES_DISC,precipitation
+TOVSADNH,01,TOVS GLA DAILY GRIDS from NOAA-11 V01 (TOVSADNH),1988-10-12,1994-07-01,3,C1274625671-GES_DISC,precipitation
+TOVSADTN,01,TOVS GLA DAILY GRIDS from TIROSN V01 (TOVSADTN),1978-11-29,1979-07-01,3,C1274625655-GES_DISC,precipitation
+TOVSAMNA,02,TOVS GLA MONTHLY GRIDS from NOAA-6 02 (TOVSAMNA),1979-08-01,1983-03-31,3,C1548834212-GES_DISC,precipitation
+TOVSAMNC,02,TOVS GLA MONTHLY GRIDS from NOAA-7 02 (TOVSAMNC),1981-08-01,1985-01-31,3,C1548834216-GES_DISC,precipitation
+TOVSAMND,02,TOVS GLA MONTHLY GRIDS from NOAA-12 02 (TOVSAMND) c,1991-06-01,1998-11-30,3,C1548834220-GES_DISC,precipitation
+TOVSAMND,01,TOVS GLA MONTHLY GRIDS from NOAA-12 V01 (TOVSAMND),1991-06-30,1994-07-01,3,C1274625672-GES_DISC,precipitation
+TOVSAMNE,02,TOVS GLA MONTHLY GRIDS from NOAA-8 02 (TOVSAMNE),1983-05-01,1984-05-31,3,C1548834222-GES_DISC,precipitation
+TOVSAMNF,01,TOVS GLA MONTHLY GRIDS from NOAA-9 V01 (TOVSAMNF),1984-12-31,1987-01-01,3,C1274625681-GES_DISC,precipitation
+TOVSAMNF,02,TOVS GLA MONTHLY GRIDS from NOAA-9 02 (TOVSAMNF),1985-01-01,1986-12-31,3,C1548834224-GES_DISC,precipitation
+TOVSAMNG,01,TOVS GLA MONTHLY GRIDS from NOAA-10 V01 (TOVSAMNG),1986-11-30,1991-09-01,3,C1274625673-GES_DISC,precipitation
+TOVSAMNG,02,TOVS GLA MONTHLY GRIDS from NOAA-10 02 (TOVSAMNG),1987-01-01,1991-08-31,3,C1548834225-GES_DISC,precipitation
+TOVSAMNH,02,TOVS GLA MONTHLY GRIDS from NOAA-11 02 (TOVSAMNH),1988-11-01,1998-12-31,3,C1548834228-GES_DISC,precipitation
+TOVSAMNH,01,TOVS GLA MONTHLY GRIDS from NOAA-11 V01 (TOVSAMNH),1988-10-31,1994-07-01,3,C1274625656-GES_DISC,precipitation
+TOVSAMNJ,02,TOVS GLA MONTHLY GRIDS from NOAA-14 02 (TOVSAMNJ),1995-02-01,2004-12-31,3,C1548834235-GES_DISC,precipitation
+TOVSAMTN,02,TOVS GLA MONTHLY GRIDS from TIROS-N 02 (TOVSAMTN),1978-12-01,1979-12-31,3,C1548834200-GES_DISC,precipitation
+TOVSAMTN,01,TOVS GLA MONTHLY GRIDS from TIROSN V01 (TOVSAMTN),1978-11-30,1979-07-01,3,C1274625682-GES_DISC,precipitation
+TRMM_1A01,7,TRMM Attitude and VIRS Packets and Header Record L1A V7 (TRMM_1A01),1997-12-20,2014-03-21,1A,C1282248315-GES_DISC,precipitation
+TRMM_1A11,7,TRMM Attitude and TMI Packets and Header Record L1A V7 (TRMM_1A11),1997-12-07,2015-04-08,1A,C1282248333-GES_DISC,precipitation
+TRMM_1B21,7,TRMM Precipitation Radar Power and Reflectivity L1B 1.5 hours V7 (TRMM_1B21),1997-12-07,2015-04-01,1B,C1282110505-GES_DISC,precipitation
+TRMM_1B51,7,TRMM Ground Validation Radar Reflectivity L1B 1 hour V7 (TRMM_1B51),1997-12-01,2014-12-31,1,C1332654209-GES_DISC,precipitation
+TRMM_1C21,7,TRMM Precipitation Radar Power and Reflectivity L1C 1.5 hours V7 (TRMM_1C21),1997-12-07,2015-04-01,1,C1282110521-GES_DISC,precipitation
+TRMM_1C51,7,TRMM Ground Validation Calibrated QC Radar Reflectivity Full Volume Scan L1C 1 hour V7 (TRMM_1C51),1997-12-01,2014-12-31,1,C1332654210-GES_DISC,precipitation
+TRMM_1C51UW,7,TRMM Ground Validation Calibrated QC Radar Reflectivity Full Volume Scan L1C 1 hour V7 (TRMM_1C51UW),1999-01-09,2003-12-31,1,C1352386182-GES_DISC,precipitation
+TRMM_2A12,7,TRMM Microwave Imager Hydrometeor Profile L2 1.5 hours V7 (TRMM_2A12),1997-12-31,2015-04-08,2,C1282060543-GES_DISC,precipitation
+TRMM_2A21,7,TRMM Precipitation Radar Surface Cross-Section L2 1.5 hours  V7 (TRMM_2A21),1997-12-31,2014-10-07,2,C1282060544-GES_DISC,precipitation
+TRMM_2A23,7,TRMM Precipitation Radar Rain Characteristics L2 1.5 hours V7 (TRMM_2A23),1997-12-31,2015-04-01,2,C1282060545-GES_DISC,precipitation
+TRMM_2A25,7,TRMM Precipitation Radar Rainfall Rate and Profile L2 1.5 hours V7 (TRMM_2A25),1997-12-31,2015-04-01,2,C1282060508-GES_DISC,precipitation
+TRMM_2A52,7,TRMM Ground Validation Rain Existence L2 1 month V7 (TRMM_2A52),1995-08-02,2014-12-31,2,C1332654211-GES_DISC,precipitation
+TRMM_2A53,7,TRMM Ground Validation Radar Site Rain Rate Map L2 1 hour 2 km V7 (TRMM_2A53),1997-11-27,2014-12-31,2,C1332654212-GES_DISC,precipitation
+TRMM_2A53UW,7,TRMM Ground Validation Radar Site Rain Rate Map L2 1 hour 2 km V7 (TRMM_2A53UW),1999-01-09,2003-12-31,2,C1356506692-GES_DISC,precipitation
+TRMM_2A54,7,TRMM Ground Validation Radar Site Rain Type Map L2 1 hour 2 km V7 (TRMM_2A54),1997-11-27,2014-12-31,2,C1332654097-GES_DISC,precipitation
+TRMM_2A54UW,7,TRMM Ground Validation Radar Site Rain Type Map L2 1 hour 2 km V7 (TRMM_2A54UW),1999-01-09,2003-12-31,2,C1356506693-GES_DISC,precipitation
+TRMM_2A55,7,TRMM Ground Validation Radar Site 3D Reflectivity L2 1 hour V7 (TRMM_2A55),1997-11-27,2014-12-31,2,C1332654098-GES_DISC,precipitation
+TRMM_2A55UW,7,TRMM Ground Validation Radar Site 3D Reflectivity L2 1 hour V7 (TRMM_2A55UW),1999-01-09,2003-12-31,2,C1356506694-GES_DISC,precipitation
+TRMM_2A56,7,TRMM Ground Validation Rain Gauge Rain Rate L2 1 month V7 (TRMM_2A56),1995-01-03,2016-07-31,2,C1332654213-GES_DISC,precipitation
+TRMM_2B31,7,TRMM Combined Precipitation Radar and Microwave Imager Rainfall Profile L2 1.5 hours V7 (TRMM_2B31),1997-12-07,2015-04-01,2,C1282060546-GES_DISC,precipitation
+TRMM_3A11,7,TRMM Microwave Imager Oceanic Rainfall L3 1 month 5 degree x 5 degree V7 (TRMM_3A11),1997-12-01,2015-03-31,3,C1282032623-GES_DISC,precipitation
+TRMM_3A12,7,TRMM Microwave Imager Precipitation Profile L3 1 month 0.5 degree x 0.5 degree V7 (TRMM_3A12),1997-12-01,2015-03-31,3,C1282032625-GES_DISC,precipitation
+TRMM_3A25,7,TRMM Radar Rainfall Statistics L3 1 month (5 x 5) and (0.5  x 0.5) degree V7 (TRMM_3A25),1997-12-01,2015-04-01,3,C1282032627-GES_DISC,precipitation
+TRMM_3A26,7,TRMM Radar Rain Distributions L3 1 month 5 degree x 5 degree V7 (TRMM_3A26),1997-12-01,2015-04-01,3,C1282032628-GES_DISC,precipitation
+TRMM_3A53,7,TRMM Ground Validation Radar Site Rain Totals Map L3 5 days 2 km V7 (TRMM_3A53),1997-11-27,2015-01-01,3,C1332654181-GES_DISC,precipitation
+TRMM_3A54,7,TRMM Ground Validation Radar Site Rain Type Totals Map L3 1 month 2 km V7 (TRMM_3A54),1997-11-01,2015-01-01,3,C1332654182-GES_DISC,precipitation
+TRMM_3A54UW,7,TRMM Ground Validation Radar Site Rain Type Totals Map L3 1 month 2 km V7 (TRMM_3A54UW),1999-07-01,2000-12-31,3,C1356506695-GES_DISC,precipitation
+TRMM_3A55,7,TRMM Ground Validation Radar Site 3D Rain Map L3 1 month 2 km V7 (TRMM_3A55),1997-12-01,2015-01-01,3,C1332654214-GES_DISC,precipitation
+TRMM_3B31,7,TRMM TMI/PR Combined Precipitation L3 1 month 0.5 degree x 0.5 degree V7 (TRMM_3B31),1997-12-01,2015-03-31,3,C1282032614-GES_DISC,precipitation
+TRMM_3G25,7,TRMM PR Gridded Orbital Spectral Latent Heating Profiles L3 1.5 hours 0.5 degree x 0.5 degree V7 (TRMM_3G25),1997-12-31,2015-04-01,3,C1282032615-GES_DISC,precipitation
+TRMM_3G31,7,TRMM TMI/PR Combined Gridded Orbital Spectral Latent Heating L3 1.5 hours 0.5 degree x 0.5 degree V7 (TRMM_3G31),1997-12-31,2015-04-01,3,C1282032565-GES_DISC,precipitation
+TRMM_3H25,7,TRMM Precipitation Radar Spectral Latent Heating L3 1 month 0.5 degree x 0.5 degree V7 (TRMM_3H25),1998-01-01,2015-04-01,3,C1282032633-GES_DISC,precipitation
+TRMM_3H31,7,TRMM TMI/PR Combined Convective Stratiform Heating L3 1 month 0.5 degree x 0.5 degree V7 (TRMM_3H31),1998-01-01,2015-03-31,3,C1282032616-GES_DISC,precipitation
+TRMM_CSH,6,TRMM Convective and Stratiform Heating L3 1 month 0.5 degree x 0.5 degree V6 (TRMM_CSH),1997-12-01,2011-07-01,3,C1282032566-GES_DISC,precipitation
+TRMM_baseUW,7,TRMM Ground Validation Radar Reflectivity Single Level Cartesian Grid 1 hour V7 (TRMM_baseUW),1999-01-09,2003-12-31,1,C1356506691-GES_DISC,precipitation
+TROPICS01ANTTL1A,1.0,TROPICS01 Pathfinder L1A Orbital Geolocated Native-Resolution Antenna Temperatures V1.0,2021-08-07,2023-12-17,1A,C2622842528-GES_DISC,precipitation
+TROPICS01BRTTL1B,1.0,TROPICS01 Pathfinder L1B Orbital Geolocated Native-Resolution Brightness Temperatures V1.0,2021-07-19,ongoing,1B,C2622841366-GES_DISC,precipitation
+TROPICS01BRTTL1C,1.0,TROPICS01 Pathfinder L1C Regularized-scan and Limb-adjusted Brightness Temperature V1.0,2021-08-07,ongoing,1,C3507629329-GES_DISC,precipitation
+TROPICS01DMINL2B,1.0,TROPICS01 L2B Deep Multispectral INtensity (DMIN) of Tropical Cyclones Estimator Algorithm V1.0,2021-08-08,2023-12-13,2,C3435466398-GES_DISC,precipitation
+TROPICS01KTPIL2B,1.0,TROPICS01 Pathfinder L2B Precipitation Ice Water Path (PIWP) V1.0,2021-08-07,2023-12-15,2,C3877985348-GES_DISC,precipitation
+TROPICS01MIRSL2B,1.0,"TROPICS01 Pathfinder L2B Atmospheric Vertical Temperature and Moisture Profiles (AVTP, AVMP) V1.0",2021-08-07,2023-12-17,2,C2929021086-GES_DISC,precipitation
+TROPICS01NNAVPL2B,1.0,TROPICS01 L2B Neural-network Atmospheric Vertical Temperature & Moisture Profiles V1.0,2021-08-07,2023-12-17,2,C3394359300-GES_DISC,precipitation
+TROPICS01PRPSL2B,1.0,TROPICS01 Pathfinder L2B Instantaneous Surface Rain Rate (ISRR) V1.0,2021-08-07,2023-12-17,2,C3104593940-GES_DISC,precipitation
+TROPICS01TCIEL2B,1.0,TROPICS01 Pathfinder L2B Tropical Cyclone Intensity Estimate (TCIE) Algorithm V1.0,2021-08-08,2023-12-17,2,C3280791029-GES_DISC,precipitation
+TROPICS01URADL2A,1.0,TROPICS01 Pathfinder L2A Unified Resolution Brightness Temperatures V1.0,2021-08-07,2023-12-14,2,C2859214263-GES_DISC,precipitation
+TROPICS03ANTTL1A,1.0,TROPICS03 L1A Orbital Geolocated Native-Resolution Antenna Temperatures V1.0,2023-06-02,2025-11-11,1A,C3171499152-GES_DISC,precipitation
+TROPICS03BRTTL1B,1.0,TROPICS03 L1B Orbital Geolocated Native-Resolution Brightness Temperatures V1.0,2023-06-02,2025-11-11,1B,C3171499529-GES_DISC,precipitation
+TROPICS03BRTTL1C,1.0,TROPICS03 L1C Regularized-scan and Limb-adjusted Brightness Temperature V1.0,2023-06-02,2025-11-11,1,C3507628384-GES_DISC,precipitation
+TROPICS03DMINL2B,1.0,TROPICS03 L2B Deep Multispectral INtensity (DMIN) of Tropical cyclones estimator Algorithm V1.0,2023-06-02,2025-11-11,2,C3435394065-GES_DISC,precipitation
+TROPICS03MIRSL2B,1.0,"TROPICS03 L2B Atmospheric Vertical Temperature and Moisture Profiles (AVTP, AVMP) V1.0",2023-06-02,2025-11-11,2,C3255751009-GES_DISC,precipitation
+TROPICS03NNAVPL2B,1.0,TROPICS03 L2B Neural-network Atmospheric Vertical Temperature & Moisture Profiles V1.0,2023-06-07,2025-11-11,2,C3385871320-GES_DISC,precipitation
+TROPICS03PRPSL2B,1.0,TROPICS03 L2B Instantaneous Surface Rain Rate (ISRR) V1.0,2023-06-02,2025-11-11,2,C3254839500-GES_DISC,precipitation
+TROPICS03TCIEL2B,1.0,TROPICS03 L2B Tropical Cyclone Intensity Estimate (TCIE) Algorithm V1.0,2023-06-02,2025-11-11,2,C3279630448-GES_DISC,precipitation
+TROPICS03URADL2A,1.0,TROPICS03 L2A Unified Resolution Brightness Temperatures V1.0,2023-06-02,2025-11-11,2,C3179859133-GES_DISC,precipitation
+TROPICS05ANTTL1A,0.2,TROPICS05 L1A Orbital Geolocated Native-Resolution Antenna Temperatures V0.2,2021-07-19,ongoing,1A,C2985158466-GES_DISC,precipitation
+TROPICS05BRTTL1B,0.2,TROPICS05 L1B Orbital Geolocated Native-Resolution Brightness Temperatures V0.2,2023-06-01,2025-11-05,1B,C2985145021-GES_DISC,precipitation
+TROPICS05BRTTL1C,0.2,TROPICS05 L1C Regularized-scan and Limb-adjusted Brightness Temperature V0.2,2023-06-01,2025-11-05,1,C3507628725-GES_DISC,precipitation
+TROPICS05DMINL2B,0.2,TROPICS05 L2B Deep Multispectral INtensity (DMIN) of Tropical Cyclones Estimator Algorithm V0.2,2023-06-01,2025-10-28,2,C3435493506-GES_DISC,precipitation
+TROPICS05NNAVPL2B,0.2,TROPICS05 L2B Neural-network Atmospheric Vertical Temperature & Moisture Profiles V0.2,2023-06-04,2025-11-05,2,C3391737812-GES_DISC,precipitation
+TROPICS05PRPSL2B,0.2,TROPICS05 L2B Instantaneous Surface Rain Rate (ISRR) V0.2,2023-06-01,2025-11-05,2,C3255745252-GES_DISC,precipitation
+TROPICS05TCIEL2B,1.0,TROPICS05 L2B Tropical Cyclone Intensity Estimate (TCIE) Algorithm V1.0,2023-06-01,2024-10-22,2,C3280806477-GES_DISC,precipitation
+TROPICS05URADL2A,0.2,TROPICS05 L2A Unified Resolution Brightness Temperatures V0.2,2023-06-01,2025-11-05,2,C2985145612-GES_DISC,precipitation
+TROPICS06ANTTL1A,1.0,TROPICS06 L1A Orbital Geolocated Native-Resolution Antenna Temperatures V1.0,2023-06-02,2025-03-15,1A,C3171499640-GES_DISC,precipitation
+TROPICS06BRTTL1B,1.0,TROPICS06 L1B Orbital Geolocated Native-Resolution Brightness Temperatures V1.0,2023-06-02,2025-03-15,1B,C3171499970-GES_DISC,precipitation
+TROPICS06BRTTL1C,1.0,TROPICS06 L1C Regularized-scan and Limb-adjusted Brightness Temperature V1.0,2023-06-02,2025-03-15,1,C3507628692-GES_DISC,precipitation
+TROPICS06DMINL2B,1.0,TROPICS06 L2B Deep Multispectral INtensity (DMIN) of Tropical Cyclones Estimator Algorithm V1.0,2023-06-02,2025-03-14,2,C3435469974-GES_DISC,precipitation
+TROPICS06MIRSL2B,1.0,"TROPICS06 L2B Atmospheric Vertical Temperature and Moisture Profiles (AVTP, AVMP) V1.0",2023-06-02,2025-03-15,2,C3255752538-GES_DISC,precipitation
+TROPICS06NNAVPL2B,1.0,TROPICS06 L2B Neural-network Atmospheric Vertical Temperature & Moisture Profiles V1.0,2023-06-04,2025-03-15,2,C3391583456-GES_DISC,precipitation
+TROPICS06PRPSL2B,1.0,TROPICS06 L2B Instantaneous Surface Rain Rate (ISRR) V1.0,2023-06-02,2025-03-15,2,C3254839721-GES_DISC,precipitation
+TROPICS06TCIEL2B,1.0,TROPICS06 L2B Tropical Cyclone Intensity Estimate (TCIE) Algorithm V1.0,2023-06-02,2025-03-15,2,C3280808959-GES_DISC,precipitation
+TROPICS06URADL2A,1.0,TROPICS06 L2A Unified Resolution Brightness Temperatures V1.0,2023-06-02,2025-03-15,2,C3179860505-GES_DISC,precipitation
+TROPICS07ANTTL1A,0.2,TROPICS07 L1A Orbital Geolocated Native-Resolution Antenna Temperatures V0.2,2023-06-09,2023-08-01,1A,C3104586410-GES_DISC,precipitation
+TROPICS07BRTTL1B,0.2,TROPICS07 L1B Orbital Geolocated Native-Resolution Brightness Temperatures V0.2,2023-06-09,2023-08-01,1B,C3104588185-GES_DISC,precipitation
+TROPICS07DMINL2B,0.2,TROPICS07 L2B Deep Multispectral INtensity (DMIN) of Tropical Cyclones Estimator Algorithm V0.2,2023-06-09,2023-07-31,2,C3435496152-GES_DISC,precipitation
+TROPICS07NNAVPL2B,0.2,TROPICS07 L2B Neural-network Atmospheric Vertical Temperature & Moisture Profiles V0.2,2023-06-09,2023-08-01,2,C3392832002-GES_DISC,precipitation
+TROPICS07TCIEL2B,1.0,TROPICS07 L2B Tropical Cyclone Intensity Estimate (TCIE) Algorithm V1.0,2023-06-09,2023-07-31,2,C3280812796-GES_DISC,precipitation
+TROPICS07URADL2A,0.2,TROPICS07 L2A Unified Resolution Brightness Temperatures V0.2,2023-06-09,2023-08-01,2,C3104589838-GES_DISC,precipitation
+WC_MULTISEN_PREC_025,001,TMI/TRMM precipitation and uncertainty (TMPA) L3 3 hour 0.25 degree x 0.25 degree V001 (WC_MULTISEN_PREC_025) at GES DISC,1998-01-01,2010-12-31,3,C1242287793-GES_DISC,precipitation
+WLDAS_NOAHMP001_DA1,D1.0,WLDAS Noah-MP 3.6 Land Surface Model L4 Daily 0.01 degree x 0.01 degree Version D1.0 (WLDAS_NOAHMP001_DA1) at GES DISC,1979-01-02,2024-01-01,4,C2789781977-GES_DISC,precipitation
+gnssro_champ_eumetsat_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for CHAMP as contributed by EUMETSAT, version 2.0 (gnssro_champ_eumetsat_l1b)",2001-05-19,2008-10-05,1B,C3628338923-GES_DISC,precipitation
+gnssro_champ_jpl_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for CHAMP as contributed by JPL, version 2.0 (gnssro_champ_jpl_l1b)",2001-04-06,2008-10-05,1B,C3628338958-GES_DISC,precipitation
+gnssro_champ_jpl_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for CHAMP as contributed by JPL, version 2.0 (gnssro_champ_jpl_l2a)",2002-01-01,2008-10-05,2,C3628338967-GES_DISC,precipitation
+gnssro_champ_jpl_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for CHAMP as contributed by JPL, version 2.0 (gnssro_champ_jpl_l2b)",2002-01-01,2008-10-05,2,C3628338949-GES_DISC,precipitation
+gnssro_champ_romsaf_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for CHAMP as contributed by ROMSAF, version 2.0 (gnssro_champ_romsaf_l2a)",2001-09-01,2008-09-30,2,C3628339200-GES_DISC,precipitation
+gnssro_champ_romsaf_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for CHAMP as contributed by ROMSAF, version 2.0 (gnssro_champ_romsaf_l2b)",2001-09-01,2008-09-30,2,C3628339176-GES_DISC,precipitation
+gnssro_champ_ucar_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for CHAMP as contributed by UCAR, version 2.0 (gnssro_champ_ucar_l1b)",2001-05-19,2008-10-05,2,C3623820402-GES_DISC,precipitation
+gnssro_champ_ucar_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for CHAMP as contributed by UCAR, version 2.0 (gnssro_champ_ucar_l2a)",2001-05-19,2008-10-05,2,C3623833517-GES_DISC,precipitation
+gnssro_champ_ucar_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for CHAMP as contributed by UCAR, version 2.0 (gnssro_champ_ucar_l2b)",2001-05-19,2008-10-05,2,C3623833368-GES_DISC,precipitation
+gnssro_cnofs_ucar_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for CNOFS as contributed by UCAR, version 2.0 (gnssro_cnofs_ucar_l1b)",2010-03-01,2011-12-31,2,C3628339481-GES_DISC,precipitation
+gnssro_cnofs_ucar_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for CNOFS as contributed by UCAR, version 2.0 (gnssro_cnofs_ucar_l2a)",2010-03-01,2011-12-31,2,C3628339490-GES_DISC,precipitation
+gnssro_cnofs_ucar_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for CNOFS as contributed by UCAR, version 2.0 (gnssro_cnofs_ucar_l2b)",2010-03-01,2011-12-31,2,C3628339471-GES_DISC,precipitation
+gnssro_cosmic1_eumetsat_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for COSMIC1 as contributed by EUMETSAT, version 2.0 (gnssro_cosmic1_eumetsat_l1b)",2006-04-22,2020-04-25,1B,C3628338932-GES_DISC,precipitation
+gnssro_cosmic1_jpl_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for COSMIC1 as contributed by JPL, version 2.0 (gnssro_cosmic1_jpl_l1b)",2006-04-21,ongoing,1B,C3628338975-GES_DISC,precipitation
+gnssro_cosmic1_jpl_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for COSMIC1 as contributed by JPL, version 2.0 (gnssro_cosmic1_jpl_l2a)",2006-04-21,ongoing,2,C3628338986-GES_DISC,precipitation
+gnssro_cosmic1_jpl_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for COSMIC1 as contributed by JPL, version 2.0 (gnssro_cosmic1_jpl_l2b)",2006-04-21,ongoing,2,C3628339030-GES_DISC,precipitation
+gnssro_cosmic1_romsaf_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for COSMIC1 as contributed by ROMSAF, version 2.0 (gnssro_cosmic1_romsaf_l2a)",2006-04-22,2016-12-31,2,C3628339349-GES_DISC,precipitation
+gnssro_cosmic1_romsaf_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for COSMIC1 as contributed by ROMSAF, version 2.0 (gnssro_cosmic1_romsaf_l2b)",2006-04-22,ongoing,2,C3628339253-GES_DISC,precipitation
+gnssro_cosmic1_ucar_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for COSMIC1 as contributed by UCAR, version 2.0 (gnssro_cosmic1_ucar_l1b)",2006-04-30,ongoing,1B,C3628339504-GES_DISC,precipitation
+gnssro_cosmic1_ucar_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for COSMIC1 as contributed by UCAR, version 2.0 (gnssro_cosmic1_ucar_l2a)",2006-04-30,ongoing,2,C3628339506-GES_DISC,precipitation
+gnssro_cosmic1_ucar_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for COSMIC1 as contributed by UCAR, version 2.0 (gnssro_cosmic1_ucar_l2b)",2006-04-30,ongoing,2,C3628339497-GES_DISC,precipitation
+gnssro_cosmic2_ucar_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for COSMIC2 as contributed by UCAR, version 2.0 (gnssro_cosmic2_ucar_l1b)",2019-10-02,ongoing,1B,C3628339513-GES_DISC,precipitation
+gnssro_cosmic2_ucar_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for COSMIC2 as contributed by UCAR, version 2.0 (gnssro_cosmic2_ucar_l2a)",2019-10-01,ongoing,2,C3628339521-GES_DISC,precipitation
+gnssro_cosmic2_ucar_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for COSMIC2 as contributed by UCAR, version 2.0 (gnssro_cosmic2_ucar_l2b)",2019-10-01,ongoing,2,C3628339510-GES_DISC,precipitation
+gnssro_geoopt_ucar_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for GEOOPT as contributed by UCAR, version 2.0 (gnssro_geoopt_ucar_l1b)",2020-12-01,ongoing,1B,C3628339575-GES_DISC,precipitation
+gnssro_geoopt_ucar_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for GEOOPT as contributed by UCAR, version 2.0 (gnssro_geoopt_ucar_l2a)",2020-12-01,2021-09-16,2,C3628339587-GES_DISC,precipitation
+gnssro_geoopt_ucar_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for GEOOPT as contributed by UCAR, version 2.0 (gnssro_geoopt_ucar_l2b)",2020-12-01,2021-09-16,2,C3628339550-GES_DISC,precipitation
+gnssro_gpsmet_ucar_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for GPSMET as contributed by UCAR, version 2.0 (gnssro_gpsmet_ucar_l1b)",1995-04-22,ongoing,1B,C3628339631-GES_DISC,precipitation
+gnssro_gpsmet_ucar_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for GPSMET as contributed by UCAR, version 2.0 (gnssro_gpsmet_ucar_l2a)",1995-04-22,1997-02-16,2,C3628339646-GES_DISC,precipitation
+gnssro_gpsmet_ucar_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for GPSMET as contributed by UCAR, version 2.0 (gnssro_gpsmet_ucar_l2b)",1995-04-21,1997-02-16,2,C3628339605-GES_DISC,precipitation
+gnssro_grace_eumetsat_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for GRACE as contributed by EUMETSAT, version 2.0 (gnssro_grace_eumetsat_l1b)",2007-02-28,2017-11-20,1B,C3628338935-GES_DISC,precipitation
+gnssro_grace_jpl_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for GRACE as contributed by JPL, version 2.0 (gnssro_grace_jpl_l1b)",2006-01-12,2017-11-19,1B,C3628339073-GES_DISC,precipitation
+gnssro_grace_jpl_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for GRACE as contributed by JPL, version 2.0 (gnssro_grace_jpl_l2a)",2006-01-12,2017-11-19,2,C3628339085-GES_DISC,precipitation
+gnssro_grace_jpl_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for GRACE as contributed by JPL, version 2.0 (gnssro_grace_jpl_l2b)",2006-01-12,2017-11-19,2,C3628339061-GES_DISC,precipitation
+gnssro_grace_romsaf_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for GRACE as contributed by ROMSAF, version 2.0 (gnssro_grace_romsaf_l2a)",2007-03-01,2016-12-31,2,C3628339441-GES_DISC,precipitation
+gnssro_grace_romsaf_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for GRACE as contributed by ROMSAF, version 2.0 (gnssro_grace_romsaf_l2b)",2007-03-01,2016-12-31,2,C3628339416-GES_DISC,precipitation
+gnssro_grace_ucar_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for GRACE as contributed by UCAR, V2.0 (gnssro_grace_ucar_l1b)",2007-02-28,ongoing,1B,C3628339668-GES_DISC,precipitation
+gnssro_grace_ucar_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for GRACE as contributed by UCAR, V2.0 (gnssro_grace_ucar_l2a)",2007-02-28,2017-11-30,2,C3628339672-GES_DISC,precipitation
+gnssro_grace_ucar_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for GRACE as contributed by UCAR, version 2.0 (gnssro_grace_ucar_l2b)",2007-02-28,2017-11-30,2,C3628339654-GES_DISC,precipitation
+gnssro_kompsat5_ucar_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for KOMPSAT5 as contributed by UCAR, version 2.0 (gnssro_kompsat5_ucar_l1b)",2019-07-01,ongoing,1B,C3628339705-GES_DISC,precipitation
+gnssro_kompsat5_ucar_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for KOMPSAT5 as contributed by UCAR, version 2.0 (gnssro_kompsat5_ucar_l2a)",2015-01-22,2025-05-31,2,C3628339719-GES_DISC,precipitation
+gnssro_kompsat5_ucar_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for KOMPSAT5 as contributed by UCAR, version 2.0 (gnssro_kompsat5_ucar_l2b)",2015-01-22,2025-05-31,2,C3628339688-GES_DISC,precipitation
+gnssro_metop_eumetsat_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for METOP as contributed by EUMETSAT, version 2.0 (gnssro_metop_eumetsat_l1b)",2006-10-27,2020-06-30,1B,C3628338940-GES_DISC,precipitation
+gnssro_metop_romsaf_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for METOP as contributed by ROMSAF, version 2.0 (gnssro_metop_romsaf_l2a)",2006-10-27,ongoing,2,C3628339453-GES_DISC,precipitation
+gnssro_metop_romsaf_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for METOP as contributed by ROMSAF, version 2.0 (gnssro_metop_romsaf_l2b)",2006-10-27,ongoing,2,C3628339444-GES_DISC,precipitation
+gnssro_metop_ucar_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for METOP as contributed by UCAR, version 2.0 (gnssro_metop_ucar_l1b)",2007-10-01,2025-05-31,1B,C3628339838-GES_DISC,precipitation
+gnssro_metop_ucar_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for METOP as contributed by UCAR, version 2.0 (gnssro_metop_ucar_l2a)",2007-10-01,2025-05-31,2,C3628339855-GES_DISC,precipitation
+gnssro_metop_ucar_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for METOP as contributed by UCAR, version 2.0 (gnssro_metop_ucar_l2b)",2007-10-01,2025-05-31,2,C3628339765-GES_DISC,precipitation
+gnssro_paz_jpl_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for PAZ as contributed by JPL, version 2.0 (gnssro_paz_jpl_l1b)",2018-05-10,2023-07-31,1B,C3628339111-GES_DISC,precipitation
+gnssro_paz_jpl_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for PAZ as contributed by JPL, version 2.0 (gnssro_paz_jpl_l2a)",2019-01-01,2022-12-31,2,C3628339129-GES_DISC,precipitation
+gnssro_paz_jpl_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for PAZ as contributed by JPL, version 2.0 (gnssro_paz_jpl_l2b)",2019-01-01,2022-12-31,2,C3628339096-GES_DISC,precipitation
+gnssro_paz_ucar_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for PAZ as contributed by UCAR, version 2.0 (gnssro_paz_ucar_l1b)",2018-05-10,ongoing,1B,C3628339979-GES_DISC,precipitation
+gnssro_paz_ucar_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for PAZ as contributed by UCAR, version 2.0 (gnssro_paz_ucar_l2a)",2018-05-10,2025-05-29,2,C3628340119-GES_DISC,precipitation
+gnssro_paz_ucar_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for PAZ as contributed by UCAR, version 2.0 (gnssro_paz_ucar_l2b)",2018-05-10,2025-05-29,2,C3628339863-GES_DISC,precipitation
+gnssro_planetiq_ucar_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for PLANETIQ as contributed by UCAR, V2.0 (gnssro_planetiq_ucar_l1b)",2023-04-05,ongoing,1B,C3628340442-GES_DISC,precipitation
+gnssro_planetiq_ucar_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for PLANETIQ as contributed by UCAR, V2.0 (gnssro_planetiq_ucar_l2a)",2023-04-05,2024-10-31,2,C3628340445-GES_DISC,precipitation
+gnssro_planetiq_ucar_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for PLANETIQ as contributed by UCAR, V2.0 (gnssro_planetiq_ucar_l2b)",2023-04-05,2024-10-31,2,C3628340323-GES_DISC,precipitation
+gnssro_sacc_ucar_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for SACC as contributed by UCAR, V2.0 (gnssro_sacc_ucar_l1b)",2006-03-09,ongoing,1B,C3628340451-GES_DISC,precipitation
+gnssro_sacc_ucar_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for SACC as contributed by UCAR, V2.0 (gnssro_sacc_ucar_l2a)",2006-03-09,2011-08-03,2,C3628340460-GES_DISC,precipitation
+gnssro_sacc_ucar_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for SACC as contributed by UCAR, V2.0 (gnssro_sacc_ucar_l2b)",2006-03-09,2011-08-03,2,C3628340447-GES_DISC,precipitation
+gnssro_spire_ucar_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for SPIRE as contributed by UCAR, version 2.0 (gnssro_spire_ucar_l1b)",2020-12-16,ongoing,1B,C3628340487-GES_DISC,precipitation
+gnssro_spire_ucar_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for SPIRE as contributed by UCAR, version 2.0 (gnssro_spire_ucar_l2a)",2020-12-16,2025-07-29,2,C3628340517-GES_DISC,precipitation
+gnssro_spire_ucar_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for SPIRE as contributed by UCAR, version 2.0 (gnssro_spire_ucar_l2b)",2020-12-16,ongoing,2,C3628340472-GES_DISC,precipitation
+gnssro_tdx_ucar_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for TDX as contributed by UCAR, version 2.0 (gnssro_tdx_ucar_l2b)",2016-01-01,ongoing,2,C3628340564-GES_DISC,precipitation
+gnssro_tsx_jpl_l1b,2.0,"GNSS radio occultation L1B excess phase and amplitude for TSX as contributed by JPL, version 2.0 (gnssro_tsx_jpl_l1b)",2012-01-02,2022-11-30,1B,C3628339146-GES_DISC,precipitation
+gnssro_tsx_jpl_l2a,2.0,"GNSS radio occultation L2A bending angle, refractivity, and dry pressure for TSX as contributed by JPL, version 2.0 (gnssro_tsx_jpl_l2a)",2012-01-03,2022-12-28,2,C3628339160-GES_DISC,precipitation
+gnssro_tsx_jpl_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for TSX as contributed by JPL, version 2.0 (gnssro_tsx_jpl_l2b)",2012-01-03,2022-12-28,2,C3628339139-GES_DISC,precipitation
+gnssro_tsx_ucar_l2b,2.0,"GNSS radio occultation L2B temperature, pressure, and water vapor retrieval for TSX as contributed by UCAR, version 2.0 (gnssro_tsx_ucar_l2b)",2008-02-10,ongoing,2,C3628340599-GES_DISC,precipitation
