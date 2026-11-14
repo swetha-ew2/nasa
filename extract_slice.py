@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Stage B: pull monthly NASA products, keep only the pool variables, coarsen to a 5-degree grid.
 
-Two ways to get the data (--mode):
-  stream    read only the needed variable straight from the remote file (HTTP range requests). No big download.
-            Works for netCDF4/HDF5 files (MERRA-2, GLDAS, FLDAS, GPM, ...). Not for HDF4 (some MODIS/AIRS).
-  download  download each granule, reduce it, delete it (disk use = one file per worker)
-  auto      (default) try stream; if a granule cannot be streamed, fall back to download for that product.
+How the data is fetched (--mode):
+  auto      (default) OPeNDAP first: the server sends ONLY the variable you need (~0.8 MB instead of a 54 MB file).
+            Any variable OPeNDAP cannot deliver is read from a downloaded file instead (that file is deleted afterwards).
+  opendap   OPeNDAP only (errors instead of falling back)
+  download  always download the whole granule, reduce it, delete it
+  stream    read from the remote file with h5netcdf (did not work for GES DISC; kept for other servers)
+--stride N  OPeNDAP only: take every Nth native point. 0 (default) = automatic: ~0.25 degree spacing, so
+            0.5-degree grids are read in full and 0.05-degree MODIS grids every 5th point (400 points per 5-degree cell).
 
 Probe first (one granule: time, size, grid, sanity stats, estimated total):
     python extract_slice.py variable_pool.csv --product M2TMNXSLV --vars T2M --probe
@@ -26,6 +29,7 @@ import glob
 import os
 import re
 import shutil
+import struct
 import sys
 import tempfile
 import time
@@ -169,6 +173,233 @@ def read_field_h5(fobj, hdf_group, name):
     return arr, lat, lon, str(units), str(long_name)
 
 
+# ------------------------------------------------------------------ OPeNDAP (DAP2) reader
+DAP_TYPES = {"Float32": (">f4", 4), "Float64": (">f8", 8), "Int16": (">i4", 4), "UInt16": (">u4", 4),
+             "Int32": (">i4", 4), "UInt32": (">u4", 4), "Byte": ("u1", 1)}
+_DAP_CACHE = {}
+_DAP_TEXT = {}
+_DAP_COORD = {}
+
+
+def parse_dds(text, var):
+    m = re.search(r"(Float32|Float64|Int16|UInt16|Int32|UInt32|Byte)\s+" + re.escape(var) + r"((?:\[[^\]]+\])+);", text)
+    if not m:
+        return None
+    dims = re.findall(r"\[(\w+)\s*=\s*(\d+)\]", m.group(2))
+    return m.group(1), [d for d, _ in dims], [int(n) for _, n in dims]
+
+
+def parse_das(text, var):
+    """attributes of one variable from DAS text -> dict (numbers as float, strings as str)."""
+    m = re.search(r"(?:^|\n)\s*" + re.escape(var) + r"\s*\{(.*?)\n\s*\}", text, re.S)
+    out = {}
+    if not m:
+        return out
+    for line in m.group(1).splitlines():
+        mm = re.match(r"\s*(\w+)\s+(\w+)\s+(.*?);\s*$", line)
+        if not mm:
+            continue
+        typ, key, val = mm.groups()
+        if typ == "String":
+            out[key] = val.strip().strip('"')
+        else:
+            try:
+                out[key] = [float(v) for v in val.split(",")]
+            except ValueError:
+                pass
+    return out
+
+
+def parse_dods(blob, dtype, count):
+    i = blob.find(b"\nData:\n")
+    if i < 0:
+        raise ValueError("no Data marker; response starts " + repr(blob[:150]))
+    p = i + len(b"\nData:\n")
+    n1, n2 = struct.unpack(">II", blob[p:p + 8])
+    if n1 != n2 or n1 != count:
+        raise ValueError(f"unexpected element count {n1} (wanted {count})")
+    p += 8
+    need = n1 * np.dtype(dtype).itemsize
+    if len(blob) - p < need:
+        raise ValueError(f"response too short: {len(blob)-p} bytes for {n1} values of {dtype}")
+    return np.frombuffer(blob[p:p + need], dtype=dtype)
+
+
+def opendap_url(result):
+    for u in result["umm"].get("RelatedUrls", []):
+        link = u.get("URL", "")
+        if "opendap" in link.lower() or "OPENDAP" in str(u.get("Subtype", "")).upper():
+            for suf in (".html", ".dds", ".das", ".dods"):
+                if link.endswith(suf):
+                    link = link[: -len(suf)]
+            return link
+    for d in result.data_links():
+        if "/data/" in d:
+            return d.replace("/data/", "/opendap/")
+    raise KeyError("no OPeNDAP address in the granule metadata")
+
+
+def _get(session, url, what):
+    r = session.get(url, timeout=300)
+    if r.status_code != 200:
+        raise RuntimeError(f"{what}: HTTP {r.status_code} {r.content[:100]!r}")
+    return r
+
+
+def _ckey(url):
+    return url.rsplit("/granules/", 1)[0] if "/granules/" in url else url.rsplit("/", 2)[0]
+
+
+def dap_meta(session, url, var, stride_req):
+    ck = _ckey(url)
+    key = (ck, var, stride_req)
+    if key in _DAP_CACHE:
+        return _DAP_CACHE[key]
+    if (ck, "dds") not in _DAP_TEXT:           # one description per collection, not per variable
+        _DAP_TEXT[(ck, "dds")] = _get(session, url + ".dds", "dds").text
+        _DAP_TEXT[(ck, "das")] = _get(session, url + ".das", "das").text
+    dds, das = _DAP_TEXT[(ck, "dds")], _DAP_TEXT[(ck, "das")]
+    parsed = parse_dds(dds, var)
+    if not parsed:
+        raise KeyError(f"variable {var!r} not in the OPeNDAP DDS")
+    typ, dims, sizes = parsed
+    attrs = parse_das(das, var)
+    roles = {}
+    for d in dims:
+        dl = d.lower()
+        if dl.startswith("ydim") or dl.startswith("lat") or d in LAT_NAMES:
+            roles[d] = "lat"
+        elif dl.startswith("xdim") or dl.startswith("lon") or d in LON_NAMES:
+            roles[d] = "lon"
+    latd = next((d for d in dims if roles.get(d) == "lat"), None)
+    lond = next((d for d in dims if roles.get(d) == "lon"), None)
+    if latd is None or lond is None:
+        latd, lond = dims[-2], dims[-1]
+    ny, nx = sizes[dims.index(latd)], sizes[dims.index(lond)]
+
+    def coord(name, n):
+        ckk = (ck, name, n)
+        if ckk not in _DAP_COORD:
+            c = None
+            mt = re.search(r"(Float32|Float64)\s+" + re.escape(name) + r"\[", dds)
+            if mt:
+                c = parse_dods(_get(session, f"{url}.dods?{name}[0:{n-1}]", name).content, DAP_TYPES[mt.group(1)][0], n).astype(float)
+                if len(c) != n:
+                    raise ValueError(f"coordinate {name}: got {len(c)} values, expected {n}")
+            _DAP_COORD[ckk] = c
+        return _DAP_COORD[ckk]
+    lat, lon = coord(latd, ny), coord(lond, nx)
+    if lat is None or lon is None:
+        lat, lon = regular_grid(ny, nx)
+    res = abs(lat[1] - lat[0]) if len(lat) > 1 else 1.0
+    stride = stride_req if stride_req > 0 else max(1, int(round(0.25 / res)))
+    for d, n in zip(dims, sizes):
+        if d not in (latd, lond) and n > 8:
+            raise ValueError(f"extra dimension {d}={n} (levels?) is not supported")
+    shape, ce = [], ""
+    for d, n in zip(dims, sizes):
+        if d in (latd, lond):
+            ce += f"[0:{stride}:{n-1}]"
+            shape.append(len(range(0, n, stride)))
+        else:
+            ce += f"[0:{n-1}]"
+            shape.append(n)
+    meta = dict(typ=typ, dims=dims, sizes=sizes, attrs=attrs, latd=latd, lond=lond, stride=stride,
+                lat=lat[::stride], lon=lon[::stride], ce=ce, shape=shape, count=int(np.prod(shape)))
+    _DAP_CACHE[key] = meta
+    return meta
+
+
+def _array_bytes(typ, count):
+    dtype, size = DAP_TYPES[typ]
+    n = count * size
+    return dtype, (n + 3) // 4 * 4 if typ == "Byte" else n
+
+
+def parse_dods_multi(blob, specs):
+    """Several arrays one after another (XDR). specs = [(typ, count)]. Returns list of arrays; checks everything is consumed."""
+    i = blob.find(b"\nData:\n")
+    if i < 0:
+        raise ValueError("no Data marker; response starts " + repr(blob[:150]))
+    p = i + len(b"\nData:\n")
+    out = []
+    for typ, count in specs:
+        n1, n2 = struct.unpack(">II", blob[p:p + 8])
+        if n1 != n2 or n1 != count:
+            raise ValueError(f"unexpected element count {n1} (wanted {count})")
+        p += 8
+        dtype, nbytes = _array_bytes(typ, count)
+        item = np.dtype(dtype).itemsize
+        out.append(np.frombuffer(blob[p:p + count * item], dtype=dtype))
+        p += nbytes
+    if p != len(blob):
+        raise ValueError(f"{len(blob)-p} unexpected trailing bytes (Grid maps in the response?)")
+    return out
+
+
+def _postprocess(arr, meta):
+    arr = arr.astype(float).reshape(meta["shape"])
+    a = meta["attrs"]
+    for k in ("_FillValue", "missing_value"):
+        if k in a:
+            arr[arr == a[k][0]] = np.nan
+    if "valid_range" in a and len(a["valid_range"]) >= 2:
+        arr[(arr < a["valid_range"][0]) | (arr > a["valid_range"][1])] = np.nan
+    if "valid_min" in a:
+        arr[arr < a["valid_min"][0]] = np.nan
+    if "valid_max" in a:
+        arr[arr > a["valid_max"][0]] = np.nan
+    arr = arr * (a["scale_factor"][0] if "scale_factor" in a else 1.0) + (a["add_offset"][0] if "add_offset" in a else 0.0)
+    arr, lat, lon = finish(arr, meta["dims"], meta["latd"], meta["lond"], meta["lat"], meta["lon"])
+    return arr, lat, lon, str(a.get("units", "")), str(a.get("long_name", ""))
+
+
+def read_fields_dap(session, url, varnames, stride_req=0, batch=10):
+    """Read many variables of one granule with few requests. Returns (fields, errors)."""
+    fields, errors, metas = {}, {}, {}
+    for v in varnames:
+        try:
+            metas[v] = dap_meta(session, url, v, stride_req)
+        except Exception as e:
+            errors[v] = e
+    names = list(metas)
+    for i in range(0, len(names), batch):
+        chunk = names[i:i + batch]
+        done = False
+        if len(chunk) > 1 and not _DAP_TEXT.get(("nobatch", _ckey(url))):
+            try:
+                proj = ",".join(f"{v}.{v}{metas[v]['ce']}" for v in chunk)
+                raw = _get(session, f"{url}.dods?{proj}", "batch").content
+                arrs = parse_dods_multi(raw, [(metas[v]["typ"], metas[v]["count"]) for v in chunk])
+                for v, arr in zip(chunk, arrs):
+                    fields[v] = _postprocess(arr, metas[v])
+                done = True
+            except Exception as e:
+                _DAP_TEXT[("nobatch", _ckey(url))] = str(e)[:100]
+        if not done:
+            for v in chunk:
+                try:
+                    fields[v] = read_field_dap(session, url, v, stride_req)
+                except Exception as e:
+                    errors[v] = e
+    return fields, errors
+
+
+def read_field_dap(session, url, var, stride_req=0):
+    """One variable per request (fallback path)."""
+    meta = dap_meta(session, url, var, stride_req)
+    last = None
+    for dotted in (True, False):
+        proj = f"{var}.{var}{meta['ce']}" if dotted else f"{var}{meta['ce']}"
+        try:
+            raw = _get(session, f"{url}.dods?{proj}", var).content
+            arr = parse_dods(raw, DAP_TYPES[meta["typ"]][0], meta["count"])
+            return _postprocess(arr, meta)
+        except Exception as e:
+            last = e
+    raise last
+
+
 # ------------------------------------------------------------------ metadata helpers
 def month_of(result):
     try:
@@ -189,33 +420,51 @@ def load_pool(path):
 
 
 # ------------------------------------------------------------------ one granule
-def process_granule(earthaccess, result, rows, mode, state):
-    """Returns ({variable: 5deg array}, info dict). May switch state['mode'] from stream to download."""
+def process_granule(earthaccess, result, rows, mode, state, stride=0):
+    """Returns ({variable: 5deg array}, info, meta). Per variable: OPeNDAP first, then (auto) a file download
+    for whatever OPeNDAP could not deliver."""
     t0 = time.time()
-    info = {}
-    use_stream = mode in ("stream", "auto") and not state.get("no_stream")
-    fields = None
-    if use_stream:
+    fields, info, failed = {}, {}, []
+    use_dap = mode in ("auto", "opendap") and not state.get("no_opendap")
+    use_stream = mode == "stream"
+    if use_dap:
         try:
-            fobj = earthaccess.open([result])[0]
-            fields = {}
-            try:
-                for r in rows:
-                    fields[r["variable"]] = read_field_h5(fobj, r["hdf_group"], r["variable"])
-            finally:
-                try:
-                    fobj.close()
-                except Exception:
-                    pass
-            info["how"] = "stream"
+            if "session" not in state:
+                state["session"] = earthaccess.get_requests_https_session()
+            url = opendap_url(result)
         except Exception as e:
-            if mode == "stream":
+            if mode == "opendap":
                 raise
-            if not state.get("no_stream"):
-                state["no_stream"] = True
-                print(f"  streaming not possible for this product ({type(e).__name__}: {str(e)[:90]}); using download mode")
-            fields = None
-    if fields is None:
+            state["no_opendap"] = True
+            print(f"  OPeNDAP not available for this product ({type(e).__name__}: {str(e)[:90]}); using downloads")
+            use_dap = False
+    if use_dap:
+        got, errs = read_fields_dap(state["session"], url, [r["variable"] for r in rows], stride)
+        fields.update(got)
+        if errs and mode == "opendap":
+            raise next(iter(errs.values()))
+        for r in rows:
+            if r["variable"] in errs:
+                failed.append(r)
+                e = errs[r["variable"]]
+                if r["variable"] not in state.setdefault("reported", set()):
+                    state["reported"].add(r["variable"])
+                    print(f"  {r['variable']}: OPeNDAP failed ({type(e).__name__}: {str(e)[:90]}); will download the file")
+        info["how"] = "opendap" if not failed else "opendap+download"
+    elif use_stream:
+        fobj = earthaccess.open([result])[0]
+        try:
+            fields = {r["variable"]: read_field_h5(fobj, r["hdf_group"], r["variable"]) for r in rows}
+        finally:
+            try:
+                fobj.close()
+            except Exception:
+                pass
+        info["how"] = "stream"
+    else:
+        failed = list(rows)
+        info["how"] = "download"
+    if failed and mode != "opendap":
         tmp = tempfile.mkdtemp(prefix="extract_")
         try:
             files = earthaccess.download([result], tmp, show_progress=False)
@@ -223,18 +472,17 @@ def process_granule(earthaccess, result, rows, mode, state):
                 raise RuntimeError("download returned no file")
             path = str(files[0])
             info["size_mb"] = os.path.getsize(path) / 1e6
-            fields = {r["variable"]: read_field(path, r["hdf_group"], r["variable"]) for r in rows}
-            info["how"] = "download"
+            for r in failed:
+                fields[r["variable"]] = read_field(path, r["hdf_group"], r["variable"])
         finally:
             shutil.rmtree(tmp, ignore_errors=True)
     out, meta = {}, {}
     for name, (arr, lat, lon, units, ln) in fields.items():
-        key = (len(lat), len(lon))
+        key = (len(lat), len(lon), float(lat[0]), float(lon[0]))
         if state.get("grid") != key:
             state["idx"], state["w"] = cell_index(lat, lon)
             state["grid"] = key
-        idx, w = state["idx"], state["w"]
-        out[name] = coarsen(arr, idx, w)
+        out[name] = coarsen(arr, state["idx"], state["w"])
         meta[name] = (arr, units, ln)
     info["seconds"] = time.time() - t0
     return out, info, meta
@@ -256,8 +504,8 @@ def _init_worker(ea_obj):
     _EA = ea_obj
 
 
-def _job(result, rows, mode, cache, m):
-    out, info, _ = process_granule(_EA, result, rows, mode, _STATE)
+def _job(result, rows, mode, cache, m, stride):
+    out, info, _ = process_granule(_EA, result, rows, mode, _STATE, stride)
     np.savez_compressed(os.path.join(cache, f"{m}.npz"), **out)
     return m, info
 
@@ -298,7 +546,11 @@ def run_product(earthaccess, product, rows, a, ea_obj=None):
 
     if a.probe:
         pick = [m for m in months if m == 201506] or [months[len(months) // 2]]
-        out, info, meta = process_granule(earthaccess, by_month[pick[0]], rows, a.mode, state)
+        out, info, meta = process_granule(earthaccess, by_month[pick[0]], rows, a.mode, state, a.stride)
+        nxt = [m for m in months if m > pick[0]][:1]
+        info2 = None
+        if nxt:
+            _, info2, _ = process_granule(earthaccess, by_month[nxt[0]], rows, a.mode, state, a.stride)
         wcell = np.cos(np.deg2rad(LAT_C))[:, None] * np.ones(NLON)[None, :]
         for r in rows:
             arr, units, ln = meta[r["variable"]]
@@ -309,11 +561,13 @@ def run_product(earthaccess, product, rows, a, ea_obj=None):
                   f"native range {np.nanmin(arr):.4g}..{np.nanmax(arr):.4g} | 5-deg area-weighted mean "
                   f"{(c[ok]*wcell[ok]).sum()/wcell[ok].sum():.4g}")
         n = len(months)
-        per = info["seconds"]
-        print(f"\nPROBE {pick[0]}: mode={info['how']}, {per:.1f}s for this granule"
-              + (f", file {info['size_mb']:.0f} MB" if 'size_mb' in info else ""))
+        per = (info2 or info)["seconds"]
+        print(f"\nPROBE: mode={info['how']}")
+        print(f"  first granule ({pick[0]}): {info['seconds']:.1f}s (includes one-time set-up)")
+        if info2:
+            print(f"  second granule ({nxt[0]}): {info2['seconds']:.1f}s  <- the steady-state cost per month")
         print(f"Estimated {product}, {n} months: ~{per*n/60/a.workers:.0f} min with {a.workers} workers "
-              f"(first granule includes login/connection set-up, so this is pessimistic)")
+              f"(if the server does not slow down under parallel load)")
         return True
 
     need = {r["variable"] for r in rows}
@@ -330,7 +584,7 @@ def run_product(earthaccess, product, rows, a, ea_obj=None):
     t1 = time.time()
     n_done = 0
     with ProcessPoolExecutor(max_workers=max(1, a.workers), initializer=_init_worker, initargs=(ea_obj,)) as ex:
-        futs = {ex.submit(_job, by_month[m], rows, a.mode, cache, m): m for m in todo}
+        futs = {ex.submit(_job, by_month[m], rows, a.mode, cache, m, a.stride): m for m in todo}
         for f in as_completed(futs):
             m = futs[f]
             try:
@@ -359,18 +613,24 @@ def main():
     ap.add_argument("pool", help="variable_pool.csv")
     ap.add_argument("--product", nargs="+", default=None)
     ap.add_argument("--all", action="store_true", help="every product in the pool")
+    ap.add_argument("--skip", nargs="+", default=[], help="with --all: leave these products out (run them later)")
     ap.add_argument("--vars", nargs="*", default=None, help="only these variables (single product only)")
     ap.add_argument("--start", default="2005-01")
     ap.add_argument("--end", default="2024-12")
     ap.add_argument("--out", default="data")
-    ap.add_argument("--mode", choices=["auto", "stream", "download"], default="auto")
-    ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--mode", choices=["auto", "opendap", "stream", "download"], default="auto")
+    ap.add_argument("--stride", type=int, default=0, help="OPeNDAP: take every Nth native point (0 = auto, aim for ~0.25 deg spacing)")
+    ap.add_argument("--workers", type=int, default=8)
     ap.add_argument("--probe", action="store_true", help="one granule only; writes nothing")
     ap.add_argument("--force", action="store_true", help="ignore cache / finished outputs")
     a = ap.parse_args()
 
     prods = load_pool(a.pool)
-    names = list(prods) if a.all else (a.product or [])
+    names = [p for p in prods if p not in set(a.skip)] if a.all else (a.product or [])
+    if a.skip:
+        unknown = [p for p in a.skip if p not in prods]
+        if unknown:
+            print(f"note: --skip names not in the pool: {unknown}")
     if not names:
         sys.exit("give --product NAME [NAME ...] or --all")
     for n in names:
