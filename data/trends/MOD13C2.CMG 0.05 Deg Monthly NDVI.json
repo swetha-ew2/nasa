@@ -1,0 +1,20 @@
+{
+ "var_id": "MOD13C2.CMG 0.05 Deg Monthly NDVI",
+ "units": "NDVI",
+ "n_months": 240,
+ "cells_valid": 965,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.002,
+ "sig_cells": 319,
+ "sig_area_fraction": 0.337,
+ "sig_positive_area": 0.321,
+ "sig_negative_area": 0.016,
+ "divergence": 0.098,
+ "global_slope_per_decade": 0.008010750590195657,
+ "global_ci": [
+  0.006499659344327255,
+  0.009531987588117099
+ ],
+ "global_p_mk": 6.573630528805552e-12,
+ "global_p_ols": 2.951805927334887e-60
+}

@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_VIC10_M.Qs_acc",
+ "units": "kg m-2",
+ "n_months": 240,
+ "cells_valid": 859,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.01,
+ "sig_cells": 132,
+ "sig_area_fraction": 0.173,
+ "sig_positive_area": 0.039,
+ "sig_negative_area": 0.134,
+ "divergence": 0.453,
+ "global_slope_per_decade": -0.004014509976196303,
+ "global_ci": [
+  -0.005287513610350265,
+  -0.0027546033905048875
+ ],
+ "global_p_mk": 1.3978425972283048e-08,
+ "global_p_ols": 3.3667701774967807e-15
+}

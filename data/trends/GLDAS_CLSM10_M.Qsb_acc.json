@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_CLSM10_M.Qsb_acc",
+ "units": "kg m-2",
+ "n_months": 240,
+ "cells_valid": 859,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 76,
+ "sig_area_fraction": 0.09,
+ "sig_positive_area": 0.009,
+ "sig_negative_area": 0.082,
+ "divergence": 0.191,
+ "global_slope_per_decade": -0.0005142572187793926,
+ "global_ci": [
+  -0.0009178915894710311,
+  -0.00013877094511122832
+ ],
+ "global_p_mk": 0.013955033217532664,
+ "global_p_ols": 1.323623551505177e-28
+}

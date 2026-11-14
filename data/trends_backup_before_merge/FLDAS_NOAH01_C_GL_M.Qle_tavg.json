@@ -1,0 +1,20 @@
+{
+ "var_id": "FLDAS_NOAH01_C_GL_M.Qle_tavg",
+ "units": "W m-2",
+ "n_months": 240,
+ "cells_valid": 987,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.004,
+ "sig_cells": 110,
+ "sig_area_fraction": 0.116,
+ "sig_positive_area": 0.082,
+ "sig_negative_area": 0.034,
+ "divergence": 0.587,
+ "global_slope_per_decade": 1.4845944153068626e-07,
+ "global_ci": [
+  -8.184263055975461e-08,
+  3.792185119535191e-07
+ ],
+ "global_p_mk": 0.19564841820280154,
+ "global_p_ols": 0.022992924562734107
+}

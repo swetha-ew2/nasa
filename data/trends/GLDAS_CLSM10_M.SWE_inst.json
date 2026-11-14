@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_CLSM10_M.SWE_inst",
+ "units": "kg m-2",
+ "n_months": 240,
+ "cells_valid": 859,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 14,
+ "sig_area_fraction": 0.012,
+ "sig_positive_area": 0.003,
+ "sig_negative_area": 0.01,
+ "divergence": 0.444,
+ "global_slope_per_decade": 0.056138449779945886,
+ "global_ci": [
+  -0.7195415690730601,
+  0.5944457452579387
+ ],
+ "global_p_mk": 0.8148025458978503,
+ "global_p_ols": 0.2026568307789483
+}

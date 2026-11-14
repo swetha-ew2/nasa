@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXFLX.HFLUX",
+ "units": "W m-2",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.255,
+ "sig_cells": 398,
+ "sig_area_fraction": 0.183,
+ "sig_positive_area": 0.04,
+ "sig_negative_area": 0.144,
+ "divergence": 0.435,
+ "global_slope_per_decade": -0.2300937702694274,
+ "global_ci": [
+  -0.3710985379240667,
+  -0.08047799075414364
+ ],
+ "global_p_mk": 0.0033310297331632377,
+ "global_p_ols": 2.372939683156947e-09
+}

@@ -1,0 +1,20 @@
+{
+ "var_id": "MOD21C3.LST_Night",
+ "units": "K",
+ "n_months": 240,
+ "cells_valid": 991,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.241,
+ "sig_cells": 661,
+ "sig_area_fraction": 0.754,
+ "sig_positive_area": 0.754,
+ "sig_negative_area": 0.001,
+ "divergence": 0.002,
+ "global_slope_per_decade": 27.957349457792553,
+ "global_ci": [
+  21.977765918733247,
+  34.795414340325976
+ ],
+ "global_p_mk": 1.4341861032107772e-12,
+ "global_p_ols": 1.9741152254938287e-56
+}

@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXRAD.ALBEDO",
+ "units": "1",
+ "n_months": 240,
+ "cells_valid": 1739,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.169,
+ "sig_cells": 524,
+ "sig_area_fraction": 0.289,
+ "sig_positive_area": 0.024,
+ "sig_negative_area": 0.265,
+ "divergence": 0.163,
+ "global_slope_per_decade": -0.0009028977179613297,
+ "global_ci": [
+  -0.0012818160961992338,
+  -0.0005137636791389869
+ ],
+ "global_p_mk": 1.796409714338587e-05,
+ "global_p_ols": 1.6088443288172113e-14
+}

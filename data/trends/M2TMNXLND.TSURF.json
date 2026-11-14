@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXLND.TSURF",
+ "units": "K",
+ "n_months": 240,
+ "cells_valid": 1114,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.135,
+ "sig_cells": 306,
+ "sig_area_fraction": 0.33,
+ "sig_positive_area": 0.315,
+ "sig_negative_area": 0.016,
+ "divergence": 0.094,
+ "global_slope_per_decade": 0.2924992175614932,
+ "global_ci": [
+  0.1498171439406285,
+  0.45731086189878656
+ ],
+ "global_p_mk": 0.00021379972105717293,
+ "global_p_ols": 2.117859892233495e-22
+}

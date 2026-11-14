@@ -1,13 +1,15 @@
-# Earth System Trend Detective: globe prototype
+# Earth System Trend Detective
 
-An interactive 3D globe for NASA Space Apps 2026 ("Be An Earth System Trend Detective").
+An interactive 3D globe for NASA Space Apps 2026 ("Be An Earth System Trend Detective"). It answers: what is changing,
+where, how much, and is it statistically significant?
 
-- Spinning globe (MapLibre GL JS, globe projection) with NASA GIBS satellite imagery
-- 11 region pins; click one to open a side panel
-- Variable catalog on the left; picking a variable highlights the regions it applies to
-- Region panel with a variable picker, placeholder chart and placeholder statistics
-
-**Everything shown is placeholder data.** No trend analysis is connected yet.
+- Globe (MapLibre GL JS, NASA GIBS imagery) coloured by the trend of the chosen variable on a 5-degree grid; cells without
+  a significant trend are faded
+- 20 variables chosen by a data-driven selection (plus 6 headline variables), each with a plain-language definition
+- 11 regions + global, and variable-specific hotspots (exploratory), each with a real time series, Sen slope, 95% interval,
+  Mann-Kendall / OLS p-value and effect size
+- "Worth watching": trends that did not pass the strict test but are interesting
+- Everything is precomputed: the site is static (`public/data`, about 3 MB). Regenerate it with `python export_frontend.py`.
 
 ---
 

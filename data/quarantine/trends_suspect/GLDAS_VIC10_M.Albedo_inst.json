@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_VIC10_M.Albedo_inst",
+ "units": "1",
+ "n_months": 240,
+ "cells_valid": 859,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 124,
+ "sig_area_fraction": 0.15,
+ "sig_positive_area": 0.026,
+ "sig_negative_area": 0.124,
+ "divergence": 0.347,
+ "global_slope_per_decade": -0.5584980819753365,
+ "global_ci": [
+  -0.9016695758732346,
+  -0.20505784087117085
+ ],
+ "global_p_mk": 0.0034888899293048503,
+ "global_p_ols": 3.0545479044690795e-18
+}

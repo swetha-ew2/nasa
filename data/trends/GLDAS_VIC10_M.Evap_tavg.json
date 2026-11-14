@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_VIC10_M.Evap_tavg",
+ "units": "kg m-2 s-1",
+ "n_months": 240,
+ "cells_valid": 859,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.009,
+ "sig_cells": 395,
+ "sig_area_fraction": 0.432,
+ "sig_positive_area": 0.408,
+ "sig_negative_area": 0.025,
+ "divergence": 0.115,
+ "global_slope_per_decade": 6.835842118545441e-07,
+ "global_ci": [
+  2.844040541396316e-07,
+  1.081413504114208e-06
+ ],
+ "global_p_mk": 0.0020815509801095367,
+ "global_p_ols": 4.063769026537226e-25
+}

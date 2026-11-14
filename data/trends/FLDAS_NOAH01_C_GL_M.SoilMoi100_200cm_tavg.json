@@ -1,0 +1,20 @@
+{
+ "var_id": "FLDAS_NOAH01_C_GL_M.SoilMoi100_200cm_tavg",
+ "units": "m^3 m-3",
+ "n_months": 240,
+ "cells_valid": 987,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 148,
+ "sig_area_fraction": 0.116,
+ "sig_positive_area": 0.093,
+ "sig_negative_area": 0.024,
+ "divergence": 0.406,
+ "global_slope_per_decade": 0.0008216619168580297,
+ "global_ci": [
+  -0.004139977183837187,
+  0.005718584320859405
+ ],
+ "global_p_mk": 0.6801216203009486,
+ "global_p_ols": 0.04793637478548959
+}

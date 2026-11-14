@@ -1,0 +1,2026 @@
+{
+ "args": {
+  "trends": "data/trends",
+  "pool": "variable_pool.csv",
+  "out": "data/selection",
+  "k": 14,
+  "headline": [
+   "M2TMNXSLV.T2M",
+   "REYNOLDS_NCDC_L4_MONTHLY_V5.sst",
+   "NASA_SSH_REF_SIMPLE_GRID_V11.ssha",
+   "GPM_3IMERGM.precipitation",
+   "MOD10CM.Snow_Cover_Monthly_CMG",
+   "MOD13C2.CMG 0.05 Deg Monthly NDVI"
+  ],
+  "min_sig_area": 0.0,
+  "min_valid": 0.3,
+  "boot": 20,
+  "dup": 0.9,
+  "seed": 0
+ },
+ "n_candidates": 149,
+ "headline": [
+  "M2TMNXSLV.T2M",
+  "REYNOLDS_NCDC_L4_MONTHLY_V5.sst",
+  "NASA_SSH_REF_SIMPLE_GRID_V11.ssha",
+  "GPM_3IMERGM.precipitation",
+  "MOD10CM.Snow_Cover_Monthly_CMG",
+  "MOD13C2.CMG 0.05 Deg Monthly NDVI"
+ ],
+ "data_driven": [
+  "GLDAS_CLSM10_M.TWS_inst",
+  "M2TMNXRAD.SWGDN",
+  "M2TMNXLND.GWETTOP",
+  "GLDAS_VIC10_M.Swnet_tavg",
+  "M2TMNXAER.TOTEXTTAU",
+  "GLDAS_NOAH025_M.SoilMoi10_40cm_inst",
+  "M2TMNXSLV.H500",
+  "GLDAS_CLSM10_M.Qle_tavg",
+  "M2TMNXSLV.CLDTMP",
+  "GLDAS_VIC10_M.Qs_acc",
+  "FLDAS_NOAH01_C_GL_M.Evap_tavg",
+  "GLDAS_NOAH025_M.SoilTMP0_10cm_inst",
+  "GLDAS_VIC10_M.SoilMoi_depth2_inst",
+  "M2TMNXFLX.EVAP"
+ ],
+ "roles": {
+  "M2TMNXSLV.T2M": "headline",
+  "REYNOLDS_NCDC_L4_MONTHLY_V5.sst": "headline",
+  "NASA_SSH_REF_SIMPLE_GRID_V11.ssha": "headline",
+  "GPM_3IMERGM.precipitation": "headline",
+  "MOD10CM.Snow_Cover_Monthly_CMG": "headline",
+  "MOD13C2.CMG 0.05 Deg Monthly NDVI": "headline",
+  "GLDAS_CLSM10_M.TWS_inst": "data-driven",
+  "M2TMNXRAD.SWGDN": "data-driven",
+  "M2TMNXLND.GWETTOP": "data-driven",
+  "GLDAS_VIC10_M.Swnet_tavg": "data-driven",
+  "M2TMNXAER.TOTEXTTAU": "data-driven",
+  "GLDAS_NOAH025_M.SoilMoi10_40cm_inst": "data-driven",
+  "M2TMNXSLV.H500": "data-driven",
+  "GLDAS_CLSM10_M.Qle_tavg": "data-driven",
+  "M2TMNXSLV.CLDTMP": "data-driven",
+  "GLDAS_VIC10_M.Qs_acc": "data-driven",
+  "FLDAS_NOAH01_C_GL_M.Evap_tavg": "data-driven",
+  "GLDAS_NOAH025_M.SoilTMP0_10cm_inst": "data-driven",
+  "GLDAS_VIC10_M.SoilMoi_depth2_inst": "data-driven",
+  "M2TMNXFLX.EVAP": "data-driven"
+ },
+ "explained_total": 0.65059423127077,
+ "explained_by_headlines": 0.26352515696864887,
+ "curve_after_headlines": [
+  0.32576278944186055,
+  0.37362528673549156,
+  0.41314436781043906,
+  0.4483693870720825,
+  0.47815047848343406,
+  0.5033804707119066,
+  0.5274742573872163,
+  0.550694329011614,
+  0.5723143531525234,
+  0.5901723486145236,
+  0.6072932210393234,
+  0.6220617895865582,
+  0.6366374148681535,
+  0.6505942312707697
+ ],
+ "drop_one": {
+  "M2TMNXSLV.T2M": 0.011532835485799642,
+  "REYNOLDS_NCDC_L4_MONTHLY_V5.sst": 0.005289035312867618,
+  "NASA_SSH_REF_SIMPLE_GRID_V11.ssha": 0.005376867269104357,
+  "GPM_3IMERGM.precipitation": 0.008085102940875943,
+  "MOD10CM.Snow_Cover_Monthly_CMG": 0.007266678463236809,
+  "MOD13C2.CMG 0.05 Deg Monthly NDVI": 0.013680129759035209,
+  "GLDAS_CLSM10_M.TWS_inst": 0.018787099983837985,
+  "M2TMNXRAD.SWGDN": 0.03474950170783364,
+  "M2TMNXLND.GWETTOP": 0.02483779798299013,
+  "GLDAS_VIC10_M.Swnet_tavg": 0.024639220968689424,
+  "M2TMNXAER.TOTEXTTAU": 0.024893520013994364,
+  "GLDAS_NOAH025_M.SoilMoi10_40cm_inst": 0.02083297277382068,
+  "M2TMNXSLV.H500": 0.01719275517851837,
+  "GLDAS_CLSM10_M.Qle_tavg": 0.019886654867621312,
+  "M2TMNXSLV.CLDTMP": 0.020763012183163565,
+  "GLDAS_VIC10_M.Qs_acc": 0.015007698568080374,
+  "FLDAS_NOAH01_C_GL_M.Evap_tavg": 0.01701132392066984,
+  "GLDAS_NOAH025_M.SoilTMP0_10cm_inst": 0.01455673086584075,
+  "GLDAS_VIC10_M.SoilMoi_depth2_inst": 0.01457142884680751,
+  "M2TMNXFLX.EVAP": 0.013956816402616368
+ },
+ "drop_family": {
+  "Aerosol optical depth": 0.024893520013994364,
+  "Humidity & clouds": 0.020763012183163565,
+  "Land temperature": 0.01455673086584075,
+  "Land water & energy fluxes": 0.06316223242461572,
+  "Ocean & sea ice": 0.013037729505104512,
+  "Precipitation": 0.008085102940875943,
+  "Pressure & circulation": 0.01719275517851837,
+  "Radiation": 0.03474950170783364,
+  "Runoff": 0.015007698568080374,
+  "Snow": 0.007266678463236809,
+  "Soil moisture": 0.08762140189914858,
+  "Surface fluxes": 0.013956816402616368,
+  "Temperature": 0.011532835485799642,
+  "Vegetation": 0.013680129759035209
+ },
+ "stability": {
+  "GLDAS_CLSM10_M.TWS_inst": 1.0,
+  "M2TMNXRAD.SWGDN": 0.85,
+  "M2TMNXLND.GWETTOP": 1.0,
+  "GLDAS_VIC10_M.Swnet_tavg": 0.85,
+  "M2TMNXAER.TOTEXTTAU": 0.95,
+  "GLDAS_NOAH025_M.SoilMoi10_40cm_inst": 0.75,
+  "M2TMNXSLV.H500": 0.75,
+  "GLDAS_CLSM10_M.Qle_tavg": 0.95,
+  "M2TMNXSLV.CLDTMP": 0.4,
+  "GLDAS_VIC10_M.Qs_acc": 0.45,
+  "FLDAS_NOAH01_C_GL_M.Evap_tavg": 0.7,
+  "GLDAS_NOAH025_M.SoilTMP0_10cm_inst": 0.55,
+  "GLDAS_VIC10_M.SoilMoi_depth2_inst": 0.4,
+  "M2TMNXFLX.EVAP": 0.3
+ },
+ "redundancy": {
+  "M2TMNXSLV.T2M": [
+   "M2SMNXSLV.T2MMAX",
+   "M2SMNXSLV.T2MMIN",
+   "M2TMNXSLV.TS",
+   "M2TMNXSLV.T850"
+  ],
+  "REYNOLDS_NCDC_L4_MONTHLY_V5.sst": [
+   "M2TMNXOCN.TSKINWTR"
+  ],
+  "NASA_SSH_REF_SIMPLE_GRID_V11.ssha": [],
+  "GPM_3IMERGM.precipitation": [],
+  "MOD10CM.Snow_Cover_Monthly_CMG": [],
+  "MOD13C2.CMG 0.05 Deg Monthly NDVI": [
+   "MOD13C2.CMG 0.05 Deg Monthly EVI"
+  ],
+  "GLDAS_CLSM10_M.TWS_inst": [
+   "GLDAS_CLSM10_M.SoilMoist_P_inst",
+   "GLDAS_CLSM10_M.SoilMoist_RZ_inst",
+   "GLDAS_CLSM10_M.SoilMoist_S_inst"
+  ],
+  "M2TMNXRAD.SWGDN": [
+   "M2TMNXRAD.SWGNT",
+   "M2TMNXRAD.SWTNT"
+  ],
+  "M2TMNXLND.GWETTOP": [
+   "M2TMNXLND.GWETROOT",
+   "M2TMNXLND.GWETPROF",
+   "M2TMNXLND.TWLAND"
+  ],
+  "GLDAS_VIC10_M.Swnet_tavg": [
+   "GLDAS_CLSM10_M.Swnet_tavg"
+  ],
+  "M2TMNXAER.TOTEXTTAU": [],
+  "GLDAS_NOAH025_M.SoilMoi10_40cm_inst": [],
+  "M2TMNXSLV.H500": [
+   "M2TMNXSLV.T250",
+   "M2TMNXSLV.T500"
+  ],
+  "GLDAS_CLSM10_M.Qle_tavg": [
+   "GLDAS_CLSM10_M.Evap_tavg"
+  ],
+  "M2TMNXSLV.CLDTMP": [],
+  "GLDAS_VIC10_M.Qs_acc": [],
+  "FLDAS_NOAH01_C_GL_M.Evap_tavg": [
+   "FLDAS_NOAH01_C_GL_M.Qle_tavg"
+  ],
+  "GLDAS_NOAH025_M.SoilTMP0_10cm_inst": [
+   "GLDAS_NOAH025_M.AvgSurfT_inst"
+  ],
+  "GLDAS_VIC10_M.SoilMoi_depth2_inst": [],
+  "M2TMNXFLX.EVAP": [
+   "M2TMNXFLX.EFLUX"
+  ]
+ },
+ "covered_by": {
+  "FLDAS_NOAH01_C_GL_M.Lwnet_tavg": [
+   "M2TMNXLND.GWETTOP",
+   0.562523670597674
+  ],
+  "FLDAS_NOAH01_C_GL_M.Qh_tavg": [
+   "FLDAS_NOAH01_C_GL_M.Evap_tavg",
+   -0.5355724642715877
+  ],
+  "FLDAS_NOAH01_C_GL_M.Qle_tavg": [
+   "FLDAS_NOAH01_C_GL_M.Evap_tavg",
+   0.9945212411210619
+  ],
+  "FLDAS_NOAH01_C_GL_M.Qs_tavg": [
+   "FLDAS_NOAH01_C_GL_M.Evap_tavg",
+   0.448652532678556
+  ],
+  "FLDAS_NOAH01_C_GL_M.Qsb_tavg": [
+   "GLDAS_NOAH025_M.SoilMoi10_40cm_inst",
+   0.10716479753043341
+  ],
+  "FLDAS_NOAH01_C_GL_M.RadT_tavg": [
+   "M2TMNXSLV.T2M",
+   0.6402762050804816
+  ],
+  "FLDAS_NOAH01_C_GL_M.Rainf_f_tavg": [
+   "FLDAS_NOAH01_C_GL_M.Evap_tavg",
+   0.6159095854080561
+  ],
+  "FLDAS_NOAH01_C_GL_M.SoilMoi00_10cm_tavg": [
+   "M2TMNXLND.GWETTOP",
+   0.4319383979168906
+  ],
+  "FLDAS_NOAH01_C_GL_M.SoilMoi100_200cm_tavg": [
+   "GLDAS_NOAH025_M.SoilMoi10_40cm_inst",
+   0.25710112051082756
+  ],
+  "FLDAS_NOAH01_C_GL_M.SoilMoi10_40cm_tavg": [
+   "M2TMNXLND.GWETTOP",
+   0.23629175856830398
+  ],
+  "FLDAS_NOAH01_C_GL_M.SoilMoi40_100cm_tavg": [
+   "GLDAS_NOAH025_M.SoilMoi10_40cm_inst",
+   0.24899897658774794
+  ],
+  "FLDAS_NOAH01_C_GL_M.SoilTemp00_10cm_tavg": [
+   "M2TMNXSLV.T2M",
+   0.623713157914254
+  ],
+  "FLDAS_NOAH01_C_GL_M.Swnet_tavg": [
+   "M2TMNXRAD.SWGDN",
+   0.5231691006678366
+  ],
+  "GLDAS_CLSM10_M.Albedo_inst": [
+   "GLDAS_VIC10_M.Swnet_tavg",
+   0.55796343071697
+  ],
+  "GLDAS_CLSM10_M.AvgSurfT_inst": [
+   "GLDAS_VIC10_M.Swnet_tavg",
+   0.5159933147294152
+  ],
+  "GLDAS_CLSM10_M.Evap_tavg": [
+   "GLDAS_CLSM10_M.Qle_tavg",
+   0.9728928274396121
+  ],
+  "GLDAS_CLSM10_M.Lwnet_tavg": [
+   "GLDAS_VIC10_M.Swnet_tavg",
+   -0.6503580959843558
+  ],
+  "GLDAS_CLSM10_M.Qh_tavg": [
+   "GLDAS_CLSM10_M.Qle_tavg",
+   -0.703501489619889
+  ],
+  "GLDAS_CLSM10_M.Qs_acc": [
+   "GLDAS_VIC10_M.Qs_acc",
+   0.8459099723794284
+  ],
+  "GLDAS_CLSM10_M.Rainf_tavg": [
+   "GLDAS_VIC10_M.Qs_acc",
+   0.8655835170300652
+  ],
+  "GLDAS_CLSM10_M.SoilMoist_P_inst": [
+   "GLDAS_CLSM10_M.TWS_inst",
+   0.9969954912431025
+  ],
+  "GLDAS_CLSM10_M.SoilMoist_RZ_inst": [
+   "GLDAS_CLSM10_M.TWS_inst",
+   0.9770435523866952
+  ],
+  "GLDAS_CLSM10_M.SoilMoist_S_inst": [
+   "GLDAS_CLSM10_M.TWS_inst",
+   0.972587776050559
+  ],
+  "GLDAS_CLSM10_M.SoilTMP0_10cm_inst": [
+   "GLDAS_VIC10_M.Swnet_tavg",
+   0.4771812164704458
+  ],
+  "GLDAS_CLSM10_M.Swnet_tavg": [
+   "GLDAS_VIC10_M.Swnet_tavg",
+   0.9604649128472651
+  ],
+  "GLDAS_CLSM10_M.TVeg_tavg": [
+   "GLDAS_CLSM10_M.Qle_tavg",
+   0.7929995325603124
+  ],
+  "GLDAS_NOAH025_M.Albedo_inst": [
+   "M2TMNXLND.GWETTOP",
+   0.15662858473393157
+  ],
+  "GLDAS_NOAH025_M.AvgSurfT_inst": [
+   "GLDAS_NOAH025_M.SoilTMP0_10cm_inst",
+   0.9366651901054107
+  ],
+  "GLDAS_NOAH025_M.Evap_tavg": [
+   "MOD13C2.CMG 0.05 Deg Monthly NDVI",
+   0.4143031614024696
+  ],
+  "GLDAS_NOAH025_M.Lwnet_tavg": [
+   "MOD13C2.CMG 0.05 Deg Monthly NDVI",
+   0.29968242855930644
+  ],
+  "GLDAS_NOAH025_M.Qh_tavg": [
+   "GLDAS_VIC10_M.Swnet_tavg",
+   0.511797438696617
+  ],
+  "GLDAS_NOAH025_M.Qle_tavg": [
+   "MOD13C2.CMG 0.05 Deg Monthly NDVI",
+   0.40787514927183394
+  ],
+  "GLDAS_NOAH025_M.Qs_acc": [
+   "MOD13C2.CMG 0.05 Deg Monthly NDVI",
+   0.5165462249538179
+  ],
+  "GLDAS_NOAH025_M.Qsb_acc": [
+   "GLDAS_NOAH025_M.SoilMoi10_40cm_inst",
+   0.6506212941196523
+  ],
+  "GLDAS_NOAH025_M.Rainf_tavg": [
+   "GLDAS_NOAH025_M.SoilMoi10_40cm_inst",
+   0.5136288444917969
+  ],
+  "GLDAS_NOAH025_M.RootMoist_inst": [
+   "GLDAS_NOAH025_M.SoilMoi10_40cm_inst",
+   0.8251282658002599
+  ],
+  "GLDAS_NOAH025_M.SoilMoi0_10cm_inst": [
+   "GLDAS_NOAH025_M.SoilMoi10_40cm_inst",
+   0.7492690239439838
+  ],
+  "GLDAS_NOAH025_M.SoilMoi100_200cm_inst": [
+   "GLDAS_NOAH025_M.SoilMoi10_40cm_inst",
+   0.6876853350706449
+  ],
+  "GLDAS_NOAH025_M.SoilMoi40_100cm_inst": [
+   "GLDAS_NOAH025_M.SoilMoi10_40cm_inst",
+   0.857869465209929
+  ],
+  "GLDAS_NOAH025_M.Swnet_tavg": [
+   "GLDAS_VIC10_M.Swnet_tavg",
+   0.8371786189421033
+  ],
+  "GLDAS_NOAH025_M.Tveg_tavg": [
+   "MOD13C2.CMG 0.05 Deg Monthly NDVI",
+   0.5335578396928383
+  ],
+  "GLDAS_VIC10_M.AvgSurfT_inst": [
+   "GLDAS_VIC10_M.Swnet_tavg",
+   0.5294632332815956
+  ],
+  "GLDAS_VIC10_M.Evap_tavg": [
+   "MOD13C2.CMG 0.05 Deg Monthly NDVI",
+   0.5861656676084285
+  ],
+  "GLDAS_VIC10_M.Lwnet_tavg": [
+   "GLDAS_VIC10_M.Swnet_tavg",
+   -0.6820851228867757
+  ],
+  "GLDAS_VIC10_M.Qh_tavg": [
+   "GLDAS_NOAH025_M.SoilTMP0_10cm_inst",
+   0.376897091098894
+  ],
+  "GLDAS_VIC10_M.Qle_tavg": [
+   "MOD13C2.CMG 0.05 Deg Monthly NDVI",
+   0.6067186349461214
+  ],
+  "GLDAS_VIC10_M.Qsb_acc": [
+   "GLDAS_VIC10_M.SoilMoi_depth2_inst",
+   0.7370013053036165
+  ],
+  "GLDAS_VIC10_M.Rainf_tavg": [
+   "GLDAS_VIC10_M.Qs_acc",
+   0.8446534743455401
+  ],
+  "GLDAS_VIC10_M.RootMoist_inst": [
+   "GLDAS_VIC10_M.SoilMoi_depth2_inst",
+   0.7340845780685729
+  ],
+  "GLDAS_VIC10_M.SoilMoi0_30cm_inst": [
+   "GLDAS_CLSM10_M.TWS_inst",
+   0.6765795501073005
+  ],
+  "GLDAS_VIC10_M.SoilMoi_depth3_inst": [
+   "GLDAS_VIC10_M.SoilMoi_depth2_inst",
+   0.755234980485587
+  ],
+  "GLDAS_VIC10_M.TVeg_tavg": [
+   "MOD13C2.CMG 0.05 Deg Monthly NDVI",
+   0.441980811590971
+  ],
+  "GPCPMON.sat_gauge_precip": [
+   "GLDAS_VIC10_M.Qs_acc",
+   0.3928466342510096
+  ],
+  "M2SMNXSLV.HOURNORAIN": [
+   "M2TMNXRAD.SWGDN",
+   0.48569077757027357
+  ],
+  "M2SMNXSLV.T2MMAX": [
+   "M2TMNXSLV.T2M",
+   0.9915324616642158
+  ],
+  "M2SMNXSLV.T2MMIN": [
+   "M2TMNXSLV.T2M",
+   0.988050771333457
+  ],
+  "M2SMNXSLV.TPRECMAX": [
+   "M2TMNXRAD.SWGDN",
+   -0.5002489488744478
+  ],
+  "M2TMNXAER.BCCMASS": [
+   "M2TMNXAER.TOTEXTTAU",
+   0.7127009675321734
+  ],
+  "M2TMNXAER.BCEXTTAU": [
+   "M2TMNXAER.TOTEXTTAU",
+   0.7064373752408438
+  ],
+  "M2TMNXAER.DUCMASS": [
+   "M2TMNXAER.TOTEXTTAU",
+   0.5278259171163916
+  ],
+  "M2TMNXAER.DUEXTTAU": [
+   "M2TMNXAER.TOTEXTTAU",
+   0.5166569960944993
+  ],
+  "M2TMNXAER.OCCMASS": [
+   "M2TMNXSLV.H500",
+   0.6008316525313774
+  ],
+  "M2TMNXAER.OCEXTTAU": [
+   "M2TMNXSLV.H500",
+   0.6247816129343959
+  ],
+  "M2TMNXAER.SO4CMASS": [
+   "NASA_SSH_REF_SIMPLE_GRID_V11.ssha",
+   -0.6963335125743699
+  ],
+  "M2TMNXAER.SSCMASS": [
+   "M2TMNXAER.TOTEXTTAU",
+   0.5776195084949995
+  ],
+  "M2TMNXAER.SSEXTTAU": [
+   "M2TMNXAER.TOTEXTTAU",
+   0.6145493893652536
+  ],
+  "M2TMNXAER.SUEXTTAU": [
+   "M2TMNXSLV.H500",
+   -0.6728584199189857
+  ],
+  "M2TMNXAER.TOTANGSTR": [
+   "REYNOLDS_NCDC_L4_MONTHLY_V5.sst",
+   -0.28253564784354485
+  ],
+  "M2TMNXCHM.COCL": [
+   "M2TMNXSLV.H500",
+   -0.35653181032925557
+  ],
+  "M2TMNXCHM.COSC": [
+   "M2TMNXAER.TOTEXTTAU",
+   -0.31579819324813085
+  ],
+  "M2TMNXFLX.EFLUX": [
+   "M2TMNXFLX.EVAP",
+   0.9999506273140035
+  ],
+  "M2TMNXFLX.HFLUX": [
+   "M2TMNXLND.GWETTOP",
+   -0.541277555693653
+  ],
+  "M2TMNXFLX.PBLH": [
+   "M2TMNXSLV.H500",
+   -0.5097861285297935
+  ],
+  "M2TMNXFLX.PRECSNO": [
+   "REYNOLDS_NCDC_L4_MONTHLY_V5.sst",
+   -0.22158508973686494
+  ],
+  "M2TMNXFLX.PRECTOTCORR": [
+   "M2TMNXLND.GWETTOP",
+   0.5763155097462779
+  ],
+  "M2TMNXFLX.SPEED": [
+   "M2TMNXSLV.H500",
+   -0.5664452628392505
+  ],
+  "M2TMNXINT.PRECCU": [
+   "M2TMNXSLV.CLDTMP",
+   -0.399642949954086
+  ],
+  "M2TMNXINT.PRECLS": [
+   "M2TMNXRAD.SWGDN",
+   -0.626641657042723
+  ],
+  "M2TMNXINT.UFLXQV": [
+   "REYNOLDS_NCDC_L4_MONTHLY_V5.sst",
+   0.25956094648091604
+  ],
+  "M2TMNXINT.VFLXQV": [
+   "M2TMNXAER.TOTEXTTAU",
+   -0.12035368455289441
+  ],
+  "M2TMNXLND.BASEFLOW": [
+   "M2TMNXLND.GWETTOP",
+   0.4280333002465684
+  ],
+  "M2TMNXLND.EVPTRNS": [
+   "M2TMNXLND.GWETTOP",
+   0.5889977449928621
+  ],
+  "M2TMNXLND.GWETPROF": [
+   "M2TMNXLND.GWETTOP",
+   0.9752261168736142
+  ],
+  "M2TMNXLND.GWETROOT": [
+   "M2TMNXLND.GWETTOP",
+   0.9780424954404232
+  ],
+  "M2TMNXLND.RUNOFF": [
+   "M2TMNXLND.GWETTOP",
+   0.7178218610438596
+  ],
+  "M2TMNXLND.TSOIL1": [
+   "M2TMNXSLV.T2M",
+   0.6453085125773489
+  ],
+  "M2TMNXLND.TSURF": [
+   "M2TMNXSLV.T2M",
+   0.656099290630742
+  ],
+  "M2TMNXLND.TWLAND": [
+   "M2TMNXLND.GWETTOP",
+   0.950574179941136
+  ],
+  "M2TMNXOCN.EFLUXWTR": [
+   "M2TMNXFLX.EVAP",
+   0.6574926501219077
+  ],
+  "M2TMNXOCN.FRSEAICE": [
+   "M2TMNXAER.TOTEXTTAU",
+   -0.2017094080168257
+  ],
+  "M2TMNXOCN.HFLUXWTR": [
+   "M2TMNXSLV.T2M",
+   -0.5104042891672941
+  ],
+  "M2TMNXOCN.RAINOCN": [
+   "M2TMNXLND.GWETTOP",
+   0.30838304517707427
+  ],
+  "M2TMNXOCN.TSKINICE": [
+   "NASA_SSH_REF_SIMPLE_GRID_V11.ssha",
+   0.7323143657206893
+  ],
+  "M2TMNXOCN.TSKINWTR": [
+   "REYNOLDS_NCDC_L4_MONTHLY_V5.sst",
+   0.9034033001616791
+  ],
+  "M2TMNXRAD.ALBEDO": [
+   "NASA_SSH_REF_SIMPLE_GRID_V11.ssha",
+   -0.5469619825924562
+  ],
+  "M2TMNXRAD.CLDHGH": [
+   "M2TMNXSLV.CLDTMP",
+   -0.5430833628379081
+  ],
+  "M2TMNXRAD.CLDLOW": [
+   "M2TMNXRAD.SWGDN",
+   -0.7046417220394702
+  ],
+  "M2TMNXRAD.CLDMID": [
+   "M2TMNXSLV.T2M",
+   -0.5009856160164495
+  ],
+  "M2TMNXRAD.CLDTOT": [
+   "M2TMNXRAD.SWGDN",
+   -0.8066489445685142
+  ],
+  "M2TMNXRAD.LWGNT": [
+   "M2TMNXRAD.SWGDN",
+   -0.6726593166121895
+  ],
+  "M2TMNXRAD.LWTUP": [
+   "M2TMNXSLV.CLDTMP",
+   0.7239851917656156
+  ],
+  "M2TMNXRAD.LWTUPCLR": [
+   "M2TMNXSLV.T2M",
+   0.43376037881491136
+  ],
+  "M2TMNXRAD.SWGNT": [
+   "M2TMNXRAD.SWGDN",
+   0.9882495024148162
+  ],
+  "M2TMNXRAD.SWTNT": [
+   "M2TMNXRAD.SWGDN",
+   0.9494641792925514
+  ],
+  "M2TMNXRAD.SWTNTCLR": [
+   "M2TMNXAER.TOTEXTTAU",
+   -0.7821891621817925
+  ],
+  "M2TMNXRAD.TAUTOT": [
+   "M2TMNXRAD.SWGDN",
+   -0.3185750783175051
+  ],
+  "M2TMNXSLV.CLDPRS": [
+   "M2TMNXSLV.CLDTMP",
+   0.89940067259994
+  ],
+  "M2TMNXSLV.OMEGA500": [
+   "M2TMNXSLV.CLDTMP",
+   0.4152823296301273
+  ],
+  "M2TMNXSLV.PS": [
+   "M2TMNXSLV.H500",
+   0.7365861298820138
+  ],
+  "M2TMNXSLV.QV2M": [
+   "M2TMNXSLV.H500",
+   0.8306271872282369
+  ],
+  "M2TMNXSLV.SLP": [
+   "M2TMNXSLV.H500",
+   0.6819159686193333
+  ],
+  "M2TMNXSLV.T250": [
+   "M2TMNXSLV.H500",
+   0.936711305264269
+  ],
+  "M2TMNXSLV.T500": [
+   "M2TMNXSLV.H500",
+   0.9203148407855959
+  ],
+  "M2TMNXSLV.T850": [
+   "M2TMNXSLV.T2M",
+   0.9081076481644205
+  ],
+  "M2TMNXSLV.TO3": [
+   "M2TMNXSLV.H500",
+   0.8991943934677423
+  ],
+  "M2TMNXSLV.TQI": [
+   "M2TMNXSLV.CLDTMP",
+   -0.7035290552911239
+  ],
+  "M2TMNXSLV.TQL": [
+   "M2TMNXRAD.SWGDN",
+   -0.7483981917348834
+  ],
+  "M2TMNXSLV.TQV": [
+   "M2TMNXSLV.H500",
+   0.7071647546995702
+  ],
+  "M2TMNXSLV.TROPPB": [
+   "M2TMNXSLV.T2M",
+   -0.5402406928313622
+  ],
+  "M2TMNXSLV.TROPT": [
+   "M2TMNXSLV.H500",
+   0.7251682627133588
+  ],
+  "M2TMNXSLV.TS": [
+   "M2TMNXSLV.T2M",
+   0.9681729702631123
+  ],
+  "M2TMNXSLV.U10M": [
+   "M2TMNXFLX.EVAP",
+   -0.27613514463626887
+  ],
+  "M2TMNXSLV.V10M": [
+   "M2TMNXAER.TOTEXTTAU",
+   -0.1384095856153066
+  ],
+  "MICASA_FLUX_M.NEE": [
+   "MOD13C2.CMG 0.05 Deg Monthly NDVI",
+   -0.3734223292814204
+  ],
+  "MICASA_FLUX_M.NPP": [
+   "MOD13C2.CMG 0.05 Deg Monthly NDVI",
+   0.699943399660291
+  ],
+  "MICASA_FLUX_M.Rh": [
+   "MOD13C2.CMG 0.05 Deg Monthly NDVI",
+   0.5980520460916431
+  ],
+  "MOD11C3.LST_Day_CMG": [
+   "M2TMNXSLV.T2M",
+   0.23995162896616265
+  ],
+  "MOD11C3.LST_Night_CMG": [
+   "M2TMNXSLV.H500",
+   0.6704720465697941
+  ],
+  "MOD13C2.CMG 0.05 Deg Monthly EVI": [
+   "MOD13C2.CMG 0.05 Deg Monthly NDVI",
+   0.9394085059083819
+  ]
+ },
+ "screened_out": [
+  [
+   "FLDAS_NOAH01_C_GL_M.SWE_inst",
+   "valid cells 27% < 30%"
+  ],
+  [
+   "FLDAS_NOAH01_C_GL_M.SnowCover_inst",
+   "valid cells 26% < 30%"
+  ],
+  [
+   "FLDAS_NOAH01_C_GL_M.SnowDepth_inst",
+   "valid cells 27% < 30%"
+  ],
+  [
+   "FLDAS_NOAH01_C_GL_M.Snowf_tavg",
+   "valid cells 26% < 30%"
+  ],
+  [
+   "GLDAS_CLSM10_M.Qsb_acc",
+   "valid cells 19% < 30%"
+  ],
+  [
+   "GLDAS_CLSM10_M.Qsm_acc",
+   "valid cells 23% < 30%"
+  ],
+  [
+   "GLDAS_CLSM10_M.SWE_inst",
+   "valid cells 23% < 30%"
+  ],
+  [
+   "GLDAS_CLSM10_M.SnowDepth_inst",
+   "valid cells 23% < 30%"
+  ],
+  [
+   "GLDAS_CLSM10_M.Snowf_tavg",
+   "valid cells 23% < 30%"
+  ],
+  [
+   "GLDAS_NOAH025_M.Qsm_acc",
+   "valid cells 27% < 30%"
+  ],
+  [
+   "GLDAS_NOAH025_M.SWE_inst",
+   "valid cells 29% < 30%"
+  ],
+  [
+   "GLDAS_NOAH025_M.SnowDepth_inst",
+   "valid cells 29% < 30%"
+  ],
+  [
+   "GLDAS_NOAH025_M.Snowf_tavg",
+   "valid cells 27% < 30%"
+  ],
+  [
+   "GLDAS_VIC10_M.Albedo_inst",
+   "valid cells 24% < 30%"
+  ],
+  [
+   "GLDAS_VIC10_M.Qsm_acc",
+   "valid cells 24% < 30%"
+  ],
+  [
+   "GLDAS_VIC10_M.SWE_inst",
+   "valid cells 24% < 30%"
+  ],
+  [
+   "GLDAS_VIC10_M.SnowDepth_inst",
+   "valid cells 24% < 30%"
+  ],
+  [
+   "GLDAS_VIC10_M.Snowf_tavg",
+   "valid cells 24% < 30%"
+  ],
+  [
+   "M2TMNXADG.DUAERIDX",
+   "empty or constant in the source data"
+  ],
+  [
+   "M2TMNXADG.SSAERIDX",
+   "empty or constant in the source data"
+  ],
+  [
+   "M2TMNXGLC.SNICEALB",
+   "valid cells 4% < 30%"
+  ],
+  [
+   "M2TMNXGLC.SNOMAS_GL",
+   "valid cells 21% < 30%"
+  ],
+  [
+   "M2TMNXGLC.SNOWDP_GL",
+   "valid cells 21% < 30%"
+  ],
+  [
+   "M2TMNXLND.FRSNO",
+   "valid cells 29% < 30%"
+  ],
+  [
+   "M2TMNXLND.GRN",
+   "empty or constant in the source data"
+  ],
+  [
+   "M2TMNXLND.LAI",
+   "empty or constant in the source data"
+  ],
+  [
+   "M2TMNXLND.SNODP",
+   "valid cells 29% < 30%"
+  ],
+  [
+   "M2TMNXLND.SNOMAS",
+   "valid cells 29% < 30%"
+  ],
+  [
+   "MICASA_FLUX_M.FIRE",
+   "valid cells 28% < 30%"
+  ]
+ ],
+ "missing_headlines": [],
+ "meta": {
+  "FLDAS_NOAH01_C_GL_M.Evap_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.184,
+   "divergence": 0.573,
+   "global_slope": 8.571563334212028e-08,
+   "global_p": 0.11127282031075936
+  },
+  "FLDAS_NOAH01_C_GL_M.Lwnet_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.129,
+   "divergence": 0.312,
+   "global_slope": 0.4605527439646268,
+   "global_p": 0.0007567942126014415
+  },
+  "FLDAS_NOAH01_C_GL_M.Qh_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.094,
+   "divergence": 0.46,
+   "global_slope": 0.4699777465409165,
+   "global_p": 0.05970964703353254
+  },
+  "FLDAS_NOAH01_C_GL_M.Qle_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.189,
+   "divergence": 0.578,
+   "global_slope": 0.21008635439478385,
+   "global_p": 0.120298434824335
+  },
+  "FLDAS_NOAH01_C_GL_M.Qs_tavg": {
+   "family": "Runoff",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.116,
+   "divergence": 0.587,
+   "global_slope": 1.4845944153068626e-07,
+   "global_p": 0.19564841820280154
+  },
+  "FLDAS_NOAH01_C_GL_M.Qsb_tavg": {
+   "family": "Runoff",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.07,
+   "divergence": 0.806,
+   "global_slope": -2.9614101828350213e-07,
+   "global_p": 0.1689271192071371
+  },
+  "FLDAS_NOAH01_C_GL_M.RadT_tavg": {
+   "family": "Land temperature",
+   "units": "K",
+   "sig_area": 0.404,
+   "divergence": 0.057,
+   "global_slope": 0.30335592689451824,
+   "global_p": 0.00020113354933393168
+  },
+  "FLDAS_NOAH01_C_GL_M.Rainf_f_tavg": {
+   "family": "Precipitation",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.067,
+   "divergence": 0.727,
+   "global_slope": -4.486692126869999e-08,
+   "global_p": 0.8966618642565936
+  },
+  "FLDAS_NOAH01_C_GL_M.SoilMoi00_10cm_tavg": {
+   "family": "Soil moisture",
+   "units": "m^3 m-3",
+   "sig_area": 0.11,
+   "divergence": 0.486,
+   "global_slope": 0.0007460522860181036,
+   "global_p": 0.2089165521141334
+  },
+  "FLDAS_NOAH01_C_GL_M.SoilMoi100_200cm_tavg": {
+   "family": "Soil moisture",
+   "units": "m^3 m-3",
+   "sig_area": 0.116,
+   "divergence": 0.406,
+   "global_slope": 0.0008216619168580297,
+   "global_p": 0.6801216203009486
+  },
+  "FLDAS_NOAH01_C_GL_M.SoilMoi10_40cm_tavg": {
+   "family": "Soil moisture",
+   "units": "m^3 m-3",
+   "sig_area": 0.075,
+   "divergence": 0.835,
+   "global_slope": 0.00038366269663035274,
+   "global_p": 0.6919977742950165
+  },
+  "FLDAS_NOAH01_C_GL_M.SoilMoi40_100cm_tavg": {
+   "family": "Soil moisture",
+   "units": "m^3 m-3",
+   "sig_area": 0.049,
+   "divergence": 0.919,
+   "global_slope": 0.0011234812266818655,
+   "global_p": 0.49111894992462024
+  },
+  "FLDAS_NOAH01_C_GL_M.SoilTemp00_10cm_tavg": {
+   "family": "Land temperature",
+   "units": "K",
+   "sig_area": 0.423,
+   "divergence": 0.073,
+   "global_slope": 0.28353073204519996,
+   "global_p": 0.00011681188484113925
+  },
+  "FLDAS_NOAH01_C_GL_M.Swnet_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.081,
+   "divergence": 0.922,
+   "global_slope": 0.27116023939959394,
+   "global_p": 0.27534761374038075
+  },
+  "GLDAS_CLSM10_M.Albedo_inst": {
+   "family": "Snow",
+   "units": "%",
+   "sig_area": 0.59,
+   "divergence": 0.081,
+   "global_slope": -0.04635559949248322,
+   "global_p": 0.4099033518905082
+  },
+  "GLDAS_CLSM10_M.AvgSurfT_inst": {
+   "family": "Land temperature",
+   "units": "K",
+   "sig_area": 0.429,
+   "divergence": 0.263,
+   "global_slope": 0.26728423313874444,
+   "global_p": 0.028859446758193963
+  },
+  "GLDAS_CLSM10_M.Evap_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.239,
+   "divergence": 0.761,
+   "global_slope": 1.9376541530973635e-07,
+   "global_p": 0.4350539155861628
+  },
+  "GLDAS_CLSM10_M.Lwnet_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.476,
+   "divergence": 0.315,
+   "global_slope": -2.0595267315032735,
+   "global_p": 2.809322929997471e-05
+  },
+  "GLDAS_CLSM10_M.Qh_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.247,
+   "divergence": 0.94,
+   "global_slope": -0.8848936464010728,
+   "global_p": 0.3316995458382248
+  },
+  "GLDAS_CLSM10_M.Qle_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.204,
+   "divergence": 0.88,
+   "global_slope": 0.3829890079828623,
+   "global_p": 0.5320056728066902
+  },
+  "GLDAS_CLSM10_M.Qs_acc": {
+   "family": "Runoff",
+   "units": "kg m-2",
+   "sig_area": 0.253,
+   "divergence": 0.367,
+   "global_slope": -0.009128205939985874,
+   "global_p": 0.00010812551254058
+  },
+  "GLDAS_CLSM10_M.Rainf_tavg": {
+   "family": "Precipitation",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.105,
+   "divergence": 0.749,
+   "global_slope": -6.183590823980457e-07,
+   "global_p": 0.015268383985104439
+  },
+  "GLDAS_CLSM10_M.SoilMoist_P_inst": {
+   "family": "Soil moisture",
+   "units": "kg m-2",
+   "sig_area": 0.105,
+   "divergence": 0.296,
+   "global_slope": -29.046222396795773,
+   "global_p": 0.09130733374963507
+  },
+  "GLDAS_CLSM10_M.SoilMoist_RZ_inst": {
+   "family": "Soil moisture",
+   "units": "kg m-2",
+   "sig_area": 0.323,
+   "divergence": 0.41,
+   "global_slope": -5.612651599293335,
+   "global_p": 0.06681070815279977
+  },
+  "GLDAS_CLSM10_M.SoilMoist_S_inst": {
+   "family": "Soil moisture",
+   "units": "kg m-2",
+   "sig_area": 0.355,
+   "divergence": 0.332,
+   "global_slope": -0.12864576477426506,
+   "global_p": 0.0020551467809879487
+  },
+  "GLDAS_CLSM10_M.SoilTMP0_10cm_inst": {
+   "family": "Land temperature",
+   "units": "K",
+   "sig_area": 0.39,
+   "divergence": 0.186,
+   "global_slope": 0.2800056059063596,
+   "global_p": 0.0006336487484102094
+  },
+  "GLDAS_CLSM10_M.Swnet_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.355,
+   "divergence": 0.358,
+   "global_slope": 1.4565070727230778,
+   "global_p": 0.17680062596480006
+  },
+  "GLDAS_CLSM10_M.TVeg_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.216,
+   "divergence": 0.873,
+   "global_slope": -0.2510134365676206,
+   "global_p": 0.4339917990724218
+  },
+  "GLDAS_CLSM10_M.TWS_inst": {
+   "family": "Soil moisture",
+   "units": "mm",
+   "sig_area": 0.079,
+   "divergence": 0.239,
+   "global_slope": -29.384785600981385,
+   "global_p": 0.1032775011547804
+  },
+  "GLDAS_NOAH025_M.Albedo_inst": {
+   "family": "Snow",
+   "units": "%",
+   "sig_area": 0.105,
+   "divergence": 0.731,
+   "global_slope": 0.45940590005142085,
+   "global_p": 0.004767798774900189
+  },
+  "GLDAS_NOAH025_M.AvgSurfT_inst": {
+   "family": "Land temperature",
+   "units": "K",
+   "sig_area": 0.446,
+   "divergence": 0.932,
+   "global_slope": -0.03550571546282762,
+   "global_p": 0.791748600090832
+  },
+  "GLDAS_NOAH025_M.Evap_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.46,
+   "divergence": 0.436,
+   "global_slope": 5.66649707808801e-07,
+   "global_p": 0.07310420467973988
+  },
+  "GLDAS_NOAH025_M.Lwnet_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.438,
+   "divergence": 0.77,
+   "global_slope": 0.431973518430406,
+   "global_p": 0.24329593455112342
+  },
+  "GLDAS_NOAH025_M.Qh_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.595,
+   "divergence": 0.859,
+   "global_slope": 1.569369438751182,
+   "global_p": 0.17824871746028492
+  },
+  "GLDAS_NOAH025_M.Qle_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.47,
+   "divergence": 0.462,
+   "global_slope": 1.3744075578494024,
+   "global_p": 0.07895087215264307
+  },
+  "GLDAS_NOAH025_M.Qs_acc": {
+   "family": "Runoff",
+   "units": "kg m-2",
+   "sig_area": 0.58,
+   "divergence": 0.236,
+   "global_slope": 0.0046681381049202,
+   "global_p": 0.00016257267787112006
+  },
+  "GLDAS_NOAH025_M.Qsb_acc": {
+   "family": "Runoff",
+   "units": "kg m-2",
+   "sig_area": 0.264,
+   "divergence": 0.646,
+   "global_slope": -0.014993195783633444,
+   "global_p": 0.009994374402901407
+  },
+  "GLDAS_NOAH025_M.Rainf_tavg": {
+   "family": "Precipitation",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.406,
+   "divergence": 0.709,
+   "global_slope": -4.7465688431260536e-07,
+   "global_p": 0.08509348794131188
+  },
+  "GLDAS_NOAH025_M.RootMoist_inst": {
+   "family": "Soil moisture",
+   "units": "kg m-2",
+   "sig_area": 0.21,
+   "divergence": 0.672,
+   "global_slope": -8.6491485351249,
+   "global_p": 0.05038594943674779
+  },
+  "GLDAS_NOAH025_M.SoilMoi0_10cm_inst": {
+   "family": "Soil moisture",
+   "units": "kg m-2",
+   "sig_area": 0.315,
+   "divergence": 0.644,
+   "global_slope": -0.21055218993858266,
+   "global_p": 0.05009114557297023
+  },
+  "GLDAS_NOAH025_M.SoilMoi100_200cm_inst": {
+   "family": "Soil moisture",
+   "units": "kg m-2",
+   "sig_area": 0.157,
+   "divergence": 0.573,
+   "global_slope": -2.067975078652976,
+   "global_p": 0.13839280530468834
+  },
+  "GLDAS_NOAH025_M.SoilMoi10_40cm_inst": {
+   "family": "Soil moisture",
+   "units": "kg m-2",
+   "sig_area": 0.269,
+   "divergence": 0.715,
+   "global_slope": -0.6872869338799653,
+   "global_p": 0.07050195271140103
+  },
+  "GLDAS_NOAH025_M.SoilMoi40_100cm_inst": {
+   "family": "Soil moisture",
+   "units": "kg m-2",
+   "sig_area": 0.157,
+   "divergence": 0.428,
+   "global_slope": -2.7040882788605334,
+   "global_p": 0.008035389491830358
+  },
+  "GLDAS_NOAH025_M.SoilTMP0_10cm_inst": {
+   "family": "Land temperature",
+   "units": "K",
+   "sig_area": 0.42,
+   "divergence": 0.902,
+   "global_slope": 0.10446969311896165,
+   "global_p": 0.21110596947907267
+  },
+  "GLDAS_NOAH025_M.Swnet_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.51,
+   "divergence": 0.525,
+   "global_slope": 1.958042665295317,
+   "global_p": 0.1859156552902781
+  },
+  "GLDAS_NOAH025_M.Tveg_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.645,
+   "divergence": 0.077,
+   "global_slope": 2.6302210173354523,
+   "global_p": 0.20639650058241732
+  },
+  "GLDAS_VIC10_M.AvgSurfT_inst": {
+   "family": "Land temperature",
+   "units": "K",
+   "sig_area": 0.439,
+   "divergence": 0.441,
+   "global_slope": 0.1801313546769724,
+   "global_p": 0.10885835702542446
+  },
+  "GLDAS_VIC10_M.Evap_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.432,
+   "divergence": 0.115,
+   "global_slope": 6.835842118545441e-07,
+   "global_p": 0.0020815509801095367
+  },
+  "GLDAS_VIC10_M.Lwnet_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.479,
+   "divergence": 0.363,
+   "global_slope": -1.8900534693725373,
+   "global_p": 6.479277436466369e-05
+  },
+  "GLDAS_VIC10_M.Qh_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.327,
+   "divergence": 0.703,
+   "global_slope": -1.2541078498055502,
+   "global_p": 0.06340916558197196
+  },
+  "GLDAS_VIC10_M.Qle_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.297,
+   "divergence": 0.159,
+   "global_slope": 1.4654089060705906,
+   "global_p": 0.006984363590359255
+  },
+  "GLDAS_VIC10_M.Qs_acc": {
+   "family": "Runoff",
+   "units": "kg m-2",
+   "sig_area": 0.173,
+   "divergence": 0.453,
+   "global_slope": -0.004014509976196303,
+   "global_p": 1.3978425972283048e-08
+  },
+  "GLDAS_VIC10_M.Qsb_acc": {
+   "family": "Runoff",
+   "units": "kg m-2",
+   "sig_area": 0.159,
+   "divergence": 0.485,
+   "global_slope": -0.010895499160444518,
+   "global_p": 0.00013355245447321806
+  },
+  "GLDAS_VIC10_M.Rainf_tavg": {
+   "family": "Precipitation",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.105,
+   "divergence": 0.792,
+   "global_slope": -5.715473670346288e-07,
+   "global_p": 0.024080495624504428
+  },
+  "GLDAS_VIC10_M.RootMoist_inst": {
+   "family": "Soil moisture",
+   "units": "kg m-2",
+   "sig_area": 0.164,
+   "divergence": 0.642,
+   "global_slope": -5.424957779967454,
+   "global_p": 7.823378935523095e-05
+  },
+  "GLDAS_VIC10_M.SoilMoi0_30cm_inst": {
+   "family": "Soil moisture",
+   "units": "kg m-2",
+   "sig_area": 0.098,
+   "divergence": 0.222,
+   "global_slope": -0.5585933034671909,
+   "global_p": 0.00030117535187090816
+  },
+  "GLDAS_VIC10_M.SoilMoi_depth2_inst": {
+   "family": "Soil moisture",
+   "units": "kg m-2",
+   "sig_area": 0.116,
+   "divergence": 0.413,
+   "global_slope": -4.855049737680392,
+   "global_p": 4.3646475156977615e-05
+  },
+  "GLDAS_VIC10_M.SoilMoi_depth3_inst": {
+   "family": "Soil moisture",
+   "units": "kg m-2",
+   "sig_area": 0.15,
+   "divergence": 0.347,
+   "global_slope": -0.5584980819753365,
+   "global_p": 0.0034888899293048503
+  },
+  "GLDAS_VIC10_M.Swnet_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.345,
+   "divergence": 0.26,
+   "global_slope": 1.8987765351078325,
+   "global_p": 0.07538469917871549
+  },
+  "GLDAS_VIC10_M.TVeg_tavg": {
+   "family": "Land water & energy fluxes",
+   "units": "W m-2",
+   "sig_area": 0.121,
+   "divergence": 0.446,
+   "global_slope": 0.22999995079858482,
+   "global_p": 0.23263111925381597
+  },
+  "GPCPMON.sat_gauge_precip": {
+   "family": "Precipitation",
+   "units": "mm/day",
+   "sig_area": 0.029,
+   "divergence": 0.792,
+   "global_slope": 0.0019659546086084373,
+   "global_p": 0.8919002945565333
+  },
+  "GPM_3IMERGM.precipitation": {
+   "family": "Precipitation",
+   "units": "mm/hr",
+   "sig_area": 0.169,
+   "divergence": 0.972,
+   "global_slope": 0.0009357277351487966,
+   "global_p": 0.06451288664293409
+  },
+  "M2SMNXSLV.HOURNORAIN": {
+   "family": "Precipitation",
+   "units": "s",
+   "sig_area": 0.035,
+   "divergence": 0.223,
+   "global_slope": -48.56348024251183,
+   "global_p": 0.00915888945882859
+  },
+  "M2SMNXSLV.T2MMAX": {
+   "family": "Temperature extremes",
+   "units": "K",
+   "sig_area": 0.26,
+   "divergence": 0.07,
+   "global_slope": 0.20778744264642457,
+   "global_p": 0.0032076163309682215
+  },
+  "M2SMNXSLV.T2MMIN": {
+   "family": "Temperature extremes",
+   "units": "K",
+   "sig_area": 0.353,
+   "divergence": 0.01,
+   "global_slope": 0.24310474042353342,
+   "global_p": 0.00039955812885672515
+  },
+  "M2SMNXSLV.TPRECMAX": {
+   "family": "Precipitation",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.099,
+   "divergence": 0.447,
+   "global_slope": 1.6059949638948873e-06,
+   "global_p": 0.00045188036616905514
+  },
+  "M2TMNXAER.BCCMASS": {
+   "family": "Aerosol mass",
+   "units": "kg m-2",
+   "sig_area": 0.604,
+   "divergence": 0.416,
+   "global_slope": 1.9658211592058065e-08,
+   "global_p": 0.04353942606719707
+  },
+  "M2TMNXAER.BCEXTTAU": {
+   "family": "Aerosol optical depth",
+   "units": "1",
+   "sig_area": 0.617,
+   "divergence": 0.421,
+   "global_slope": 0.0002023227259253616,
+   "global_p": 0.04813615664145399
+  },
+  "M2TMNXAER.DUCMASS": {
+   "family": "Aerosol mass",
+   "units": "kg m-2",
+   "sig_area": 0.384,
+   "divergence": 0.383,
+   "global_slope": -1.7666907087875885e-06,
+   "global_p": 0.020112414598288497
+  },
+  "M2TMNXAER.DUEXTTAU": {
+   "family": "Aerosol optical depth",
+   "units": "1",
+   "sig_area": 0.405,
+   "divergence": 0.377,
+   "global_slope": -0.0012093288320994006,
+   "global_p": 0.030637835791397228
+  },
+  "M2TMNXAER.OCCMASS": {
+   "family": "Aerosol mass",
+   "units": "kg m-2",
+   "sig_area": 0.598,
+   "divergence": 0.054,
+   "global_slope": 4.319069154053778e-07,
+   "global_p": 0.0007326995368373002
+  },
+  "M2TMNXAER.OCEXTTAU": {
+   "family": "Aerosol optical depth",
+   "units": "1",
+   "sig_area": 0.629,
+   "divergence": 0.056,
+   "global_slope": 0.002832641839220643,
+   "global_p": 0.0008595061072016463
+  },
+  "M2TMNXAER.SO4CMASS": {
+   "family": "Aerosol mass",
+   "units": "kg m-2",
+   "sig_area": 0.904,
+   "divergence": 0.019,
+   "global_slope": -3.86773023837315e-07,
+   "global_p": 0.0011595522633136568
+  },
+  "M2TMNXAER.SSCMASS": {
+   "family": "Aerosol mass",
+   "units": "kg m-2",
+   "sig_area": 0.319,
+   "divergence": 0.984,
+   "global_slope": 2.2796623005608312e-08,
+   "global_p": 0.8758174736202966
+  },
+  "M2TMNXAER.SSEXTTAU": {
+   "family": "Aerosol optical depth",
+   "units": "1",
+   "sig_area": 0.398,
+   "divergence": 0.87,
+   "global_slope": 0.0005619182989080864,
+   "global_p": 0.010157819954441427
+  },
+  "M2TMNXAER.SUEXTTAU": {
+   "family": "Aerosol optical depth",
+   "units": "1",
+   "sig_area": 0.649,
+   "divergence": 0.046,
+   "global_slope": -0.003367608441615224,
+   "global_p": 0.0003594184635773434
+  },
+  "M2TMNXAER.TOTANGSTR": {
+   "family": "Aerosol optical depth",
+   "units": "1",
+   "sig_area": 0.214,
+   "divergence": 0.683,
+   "global_slope": -0.002305879540685692,
+   "global_p": 0.7416864027965371
+  },
+  "M2TMNXAER.TOTEXTTAU": {
+   "family": "Aerosol optical depth",
+   "units": "1",
+   "sig_area": 0.437,
+   "divergence": 0.834,
+   "global_slope": -0.0009708849455927193,
+   "global_p": 0.47392796725871844
+  },
+  "M2TMNXCHM.COCL": {
+   "family": "Carbon monoxide",
+   "units": "kg m-2",
+   "sig_area": 0.521,
+   "divergence": 0.861,
+   "global_slope": -8.629397562913796e-07,
+   "global_p": 0.9076758132928335
+  },
+  "M2TMNXCHM.COSC": {
+   "family": "Carbon monoxide",
+   "units": "1e-9",
+   "sig_area": 0.461,
+   "divergence": 0.653,
+   "global_slope": 1.4649094684589654,
+   "global_p": 0.222551175721442
+  },
+  "M2TMNXFLX.EFLUX": {
+   "family": "Surface fluxes",
+   "units": "W m-2",
+   "sig_area": 0.203,
+   "divergence": 0.628,
+   "global_slope": -1.2099905700670675,
+   "global_p": 0.0
+  },
+  "M2TMNXFLX.EVAP": {
+   "family": "Surface fluxes",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.203,
+   "divergence": 0.635,
+   "global_slope": -4.906832051344235e-07,
+   "global_p": 0.0
+  },
+  "M2TMNXFLX.HFLUX": {
+   "family": "Surface fluxes",
+   "units": "W m-2",
+   "sig_area": 0.183,
+   "divergence": 0.435,
+   "global_slope": -0.2300937702694274,
+   "global_p": 0.0033310297331632377
+  },
+  "M2TMNXFLX.PBLH": {
+   "family": "Boundary layer",
+   "units": "m",
+   "sig_area": 0.152,
+   "divergence": 0.319,
+   "global_slope": -8.420303112387439,
+   "global_p": 5.2276183382105046e-11
+  },
+  "M2TMNXFLX.PRECSNO": {
+   "family": "Precipitation",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.006,
+   "divergence": 0.893,
+   "global_slope": -7.96309171161919e-09,
+   "global_p": 0.4894886596833459
+  },
+  "M2TMNXFLX.PRECTOTCORR": {
+   "family": "Precipitation",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.124,
+   "divergence": 0.907,
+   "global_slope": -2.4476786424119456e-07,
+   "global_p": 0.06265856678544801
+  },
+  "M2TMNXFLX.SPEED": {
+   "family": "Surface fluxes",
+   "units": "m s-1",
+   "sig_area": 0.124,
+   "divergence": 0.168,
+   "global_slope": -0.07142498633911516,
+   "global_p": 5.24869037121789e-12
+  },
+  "M2TMNXINT.PRECCU": {
+   "family": "Precipitation",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.053,
+   "divergence": 0.743,
+   "global_slope": -4.6208259016837135e-07,
+   "global_p": 1.1923795284474181e-12
+  },
+  "M2TMNXINT.PRECLS": {
+   "family": "Precipitation",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.122,
+   "divergence": 0.54,
+   "global_slope": 8.784448997503541e-09,
+   "global_p": 0.888765734114713
+  },
+  "M2TMNXINT.UFLXQV": {
+   "family": "Moisture transport",
+   "units": "kg m-1 s-1",
+   "sig_area": 0.045,
+   "divergence": 0.552,
+   "global_slope": 2.197985492712429,
+   "global_p": 0.002115318779747577
+  },
+  "M2TMNXINT.VFLXQV": {
+   "family": "Moisture transport",
+   "units": "kg m-1 s-1",
+   "sig_area": 0.018,
+   "divergence": 0.647,
+   "global_slope": -0.011353162506485007,
+   "global_p": 0.9409067254644068
+  },
+  "M2TMNXLND.BASEFLOW": {
+   "family": "Runoff",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.05,
+   "divergence": 0.626,
+   "global_slope": -1.2615910149509334e-08,
+   "global_p": 0.1409710374802069
+  },
+  "M2TMNXLND.EVPTRNS": {
+   "family": "Land energy",
+   "units": "W m-2",
+   "sig_area": 0.15,
+   "divergence": 0.313,
+   "global_slope": 0.34834213638584344,
+   "global_p": 0.0018570392477808007
+  },
+  "M2TMNXLND.GWETPROF": {
+   "family": "Soil moisture",
+   "units": "1",
+   "sig_area": 0.069,
+   "divergence": 0.574,
+   "global_slope": 0.002629131059062824,
+   "global_p": 0.24155403274298148
+  },
+  "M2TMNXLND.GWETROOT": {
+   "family": "Soil moisture",
+   "units": "1",
+   "sig_area": 0.085,
+   "divergence": 0.561,
+   "global_slope": 0.002540002453655821,
+   "global_p": 0.2480206721512146
+  },
+  "M2TMNXLND.GWETTOP": {
+   "family": "Soil moisture",
+   "units": "1",
+   "sig_area": 0.045,
+   "divergence": 0.638,
+   "global_slope": 0.0017155449857130084,
+   "global_p": 0.046776093678407626
+  },
+  "M2TMNXLND.RUNOFF": {
+   "family": "Runoff",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.219,
+   "divergence": 0.408,
+   "global_slope": 6.760922209473242e-07,
+   "global_p": 0.0017707366892203424
+  },
+  "M2TMNXLND.TSOIL1": {
+   "family": "Land energy",
+   "units": "K",
+   "sig_area": 0.387,
+   "divergence": 0.075,
+   "global_slope": 0.2919472119433748,
+   "global_p": 0.0003418793996898817
+  },
+  "M2TMNXLND.TSURF": {
+   "family": "Land energy",
+   "units": "K",
+   "sig_area": 0.33,
+   "divergence": 0.094,
+   "global_slope": 0.2924992175614932,
+   "global_p": 0.00021379972105717293
+  },
+  "M2TMNXLND.TWLAND": {
+   "family": "Soil moisture",
+   "units": "kg m-2",
+   "sig_area": 0.06,
+   "divergence": 0.583,
+   "global_slope": 2.788982584791137,
+   "global_p": 0.32936226980297256
+  },
+  "M2TMNXOCN.EFLUXWTR": {
+   "family": "Ocean & sea ice",
+   "units": "W m-2",
+   "sig_area": 0.191,
+   "divergence": 0.195,
+   "global_slope": -1.7707892967270018,
+   "global_p": 0.0
+  },
+  "M2TMNXOCN.FRSEAICE": {
+   "family": "Ocean & sea ice",
+   "units": "1",
+   "sig_area": 0.0,
+   "divergence": 0.0,
+   "global_slope": -0.001582172998329498,
+   "global_p": 0.00882532807330727
+  },
+  "M2TMNXOCN.HFLUXWTR": {
+   "family": "Ocean & sea ice",
+   "units": "W m-2",
+   "sig_area": 0.186,
+   "divergence": 0.261,
+   "global_slope": -0.29464244440042164,
+   "global_p": 0.14199947102596888
+  },
+  "M2TMNXOCN.RAINOCN": {
+   "family": "Ocean & sea ice",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.108,
+   "divergence": 0.713,
+   "global_slope": -3.70884214901518e-07,
+   "global_p": 0.015254985551095723
+  },
+  "M2TMNXOCN.TSKINICE": {
+   "family": "Ocean & sea ice",
+   "units": "K",
+   "sig_area": 0.17,
+   "divergence": 0.005,
+   "global_slope": 0.027991534791414814,
+   "global_p": 0.018417730520909004
+  },
+  "M2TMNXOCN.TSKINWTR": {
+   "family": "Ocean & sea ice",
+   "units": "K",
+   "sig_area": 0.176,
+   "divergence": 0.057,
+   "global_slope": 0.21366467776316275,
+   "global_p": 0.005825261210287147
+  },
+  "M2TMNXRAD.ALBEDO": {
+   "family": "Radiation",
+   "units": "1",
+   "sig_area": 0.289,
+   "divergence": 0.163,
+   "global_slope": -0.0009028977179613297,
+   "global_p": 1.796409714338587e-05
+  },
+  "M2TMNXRAD.CLDHGH": {
+   "family": "Clouds",
+   "units": "1",
+   "sig_area": 0.074,
+   "divergence": 0.293,
+   "global_slope": 0.009014208782966231,
+   "global_p": 3.176649387981456e-09
+  },
+  "M2TMNXRAD.CLDLOW": {
+   "family": "Clouds",
+   "units": "1",
+   "sig_area": 0.292,
+   "divergence": 0.571,
+   "global_slope": 0.003790987309257644,
+   "global_p": 9.323171890529558e-05
+  },
+  "M2TMNXRAD.CLDMID": {
+   "family": "Clouds",
+   "units": "1",
+   "sig_area": 0.035,
+   "divergence": 0.433,
+   "global_slope": -0.0033089743263528563,
+   "global_p": 2.3865354137342365e-12
+  },
+  "M2TMNXRAD.CLDTOT": {
+   "family": "Clouds",
+   "units": "1",
+   "sig_area": 0.173,
+   "divergence": 0.286,
+   "global_slope": 0.006721137392320521,
+   "global_p": 8.221926228735299e-06
+  },
+  "M2TMNXRAD.LWGNT": {
+   "family": "Radiation",
+   "units": "W m-2",
+   "sig_area": 0.299,
+   "divergence": 0.107,
+   "global_slope": 0.9988528275743358,
+   "global_p": 1.9984014443252818e-15
+  },
+  "M2TMNXRAD.LWTUP": {
+   "family": "Radiation",
+   "units": "W m-2",
+   "sig_area": 0.016,
+   "divergence": 0.963,
+   "global_slope": -0.26921846419870277,
+   "global_p": 0.03656536705142077
+  },
+  "M2TMNXRAD.LWTUPCLR": {
+   "family": "Radiation",
+   "units": "W m-2",
+   "sig_area": 0.021,
+   "divergence": 0.954,
+   "global_slope": 0.023486660397214643,
+   "global_p": 0.8528694952872287
+  },
+  "M2TMNXRAD.SWGDN": {
+   "family": "Radiation",
+   "units": "W m-2",
+   "sig_area": 0.217,
+   "divergence": 0.39,
+   "global_slope": -0.8994334463783465,
+   "global_p": 8.748397117841478e-09
+  },
+  "M2TMNXRAD.SWGNT": {
+   "family": "Radiation",
+   "units": "W m-2",
+   "sig_area": 0.193,
+   "divergence": 0.425,
+   "global_slope": -0.667336372502052,
+   "global_p": 5.551123594127461e-07
+  },
+  "M2TMNXRAD.SWTNT": {
+   "family": "Radiation",
+   "units": "W m-2",
+   "sig_area": 0.15,
+   "divergence": 0.62,
+   "global_slope": -0.13942130430756108,
+   "global_p": 0.21859273859502792
+  },
+  "M2TMNXRAD.SWTNTCLR": {
+   "family": "Radiation",
+   "units": "W m-2",
+   "sig_area": 0.101,
+   "divergence": 0.159,
+   "global_slope": 0.21793487936978417,
+   "global_p": 0.0008281058504870931
+  },
+  "M2TMNXRAD.TAUTOT": {
+   "family": "Clouds",
+   "units": "1",
+   "sig_area": 0.135,
+   "divergence": 0.77,
+   "global_slope": -0.3464572284448062,
+   "global_p": 0.002547008890541269
+  },
+  "M2TMNXSLV.CLDPRS": {
+   "family": "Humidity & clouds",
+   "units": "Pa",
+   "sig_area": 0.019,
+   "divergence": 0.385,
+   "global_slope": -433.3375344249181,
+   "global_p": 8.356210834392641e-08
+  },
+  "M2TMNXSLV.CLDTMP": {
+   "family": "Humidity & clouds",
+   "units": "K",
+   "sig_area": 0.015,
+   "divergence": 0.541,
+   "global_slope": -0.1973332977954637,
+   "global_p": 0.02490045811566377
+  },
+  "M2TMNXSLV.H500": {
+   "family": "Pressure & circulation",
+   "units": "m",
+   "sig_area": 0.648,
+   "divergence": 0.0,
+   "global_slope": 7.152300933920996,
+   "global_p": 6.953605674508978e-05
+  },
+  "M2TMNXSLV.OMEGA500": {
+   "family": "Pressure & circulation",
+   "units": "Pa s-1",
+   "sig_area": 0.053,
+   "divergence": 0.661,
+   "global_slope": -2.530571412907501e-06,
+   "global_p": 0.5641079891465752
+  },
+  "M2TMNXSLV.PS": {
+   "family": "Pressure & circulation",
+   "units": "Pa",
+   "sig_area": 0.054,
+   "divergence": 0.047,
+   "global_slope": 5.126580872524354,
+   "global_p": 1.03779775173507e-06
+  },
+  "M2TMNXSLV.QV2M": {
+   "family": "Humidity & clouds",
+   "units": "kg kg-1",
+   "sig_area": 0.443,
+   "divergence": 0.016,
+   "global_slope": 0.0001859583389361567,
+   "global_p": 0.00029781775339743355
+  },
+  "M2TMNXSLV.SLP": {
+   "family": "Pressure & circulation",
+   "units": "Pa",
+   "sig_area": 0.035,
+   "divergence": 0.044,
+   "global_slope": 1.986636066379472,
+   "global_p": 0.000794272702936194
+  },
+  "M2TMNXSLV.T250": {
+   "family": "Temperature",
+   "units": "K",
+   "sig_area": 0.464,
+   "divergence": 0.0,
+   "global_slope": 0.2934116866446498,
+   "global_p": 0.004838904838730729
+  },
+  "M2TMNXSLV.T2M": {
+   "family": "Temperature",
+   "units": "K",
+   "sig_area": 0.309,
+   "divergence": 0.044,
+   "global_slope": 0.22360549902994356,
+   "global_p": 0.0014287114751780905
+  },
+  "M2TMNXSLV.T500": {
+   "family": "Temperature",
+   "units": "K",
+   "sig_area": 0.607,
+   "divergence": 0.0,
+   "global_slope": 0.3294977009657417,
+   "global_p": 5.917185447157358e-05
+  },
+  "M2TMNXSLV.T850": {
+   "family": "Temperature",
+   "units": "K",
+   "sig_area": 0.493,
+   "divergence": 0.032,
+   "global_slope": 0.28990669546186926,
+   "global_p": 1.895258914386133e-05
+  },
+  "M2TMNXSLV.TO3": {
+   "family": "Ozone",
+   "units": "Dobsons",
+   "sig_area": 0.0,
+   "divergence": 0.0,
+   "global_slope": 2.331884677780184,
+   "global_p": 0.10132945399578852
+  },
+  "M2TMNXSLV.TQI": {
+   "family": "Humidity & clouds",
+   "units": "kg m-2",
+   "sig_area": 0.038,
+   "divergence": 0.78,
+   "global_slope": -5.658998214054235e-07,
+   "global_p": 0.9961670279386432
+  },
+  "M2TMNXSLV.TQL": {
+   "family": "Humidity & clouds",
+   "units": "kg m-2",
+   "sig_area": 0.268,
+   "divergence": 0.809,
+   "global_slope": -0.0003182703021624639,
+   "global_p": 0.21061579695531796
+  },
+  "M2TMNXSLV.TQV": {
+   "family": "Humidity & clouds",
+   "units": "kg m-2",
+   "sig_area": 0.34,
+   "divergence": 0.001,
+   "global_slope": 0.5300351150190334,
+   "global_p": 1.9503375032758896e-06
+  },
+  "M2TMNXSLV.TROPPB": {
+   "family": "Pressure & circulation",
+   "units": "Pa",
+   "sig_area": 0.0,
+   "divergence": 0.0,
+   "global_slope": -77.73575086918564,
+   "global_p": 0.00020189821344285264
+  },
+  "M2TMNXSLV.TROPT": {
+   "family": "Temperature",
+   "units": "K",
+   "sig_area": 0.002,
+   "divergence": 0.0,
+   "global_slope": 0.17653884538962739,
+   "global_p": 0.008792886396071564
+  },
+  "M2TMNXSLV.TS": {
+   "family": "Temperature",
+   "units": "K",
+   "sig_area": 0.212,
+   "divergence": 0.062,
+   "global_slope": 0.2287630495532331,
+   "global_p": 0.00034013889469575176
+  },
+  "M2TMNXSLV.U10M": {
+   "family": "Pressure & circulation",
+   "units": "m s-1",
+   "sig_area": 0.064,
+   "divergence": 0.249,
+   "global_slope": 0.05353651765057145,
+   "global_p": 8.23410993271434e-05
+  },
+  "M2TMNXSLV.V10M": {
+   "family": "Pressure & circulation",
+   "units": "m s-1",
+   "sig_area": 0.037,
+   "divergence": 0.73,
+   "global_slope": -0.0008004827888981071,
+   "global_p": 0.8770890454143441
+  },
+  "MICASA_FLUX_M.NEE": {
+   "family": "Carbon fluxes",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.007,
+   "divergence": 0.68,
+   "global_slope": -1.2739017708586738e-11,
+   "global_p": 0.34695378825013945
+  },
+  "MICASA_FLUX_M.NPP": {
+   "family": "Carbon fluxes",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.059,
+   "divergence": 0.092,
+   "global_slope": 4.57156694733947e-11,
+   "global_p": 0.029478988852326582
+  },
+  "MICASA_FLUX_M.Rh": {
+   "family": "Carbon fluxes",
+   "units": "kg m-2 s-1",
+   "sig_area": 0.13,
+   "divergence": 0.155,
+   "global_slope": 6.503498602247542e-11,
+   "global_p": 2.717411278685411e-05
+  },
+  "MOD10CM.Snow_Cover_Monthly_CMG": {
+   "family": "Snow",
+   "units": "none",
+   "sig_area": 0.018,
+   "divergence": 0.826,
+   "global_slope": -0.20681834267366345,
+   "global_p": 0.005237685069380493
+  },
+  "MOD11C3.LST_Day_CMG": {
+   "family": "Land surface temperature",
+   "units": "K",
+   "sig_area": 0.056,
+   "divergence": 0.432,
+   "global_slope": 0.12957545638680473,
+   "global_p": 0.1516430183927333
+  },
+  "MOD11C3.LST_Night_CMG": {
+   "family": "Land surface temperature",
+   "units": "K",
+   "sig_area": 0.682,
+   "divergence": 0.004,
+   "global_slope": 0.44281672762458646,
+   "global_p": 2.5135826753341917e-10
+  },
+  "MOD13C2.CMG 0.05 Deg Monthly EVI": {
+   "family": "Vegetation",
+   "units": "EVI",
+   "sig_area": 0.343,
+   "divergence": 0.054,
+   "global_slope": 0.00648421629726177,
+   "global_p": 1.0069967082415587e-10
+  },
+  "MOD13C2.CMG 0.05 Deg Monthly NDVI": {
+   "family": "Vegetation",
+   "units": "NDVI",
+   "sig_area": 0.337,
+   "divergence": 0.098,
+   "global_slope": 0.008010750590195657,
+   "global_p": 6.573630528805552e-12
+  },
+  "NASA_SSH_REF_SIMPLE_GRID_V11.ssha": {
+   "family": "Ocean & sea ice",
+   "units": "m",
+   "sig_area": 0.831,
+   "divergence": 0.005,
+   "global_slope": 0.035742769308871616,
+   "global_p": 0.0
+  },
+  "REYNOLDS_NCDC_L4_MONTHLY_V5.sst": {
+   "family": "Ocean & sea ice",
+   "units": "degree_C",
+   "sig_area": 0.281,
+   "divergence": 0.002,
+   "global_slope": 0.22276900384383294,
+   "global_p": 0.020467665163397264
+  }
+ }
+}

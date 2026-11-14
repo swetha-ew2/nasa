@@ -1,0 +1,20 @@
+{
+ "var_id": "FLDAS_NOAH01_C_GL_M.SoilMoi10_40cm_tavg",
+ "units": "m^3 m-3",
+ "n_months": 240,
+ "cells_valid": 987,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 49,
+ "sig_area_fraction": 0.049,
+ "sig_positive_area": 0.026,
+ "sig_negative_area": 0.022,
+ "divergence": 0.919,
+ "global_slope_per_decade": 0.0011234812266818655,
+ "global_ci": [
+  -0.0026566798726676212,
+  0.0044833640771410966
+ ],
+ "global_p_mk": 0.49111894992462024,
+ "global_p_ols": 0.014187332389641545
+}

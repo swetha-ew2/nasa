@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_NOAH025_M.Snowf_tavg",
+ "units": "kg m-2 s-1",
+ "n_months": 240,
+ "cells_valid": 963,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.002,
+ "sig_cells": 326,
+ "sig_area_fraction": 0.233,
+ "sig_positive_area": 0.145,
+ "sig_negative_area": 0.072,
+ "divergence": 0.666,
+ "global_slope_per_decade": 1.7833841271428404e-07,
+ "global_ci": [
+  4.329748452220682e-08,
+  3.215947140877609e-07
+ ],
+ "global_p_mk": 0.006263704477037946,
+ "global_p_ols": 1.976566416739337e-11
+}

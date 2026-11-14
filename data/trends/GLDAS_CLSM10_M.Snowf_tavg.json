@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_CLSM10_M.Snowf_tavg",
+ "units": "kg m-2 s-1",
+ "n_months": 240,
+ "cells_valid": 859,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 39,
+ "sig_area_fraction": 0.028,
+ "sig_positive_area": 0.011,
+ "sig_negative_area": 0.017,
+ "divergence": 0.777,
+ "global_slope_per_decade": 2.2818860812699243e-09,
+ "global_ci": [
+  -4.4053014385260074e-08,
+  4.6544257677693216e-08
+ ],
+ "global_p_mk": 0.9160715102643309,
+ "global_p_ols": 0.32971971665661287
+}

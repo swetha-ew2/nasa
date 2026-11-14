@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXRAD.CLDLOW",
+ "units": "1",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.445,
+ "sig_cells": 659,
+ "sig_area_fraction": 0.292,
+ "sig_positive_area": 0.208,
+ "sig_negative_area": 0.083,
+ "divergence": 0.571,
+ "global_slope_per_decade": 0.003790987309257644,
+ "global_ci": [
+  0.0020043389644835456,
+  0.005590782198486896
+ ],
+ "global_p_mk": 9.323171890529558e-05,
+ "global_p_ols": 4.604325207469809e-14
+}

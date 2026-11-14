@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_NOAH025_M.RootMoist_inst",
+ "units": "kg m-2",
+ "n_months": 240,
+ "cells_valid": 963,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 195,
+ "sig_area_fraction": 0.21,
+ "sig_positive_area": 0.071,
+ "sig_negative_area": 0.14,
+ "divergence": 0.672,
+ "global_slope_per_decade": -8.6491485351249,
+ "global_ci": [
+  -17.074820226861743,
+  0.026390923474436837
+ ],
+ "global_p_mk": 0.05038594943674779,
+ "global_p_ols": 6.175912217509438e-32
+}

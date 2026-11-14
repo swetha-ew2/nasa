@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXSLV.U10M",
+ "units": "m s-1",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.6,
+ "sig_cells": 125,
+ "sig_area_fraction": 0.064,
+ "sig_positive_area": 0.056,
+ "sig_negative_area": 0.008,
+ "divergence": 0.249,
+ "global_slope_per_decade": 0.05353651765057145,
+ "global_ci": [
+  0.028768393385324033,
+  0.07929953800003733
+ ],
+ "global_p_mk": 8.23410993271434e-05,
+ "global_p_ols": 8.164710716884794e-07
+}

@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXOCN.TSKINICE",
+ "units": "K",
+ "n_months": 240,
+ "cells_valid": 2061,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.272,
+ "sig_cells": 385,
+ "sig_area_fraction": 0.17,
+ "sig_positive_area": 0.17,
+ "sig_negative_area": 0.0,
+ "divergence": 0.005,
+ "global_slope_per_decade": 0.027991534791414814,
+ "global_ci": [
+  0.0050017875983026025,
+  0.050356395500698134
+ ],
+ "global_p_mk": 0.018417730520909004,
+ "global_p_ols": 9.498811105678971e-06
+}

@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXOCN.EFLUXWTR",
+ "units": "W m-2",
+ "n_months": 240,
+ "cells_valid": 2061,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.513,
+ "sig_cells": 353,
+ "sig_area_fraction": 0.191,
+ "sig_positive_area": 0.019,
+ "sig_negative_area": 0.173,
+ "divergence": 0.195,
+ "global_slope_per_decade": -1.7707892967270018,
+ "global_ci": [
+  -2.0324286876923057,
+  -1.5201844045359978
+ ],
+ "global_p_mk": 0.0,
+ "global_p_ols": 1.4155164820230582e-32
+}

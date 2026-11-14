@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXSLV.T850",
+ "units": "K",
+ "n_months": 240,
+ "cells_valid": 2433,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.548,
+ "sig_cells": 961,
+ "sig_area_fraction": 0.493,
+ "sig_positive_area": 0.485,
+ "sig_negative_area": 0.008,
+ "divergence": 0.032,
+ "global_slope_per_decade": 0.28990669546186926,
+ "global_ci": [
+  0.1719576620176973,
+  0.428818797613908
+ ],
+ "global_p_mk": 1.895258914386133e-05,
+ "global_p_ols": 1.9856905308164762e-42
+}

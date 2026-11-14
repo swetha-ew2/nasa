@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXOCN.HFLUXWTR",
+ "units": "W m-2",
+ "n_months": 240,
+ "cells_valid": 2061,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.204,
+ "sig_cells": 357,
+ "sig_area_fraction": 0.186,
+ "sig_positive_area": 0.024,
+ "sig_negative_area": 0.161,
+ "divergence": 0.261,
+ "global_slope_per_decade": -0.29464244440042164,
+ "global_ci": [
+  -0.7012249979510319,
+  0.10449433622859866
+ ],
+ "global_p_mk": 0.14199947102596888,
+ "global_p_ols": 0.002323632392059293
+}

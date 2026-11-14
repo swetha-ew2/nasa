@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXGLC.SNOWDP_GL",
+ "units": "m",
+ "n_months": 240,
+ "cells_valid": 106,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 2,
+ "sig_area_fraction": 0.026,
+ "sig_positive_area": 0.0,
+ "sig_negative_area": 0.026,
+ "divergence": 0.0,
+ "global_slope_per_decade": -0.0005305367469111585,
+ "global_ci": [
+  -0.002107286120760009,
+  0.001080760761699223
+ ],
+ "global_p_mk": 0.5206130910704316,
+ "global_p_ols": 0.24656141053037814
+}

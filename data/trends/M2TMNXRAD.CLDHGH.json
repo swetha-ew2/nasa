@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXRAD.CLDHGH",
+ "units": "1",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.585,
+ "sig_cells": 271,
+ "sig_area_fraction": 0.074,
+ "sig_positive_area": 0.063,
+ "sig_negative_area": 0.011,
+ "divergence": 0.293,
+ "global_slope_per_decade": 0.009014208782966231,
+ "global_ci": [
+  0.006482316377139499,
+  0.011520602050021502
+ ],
+ "global_p_mk": 3.176649387981456e-09,
+ "global_p_ols": 3.3079966824933624e-26
+}

@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXAER.OCCMASS",
+ "units": "kg m-2",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.14,
+ "sig_cells": 919,
+ "sig_area_fraction": 0.398,
+ "sig_positive_area": 0.225,
+ "sig_negative_area": 0.173,
+ "divergence": 0.87,
+ "global_slope_per_decade": 0.0005619182989080864,
+ "global_ci": [
+  0.00013189575922445916,
+  0.0009804276806352243
+ ],
+ "global_p_mk": 0.010157819954441427,
+ "global_p_ols": 0.0015488405647900365
+}

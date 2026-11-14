@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_VIC10_M.Rainf_tavg",
+ "units": "kg m-2 s-1",
+ "n_months": 240,
+ "cells_valid": 859,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.043,
+ "sig_cells": 86,
+ "sig_area_fraction": 0.105,
+ "sig_positive_area": 0.041,
+ "sig_negative_area": 0.063,
+ "divergence": 0.792,
+ "global_slope_per_decade": -5.715473670346288e-07,
+ "global_ci": [
+  -1.0874661593232842e-06,
+  -8.05143765703463e-08
+ ],
+ "global_p_mk": 0.024080495624504428,
+ "global_p_ols": 0.00013338356017989904
+}

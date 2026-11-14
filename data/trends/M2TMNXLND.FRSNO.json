@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXLND.FRSNO",
+ "units": "1",
+ "n_months": 240,
+ "cells_valid": 1114,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.003,
+ "sig_cells": 6,
+ "sig_area_fraction": 0.007,
+ "sig_positive_area": 0.007,
+ "sig_negative_area": 0.0,
+ "divergence": 0.0,
+ "global_slope_per_decade": -0.0010341299855249112,
+ "global_ci": [
+  -0.002163239344992792,
+  6.0192900157515105e-05
+ ],
+ "global_p_mk": 0.06505728655163345,
+ "global_p_ols": 0.010862623701491091
+}

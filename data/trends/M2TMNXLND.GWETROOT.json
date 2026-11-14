@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXLND.GWETROOT",
+ "units": "1",
+ "n_months": 240,
+ "cells_valid": 1114,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 84,
+ "sig_area_fraction": 0.085,
+ "sig_positive_area": 0.061,
+ "sig_negative_area": 0.024,
+ "divergence": 0.561,
+ "global_slope_per_decade": 0.002540002453655821,
+ "global_ci": [
+  -0.0021654087432990245,
+  0.00719797210727475
+ ],
+ "global_p_mk": 0.2480206721512146,
+ "global_p_ols": 8.304056905270146e-07
+}

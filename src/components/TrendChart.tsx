@@ -1,66 +1,142 @@
-import { useMemo } from 'react';
-import { makePlaceholderSeries, olsLine } from '../lib/placeholder';
+import { useMemo, useState } from 'react';
+import type { SeriesRecord } from '../types';
+import { decimalYear, fmt } from '../lib/data';
 
 interface Props {
-  seed: string;
-  title: string;
+  rec: SeriesRecord;
   units: string;
+  mode: 'anomaly' | 'actual';
 }
 
-const W = 340;
-const H = 170;
-const M = { l: 10, r: 10, t: 22, b: 24 };
+const W = 360;
+const H = 220;
+const M = { l: 44, r: 10, t: 12, b: 26 };
 
-/**
- * Placeholder time-series chart (plain SVG, no chart library).
- * Replace with Plotly / ECharts once real data is wired in.
- */
-export default function TrendChart({ seed, title, units }: Props) {
-  const { pathD, trendD, xTicks } = useMemo(() => {
-    const s = makePlaceholderSeries(seed);
-    const t0 = s.t[0];
-    const t1 = s.t[s.t.length - 1];
-    const yMin = Math.min(...s.y);
-    const yMax = Math.max(...s.y);
-    const pad = (yMax - yMin) * 0.1;
+function niceStep(range: number, ticks: number) {
+  const raw = range / ticks;
+  const mag = 10 ** Math.floor(Math.log10(raw));
+  const f = raw / mag;
+  return (f < 1.5 ? 1 : f < 3.5 ? 2 : f < 7.5 ? 5 : 10) * mag;
+}
 
-    const x = (t: number) => M.l + ((t - t0) / (t1 - t0)) * (W - M.l - M.r);
-    const y = (v: number) =>
-      H - M.b - ((v - (yMin - pad)) / (yMax - yMin + 2 * pad)) * (H - M.t - M.b);
+/** Real time series: monthly values, 12-month mean, Sen trend line and the slope uncertainty fan. */
+export default function TrendChart({ rec, units, mode }: Props) {
+  const [hover, setHover] = useState<number | null>(null);
 
-    const pathD = s.y.map((v, i) => `${i === 0 ? 'M' : 'L'}${x(s.t[i]).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+  const g = useMemo(() => {
+    const months = rec.months ?? [];
+    const t = months.map(decimalYear);
+    const y = (mode === 'anomaly' ? rec.anomaly : rec.raw) ?? [];
+    const sm = y.map((_, i) => {
+      if (i < 11) return null;
+      const w = y.slice(i - 11, i + 1).filter((v): v is number => v !== null);
+      return w.length >= 9 ? w.reduce((a, b) => a + b, 0) / w.length : null;
+    });
+    const t0 = t[0];
+    const t1 = t[t.length - 1];
+    const slopeY = (rec.slope_per_decade ?? 0) / 10; // per year
+    const trendAt = (tt: number) => slopeY * (tt - t0) + (rec.sen_intercept ?? 0);
+    const showTrend = mode === 'anomaly' && rec.slope_per_decade !== undefined;
+    const vals = y.filter((v): v is number => v !== null);
+    const tl = showTrend ? [trendAt(t0), trendAt(t1)] : [];
+    let lo = Math.min(...vals, ...tl);
+    let hi = Math.max(...vals, ...tl);
+    if (hi === lo) {
+      hi += 1;
+      lo -= 1;
+    }
+    const pad = (hi - lo) * 0.08;
+    lo -= pad;
+    hi += pad;
+    const step = niceStep(hi - lo, 4);
+    const yt: number[] = [];
+    for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) yt.push(Number(v.toFixed(10)));
+    const X = (tt: number) => M.l + ((tt - t0) / (t1 - t0)) * (W - M.l - M.r);
+    const Y = (v: number) => H - M.b - ((v - lo) / (hi - lo)) * (H - M.t - M.b);
+    const path = (arr: (number | null)[]) => {
+      let d = '';
+      let pen = false;
+      arr.forEach((v, i) => {
+        if (v === null) {
+          pen = false;
+          return;
+        }
+        d += `${pen ? 'L' : 'M'}${X(t[i]).toFixed(1)},${Y(v).toFixed(1)} `;
+        pen = true;
+      });
+      return d;
+    };
+    let fan = '';
+    let trend = '';
+    if (showTrend) {
+      const tm = (t0 + t1) / 2;
+      const ym = trendAt(tm);
+      const loS = (rec.ci95?.[0] ?? slopeY * 10) / 10;
+      const hiS = (rec.ci95?.[1] ?? slopeY * 10) / 10;
+      fan = `M${X(t0)},${Y(ym + loS * (t0 - tm))} L${X(t1)},${Y(ym + loS * (t1 - tm))} L${X(t1)},${Y(ym + hiS * (t1 - tm))} L${X(t0)},${Y(ym + hiS * (t0 - tm))} Z`;
+      trend = `M${X(t0)},${Y(trendAt(t0))} L${X(t1)},${Y(trendAt(t1))}`;
+    }
+    const xt: number[] = [];
+    for (let yr = Math.ceil(t0); yr <= t1 + 0.9; yr += 5) xt.push(yr);
+    return { t, y, sm, X, Y, path, fan, trend, yt, xt, line: path(y), smooth: path(sm) };
+  }, [rec, mode]);
 
-    const { a, b } = olsLine(s.t, s.y);
-    const trendD = `M${x(t0).toFixed(1)},${y(a + b * t0).toFixed(1)} L${x(t1).toFixed(1)},${y(a + b * t1).toFixed(1)}`;
-
-    const xTicks = [
-      { label: String(Math.floor(t0)), px: x(t0), anchor: 'start' as const },
-      { label: String(Math.round((t0 + t1) / 2)), px: x((t0 + t1) / 2), anchor: 'middle' as const },
-      { label: String(Math.floor(t1)), px: x(t1), anchor: 'end' as const },
-    ];
-    return { pathD, trendD, xTicks };
-  }, [seed]);
+  const n = g.t.length;
+  function onMove(e: React.MouseEvent<SVGSVGElement>) {
+    const r = e.currentTarget.getBoundingClientRect();
+    const px = ((e.clientX - r.left) / r.width) * W;
+    const t0 = g.t[0];
+    const t1 = g.t[n - 1];
+    const tt = t0 + ((px - M.l) / (W - M.l - M.r)) * (t1 - t0);
+    const i = Math.round((tt - t0) * 12);
+    setHover(i >= 0 && i < n ? i : null);
+  }
+  const hv = hover !== null ? g.y[hover] : null;
 
   return (
     <figure className="chart">
-      <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Placeholder time series of ${title}`}>
-        <text x={M.l} y={13} className="chart__title">
-          {title} ({units})
-        </text>
-        <line x1={M.l} x2={W - M.r} y1={H - M.b} y2={H - M.b} className="chart__axis" />
-        <path d={pathD} className="chart__line" />
-        <path d={trendD} className="chart__trend" />
-        {xTicks.map((t) => (
-          <text key={t.label} x={t.px} y={H - 8} textAnchor={t.anchor} className="chart__tick">
-            {t.label}
-          </text>
+      <svg
+        viewBox={`0 0 ${W} ${H}`}
+        role="img"
+        aria-label={`Monthly ${mode === 'anomaly' ? 'anomaly' : 'values'} of ${rec.name}`}
+        onMouseMove={onMove}
+        onMouseLeave={() => setHover(null)}
+      >
+        {g.yt.map((v) => (
+          <g key={v}>
+            <line x1={M.l} x2={W - M.r} y1={g.Y(v)} y2={g.Y(v)} className={v === 0 && mode === 'anomaly' ? 'chart__zero' : 'chart__grid'} />
+            <text x={M.l - 5} y={g.Y(v) + 3} textAnchor="end" className="chart__tick">{fmt(v, 3)}</text>
+          </g>
         ))}
-        <text x={W / 2} y={H / 2} textAnchor="middle" className="chart__watermark">
-          PLACEHOLDER DATA
-        </text>
+        {g.xt.map((yr) => (
+          <text key={yr} x={g.X(yr)} y={H - 8} textAnchor="middle" className="chart__tick">{yr}</text>
+        ))}
+        {g.fan && <path d={g.fan} className="chart__fan" />}
+        <path d={g.line} className="chart__line" />
+        <path d={g.smooth} className="chart__smooth" />
+        {g.trend && <path d={g.trend} className="chart__trend" />}
+        {hover !== null && hv !== null && hv !== undefined && (
+          <g>
+            <line x1={g.X(g.t[hover])} x2={g.X(g.t[hover])} y1={M.t} y2={H - M.b} className="chart__cursor" />
+            <circle cx={g.X(g.t[hover])} cy={g.Y(hv)} r={3.2} className="chart__dot" />
+          </g>
+        )}
       </svg>
       <figcaption>
-        Synthetic values for layout only. Dashed line is illustrative, not a statistical result.
+        {hover !== null && hv !== null && hv !== undefined ? (
+          <>
+            <strong>{String(rec.months![hover]).replace(/(\d{4})(\d{2})/, '$1-$2')}</strong>: {fmt(hv, 4)} {units}
+          </>
+        ) : (
+          <>
+            <span className="key key--line" /> monthly <span className="key key--smooth" /> 12-month average{' '}
+            {mode === 'anomaly' && (
+              <>
+                <span className="key key--trend" /> trend <span className="key key--fan" /> 95% range of the rate
+              </>
+            )}
+          </>
+        )}
       </figcaption>
     </figure>
   );

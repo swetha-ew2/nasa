@@ -1,0 +1,20 @@
+{
+ "var_id": "FLDAS_NOAH01_C_GL_M.SWE_inst",
+ "units": "kg m-2",
+ "n_months": 240,
+ "cells_valid": 987,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.004,
+ "sig_cells": 62,
+ "sig_area_fraction": 0.07,
+ "sig_positive_area": 0.042,
+ "sig_negative_area": 0.028,
+ "divergence": 0.806,
+ "global_slope_per_decade": -2.9614101828350213e-07,
+ "global_ci": [
+  -7.171522734562554e-07,
+  1.3421553537792762e-07
+ ],
+ "global_p_mk": 0.1689271192071371,
+ "global_p_ols": 0.00012740175344274685
+}

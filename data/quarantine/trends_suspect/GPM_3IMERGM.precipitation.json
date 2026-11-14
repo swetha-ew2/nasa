@@ -1,0 +1,20 @@
+{
+ "var_id": "GPM_3IMERGM.precipitation",
+ "units": "mm/hr",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.058,
+ "sig_cells": 558,
+ "sig_area_fraction": 0.177,
+ "sig_positive_area": 0.084,
+ "sig_negative_area": 0.092,
+ "divergence": 0.954,
+ "global_slope_per_decade": -0.05215851755886677,
+ "global_ci": [
+  -0.1048418012711392,
+  -0.009993753450575918
+ ],
+ "global_p_mk": 0.01082597810350805,
+ "global_p_ols": 0.5719652182220663
+}

@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_NOAH025_M.Qsb_acc",
+ "units": "kg m-2",
+ "n_months": 240,
+ "cells_valid": 963,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 162,
+ "sig_area_fraction": 0.12,
+ "sig_positive_area": 0.091,
+ "sig_negative_area": 0.027,
+ "divergence": 0.462,
+ "global_slope_per_decade": 0.0016455391358972972,
+ "global_ci": [
+  0.0007480467736583203,
+  0.002729033836421337
+ ],
+ "global_p_mk": 0.0005096320585962211,
+ "global_p_ols": 2.911033796755367e-07
+}

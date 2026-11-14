@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXLND.SNODP",
+ "units": "m",
+ "n_months": 240,
+ "cells_valid": 1114,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.003,
+ "sig_cells": 45,
+ "sig_area_fraction": 0.034,
+ "sig_positive_area": 0.029,
+ "sig_negative_area": 0.004,
+ "divergence": 0.217,
+ "global_slope_per_decade": 0.00023368435749014112,
+ "global_ci": [
+  -0.000640364074051069,
+  0.0010747640412198055
+ ],
+ "global_p_mk": 0.5935860989213775,
+ "global_p_ols": 0.5943185191581078
+}

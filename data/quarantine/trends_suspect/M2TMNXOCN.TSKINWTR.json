@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXOCN.TSKINWTR",
+ "units": "K",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 2,
+ "sig_area_fraction": 0.0,
+ "sig_positive_area": 0.0,
+ "sig_negative_area": 0.0,
+ "divergence": 0.0,
+ "global_slope_per_decade": -0.001582172998329498,
+ "global_ci": [
+  -0.002709967374855045,
+  -0.00045031460993742343
+ ],
+ "global_p_mk": 0.00882532807330727,
+ "global_p_ols": 1.5185070572376988e-18
+}

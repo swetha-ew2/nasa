@@ -1,108 +1,104 @@
 import { useEffect, useRef, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import type { Region } from '../types';
+import type { MapFile, RegionInfo, Scheme, SeriesRecord, Target } from '../types';
+import { cellsGeoJSON, cellsOutline, endColors, fmt, fmtP } from '../lib/data';
 
 // NASA GIBS "Blue Marble" static imagery (no date needed, no login needed).
-// GIBS serves WMTS tiles as {z}/{row}/{col}, which equals MapLibre's {z}/{y}/{x}.
 const GIBS_BLUE_MARBLE =
   'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpeg';
 
-const OUTLINE_SOURCE = 'region-outline';
 const IMAGERY_LAYER = 'gibs-blue-marble';
+const EMPTY_FC: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
 
-// Inline style: no third-party style file to depend on. If the imagery tiles
-// cannot load (offline, blocked), you still get a plain dark-blue globe with pins.
 const BASE_STYLE: maplibregl.StyleSpecification = {
   version: 8,
   projection: { type: 'globe' },
   sources: {
-    [IMAGERY_LAYER]: {
-      type: 'raster',
-      tiles: [GIBS_BLUE_MARBLE],
-      tileSize: 256,
-      maxzoom: 8,
-      attribution: 'NASA GIBS',
-    },
+    [IMAGERY_LAYER]: { type: 'raster', tiles: [GIBS_BLUE_MARBLE], tileSize: 256, maxzoom: 8, attribution: 'NASA GIBS' },
   },
   layers: [
     { id: 'ocean', type: 'background', paint: { 'background-color': '#0b2a4a' } },
-    { id: IMAGERY_LAYER, type: 'raster', source: IMAGERY_LAYER },
+    { id: IMAGERY_LAYER, type: 'raster', source: IMAGERY_LAYER, paint: { 'raster-saturation': -0.35, 'raster-brightness-max': 0.75 } },
   ],
 };
 
+/** angular distance (degrees) between two lng/lat points */
+function angleDeg(lng1: number, lat1: number, lng2: number, lat2: number) {
+  const r = Math.PI / 180;
+  const c = Math.sin(lat1 * r) * Math.sin(lat2 * r) + Math.cos(lat1 * r) * Math.cos(lat2 * r) * Math.cos((lng1 - lng2) * r);
+  return Math.acos(Math.max(-1, Math.min(1, c))) / r;
+}
+
+export type PinState = 'up' | 'down' | 'none' | 'nodata';
+
 interface Props {
-  regions: Region[];
-  selectedRegionId: string | null;
-  /** Region ids to emphasise (e.g. regions where the chosen variable applies). null = no filter. */
-  highlightRegionIds: Set<string> | null;
+  regions: RegionInfo[];
+  pinStates: Record<string, PinState>;
+  mapData: MapFile | null;
+  scheme: Scheme;
+  units: string;
+  showNonSig: boolean;
+  showHotspots: boolean;
+  showPins: boolean;
+  hotspots: SeriesRecord[];
+  target: Target | null;
+  highlightCells: [number, number][] | null;
   showImagery: boolean;
   autoRotate: boolean;
-  onSelectRegion: (id: string | null) => void;
+  onSelect: (t: Target | null) => void;
   onUserInteract: () => void;
 }
 
-const EMPTY_FC: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
-
-function bboxToFeature(b: [number, number, number, number]): GeoJSON.Feature {
-  const [w, s, e, n] = b;
-  return {
-    type: 'Feature',
-    properties: {},
-    geometry: {
-      type: 'Polygon',
-      coordinates: [[[w, s], [e, s], [e, n], [w, n], [w, s]]],
-    },
-  };
+function spanOf(b: [number, number, number, number]) {
+  return Math.max(b[2] - b[0], (b[3] - b[1]) * 1.4);
+}
+function zoomFor(spanDeg: number) {
+  // keep enough of the globe in view that it can still be dragged around comfortably
+  return Math.max(1.4, Math.min(3.3, 3.0 - Math.log2(Math.max(spanDeg, 5) / 20) * 0.85));
 }
 
-export default function Globe({
-  regions,
-  selectedRegionId,
-  highlightRegionIds,
-  showImagery,
-  autoRotate,
-  onSelectRegion,
-  onUserInteract,
-}: Props) {
+export default function Globe(p: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const pinEls = useRef<Map<string, HTMLElement>>(new Map());
+  const hotspotMarkers = useRef<maplibregl.Marker[]>([]);
+  const popupRef = useRef<maplibregl.Popup | null>(null);
+  /** DOM marker -> [lng, lat]; used to hide markers on the far side of the globe */
+  const markerPos = useRef<Map<HTMLElement, [number, number]>>(new Map());
   const spinRef = useRef(false);
+  const homeZoom = useRef(2);
+  const hadTarget = useRef(false);
   const [ready, setReady] = useState(false);
 
-  // Keep latest callbacks in refs so map listeners never go stale.
-  const cb = useRef({ onSelectRegion, onUserInteract });
-  cb.current = { onSelectRegion, onUserInteract };
+  const cb = useRef({ onSelect: p.onSelect, onUserInteract: p.onUserInteract, units: p.units });
+  cb.current = { onSelect: p.onSelect, onUserInteract: p.onUserInteract, units: p.units };
 
   // ---- create the map once ----
   useEffect(() => {
     if (!containerRef.current) return;
-
+    // size the first view so the globe fills about 70% of the smaller side of its container
+    const box = containerRef.current;
+    const startZoom = Math.max(1, Math.min(2.4, Math.log2((0.72 * Math.min(box.clientWidth, box.clientHeight || 600)) / 131)));
+    homeZoom.current = startZoom;
     const map = new maplibregl.Map({
       container: containerRef.current,
       style: BASE_STYLE,
       center: [10, 25],
-      zoom: 1.6,
-      minZoom: 1,
+      zoom: startZoom,
+      minZoom: 0.8,
       maxZoom: 8,
       attributionControl: false,
     });
     mapRef.current = map;
-
     map.addControl(
-      new maplibregl.AttributionControl({
-        compact: true,
-        customAttribution: 'Imagery: NASA GIBS / ESDIS',
-      }),
+      new maplibregl.AttributionControl({ compact: true, customAttribution: 'Imagery: NASA GIBS / ESDIS' }),
       'bottom-right',
     );
     map.addControl(new maplibregl.NavigationControl({ visualizePitch: false }), 'bottom-right');
 
     map.on('style.load', () => {
       map.setProjection({ type: 'globe' });
-
-      // Atmosphere glow. Wrapped so a version difference can never break the app.
       try {
         map.setSky({
           'sky-color': '#0a1f44',
@@ -117,33 +113,75 @@ export default function Globe({
         console.warn('Atmosphere not applied:', err);
       }
 
-      map.addSource(OUTLINE_SOURCE, { type: 'geojson', data: EMPTY_FC });
+      map.addSource('cells', { type: 'geojson', data: EMPTY_FC });
+      map.addLayer({
+        id: 'cells-fill',
+        type: 'fill',
+        source: 'cells',
+        paint: { 'fill-color': ['get', 'c'], 'fill-opacity': ['get', 'op'], 'fill-antialias': false },
+      });
+      map.addSource('hotspot-cells', { type: 'geojson', data: EMPTY_FC });
+      map.addLayer({
+        id: 'hotspot-cells-line',
+        type: 'line',
+        source: 'hotspot-cells',
+        paint: { 'line-color': '#ffffff', 'line-width': 1.6, 'line-opacity': 0.95 },
+      });
+      map.addSource('region-outline', { type: 'geojson', data: EMPTY_FC });
       map.addLayer({
         id: 'region-outline-fill',
         type: 'fill',
-        source: OUTLINE_SOURCE,
-        paint: { 'fill-color': '#5ad1ff', 'fill-opacity': 0.14 },
+        source: 'region-outline',
+        paint: { 'fill-color': '#ffffff', 'fill-opacity': 0.05 },
       });
       map.addLayer({
         id: 'region-outline-line',
         type: 'line',
-        source: OUTLINE_SOURCE,
-        paint: { 'line-color': '#7fe0ff', 'line-width': 2, 'line-dasharray': [2, 1] },
+        source: 'region-outline',
+        paint: { 'line-color': '#ffffff', 'line-width': 2, 'line-dasharray': [2, 1] },
       });
 
+      // hover read-out for cells: what is changing here, and by how much
+      const popup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, className: 'cell-popup', offset: 10 });
+      popupRef.current = popup;
+      map.on('mousemove', 'cells-fill', (e) => {
+        const f = e.features?.[0];
+        if (!f) return;
+        const pr = f.properties as { v: number; sig: number; p: number | null };
+        popup
+          .setLngLat(e.lngLat)
+          .setHTML(
+            `<strong>${pr.v > 0 ? '+' : ''}${fmt(Number(pr.v))}</strong> ${cb.current.units} per decade<br>` +
+              (Number(pr.sig) === 1
+                ? '<span class="pop-sig">significant trend</span>'
+                : '<span class="pop-ns">not significant</span>') +
+              (pr.p !== null && pr.p !== undefined ? ` · p = ${fmtP(Number(pr.p))}` : ''),
+          )
+          .addTo(map);
+        map.getCanvas().style.cursor = 'crosshair';
+      });
+      map.on('mouseleave', 'cells-fill', () => {
+        popup.remove();
+        map.getCanvas().style.cursor = '';
+      });
       setReady(true);
     });
 
-    // Click on empty globe = deselect.
-    map.on('click', () => cb.current.onSelectRegion(null));
+    const updateVisibility = () => {
+      const c = map.getCenter();
+      markerPos.current.forEach(([lng, lat], el) => {
+        el.style.visibility = angleDeg(c.lng, c.lat, lng, lat) > 74 ? 'hidden' : 'visible';
+      });
+    };
+    map.on('move', updateVisibility);
+    map.on('zoom', updateVisibility);
+    (map as unknown as { _updateMarkerVisibility: () => void })._updateMarkerVisibility = updateVisibility;
 
-    // Any manual interaction stops the auto-rotation.
+    map.on('click', () => cb.current.onSelect(null));
     const stopSpin = () => cb.current.onUserInteract();
     map.on('mousedown', stopSpin);
     map.on('touchstart', stopSpin);
     map.on('wheel', stopSpin);
-
-    // Auto-rotate loop: each easeTo ends with moveend, which starts the next step.
     map.on('moveend', () => {
       if (!spinRef.current) return;
       const c = map.getCenter();
@@ -151,93 +189,194 @@ export default function Globe({
       map.easeTo({ center: c, duration: 1000, easing: (t) => t });
     });
 
-    // Pins (DOM markers). Style the children, never the root: MapLibre positions
-    // the root element with its own transform.
-    regions.forEach((r) => {
-      const el = document.createElement('button');
-      el.type = 'button';
-      el.className = `pin pin--${r.placeholderTrend}`;
-      el.setAttribute('aria-label', r.name);
-
-      const dot = document.createElement('span');
-      dot.className = 'pin__dot';
-      const label = document.createElement('span');
-      label.className = 'pin__label';
-      label.textContent = r.name;
-      el.append(dot, label);
-
-      el.addEventListener('click', (e) => {
-        e.stopPropagation();
-        cb.current.onSelectRegion(r.id);
-      });
-
-      new maplibregl.Marker({ element: el, anchor: 'center' })
-        .setLngLat([r.lon, r.lat])
-        .addTo(map);
-      pinEls.current.set(r.id, el);
-    });
-
-    // Keep the canvas sized correctly when the layout changes.
     const ro = new ResizeObserver(() => map.resize());
     ro.observe(containerRef.current);
-
     return () => {
       ro.disconnect();
       spinRef.current = false;
       pinEls.current.clear();
+      hotspotMarkers.current = [];
+      markerPos.current.clear();
       map.remove();
       mapRef.current = null;
       setReady(false);
     };
-    // Regions are static for now; create the map once.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // ---- imagery toggle ----
+  // ---- region pins (created once the regions are known) ----
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !ready) return;
-    map.setLayoutProperty(IMAGERY_LAYER, 'visibility', showImagery ? 'visible' : 'none');
-  }, [showImagery, ready]);
+    const markers: maplibregl.Marker[] = [];
+    if (!p.showPins) return;
+    p.regions
+      .filter((r) => r.id !== 'global')
+      .forEach((r) => {
+        const el = document.createElement('button');
+        el.type = 'button';
+        el.className = 'pin pin--nodata';
+        el.setAttribute('aria-label', r.name);
+        const dot = document.createElement('span');
+        dot.className = 'pin__dot';
+        const label = document.createElement('span');
+        label.className = 'pin__label';
+        label.textContent = r.name;
+        el.append(dot, label);
+        el.addEventListener('click', (e) => {
+          e.stopPropagation();
+          cb.current.onSelect({ kind: 'region', id: r.id });
+        });
+        const [w, s, e2, n] = r.bbox;
+        const pos: [number, number] = [(w + e2) / 2, (s + n) / 2];
+        markers.push(new maplibregl.Marker({ element: el, anchor: 'center' }).setLngLat(pos).addTo(map));
+        markerPos.current.set(el, pos);
+        pinEls.current.set(r.id, el);
+      });
+    (map as unknown as { _updateMarkerVisibility?: () => void })._updateMarkerVisibility?.();
+    return () => {
+      markers.forEach((m) => {
+        markerPos.current.delete(m.getElement());
+        m.remove();
+      });
+      pinEls.current.clear();
+    };
+  }, [ready, p.regions, p.showPins]);
 
-  // ---- auto-rotate ----
+  // ---- pin state + selection (toggle only our own classes: MapLibre adds its own positioning classes) ----
+  useEffect(() => {
+    pinEls.current.forEach((el, id) => {
+      el.classList.remove('pin--up', 'pin--down', 'pin--none', 'pin--nodata', 'is-selected');
+      el.classList.add(`pin--${p.pinStates[id] ?? 'nodata'}`);
+      if (p.target?.kind === 'region' && p.target.id === id) el.classList.add('is-selected');
+    });
+  }, [p.pinStates, p.target, ready, p.regions, p.showPins]);
+
+  // ---- trend map cells ----
   useEffect(() => {
     const map = mapRef.current;
-    spinRef.current = autoRotate;
-    if (!map || !ready || !autoRotate) return;
+    if (!map || !ready) return;
+    const src = map.getSource('cells') as maplibregl.GeoJSONSource | undefined;
+    src?.setData(p.mapData ? cellsGeoJSON(p.mapData, p.scheme, p.showNonSig) : EMPTY_FC);
+  }, [p.mapData, p.scheme, p.showNonSig, ready]);
+
+  // ---- hotspot markers ----
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !ready) return;
+    hotspotMarkers.current.forEach((m) => {
+      markerPos.current.delete(m.getElement());
+      m.remove();
+    });
+    hotspotMarkers.current = [];
+    if (!p.showHotspots) return;
+    p.hotspots.forEach((h) => {
+      if (!h.centroid) return;
+      const el = document.createElement('button');
+      el.type = 'button';
+      const sel = p.target?.kind === 'hotspot' && p.target.id === h.id;
+      el.className = `hs hs--${h.direction === 'increasing' ? 'inc' : 'dec'}${sel ? ' is-selected' : ''}`;
+      el.setAttribute('aria-label', `Hotspot: ${h.name}`);
+      const g = document.createElement('span');
+      g.className = 'hs__glyph';
+      g.textContent = h.direction === 'increasing' ? '▲' : '▼';
+      const label = document.createElement('span');
+      label.className = 'hs__label';
+      label.textContent = `${h.name} (${h.direction})`;
+      el.append(g, label);
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        cb.current.onSelect({ kind: 'hotspot', id: h.id });
+      });
+      markerPos.current.set(el, [h.centroid[1], h.centroid[0]]);
+      hotspotMarkers.current.push(
+        new maplibregl.Marker({ element: el, anchor: 'center' }).setLngLat([h.centroid[1], h.centroid[0]]).addTo(map),
+      );
+    });
+    (map as unknown as { _updateMarkerVisibility?: () => void })._updateMarkerVisibility?.();
+  }, [p.hotspots, p.showHotspots, p.target, ready]);
+
+  // ---- colours for pins / hotspots follow the variable's colour scheme ----
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const c = endColors(p.scheme);
+    el.style.setProperty('--c-pos', c.pos);
+    el.style.setProperty('--c-neg', c.neg);
+  }, [p.scheme]);
+
+  // ---- imagery toggle + auto-rotate ----
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !ready) return;
+    if (!map.getLayer(IMAGERY_LAYER)) return; // style not (re)loaded yet, e.g. right after a hot reload
+    map.setLayoutProperty(IMAGERY_LAYER, 'visibility', p.showImagery ? 'visible' : 'none');
+  }, [p.showImagery, ready]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    spinRef.current = p.autoRotate;
+    if (!map || !ready || !p.autoRotate) return;
     const c = map.getCenter();
     c.lng -= 3;
     map.easeTo({ center: c, duration: 1000, easing: (t) => t });
-  }, [autoRotate, ready]);
+  }, [p.autoRotate, ready]);
 
-  // ---- pin styling: selected / highlighted / dimmed ----
-  useEffect(() => {
-    pinEls.current.forEach((el, id) => {
-      el.classList.toggle('is-selected', id === selectedRegionId);
-      el.classList.toggle('is-match', !!highlightRegionIds && highlightRegionIds.has(id));
-      el.classList.toggle('is-dim', !!highlightRegionIds && !highlightRegionIds.has(id));
-    });
-  }, [selectedRegionId, highlightRegionIds]);
-
-  // ---- region outline + camera move on selection ----
+  // ---- selection: outline, highlighted hotspot cells, camera ----
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !ready) return;
-    const region = regions.find((r) => r.id === selectedRegionId) ?? null;
+    const region = p.target?.kind === 'region' ? p.regions.find((r) => r.id === p.target!.id) : undefined;
+    const outline = map.getSource('region-outline') as maplibregl.GeoJSONSource | undefined;
+    outline?.setData(
+      region && region.id !== 'global'
+        ? {
+            type: 'Feature',
+            properties: {},
+            geometry: {
+              type: 'Polygon',
+              coordinates: [[[region.bbox[0], region.bbox[1]], [region.bbox[2], region.bbox[1]], [region.bbox[2], region.bbox[3]], [region.bbox[0], region.bbox[3]], [region.bbox[0], region.bbox[1]]]],
+            },
+          }
+        : EMPTY_FC,
+    );
+    const hl = map.getSource('hotspot-cells') as maplibregl.GeoJSONSource | undefined;
+    hl?.setData(p.highlightCells ? cellsOutline(p.highlightCells) : EMPTY_FC);
 
-    const src = map.getSource(OUTLINE_SOURCE) as maplibregl.GeoJSONSource | undefined;
-    src?.setData(region ? bboxToFeature(region.bbox) : EMPTY_FC);
-
-    if (region) {
+    if (region && region.id !== 'global') {
       map.flyTo({
-        center: [region.lon, region.lat],
-        zoom: 3.4,
+        center: [(region.bbox[0] + region.bbox[2]) / 2, (region.bbox[1] + region.bbox[3]) / 2],
+        zoom: zoomFor(spanOf(region.bbox)),
         speed: 0.9,
-        // shift the target left so it isn't hidden behind the side panel
         offset: [-190, 0],
       });
+    } else if (p.target?.kind === 'hotspot') {
+      const h = p.hotspots.find((x) => x.id === p.target!.id);
+      if (h?.centroid) {
+        map.flyTo({ center: [h.centroid[1], h.centroid[0]], zoom: zoomFor(spanOf(h.bbox)), speed: 0.9, offset: [-190, 0] });
+      }
     }
-  }, [selectedRegionId, ready, regions]);
+    if (!p.target && hadTarget.current) {
+      // selection cleared: go back to the overview so the whole globe can be dragged again
+      map.easeTo({ zoom: homeZoom.current, duration: 900, offset: [0, 0] });
+    }
+    hadTarget.current = !!p.target;
+    // camera should move only when the selection changes, not when hotspots reload
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [p.target, p.highlightCells, ready]);
 
-  return <div ref={containerRef} className="globe" />;
+  function resetView() {
+    const map = mapRef.current;
+    if (!map) return;
+    cb.current.onSelect(null);
+    map.easeTo({ center: [10, 25], zoom: homeZoom.current, pitch: 0, bearing: 0, duration: 900, offset: [0, 0] });
+  }
+
+  return (
+    <>
+      <div ref={containerRef} className="globe" />
+      <button type="button" className="reset-btn" onClick={resetView} title="Zoom out to the whole globe">
+        ⟲ Whole globe
+      </button>
+    </>
+  );
 }

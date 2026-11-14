@@ -162,9 +162,24 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("files", nargs="+")
     ap.add_argument("--out", default="data/trends")
+    ap.add_argument("--workers", type=int, default=1)
+    ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("--force", action="store_true", help="redo variables that already have results")
     a = ap.parse_args()
-    for f in a.files:
-        s = process(f, a.out)
+    files = [f for f in a.files
+             if a.force or not os.path.exists(os.path.join(a.out, os.path.basename(f)[:-4] + ".json"))]
+    print(f"{len(files)} to do, {len(a.files) - len(files)} already finished")
+    if a.workers > 1:
+        from concurrent.futures import ProcessPoolExecutor
+        with ProcessPoolExecutor(a.workers) as ex:
+            results = list(ex.map(process, files, [a.out] * len(files)))
+    else:
+        results = (process(f, a.out) for f in files)
+    for s in results:
+        if a.quiet:
+            print(f"{s['var_id']}: global {s['global_slope_per_decade']:+.3g} {s['units']}/decade, "
+                  f"{100*s['sig_area_fraction']:.0f}% significant area")
+            continue
         print(f"{s['var_id']}  [{s['units']}]")
         print(f"  test used: {s['test_used']} (clean-residual cells {100*s['clean_residual_fraction']:.0f}%)")
         print(f"  significant (FDR 5%): {s['sig_cells']} cells = {100*s['sig_area_fraction']:.0f}% of area "

@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXAER.BCCMASS",
+ "units": "kg m-2",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.003,
+ "sig_cells": 831,
+ "sig_area_fraction": 0.405,
+ "sig_positive_area": 0.076,
+ "sig_negative_area": 0.328,
+ "divergence": 0.377,
+ "global_slope_per_decade": -0.0012093288320994006,
+ "global_ci": [
+  -0.002302530091085374,
+  -9.795357721338697e-05
+ ],
+ "global_p_mk": 0.030637835791397228,
+ "global_p_ols": 0.0009830407625452387
+}

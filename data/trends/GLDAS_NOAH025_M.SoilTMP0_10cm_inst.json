@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst",
+ "units": "K",
+ "n_months": 240,
+ "cells_valid": 963,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.034,
+ "sig_cells": 363,
+ "sig_area_fraction": 0.42,
+ "sig_positive_area": 0.19,
+ "sig_negative_area": 0.231,
+ "divergence": 0.902,
+ "global_slope_per_decade": 0.10446969311896165,
+ "global_ci": [
+  -0.060825053289516255,
+  0.2739220318184142
+ ],
+ "global_p_mk": 0.21110596947907267,
+ "global_p_ols": 0.0006109414290415949
+}

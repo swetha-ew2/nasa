@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_NOAH025_M.SnowDepth_inst",
+ "units": "m",
+ "n_months": 240,
+ "cells_valid": 963,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 145,
+ "sig_area_fraction": 0.087,
+ "sig_positive_area": 0.061,
+ "sig_negative_area": 0.026,
+ "divergence": 0.605,
+ "global_slope_per_decade": -0.062320065666687685,
+ "global_ci": [
+  -0.1540964732893906,
+  0.04384559706261057
+ ],
+ "global_p_mk": 0.2118460000724851,
+ "global_p_ols": 5.088517541550073e-12
+}

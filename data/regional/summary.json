@@ -1,0 +1,3682 @@
+{
+ "regions": [
+  {
+   "id": "amazon",
+   "name": "Amazon Basin",
+   "bbox": [
+    -70.0,
+    -12.0,
+    -50.0,
+    4.0
+   ]
+  },
+  {
+   "id": "sahel",
+   "name": "Sahel",
+   "bbox": [
+    -15.0,
+    10.0,
+    25.0,
+    18.0
+   ]
+  },
+  {
+   "id": "arctic",
+   "name": "Arctic Ocean (Beaufort\u2013Chukchi)",
+   "bbox": [
+    -170.0,
+    70.0,
+    -130.0,
+    82.0
+   ]
+  },
+  {
+   "id": "tibet",
+   "name": "Tibetan Plateau",
+   "bbox": [
+    78.0,
+    28.0,
+    98.0,
+    38.0
+   ]
+  },
+  {
+   "id": "gbr",
+   "name": "Great Barrier Reef",
+   "bbox": [
+    143.0,
+    -24.0,
+    154.0,
+    -11.0
+   ]
+  },
+  {
+   "id": "nsea",
+   "name": "North Sea & Low Countries",
+   "bbox": [
+    -2.0,
+    50.0,
+    10.0,
+    57.0
+   ]
+  },
+  {
+   "id": "cvalley",
+   "name": "California Central Valley",
+   "bbox": [
+    -122.5,
+    34.5,
+    -118.5,
+    40.0
+   ]
+  },
+  {
+   "id": "med",
+   "name": "Mediterranean Basin",
+   "bbox": [
+    -6.0,
+    30.0,
+    36.0,
+    45.0
+   ]
+  },
+  {
+   "id": "indo",
+   "name": "Indonesia & Maritime Continent",
+   "bbox": [
+    95.0,
+    -10.0,
+    141.0,
+    6.0
+   ]
+  },
+  {
+   "id": "igp",
+   "name": "Indo-Gangetic Plain",
+   "bbox": [
+    72.0,
+    22.0,
+    92.0,
+    30.0
+   ]
+  },
+  {
+   "id": "antp",
+   "name": "Antarctic Peninsula",
+   "bbox": [
+    -75.0,
+    -72.0,
+    -55.0,
+    -62.0
+   ]
+  },
+  {
+   "id": "global",
+   "name": "Global",
+   "bbox": [
+    -180,
+    -90,
+    180,
+    90
+   ]
+  }
+ ],
+ "variables": {
+  "M2TMNXSLV.T2M": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": 0.4518,
+    "ci95": [
+     0.03654,
+     0.8958
+    ],
+    "p": 0.0342,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 1.319,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": -0.1769,
+    "ci95": [
+     -0.4077,
+     0.05602
+    ],
+    "p": 0.1366,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.4602,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "ok",
+    "slope_per_decade": 0.5208,
+    "ci95": [
+     0.08733,
+     0.9899
+    ],
+    "p": 0.01859,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 0.664,
+    "cover": 1.0
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": 0.2415,
+    "ci95": [
+     -0.007286,
+     0.483
+    ],
+    "p": 0.05642,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.6,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": 0.5104,
+    "ci95": [
+     0.298,
+     0.7226
+    ],
+    "p": 1.087e-05,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.929,
+    "cover": 1.0
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": 0.5816,
+    "ci95": [
+     0.2632,
+     0.9079
+    ],
+    "p": 0.0006678,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.038,
+    "cover": 1.0
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": 0.5707,
+    "ci95": [
+     0.2684,
+     0.8552
+    ],
+    "p": 0.0002043,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.162,
+    "cover": 1.0
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": 0.6914,
+    "ci95": [
+     0.4854,
+     0.8915
+    ],
+    "p": 5.276e-09,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 2.158,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": 0.3043,
+    "ci95": [
+     0.1434,
+     0.4663
+    ],
+    "p": 0.0007385,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 2.601,
+    "cover": 1.0
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": -0.01262,
+    "ci95": [
+     -0.2934,
+     0.2546
+    ],
+    "p": 0.9193,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.03133,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "ok",
+    "slope_per_decade": -0.05209,
+    "ci95": [
+     -0.4721,
+     0.3675
+    ],
+    "p": 0.8209,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.07118,
+    "cover": 1.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": 0.2236,
+    "ci95": [
+     0.09789,
+     0.3596
+    ],
+    "p": 0.001429,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 2.582,
+    "cover": 1.0
+   }
+  ],
+  "REYNOLDS_NCDC_L4_MONTHLY_V5.sst": [
+   {
+    "id": "amazon",
+    "status": "no_data",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.0
+   },
+   {
+    "id": "sahel",
+    "status": "insufficient_coverage",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.07881
+   },
+   {
+    "id": "arctic",
+    "status": "ok",
+    "slope_per_decade": 0.0,
+    "ci95": [
+     -0.05653,
+     0.03232
+    ],
+    "p": 0.7899,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.0,
+    "cover": 1.0
+   },
+   {
+    "id": "tibet",
+    "status": "no_data",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": 0.306,
+    "ci95": [
+     0.08909,
+     0.5177
+    ],
+    "p": 0.007675,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.63,
+    "cover": 0.8099
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": 0.5003,
+    "ci95": [
+     0.1567,
+     0.8323
+    ],
+    "p": 0.004767,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.383,
+    "cover": 1.0
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": 0.4167,
+    "ci95": [
+     -0.03034,
+     0.8603
+    ],
+    "p": 0.06573,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 1.157,
+    "cover": 0.661
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": 0.5603,
+    "ci95": [
+     0.4314,
+     0.6906
+    ],
+    "p": 4.153e-11,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 3.494,
+    "cover": 0.8731
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": 0.1962,
+    "ci95": [
+     -0.007822,
+     0.4005
+    ],
+    "p": 0.0595,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 1.371,
+    "cover": 1.0
+   },
+   {
+    "id": "igp",
+    "status": "insufficient_coverage",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.1923
+   },
+   {
+    "id": "antp",
+    "status": "ok",
+    "slope_per_decade": 0.004443,
+    "ci95": [
+     -0.1184,
+     0.122
+    ],
+    "p": 0.9331,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.06671,
+    "cover": 0.9614
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": 0.2228,
+    "ci95": [
+     0.061,
+     0.391
+    ],
+    "p": 0.02047,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 4.613,
+    "cover": 0.8005
+   }
+  ],
+  "NASA_SSH_REF_SIMPLE_GRID_V11.ssha": [
+   {
+    "id": "amazon",
+    "status": "insufficient_coverage",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.06283
+   },
+   {
+    "id": "sahel",
+    "status": "insufficient_coverage",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.07881
+   },
+   {
+    "id": "arctic",
+    "status": "insufficient_coverage",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.1981
+   },
+   {
+    "id": "tibet",
+    "status": "no_data",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": 0.03978,
+    "ci95": [
+     0.0265,
+     0.05264
+    ],
+    "p": 8.443e-07,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 2.877,
+    "cover": 0.9457
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": 0.03896,
+    "ci95": [
+     0.02568,
+     0.05225
+    ],
+    "p": 2.233e-08,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.194,
+    "cover": 1.0
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": 0.03085,
+    "ci95": [
+     0.02014,
+     0.04146
+    ],
+    "p": 2.215e-06,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 2.186,
+    "cover": 0.661
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": 0.03399,
+    "ci95": [
+     0.02674,
+     0.04148
+    ],
+    "p": 1.998e-15,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 2.123,
+    "cover": 0.9577
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": 0.03748,
+    "ci95": [
+     -0.01323,
+     0.08438
+    ],
+    "p": 0.1285,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 1.5,
+    "cover": 1.0
+   },
+   {
+    "id": "igp",
+    "status": "insufficient_coverage",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.1923
+   },
+   {
+    "id": "antp",
+    "status": "ok",
+    "slope_per_decade": 0.003525,
+    "ci95": [
+     -0.004014,
+     0.01122
+    ],
+    "p": 0.372,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.2881,
+    "cover": 1.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": 0.03573,
+    "ci95": [
+     0.03433,
+     0.0372
+    ],
+    "p": 1e-16,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 23.34,
+    "cover": 0.7845
+   }
+  ],
+  "GPM_3IMERGM.precipitation": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": -0.01546,
+    "ci95": [
+     -0.02657,
+     -0.005278
+    ],
+    "p": 0.00492,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -0.8877,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": 0.0004536,
+    "ci95": [
+     -0.0004465,
+     0.001943
+    ],
+    "p": 0.3814,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.06907,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "ok",
+    "slope_per_decade": 0.003473,
+    "ci95": [
+     0.00162,
+     0.005303
+    ],
+    "p": 0.0002868,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 0.7198,
+    "cover": 1.0
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": 0.000689,
+    "ci95": [
+     -0.00178,
+     0.003189
+    ],
+    "p": 0.5688,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.1006,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": 0.0003938,
+    "ci95": [
+     -0.01063,
+     0.01198
+    ],
+    "p": 0.9542,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.0128,
+    "cover": 1.0
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": 0.005419,
+    "ci95": [
+     -0.003786,
+     0.01479
+    ],
+    "p": 0.1976,
+    "test_used": "ols",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.285,
+    "cover": 1.0
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": 0.000367,
+    "ci95": [
+     -0.003893,
+     0.004769
+    ],
+    "p": 0.8512,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.02021,
+    "cover": 1.0
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": -0.003486,
+    "ci95": [
+     -0.006905,
+     0.0002657
+    ],
+    "p": 0.06777,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.4338,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": 0.006899,
+    "ci95": [
+     -0.01558,
+     0.03049
+    ],
+    "p": 0.5433,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.2114,
+    "cover": 1.0
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": 0.003805,
+    "ci95": [
+     -0.001476,
+     0.009284
+    ],
+    "p": 0.1576,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.23,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "ok",
+    "slope_per_decade": 0.01301,
+    "ci95": [
+     0.008325,
+     0.01784
+    ],
+    "p": 1.252e-07,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.332,
+    "cover": 1.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": 0.0009357,
+    "ci95": [
+     -6.237e-05,
+     0.001911
+    ],
+    "p": 0.06451,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.6438,
+    "cover": 1.0
+   }
+  ],
+  "MOD10CM.Snow_Cover_Monthly_CMG": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": -0.000238,
+    "ci95": [
+     -0.0004498,
+     -1.22e-05
+    ],
+    "p": 0.03887,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.4259,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": 0.0,
+    "ci95": [
+     -5.823e-07,
+     5.622e-07
+    ],
+    "p": 0.9949,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.0,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "insufficient_coverage",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.3961
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": -0.327,
+    "ci95": [
+     -1.673,
+     0.9668
+    ],
+    "p": 0.6119,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.1541,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": -0.001542,
+    "ci95": [
+     -0.003411,
+     0.0002854
+    ],
+    "p": 0.1033,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.2038,
+    "cover": 0.8598
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": -0.07167,
+    "ci95": [
+     -0.4485,
+     0.2289
+    ],
+    "p": 0.5472,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.02197,
+    "cover": 0.8913
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": -0.1547,
+    "ci95": [
+     -0.8349,
+     0.398
+    ],
+    "p": 0.5236,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.09833,
+    "cover": 1.0
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": -0.05575,
+    "ci95": [
+     -0.1814,
+     -0.005658
+    ],
+    "p": 0.01619,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.06135,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": -0.003154,
+    "ci95": [
+     -0.006675,
+     0.0002668
+    ],
+    "p": 0.07018,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.1081,
+    "cover": 0.924
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": -0.1336,
+    "ci95": [
+     -0.3736,
+     0.1269
+    ],
+    "p": 0.3024,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.325,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "ok",
+    "slope_per_decade": -0.00151,
+    "ci95": [
+     -0.003078,
+     -0.0002441
+    ],
+    "p": 0.01822,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.2073,
+    "cover": 0.9112
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": -0.2212,
+    "ci95": [
+     -0.3757,
+     -0.07182
+    ],
+    "p": 0.003664,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -0.9348,
+    "cover": 0.4739
+   }
+  ],
+  "MOD13C2.CMG 0.05 Deg Monthly NDVI": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": 0.001719,
+    "ci95": [
+     -0.001366,
+     0.004799
+    ],
+    "p": 0.2632,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.6122,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": 0.006407,
+    "ci95": [
+     0.001023,
+     0.0125
+    ],
+    "p": 0.02082,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.226,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "insufficient_coverage",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.3961
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": 0.01004,
+    "ci95": [
+     0.007175,
+     0.01283
+    ],
+    "p": 9.226e-09,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 2.88,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": 0.01433,
+    "ci95": [
+     -0.002842,
+     0.03101
+    ],
+    "p": 0.09702,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 1.129,
+    "cover": 0.8598
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": 0.009734,
+    "ci95": [
+     -0.001068,
+     0.02207
+    ],
+    "p": 0.07906,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.6785,
+    "cover": 1.0
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": -0.006088,
+    "ci95": [
+     -0.02117,
+     0.009094
+    ],
+    "p": 0.4131,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.6084,
+    "cover": 1.0
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": 0.007714,
+    "ci95": [
+     0.00166,
+     0.01381
+    ],
+    "p": 0.01332,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.532,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": 0.006082,
+    "ci95": [
+     0.0009295,
+     0.01117
+    ],
+    "p": 0.02356,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.352,
+    "cover": 0.9253
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": 0.03253,
+    "ci95": [
+     0.02513,
+     0.04005
+    ],
+    "p": 1.884e-10,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 4.177,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "no_data",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": 0.008013,
+    "ci95": [
+     0.00652,
+     0.009525
+    ],
+    "p": 1.375e-12,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 4.808,
+    "cover": 0.4828
+   }
+  ],
+  "GLDAS_CLSM10_M.TWS_inst": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": -84.59,
+    "ci95": [
+     -160.6,
+     -6.947
+    ],
+    "p": 0.03745,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -3.087,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": 0.6549,
+    "ci95": [
+     -15.49,
+     20.22
+    ],
+    "p": 0.9281,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.08247,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "insufficient_coverage",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.132
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": -1.81,
+    "ci95": [
+     -26.39,
+     20.67
+    ],
+    "p": 0.8679,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.1966,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": -26.79,
+    "ci95": [
+     -78.56,
+     22.47
+    ],
+    "p": 0.2728,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.9521,
+    "cover": 0.6015
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": -62.01,
+    "ci95": [
+     -149.8,
+     22.92
+    ],
+    "p": 0.1223,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -2.275,
+    "cover": 0.8913
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": -2.793,
+    "ci95": [
+     -58.92,
+     45.65
+    ],
+    "p": 0.913,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.1088,
+    "cover": 0.9399
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": -25.39,
+    "ci95": [
+     -52.24,
+     -2.752
+    ],
+    "p": 0.03291,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -2.385,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": -28.02,
+    "ci95": [
+     -216.7,
+     165.1
+    ],
+    "p": 0.6526,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.6788,
+    "cover": 0.7339
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": -7.605,
+    "ci95": [
+     -41.29,
+     24.37
+    ],
+    "p": 0.6017,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.5047,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "no_data",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": -29.38,
+    "ci95": [
+     -66.78,
+     12.82
+    ],
+    "p": 0.1033,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -4.681,
+    "cover": 0.3631
+   }
+  ],
+  "M2TMNXRAD.SWGDN": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": 1.025,
+    "ci95": [
+     -2.561,
+     4.751
+    ],
+    "p": 0.567,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.2411,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": -1.133,
+    "ci95": [
+     -3.25,
+     1.048
+    ],
+    "p": 0.3299,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.3326,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "ok",
+    "slope_per_decade": -1.116,
+    "ci95": [
+     -3.316,
+     -0.01392
+    ],
+    "p": 0.01004,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -0.2394,
+    "cover": 1.0
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": -4.138,
+    "ci95": [
+     -5.764,
+     -2.484
+    ],
+    "p": 1.48e-06,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -1.414,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": -0.5459,
+    "ci95": [
+     -4.225,
+     3.332
+    ],
+    "p": 0.7642,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.06976,
+    "cover": 1.0
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": 0.3886,
+    "ci95": [
+     -1.365,
+     2.152
+    ],
+    "p": 0.6548,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.08512,
+    "cover": 1.0
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": -0.2514,
+    "ci95": [
+     -3.24,
+     2.722
+    ],
+    "p": 0.8406,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.04512,
+    "cover": 1.0
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": 1.188,
+    "ci95": [
+     -0.077,
+     2.398
+    ],
+    "p": 0.0655,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.4438,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": 3.084,
+    "ci95": [
+     -2.229,
+     8.395
+    ],
+    "p": 0.2469,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.5245,
+    "cover": 1.0
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": -2.447,
+    "ci95": [
+     -4.333,
+     -0.5592
+    ],
+    "p": 0.01243,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -0.6468,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "ok",
+    "slope_per_decade": -0.7763,
+    "ci95": [
+     -1.809,
+     -0.08948
+    ],
+    "p": 0.01963,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.2385,
+    "cover": 1.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": -0.8994,
+    "ci95": [
+     -1.16,
+     -0.6219
+    ],
+    "p": 8.748e-09,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -2.193,
+    "cover": 1.0
+   }
+  ],
+  "M2TMNXLND.GWETTOP": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": -0.02616,
+    "ci95": [
+     -0.07683,
+     0.025
+    ],
+    "p": 0.2825,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -1.202,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": 0.03308,
+    "ci95": [
+     0.01181,
+     0.05468
+    ],
+    "p": 0.004314,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 2.171,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "ok",
+    "slope_per_decade": 0.004525,
+    "ci95": [
+     0.0001246,
+     0.01161
+    ],
+    "p": 0.04442,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 2.099,
+    "cover": 1.0
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": 0.02738,
+    "ci95": [
+     0.01039,
+     0.04456
+    ],
+    "p": 0.003132,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 2.23,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": -0.02274,
+    "ci95": [
+     -0.04072,
+     -0.004157
+    ],
+    "p": 0.01739,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -1.401,
+    "cover": 1.0
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": -0.0003085,
+    "ci95": [
+     -0.01506,
+     0.01391
+    ],
+    "p": 0.9615,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.02947,
+    "cover": 1.0
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": -0.008177,
+    "ci95": [
+     -0.04157,
+     0.02515
+    ],
+    "p": 0.6033,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.3488,
+    "cover": 1.0
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": -0.00905,
+    "ci95": [
+     -0.0181,
+     -4.898e-05
+    ],
+    "p": 0.04887,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -1.193,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": 0.001687,
+    "ci95": [
+     -0.02032,
+     0.02268
+    ],
+    "p": 0.8514,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.1696,
+    "cover": 1.0
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": 0.03176,
+    "ci95": [
+     0.009637,
+     0.05424
+    ],
+    "p": 0.006126,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.401,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "ok",
+    "slope_per_decade": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "p": 1.0,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": null,
+    "cover": 1.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": 0.001716,
+    "ci95": [
+     2.749e-05,
+     0.003341
+    ],
+    "p": 0.04678,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.666,
+    "cover": 1.0
+   }
+  ],
+  "GLDAS_VIC10_M.Swnet_tavg": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": -0.02658,
+    "ci95": [
+     -6.24,
+     6.288
+    ],
+    "p": 0.9926,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.00428,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": 4.235,
+    "ci95": [
+     2.425,
+     6.04
+    ],
+    "p": 9.478e-06,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.5,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "insufficient_coverage",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.132
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": 1.215,
+    "ci95": [
+     -3.733,
+     6.19
+    ],
+    "p": 0.625,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.2071,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": 6.858,
+    "ci95": [
+     3.143,
+     10.72
+    ],
+    "p": 0.000466,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.053,
+    "cover": 0.6015
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": -2.204,
+    "ci95": [
+     -4.613,
+     0.05665
+    ],
+    "p": 0.05689,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.4468,
+    "cover": 0.8913
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": -0.06429,
+    "ci95": [
+     -2.929,
+     2.795
+    ],
+    "p": 0.9664,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.01312,
+    "cover": 0.9399
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": 3.754,
+    "ci95": [
+     2.314,
+     5.201
+    ],
+    "p": 2.014e-06,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.563,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": 2.39,
+    "ci95": [
+     -4.281,
+     9.138
+    ],
+    "p": 0.4496,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.3892,
+    "cover": 0.7339
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": 2.548,
+    "ci95": [
+     -0.2708,
+     5.465
+    ],
+    "p": 0.07598,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.5736,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "no_data",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": 1.899,
+    "ci95": [
+     -0.2368,
+     4.12
+    ],
+    "p": 0.07538,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.9593,
+    "cover": 0.3631
+   }
+  ],
+  "M2TMNXAER.TOTEXTTAU": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": 0.01316,
+    "ci95": [
+     -0.001244,
+     0.02494
+    ],
+    "p": 0.0706,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.4128,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": -0.02439,
+    "ci95": [
+     -0.04054,
+     -0.007956
+    ],
+    "p": 0.00503,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -0.7695,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "ok",
+    "slope_per_decade": -0.00323,
+    "ci95": [
+     -0.009449,
+     0.00296
+    ],
+    "p": 0.2875,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.2377,
+    "cover": 1.0
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": 0.003444,
+    "ci95": [
+     -0.002187,
+     0.009051
+    ],
+    "p": 0.2302,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.3794,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": -0.004023,
+    "ci95": [
+     -0.007277,
+     -0.0007821
+    ],
+    "p": 0.01417,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -0.5663,
+    "cover": 1.0
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": -0.00577,
+    "ci95": [
+     -0.01068,
+     -0.0007289
+    ],
+    "p": 0.02637,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -0.545,
+    "cover": 1.0
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": -0.001473,
+    "ci95": [
+     -0.006317,
+     0.003579
+    ],
+    "p": 0.5343,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.07316,
+    "cover": 1.0
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": -0.009533,
+    "ci95": [
+     -0.01568,
+     -0.003509
+    ],
+    "p": 0.002682,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -0.7986,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": -0.004229,
+    "ci95": [
+     -0.01431,
+     0.004798
+    ],
+    "p": 0.3579,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.1855,
+    "cover": 1.0
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": 0.02428,
+    "ci95": [
+     0.00877,
+     0.03933
+    ],
+    "p": 0.002439,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.002,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "ok",
+    "slope_per_decade": 0.005034,
+    "ci95": [
+     0.001515,
+     0.008489
+    ],
+    "p": 0.004706,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 0.9623,
+    "cover": 1.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": -0.0009709,
+    "ci95": [
+     -0.00359,
+     0.001793
+    ],
+    "p": 0.4739,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.2717,
+    "cover": 1.0
+   }
+  ],
+  "GLDAS_NOAH025_M.SoilMoi10_40cm_inst": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": -4.501,
+    "ci95": [
+     -7.612,
+     -1.73
+    ],
+    "p": 0.003347,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -2.02,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": -0.4272,
+    "ci95": [
+     -2.118,
+     1.109
+    ],
+    "p": 0.5443,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.4353,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "insufficient_coverage",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.2641
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": -0.459,
+    "ci95": [
+     -1.366,
+     0.43
+    ],
+    "p": 0.311,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.5887,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": -3.052,
+    "ci95": [
+     -6.362,
+     0.2666
+    ],
+    "p": 0.07056,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -1.018,
+    "cover": 0.8598
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": 0.055,
+    "ci95": [
+     -2.236,
+     2.037
+    ],
+    "p": 0.9657,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.021,
+    "cover": 0.8913
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": -0.1157,
+    "ci95": [
+     -4.922,
+     4.493
+    ],
+    "p": 0.9676,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.03467,
+    "cover": 1.0
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": -1.598,
+    "ci95": [
+     -2.827,
+     -0.3701
+    ],
+    "p": 0.01206,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -1.39,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": -1.732,
+    "ci95": [
+     -5.511,
+     1.397
+    ],
+    "p": 0.2415,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.7013,
+    "cover": 0.8696
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": 0.1895,
+    "ci95": [
+     -2.267,
+     2.807
+    ],
+    "p": 0.8796,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.09015,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "no_data",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": -0.6873,
+    "ci95": [
+     -1.489,
+     0.06288
+    ],
+    "p": 0.0705,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -1.477,
+    "cover": 0.4083
+   }
+  ],
+  "M2TMNXSLV.H500": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": 7.759,
+    "ci95": [
+     3.488,
+     12.38
+    ],
+    "p": 0.0006264,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 2.116,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": 6.88,
+    "ci95": [
+     2.6,
+     11.14
+    ],
+    "p": 0.002545,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.679,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "ok",
+    "slope_per_decade": -3.845,
+    "ci95": [
+     -16.12,
+     8.806
+    ],
+    "p": 0.6863,
+    "test_used": "ols",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.1531,
+    "cover": 1.0
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": 7.585,
+    "ci95": [
+     3.553,
+     11.44
+    ],
+    "p": 0.0003176,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 0.9716,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": 8.247,
+    "ci95": [
+     3.936,
+     12.49
+    ],
+    "p": 0.0002311,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.547,
+    "cover": 1.0
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": 11.06,
+    "ci95": [
+     -3.153,
+     25.46
+    ],
+    "p": 0.08591,
+    "test_used": "ols",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.3908,
+    "cover": 1.0
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": 10.61,
+    "ci95": [
+     2.858,
+     18.26
+    ],
+    "p": 0.01022,
+    "test_used": "ols",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 0.6498,
+    "cover": 1.0
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": 16.71,
+    "ci95": [
+     11.37,
+     22.17
+    ],
+    "p": 9.55e-09,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.437,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": 7.418,
+    "ci95": [
+     1.643,
+     13.36
+    ],
+    "p": 0.01344,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.769,
+    "cover": 1.0
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": 8.116,
+    "ci95": [
+     4.929,
+     11.25
+    ],
+    "p": 6.477e-06,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.223,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "ok",
+    "slope_per_decade": -8.159,
+    "ci95": [
+     -22.13,
+     5.648
+    ],
+    "p": 0.2492,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.298,
+    "cover": 1.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": 7.152,
+    "ci95": [
+     4.007,
+     10.44
+    ],
+    "p": 6.954e-05,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 3.247,
+    "cover": 1.0
+   }
+  ],
+  "GLDAS_CLSM10_M.Qle_tavg": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": 1.411,
+    "ci95": [
+     -5.759,
+     8.702
+    ],
+    "p": 0.6923,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.248,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": 1.11,
+    "ci95": [
+     -1.128,
+     3.531
+    ],
+    "p": 0.3457,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.513,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "insufficient_coverage",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.132
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": 0.3344,
+    "ci95": [
+     -0.6773,
+     1.343
+    ],
+    "p": 0.5306,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.2411,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": -2.253,
+    "ci95": [
+     -9.405,
+     4.843
+    ],
+    "p": 0.5207,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.2997,
+    "cover": 0.6015
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": 1.79,
+    "ci95": [
+     -0.471,
+     3.897
+    ],
+    "p": 0.1183,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.4786,
+    "cover": 0.8913
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": -0.1009,
+    "ci95": [
+     -5.402,
+     4.925
+    ],
+    "p": 0.9682,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.01869,
+    "cover": 0.9399
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": -1.168,
+    "ci95": [
+     -3.145,
+     0.6126
+    ],
+    "p": 0.1918,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.5823,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": 7.076,
+    "ci95": [
+     -3.504,
+     15.79
+    ],
+    "p": 0.1659,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 1.232,
+    "cover": 0.7339
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": 1.704,
+    "ci95": [
+     -1.682,
+     5.361
+    ],
+    "p": 0.3071,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.4738,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "no_data",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": 0.383,
+    "ci95": [
+     -0.9092,
+     1.571
+    ],
+    "p": 0.532,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.3974,
+    "cover": 0.3631
+   }
+  ],
+  "M2TMNXSLV.CLDTMP": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": 0.4358,
+    "ci95": [
+     -0.9581,
+     1.913
+    ],
+    "p": 0.5558,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.2269,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": 0.6328,
+    "ci95": [
+     -0.02851,
+     1.3
+    ],
+    "p": 0.06034,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.4252,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "ok",
+    "slope_per_decade": -0.06306,
+    "ci95": [
+     -0.5898,
+     0.4393
+    ],
+    "p": 0.5578,
+    "test_used": "ols",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.06727,
+    "cover": 1.0
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": -0.05325,
+    "ci95": [
+     -0.6401,
+     0.5675
+    ],
+    "p": 0.8778,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.05034,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": -0.4646,
+    "ci95": [
+     -2.17,
+     1.26
+    ],
+    "p": 0.6004,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.1375,
+    "cover": 1.0
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": -0.7492,
+    "ci95": [
+     -1.479,
+     -0.02946
+    ],
+    "p": 0.03287,
+    "test_used": "ols",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.4614,
+    "cover": 1.0
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": -0.5494,
+    "ci95": [
+     -1.865,
+     0.7323
+    ],
+    "p": 0.2348,
+    "test_used": "ols",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.2096,
+    "cover": 1.0
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": -0.6737,
+    "ci95": [
+     -1.424,
+     0.08617
+    ],
+    "p": 0.0793,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.431,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": -0.103,
+    "ci95": [
+     -2.419,
+     2.242
+    ],
+    "p": 0.9287,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.04291,
+    "cover": 1.0
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": 1.381,
+    "ci95": [
+     0.05193,
+     2.764
+    ],
+    "p": 0.04099,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.5124,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "ok",
+    "slope_per_decade": -0.468,
+    "ci95": [
+     -0.915,
+     -0.003534
+    ],
+    "p": 0.04791,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.5207,
+    "cover": 1.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": -0.1979,
+    "ci95": [
+     -0.376,
+     -0.02587
+    ],
+    "p": 0.02502,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -0.7132,
+    "cover": 0.9917
+   }
+  ],
+  "GLDAS_VIC10_M.Qs_acc": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": -0.02068,
+    "ci95": [
+     -0.03066,
+     -0.01138
+    ],
+    "p": 2.261e-05,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -1.399,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": 3.827e-05,
+    "ci95": [
+     -0.0002373,
+     0.0004532
+    ],
+    "p": 0.7573,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.01715,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "insufficient_coverage",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.132
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": -0.0003533,
+    "ci95": [
+     -0.001747,
+     0.0006811
+    ],
+    "p": 0.5372,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.03207,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": -0.00171,
+    "ci95": [
+     -0.0074,
+     0.003136
+    ],
+    "p": 0.5045,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.08904,
+    "cover": 0.6015
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": -0.001394,
+    "ci95": [
+     -0.005111,
+     0.002545
+    ],
+    "p": 0.41,
+    "test_used": "ols",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.1783,
+    "cover": 0.8913
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": -0.0005779,
+    "ci95": [
+     -0.003342,
+     0.001093
+    ],
+    "p": 0.4913,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.05433,
+    "cover": 0.9399
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": -0.003,
+    "ci95": [
+     -0.005032,
+     -0.001185
+    ],
+    "p": 0.001624,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -0.7688,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": -0.006217,
+    "ci95": [
+     -0.01793,
+     0.005602
+    ],
+    "p": 0.2948,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.3872,
+    "cover": 0.7339
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": -0.000698,
+    "ci95": [
+     -0.005603,
+     0.003281
+    ],
+    "p": 0.7344,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.04039,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "no_data",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": -0.004015,
+    "ci95": [
+     -0.005288,
+     -0.002755
+    ],
+    "p": 1.398e-08,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -1.845,
+    "cover": 0.3631
+   }
+  ],
+  "FLDAS_NOAH01_C_GL_M.Evap_tavg": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": -5.053e-08,
+    "ci95": [
+     -9.138e-07,
+     7.942e-07
+    ],
+    "p": 0.9051,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.05517,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": 5.544e-07,
+    "ci95": [
+     2.672e-07,
+     8.804e-07
+    ],
+    "p": 0.0005144,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.1,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "insufficient_coverage",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.3301
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": -1.524e-07,
+    "ci95": [
+     -3.792e-07,
+     7.239e-08
+    ],
+    "p": 0.1715,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.2961,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": 6.542e-07,
+    "ci95": [
+     -8.855e-07,
+     2.223e-06
+    ],
+    "p": 0.4086,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.3652,
+    "cover": 0.8598
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": 5.246e-07,
+    "ci95": [
+     -2.987e-07,
+     1.343e-06
+    ],
+    "p": 0.2078,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.3943,
+    "cover": 0.8913
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": -1.335e-07,
+    "ci95": [
+     -1.485e-06,
+     1.199e-06
+    ],
+    "p": 0.8237,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.1131,
+    "cover": 1.0
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": -5.897e-07,
+    "ci95": [
+     -1.034e-06,
+     -1.662e-07
+    ],
+    "p": 0.007343,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -1.045,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": 8.212e-07,
+    "ci95": [
+     2.153e-07,
+     1.438e-06
+    ],
+    "p": 0.01,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 0.93,
+    "cover": 0.8696
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": 6.8e-07,
+    "ci95": [
+     1.6e-07,
+     1.227e-06
+    ],
+    "p": 0.01031,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 0.6936,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "no_data",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": 8.572e-08,
+    "ci95": [
+     -1.965e-08,
+     1.927e-07
+    ],
+    "p": 0.1113,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.5477,
+    "cover": 0.4187
+   }
+  ],
+  "GLDAS_NOAH025_M.SoilTMP0_10cm_inst": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": -1.037,
+    "ci95": [
+     -1.437,
+     -0.5618
+    ],
+    "p": 0.0002412,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -3.327,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": -0.1222,
+    "ci95": [
+     -0.4398,
+     0.1874
+    ],
+    "p": 0.4303,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.3267,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "insufficient_coverage",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.2641
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": 0.3362,
+    "ci95": [
+     -0.01086,
+     0.6835
+    ],
+    "p": 0.05762,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.7605,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": 0.2435,
+    "ci95": [
+     -0.02512,
+     0.4913
+    ],
+    "p": 0.07934,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.7342,
+    "cover": 0.8598
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": 0.0635,
+    "ci95": [
+     -0.3153,
+     0.4487
+    ],
+    "p": 0.7403,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.1017,
+    "cover": 0.8913
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": 0.1837,
+    "ci95": [
+     -0.1713,
+     0.5523
+    ],
+    "p": 0.2924,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.3223,
+    "cover": 1.0
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": 0.5293,
+    "ci95": [
+     0.3118,
+     0.751
+    ],
+    "p": 1.283e-05,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.488,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": -0.2267,
+    "ci95": [
+     -0.5076,
+     0.05689
+    ],
+    "p": 0.1114,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -1.312,
+    "cover": 0.8696
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": -0.5281,
+    "ci95": [
+     -0.9243,
+     -0.1019
+    ],
+    "p": 0.01621,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -1.231,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "no_data",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": 0.1045,
+    "ci95": [
+     -0.06083,
+     0.2739
+    ],
+    "p": 0.2111,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.7787,
+    "cover": 0.4083
+   }
+  ],
+  "GLDAS_VIC10_M.SoilMoi_depth2_inst": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": -4.319,
+    "ci95": [
+     -8.084,
+     -0.732
+    ],
+    "p": 0.0202,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -0.9638,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": 3.35,
+    "ci95": [
+     0.8388,
+     5.825
+    ],
+    "p": 0.01078,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.408,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "insufficient_coverage",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.132
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": -12.98,
+    "ci95": [
+     -20.41,
+     -6.252
+    ],
+    "p": 0.001503,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -4.094,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": -8.799,
+    "ci95": [
+     -24.55,
+     6.564
+    ],
+    "p": 0.2452,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.7131,
+    "cover": 0.6015
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": -4.002,
+    "ci95": [
+     -14.68,
+     5.555
+    ],
+    "p": 0.42,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.4206,
+    "cover": 0.8913
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": -2.965,
+    "ci95": [
+     -30.55,
+     22.25
+    ],
+    "p": 0.81,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.205,
+    "cover": 0.9399
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": -11.94,
+    "ci95": [
+     -19.32,
+     -5.236
+    ],
+    "p": 0.001568,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -2.697,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": -2.132,
+    "ci95": [
+     -10.78,
+     6.353
+    ],
+    "p": 0.5996,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.3212,
+    "cover": 0.7339
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": -2.894,
+    "ci95": [
+     -10.1,
+     4.297
+    ],
+    "p": 0.4074,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.4974,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "no_data",
+    "slope_per_decade": null,
+    "ci95": null,
+    "p": null,
+    "test_used": null,
+    "significant_fdr": null,
+    "direction": null,
+    "snr": null,
+    "cover": 0.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": -4.855,
+    "ci95": [
+     -6.559,
+     -3.103
+    ],
+    "p": 4.365e-05,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -4.196,
+    "cover": 0.3631
+   }
+  ],
+  "M2TMNXFLX.EVAP": [
+   {
+    "id": "amazon",
+    "status": "ok",
+    "slope_per_decade": -1.805e-06,
+    "ci95": [
+     -3.292e-06,
+     -3.606e-07
+    ],
+    "p": 0.01671,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -1.174,
+    "cover": 1.0
+   },
+   {
+    "id": "sahel",
+    "status": "ok",
+    "slope_per_decade": 2.12e-06,
+    "ci95": [
+     9.812e-07,
+     3.333e-06
+    ],
+    "p": 0.0005788,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.988,
+    "cover": 1.0
+   },
+   {
+    "id": "arctic",
+    "status": "ok",
+    "slope_per_decade": -1.417e-07,
+    "ci95": [
+     -3.69e-07,
+     8.274e-08
+    ],
+    "p": 0.2023,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": -0.2993,
+    "cover": 1.0
+   },
+   {
+    "id": "tibet",
+    "status": "ok",
+    "slope_per_decade": 1.113e-06,
+    "ci95": [
+     6.33e-07,
+     1.639e-06
+    ],
+    "p": 3.014e-05,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 2.015,
+    "cover": 1.0
+   },
+   {
+    "id": "gbr",
+    "status": "ok",
+    "slope_per_decade": -3.138e-06,
+    "ci95": [
+     -4.326e-06,
+     -1.949e-06
+    ],
+    "p": 1.055e-07,
+    "test_used": "ols",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -1.249,
+    "cover": 1.0
+   },
+   {
+    "id": "nsea",
+    "status": "ok",
+    "slope_per_decade": 1.315e-07,
+    "ci95": [
+     -3.925e-07,
+     6.591e-07
+    ],
+    "p": 0.6297,
+    "test_used": "ols",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.1127,
+    "cover": 1.0
+   },
+   {
+    "id": "cvalley",
+    "status": "ok",
+    "slope_per_decade": 7.31e-08,
+    "ci95": [
+     -1.128e-06,
+     1.269e-06
+    ],
+    "p": 0.9124,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.04902,
+    "cover": 1.0
+   },
+   {
+    "id": "med",
+    "status": "ok",
+    "slope_per_decade": 7.458e-08,
+    "ci95": [
+     -4.193e-07,
+     5.563e-07
+    ],
+    "p": 0.775,
+    "test_used": "mk",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.07254,
+    "cover": 1.0
+   },
+   {
+    "id": "indo",
+    "status": "ok",
+    "slope_per_decade": -8.25e-07,
+    "ci95": [
+     -1.516e-06,
+     -1.831e-07
+    ],
+    "p": 0.000211,
+    "test_used": "ols",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -0.7127,
+    "cover": 1.0
+   },
+   {
+    "id": "igp",
+    "status": "ok",
+    "slope_per_decade": 1.587e-06,
+    "ci95": [
+     6.429e-07,
+     2.635e-06
+    ],
+    "p": 0.001228,
+    "test_used": "mk",
+    "significant_fdr": true,
+    "direction": "increasing",
+    "snr": 1.124,
+    "cover": 1.0
+   },
+   {
+    "id": "antp",
+    "status": "ok",
+    "slope_per_decade": 5.642e-08,
+    "ci95": [
+     -2.013e-07,
+     3.029e-07
+    ],
+    "p": 0.734,
+    "test_used": "ols",
+    "significant_fdr": false,
+    "direction": "no significant trend",
+    "snr": 0.09383,
+    "cover": 1.0
+   },
+   {
+    "id": "global",
+    "status": "ok",
+    "slope_per_decade": -4.907e-07,
+    "ci95": [
+     -5.9e-07,
+     -3.864e-07
+    ],
+    "p": 1e-16,
+    "test_used": "ols",
+    "significant_fdr": true,
+    "direction": "decreasing",
+    "snr": -2.448,
+    "cover": 1.0
+   }
+  ]
+ }
+}

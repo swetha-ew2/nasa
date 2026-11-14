@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXAER.SUEXTTAU",
+ "units": "1",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.034,
+ "sig_cells": 1560,
+ "sig_area_fraction": 0.649,
+ "sig_positive_area": 0.015,
+ "sig_negative_area": 0.634,
+ "divergence": 0.046,
+ "global_slope_per_decade": -0.003367608441615224,
+ "global_ci": [
+  -0.005101933170879128,
+  -0.0016731508108442294
+ ],
+ "global_p_mk": 0.0003594184635773434,
+ "global_p_ols": 2.167176784930639e-33
+}

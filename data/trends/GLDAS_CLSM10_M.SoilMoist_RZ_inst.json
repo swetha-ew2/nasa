@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_CLSM10_M.SoilMoist_RZ_inst",
+ "units": "kg m-2",
+ "n_months": 240,
+ "cells_valid": 859,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 283,
+ "sig_area_fraction": 0.323,
+ "sig_positive_area": 0.066,
+ "sig_negative_area": 0.257,
+ "divergence": 0.41,
+ "global_slope_per_decade": -5.612651599293335,
+ "global_ci": [
+  -11.259459006236627,
+  0.6615950533062651
+ ],
+ "global_p_mk": 0.06681070815279977,
+ "global_p_ols": 1.2572117511602413e-43
+}

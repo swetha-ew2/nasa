@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXSLV.OMEGA500",
+ "units": "Pa s-1",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.522,
+ "sig_cells": 99,
+ "sig_area_fraction": 0.053,
+ "sig_positive_area": 0.017,
+ "sig_negative_area": 0.035,
+ "divergence": 0.661,
+ "global_slope_per_decade": -2.530571412907501e-06,
+ "global_ci": [
+  -1.2023819458248567e-05,
+  6.756246101614141e-06
+ ],
+ "global_p_mk": 0.5641079891465752,
+ "global_p_ols": 0.45458576167838805
+}

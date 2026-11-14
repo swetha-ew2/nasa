@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_NOAH025_M.AvgSurfT_inst",
+ "units": "K",
+ "n_months": 240,
+ "cells_valid": 963,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.002,
+ "sig_cells": 245,
+ "sig_area_fraction": 0.269,
+ "sig_positive_area": 0.096,
+ "sig_negative_area": 0.173,
+ "divergence": 0.715,
+ "global_slope_per_decade": -0.6872869338799653,
+ "global_ci": [
+  -1.488768735252517,
+  0.06287548061482241
+ ],
+ "global_p_mk": 0.07050195271140103,
+ "global_p_ols": 2.1645858879354136e-11
+}

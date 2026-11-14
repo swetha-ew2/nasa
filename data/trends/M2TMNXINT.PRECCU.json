@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXINT.PRECCU",
+ "units": "kg m-2 s-1",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.011,
+ "sig_cells": 98,
+ "sig_area_fraction": 0.053,
+ "sig_positive_area": 0.02,
+ "sig_negative_area": 0.034,
+ "divergence": 0.743,
+ "global_slope_per_decade": -4.6208259016837135e-07,
+ "global_ci": [
+  -5.705723355040731e-07,
+  -3.5373911284614737e-07
+ ],
+ "global_p_mk": 1.1923795284474181e-12,
+ "global_p_ols": 5.7737138195150645e-33
+}

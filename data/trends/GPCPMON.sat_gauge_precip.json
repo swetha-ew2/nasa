@@ -1,0 +1,20 @@
+{
+ "var_id": "GPCPMON.sat_gauge_precip",
+ "units": "mm/day",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.14,
+ "sig_cells": 87,
+ "sig_area_fraction": 0.029,
+ "sig_positive_area": 0.018,
+ "sig_negative_area": 0.011,
+ "divergence": 0.792,
+ "global_slope_per_decade": 0.0019659546086084373,
+ "global_ci": [
+  -0.02258133165888381,
+  0.027456132924834408
+ ],
+ "global_p_mk": 0.8919002945565333,
+ "global_p_ols": 9.785493522079011e-05
+}

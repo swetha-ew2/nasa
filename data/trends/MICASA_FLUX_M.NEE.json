@@ -1,0 +1,20 @@
+{
+ "var_id": "MICASA_FLUX_M.NEE",
+ "units": "kg m-2 s-1",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.003,
+ "sig_cells": 17,
+ "sig_area_fraction": 0.007,
+ "sig_positive_area": 0.002,
+ "sig_negative_area": 0.005,
+ "divergence": 0.68,
+ "global_slope_per_decade": -1.2739017708586738e-11,
+ "global_ci": [
+  -4.110246888058778e-11,
+  1.4296293380474294e-11
+ ],
+ "global_p_mk": 0.34695378825013945,
+ "global_p_ols": 0.059022880425942975
+}

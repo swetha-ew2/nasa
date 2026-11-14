@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_CLSM10_M.TVeg_tavg",
+ "units": "W m-2",
+ "n_months": 240,
+ "cells_valid": 859,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.002,
+ "sig_cells": 179,
+ "sig_area_fraction": 0.216,
+ "sig_positive_area": 0.094,
+ "sig_negative_area": 0.121,
+ "divergence": 0.873,
+ "global_slope_per_decade": -0.2510134365676206,
+ "global_ci": [
+  -0.9067157641643574,
+  0.38141283775110224
+ ],
+ "global_p_mk": 0.4339917990724218,
+ "global_p_ols": 0.05367158848613387
+}

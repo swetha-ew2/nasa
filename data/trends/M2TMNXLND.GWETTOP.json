@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXLND.GWETTOP",
+ "units": "1",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 91,
+ "sig_area_fraction": 0.045,
+ "sig_positive_area": 0.031,
+ "sig_negative_area": 0.014,
+ "divergence": 0.638,
+ "global_slope_per_decade": 0.0017155449857130084,
+ "global_ci": [
+  2.7486923689852708e-05,
+  0.003341397033348917
+ ],
+ "global_p_mk": 0.046776093678407626,
+ "global_p_ols": 2.985765886972832e-11
+}

@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXFLX.PRECSNO",
+ "units": "kg m-2 s-1",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.446,
+ "sig_cells": 360,
+ "sig_area_fraction": 0.152,
+ "sig_positive_area": 0.024,
+ "sig_negative_area": 0.128,
+ "divergence": 0.319,
+ "global_slope_per_decade": -8.420303112387439,
+ "global_ci": [
+  -10.853074706717301,
+  -5.996377641279592
+ ],
+ "global_p_mk": 5.2276183382105046e-11,
+ "global_p_ols": 2.3786232290958533e-24
+}

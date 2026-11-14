@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXRAD.SWTNTCLR",
+ "units": "W m-2",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.4,
+ "sig_cells": 283,
+ "sig_area_fraction": 0.135,
+ "sig_positive_area": 0.052,
+ "sig_negative_area": 0.083,
+ "divergence": 0.77,
+ "global_slope_per_decade": -0.3464572284448062,
+ "global_ci": [
+  -0.5700593226985703,
+  -0.1262432272508762
+ ],
+ "global_p_mk": 0.002547008890541269,
+ "global_p_ols": 1.1520501740176738e-10
+}

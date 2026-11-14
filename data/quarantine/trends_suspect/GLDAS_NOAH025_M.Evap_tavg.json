@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_NOAH025_M.Evap_tavg",
+ "units": "kg m-2 s-1",
+ "n_months": 240,
+ "cells_valid": 963,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.024,
+ "sig_cells": 439,
+ "sig_area_fraction": 0.46,
+ "sig_positive_area": 0.36,
+ "sig_negative_area": 0.1,
+ "divergence": 0.436,
+ "global_slope_per_decade": 5.666497075979349e-07,
+ "global_ci": [
+  -6.354296465841315e-08,
+  1.2420160964955758e-06
+ ],
+ "global_p_mk": 0.07310420467973988,
+ "global_p_ols": 1.28169779452424e-14
+}

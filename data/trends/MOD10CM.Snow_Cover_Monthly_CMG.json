@@ -1,0 +1,20 @@
+{
+ "var_id": "MOD10CM.Snow_Cover_Monthly_CMG",
+ "units": "none",
+ "n_months": 238,
+ "cells_valid": 1201,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.001,
+ "sig_cells": 16,
+ "sig_area_fraction": 0.018,
+ "sig_positive_area": 0.008,
+ "sig_negative_area": 0.011,
+ "divergence": 0.826,
+ "global_slope_per_decade": -0.20681834267366345,
+ "global_ci": [
+  -0.35781504876180137,
+  -0.06250985994809063
+ ],
+ "global_p_mk": 0.005237685069380493,
+ "global_p_ols": 4.4083952958868515e-06
+}

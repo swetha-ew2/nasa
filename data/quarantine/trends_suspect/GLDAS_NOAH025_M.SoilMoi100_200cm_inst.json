@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_NOAH025_M.SoilMoi100_200cm_inst",
+ "units": "kg m-2",
+ "n_months": 240,
+ "cells_valid": 963,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.004,
+ "sig_cells": 289,
+ "sig_area_fraction": 0.315,
+ "sig_positive_area": 0.101,
+ "sig_negative_area": 0.213,
+ "divergence": 0.644,
+ "global_slope_per_decade": -0.21055219092402078,
+ "global_ci": [
+  -0.42973820144510533,
+  0.0002275799017215961
+ ],
+ "global_p_mk": 0.05009114557297023,
+ "global_p_ols": 2.3175236602867792e-08
+}

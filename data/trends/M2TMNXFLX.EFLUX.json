@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXFLX.EFLUX",
+ "units": "W m-2",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.343,
+ "sig_cells": 389,
+ "sig_area_fraction": 0.203,
+ "sig_positive_area": 0.064,
+ "sig_negative_area": 0.139,
+ "divergence": 0.628,
+ "global_slope_per_decade": -1.2099905700670675,
+ "global_ci": [
+  -1.4560731330471433,
+  -0.9554067421689444
+ ],
+ "global_p_mk": 0.0,
+ "global_p_ols": 3.5813749240118313e-22
+}

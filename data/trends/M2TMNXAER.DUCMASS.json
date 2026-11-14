@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXAER.DUCMASS",
+ "units": "kg m-2",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.004,
+ "sig_cells": 762,
+ "sig_area_fraction": 0.384,
+ "sig_positive_area": 0.074,
+ "sig_negative_area": 0.311,
+ "divergence": 0.383,
+ "global_slope_per_decade": -1.7666907087875885e-06,
+ "global_ci": [
+  -3.1870598449973834e-06,
+  -3.0972100442962034e-07
+ ],
+ "global_p_mk": 0.020112414598288497,
+ "global_p_ols": 0.000622806500343421
+}

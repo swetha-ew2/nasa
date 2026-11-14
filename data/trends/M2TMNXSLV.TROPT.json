@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXSLV.TROPT",
+ "units": "K",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.351,
+ "sig_cells": 3,
+ "sig_area_fraction": 0.002,
+ "sig_positive_area": 0.002,
+ "sig_negative_area": 0.0,
+ "divergence": 0.0,
+ "global_slope_per_decade": 0.17653884538962739,
+ "global_ci": [
+  0.04726581939418692,
+  0.30650513142322944
+ ],
+ "global_p_mk": 0.008792886396071564,
+ "global_p_ols": 1.9000624733403913e-11
+}

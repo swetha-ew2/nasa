@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXAER.SO4CMASS",
+ "units": "kg m-2",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.002,
+ "sig_cells": 2384,
+ "sig_area_fraction": 0.904,
+ "sig_positive_area": 0.009,
+ "sig_negative_area": 0.895,
+ "divergence": 0.019,
+ "global_slope_per_decade": -3.86773023837315e-07,
+ "global_ci": [
+  -6.17504503530181e-07,
+  -1.7653875041300512e-07
+ ],
+ "global_p_mk": 0.0011595522633136568,
+ "global_p_ols": 3.4617783212625614e-33
+}

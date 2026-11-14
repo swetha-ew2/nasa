@@ -1,0 +1,20 @@
+{
+ "var_id": "M2SMNXSLV.T2MMAX",
+ "units": "K",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.153,
+ "sig_cells": 219,
+ "sig_area_fraction": 0.099,
+ "sig_positive_area": 0.077,
+ "sig_negative_area": 0.022,
+ "divergence": 0.447,
+ "global_slope_per_decade": 1.6059949638948873e-06,
+ "global_ci": [
+  7.088509287994615e-07,
+  2.4673980006612056e-06
+ ],
+ "global_p_mk": 0.00045188036616905514,
+ "global_p_ols": 1.1861096415446355e-06
+}

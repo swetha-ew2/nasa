@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXRAD.CLDTOT",
+ "units": "1",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.492,
+ "sig_cells": 451,
+ "sig_area_fraction": 0.173,
+ "sig_positive_area": 0.148,
+ "sig_negative_area": 0.025,
+ "divergence": 0.286,
+ "global_slope_per_decade": 0.006721137392320521,
+ "global_ci": [
+  0.0039015203062493717,
+  0.009330223196102858
+ ],
+ "global_p_mk": 8.221926228735299e-06,
+ "global_p_ols": 1.4184863395607184e-17
+}

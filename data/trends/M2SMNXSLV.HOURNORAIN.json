@@ -1,0 +1,20 @@
+{
+ "var_id": "M2SMNXSLV.HOURNORAIN",
+ "units": "s",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.052,
+ "sig_cells": 99,
+ "sig_area_fraction": 0.035,
+ "sig_positive_area": 0.004,
+ "sig_negative_area": 0.031,
+ "divergence": 0.223,
+ "global_slope_per_decade": -48.56348024251183,
+ "global_ci": [
+  -83.97230320332044,
+  -11.891792629385662
+ ],
+ "global_p_mk": 0.00915888945882859,
+ "global_p_ols": 0.0030911604200432323
+}

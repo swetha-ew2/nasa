@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXSLV.SLP",
+ "units": "Pa",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.526,
+ "sig_cells": 62,
+ "sig_area_fraction": 0.035,
+ "sig_positive_area": 0.034,
+ "sig_negative_area": 0.001,
+ "divergence": 0.044,
+ "global_slope_per_decade": 1.986636066379472,
+ "global_ci": [
+  0.8441915659986698,
+  3.074494841218915
+ ],
+ "global_p_mk": 0.000794272702936194,
+ "global_p_ols": 4.3982375473709256e-07
+}

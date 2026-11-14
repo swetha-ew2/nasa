@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXLND.GRN",
+ "units": "1",
+ "n_months": 240,
+ "cells_valid": 1114,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 0,
+ "sig_area_fraction": 0.0,
+ "sig_positive_area": 0.0,
+ "sig_negative_area": 0.0,
+ "divergence": 0.0,
+ "global_slope_per_decade": 0.0,
+ "global_ci": [
+  0.0,
+  0.0
+ ],
+ "global_p_mk": 0.46572882334312204,
+ "global_p_ols": 0.5043652285624964
+}

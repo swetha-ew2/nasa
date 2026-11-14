@@ -1,0 +1,20 @@
+{
+ "var_id": "MICASA_FLUX_M.NPP",
+ "units": "kg m-2 s-1",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 0,
+ "sig_area_fraction": 0.0,
+ "sig_positive_area": 0.0,
+ "sig_negative_area": 0.0,
+ "divergence": 0.0,
+ "global_slope_per_decade": -7.978313734529648e-12,
+ "global_ci": [
+  -1.8892860719185988e-11,
+  3.6211662136326997e-12
+ ],
+ "global_p_mk": 0.17155925769217384,
+ "global_p_ols": 0.4039517970895374
+}

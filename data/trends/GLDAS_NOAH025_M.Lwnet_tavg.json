@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_NOAH025_M.Lwnet_tavg",
+ "units": "W m-2",
+ "n_months": 240,
+ "cells_valid": 963,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.031,
+ "sig_cells": 422,
+ "sig_area_fraction": 0.438,
+ "sig_positive_area": 0.269,
+ "sig_negative_area": 0.169,
+ "divergence": 0.77,
+ "global_slope_per_decade": 0.431973518430406,
+ "global_ci": [
+  -0.31887636658426377,
+  1.2073481786379938
+ ],
+ "global_p_mk": 0.24329593455112342,
+ "global_p_ols": 0.027713717718984645
+}

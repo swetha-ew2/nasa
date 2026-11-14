@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXAER.OCEXTTAU",
+ "units": "1",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 1721,
+ "sig_area_fraction": 0.598,
+ "sig_positive_area": 0.582,
+ "sig_negative_area": 0.016,
+ "divergence": 0.054,
+ "global_slope_per_decade": 4.319069154053778e-07,
+ "global_ci": [
+  1.823477810023517e-07,
+  6.996279269938217e-07
+ ],
+ "global_p_mk": 0.0007326995368373002,
+ "global_p_ols": 1.1509802869952202e-11
+}

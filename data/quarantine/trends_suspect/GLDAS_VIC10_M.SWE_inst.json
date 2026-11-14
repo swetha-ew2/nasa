@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_VIC10_M.SWE_inst",
+ "units": "kg m-2",
+ "n_months": 240,
+ "cells_valid": 859,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.002,
+ "sig_cells": 135,
+ "sig_area_fraction": 0.164,
+ "sig_positive_area": 0.053,
+ "sig_negative_area": 0.111,
+ "divergence": 0.642,
+ "global_slope_per_decade": -5.424957779967454,
+ "global_ci": [
+  -7.581157701860319,
+  -3.3194028979781036
+ ],
+ "global_p_mk": 7.823378935523095e-05,
+ "global_p_ols": 1.5613715282441922e-45
+}

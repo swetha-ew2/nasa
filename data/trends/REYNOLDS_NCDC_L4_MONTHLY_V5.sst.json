@@ -1,0 +1,20 @@
+{
+ "var_id": "REYNOLDS_NCDC_L4_MONTHLY_V5.sst",
+ "units": "degree_C",
+ "n_months": 240,
+ "cells_valid": 1955,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 516,
+ "sig_area_fraction": 0.281,
+ "sig_positive_area": 0.277,
+ "sig_negative_area": 0.0,
+ "divergence": 0.002,
+ "global_slope_per_decade": 0.22276900384383294,
+ "global_ci": [
+  0.06100348570625868,
+  0.39100948755657483
+ ],
+ "global_p_mk": 0.020467665163397264,
+ "global_p_ols": 6.50605883209005e-57
+}

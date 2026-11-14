@@ -1,0 +1,20 @@
+{
+ "var_id": "MOD13C2.CMG 0.05 Deg Monthly EVI",
+ "units": "EVI",
+ "n_months": 240,
+ "cells_valid": 965,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.035,
+ "sig_cells": 336,
+ "sig_area_fraction": 0.343,
+ "sig_positive_area": 0.334,
+ "sig_negative_area": 0.009,
+ "divergence": 0.054,
+ "global_slope_per_decade": 0.00648421629726177,
+ "global_ci": [
+  0.005300856446061347,
+  0.0076019654433787855
+ ],
+ "global_p_mk": 1.0069967082415587e-10,
+ "global_p_ols": 1.1468693590352829e-76
+}

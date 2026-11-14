@@ -118,9 +118,22 @@ def read_field(path, hdf_group, name):
             latd = next((d for d in dims if d.startswith("YDim")), dims[-2])
             lond = next((d for d in dims if d.startswith("XDim")), dims[-1])
             lat, lon = regular_grid(v.shape[dims.index(latd)], v.shape[dims.index(lond)])
-        v.set_auto_maskandscale(True)
+        # Mask with _FillValue/valid_range here, but scale by hand: HDF4 products (MODIS) use two conventions that
+        # netCDF4 does not handle: "_Scale/_Offset" (MOD21C3, multiplier) and "scale_factor" > 1 meaning a DIVISOR
+        # (MOD13C2 NDVI/EVI: scale_factor = 10000, real = raw / 10000).
+        v.set_auto_mask(True)
+        v.set_auto_scale(False)
         arr = v[:]
         arr = np.ma.filled(arr.astype(float), np.nan) if np.ma.isMaskedArray(arr) else np.asarray(arr, float)
+        ncat = set(v.ncattrs())
+        if "_Scale" in ncat:
+            arr = arr * float(v.getncattr("_Scale")) + (float(v.getncattr("_Offset")) if "_Offset" in ncat else 0.0)
+        elif "scale_factor" in ncat:
+            sf = float(v.getncattr("scale_factor"))
+            off = float(v.getncattr("add_offset")) if "add_offset" in ncat else 0.0
+            arr = (arr - off) / sf if sf > 1 else arr * sf + off
+        if str(getattr(v, "units", "")) == "K":      # a few bad retrievals pass the products' valid_range (e.g. 451 K)
+            arr[(arr < 150) | (arr > 350)] = np.nan
         units, long_name = getattr(v, "units", ""), getattr(v, "long_name", "")
     arr, lat, lon = finish(arr, dims, latd, lond, lat, lon)
     return arr, lat, lon, units, long_name
@@ -191,7 +204,8 @@ def parse_dds(text, var):
 
 def parse_das(text, var):
     """attributes of one variable from DAS text -> dict (numbers as float, strings as str)."""
-    m = re.search(r"(?:^|\n)\s*" + re.escape(var) + r"\s*\{(.*?)\n\s*\}", text, re.S)
+    # some servers (e.g. GPM IMERG) list the attribute block under a path such as "/Grid/precipitation {"
+    m = re.search(r"(?:^|\n)\s*(?:/[\w/]*/)?" + re.escape(var) + r"\s*\{(.*?)\n\s*\}", text, re.S)
     out = {}
     if not m:
         return out
@@ -337,12 +351,30 @@ def parse_dods_multi(blob, specs):
     return out
 
 
+def response_order(blob, names):
+    """Variable names in the order the DAP2 response actually contains them (from the DDS text before 'Data:')."""
+    i = blob.find(b"\nData:\n")
+    if i < 0:
+        raise ValueError("no Data marker")
+    head = blob[:i].decode("latin-1")
+    pos = {}
+    for v in names:
+        m = re.search(r"(?<![\w.])%s\s*\[" % re.escape(v), head)
+        if not m:
+            raise ValueError(f"variable {v} not found in response header")
+        pos[v] = m.start()
+    if len(set(pos.values())) != len(names):
+        raise ValueError("ambiguous variable order in response header")
+    return sorted(names, key=pos.get)
+
+
 def _postprocess(arr, meta):
     arr = arr.astype(float).reshape(meta["shape"])
     a = meta["attrs"]
     for k in ("_FillValue", "missing_value"):
         if k in a:
-            arr[arr == a[k][0]] = np.nan
+            # attribute text is parsed as float64 but data are float32 (-9999.9 != -9999.900390625): compare with tolerance
+            arr[np.isclose(arr, a[k][0], rtol=1e-6, atol=0.0)] = np.nan
     if "valid_range" in a and len(a["valid_range"]) >= 2:
         arr[(arr < a["valid_range"][0]) | (arr > a["valid_range"][1])] = np.nan
     if "valid_min" in a:
@@ -370,6 +402,9 @@ def read_fields_dap(session, url, varnames, stride_req=0, batch=10):
             try:
                 proj = ",".join(f"{v}.{v}{metas[v]['ce']}" for v in chunk)
                 raw = _get(session, f"{url}.dods?{proj}", "batch").content
+                # The server returns variables in the file's own order, NOT the order requested. Read the order from
+                # the DDS header; if it cannot be determined unambiguously, raise (-> safe per-variable fallback).
+                chunk = response_order(raw, chunk)
                 arrs = parse_dods_multi(raw, [(metas[v]["typ"], metas[v]["count"]) for v in chunk])
                 for v, arr in zip(chunk, arrs):
                     fields[v] = _postprocess(arr, metas[v])

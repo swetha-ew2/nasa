@@ -1,0 +1,20 @@
+{
+ "var_id": "MICASA_FLUX_M.FIRE",
+ "units": "kg m-2 s-1",
+ "n_months": 240,
+ "cells_valid": 2592,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.037,
+ "sig_cells": 304,
+ "sig_area_fraction": 0.13,
+ "sig_positive_area": 0.12,
+ "sig_negative_area": 0.01,
+ "divergence": 0.155,
+ "global_slope_per_decade": 6.503498602247542e-11,
+ "global_ci": [
+  3.673258665294764e-11,
+  9.136746446275937e-11
+ ],
+ "global_p_mk": 2.717411278685411e-05,
+ "global_p_ols": 2.2398709425458343e-14
+}

@@ -1,0 +1,20 @@
+{
+ "var_id": "GLDAS_NOAH025_M.Albedo_inst",
+ "units": "%",
+ "n_months": 240,
+ "cells_valid": 963,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.0,
+ "sig_cells": 164,
+ "sig_area_fraction": 0.105,
+ "sig_positive_area": 0.067,
+ "sig_negative_area": 0.038,
+ "divergence": 0.731,
+ "global_slope_per_decade": 0.45940590005142085,
+ "global_ci": [
+  0.13307502981412472,
+  0.7965483776261645
+ ],
+ "global_p_mk": 0.004767798774900189,
+ "global_p_ols": 3.1423814394704646e-15
+}

@@ -1,0 +1,20 @@
+{
+ "var_id": "M2TMNXSLV.CLDPRS",
+ "units": "Pa",
+ "n_months": 240,
+ "cells_valid": 2452,
+ "test_used": "mk",
+ "clean_residual_fraction": 0.547,
+ "sig_cells": 39,
+ "sig_area_fraction": 0.019,
+ "sig_positive_area": 0.004,
+ "sig_negative_area": 0.016,
+ "divergence": 0.385,
+ "global_slope_per_decade": -433.3375344249181,
+ "global_ci": [
+  -580.5428917838578,
+  -288.9091493482872
+ ],
+ "global_p_mk": 8.356210834392641e-08,
+ "global_p_ols": 8.968778492595981e-15
+}
