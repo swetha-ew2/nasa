@@ -80,6 +80,9 @@ export function cellsGeoJSON(m: MapFile, scheme: Scheme, showNonSig: boolean): G
           v,
           sig: sig ? 1 : 0,
           p: m.p[k],
+          e: m.effect_size[k],
+          la: m.lat[i],
+          lo: m.lon[j],
         },
         geometry: { type: 'Polygon', coordinates: [[[lo0, la0], [lo1, la0], [lo1, la1], [lo0, la1], [lo0, la0]]] },
       });
@@ -133,4 +136,27 @@ export function decimalYear(yyyymm: number): number {
 
 export function testName(t: 'ols' | 'mk' | undefined): string {
   return t === 'ols' ? 'OLS t-test' : 'Mann-Kendall test (adjusted for autocorrelation)';
+}
+
+/** plain-language meaning of a unit, so nobody has to guess what "kg/m²" or "index" is */
+export function unitExplain(id: string, units: string): string {
+  const byId: Record<string, string> = {
+    ndvi: 'greenness index from 0 (bare ground) to 1 (dense green plants)',
+    aod: 'haze index with no unit; higher means more dust, smoke or salt in the air',
+    soil_wetness_top: 'fraction from 0 (dry) to 1 (saturated)',
+    tws: 'millimetres of water spread over the area, counting soil, snow, groundwater and rivers',
+    runoff: 'kilograms of water per square metre, about the same as millimetres of water',
+  };
+  if (byId[id]) return byId[id];
+  const byUnit: Record<string, string> = {
+    '°C': 'degrees Celsius',
+    cm: 'centimetres',
+    m: 'metres',
+    'mm/day': 'millimetres of water per day',
+    '% of area': 'percentage points of the area covered',
+    'W/m²': 'watts per square metre, a measure of energy flow',
+    'kg/m²': 'kilograms of water per square metre, about the same as millimetres of water',
+    K: 'kelvin; a change of 1 K is the same as a change of 1 °C',
+  };
+  return byUnit[units] ?? units;
 }

@@ -150,7 +150,7 @@
    "var_name": "Cloud-top temperature",
    "units": "K",
    "region": "igp",
-   "region_name": "Indo-Gangetic Plain",
+   "region_name": "Indo-Gangetic Plain (northern India)",
    "slope_per_decade": 1.381,
    "ci95": [
     0.05193,
@@ -159,14 +159,14 @@
    "p": 0.04099,
    "snr": 0.5124,
    "ci_excludes_zero": true,
-   "text": "Cloud-top temperature over Indo-Gangetic Plain is rising by 1.38 K per decade (95% confidence interval +0.0519 to +2.76, p = 0.041). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
+   "text": "Cloud-top temperature over Indo-Gangetic Plain (northern India) is rising by 1.38 K per decade (95% confidence interval +0.0519 to +2.76, p = 0.041). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
   },
   {
    "var": "soil_wetness_top",
    "var_name": "Surface soil wetness",
    "units": "fraction (0\u20131)",
    "region": "arctic",
-   "region_name": "Arctic Ocean (Beaufort\u2013Chukchi)",
+   "region_name": "Arctic Ocean (Alaska side)",
    "slope_per_decade": 0.004525,
    "ci95": [
     0.0001246,
@@ -175,7 +175,7 @@
    "p": 0.04442,
    "snr": 2.099,
    "ci_excludes_zero": true,
-   "text": "Surface soil wetness over Arctic Ocean (Beaufort\u2013Chukchi) is rising by 0.00453 fraction (0\u20131) per decade (95% confidence interval +0.000125 to +0.0116, p = 0.044). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
+   "text": "Surface soil wetness over Arctic Ocean (Alaska side) is rising by 0.00453 fraction (0\u20131) per decade (95% confidence interval +0.000125 to +0.0116, p = 0.044). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
   },
   {
    "var": "cloud_top_temp",
@@ -262,7 +262,7 @@
    "var_name": "Sea surface temperature",
    "units": "\u00b0C",
    "region": "indo",
-   "region_name": "Indonesia & Maritime Continent",
+   "region_name": "Indonesia & Maritime Southeast Asia",
    "slope_per_decade": 0.1962,
    "ci95": [
     -0.007822,
@@ -271,7 +271,7 @@
    "p": 0.0595,
    "snr": 1.371,
    "ci_excludes_zero": false,
-   "text": "Sea surface temperature over Indonesia & Maritime Continent is rising by 0.196 \u00b0C per decade (95% confidence interval -0.00782 to +0.401, p = 0.059). The interval includes zero, so this is only a hint."
+   "text": "Sea surface temperature over Indonesia & Maritime Southeast Asia is rising by 0.196 \u00b0C per decade (95% confidence interval -0.00782 to +0.401, p = 0.059). The interval includes zero, so this is only a hint."
   },
   {
    "var": "cloud_top_temp",
@@ -358,7 +358,7 @@
    "var_name": "Snow cover",
    "units": "% of area",
    "region": "indo",
-   "region_name": "Indonesia & Maritime Continent",
+   "region_name": "Indonesia & Maritime Southeast Asia",
    "slope_per_decade": -0.003154,
    "ci95": [
     -0.006675,
@@ -367,7 +367,7 @@
    "p": 0.07018,
    "snr": -0.1081,
    "ci_excludes_zero": false,
-   "text": "Snow cover over Indonesia & Maritime Continent is falling by 0.00315 % of area per decade (95% confidence interval -0.00668 to +0.000267, p = 0.07). The interval includes zero, so this is only a hint."
+   "text": "Snow cover over Indonesia & Maritime Southeast Asia is falling by 0.00315 % of area per decade (95% confidence interval -0.00668 to +0.000267, p = 0.07). The interval includes zero, so this is only a hint."
   },
   {
    "var": "soil_moist_10_40",
@@ -438,7 +438,7 @@
    "var_name": "Sunlight absorbed by land",
    "units": "W/m\u00b2",
    "region": "igp",
-   "region_name": "Indo-Gangetic Plain",
+   "region_name": "Indo-Gangetic Plain (northern India)",
    "slope_per_decade": 2.548,
    "ci95": [
     -0.2708,
@@ -447,7 +447,7 @@
    "p": 0.07598,
    "snr": 0.5736,
    "ci_excludes_zero": false,
-   "text": "Sunlight absorbed by land over Indo-Gangetic Plain is rising by 2.55 W/m\u00b2 per decade (95% confidence interval -0.271 to +5.46, p = 0.076). The interval includes zero, so this is only a hint."
+   "text": "Sunlight absorbed by land over Indo-Gangetic Plain (northern India) is rising by 2.55 W/m\u00b2 per decade (95% confidence interval -0.271 to +5.46, p = 0.076). The interval includes zero, so this is only a hint."
   },
   {
    "var": "ndvi",

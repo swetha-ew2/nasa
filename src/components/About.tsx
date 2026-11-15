@@ -37,6 +37,17 @@ export default function About({ manifest, onClose }: Props) {
           ))}
         </dl>
 
+        <h3>Early signs</h3>
+        <p className="small">
+          The <strong>Early signs</strong> tab lists changes that look real but did not pass the strict test once we account for
+          checking many regions at once (p between 0.05 and 0.10, or significant only before the correction). They are leads, not
+          conclusions: a longer record or better data could settle them.
+        </p>
+        <p className="small">
+          No single one passes on its own, but several pointing the same way in one region is worth a closer look. Twenty years is
+          short, and with this many tests a few p-values below 0.05 are expected by chance.
+        </p>
+
         <h3>Honest caveats</h3>
         <ul>
           {manifest.caveats.map((c) => (

@@ -1,28 +1,40 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Globe, { type PinState } from './components/Globe';
 import Catalog from './components/Catalog';
 import DetailPanel from './components/DetailPanel';
+import TilePanel from './components/TilePanel';
 import Legend from './components/Legend';
 import About from './components/About';
+import Welcome from './components/Welcome';
+import Tour, { TourAsk } from './components/Tour';
+import type { Example } from './lib/examples';
+import { TOUR_STEPS } from './components/Tour';
 import { loadInteresting, loadManifest, loadMap, loadSeries } from './lib/data';
 import type { Interesting, Manifest, MapFile, SeriesFile, SeriesRecord, Target } from './types';
+
+const TOUR_STEPS_NEED_DEMO = TOUR_STEPS.flatMap((st, i) => (st.demo ? [i] : []));
 
 export default function App() {
   const [manifest, setManifest] = useState<Manifest | null>(null);
   const [interesting, setInteresting] = useState<Interesting | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const [variableId, setVariableId] = useState('t2m');
+  const [variableId, setVariableId] = useState<string | null>(null);
   const [mapData, setMapData] = useState<MapFile | null>(null);
   const [series, setSeries] = useState<SeriesFile | null>(null);
   const [target, setTarget] = useState<Target | null>(null);
 
-  const [showNonSig, setShowNonSig] = useState(true);
   const [showHotspots, setShowHotspots] = useState(true);
   const [showPins, setShowPins] = useState(true);
   const [showImagery, setShowImagery] = useState(true);
   const [autoRotate, setAutoRotate] = useState(true);
   const [aboutOpen, setAboutOpen] = useState(false);
+  const [started, setStarted] = useState(false); // false = intro: just the globe and the welcome popup
+  // ask = offer the site guide, tour = the guide, home/examples = the guided-example screens
+  const [phase, setPhase] = useState<'ask' | 'tour' | 'home' | 'examples' | null>('ask');
+  const [tourStep, setTourStep] = useState(0);
+  const tourBefore = useRef<{ started: boolean; hadVariable: boolean } | null>(null);
+  const [guide, setGuide] = useState<Example | null>(null);
 
   useEffect(() => {
     loadManifest().then(setManifest).catch((e) => setError(String(e.message ?? e)));
@@ -31,6 +43,7 @@ export default function App() {
 
   // load the map and the series of the chosen variable together, so they never get out of step
   useEffect(() => {
+    if (!variableId) return;
     let cancelled = false;
     Promise.all([loadMap(variableId), loadSeries(variableId)])
       .then(([m, s]) => {
@@ -44,7 +57,7 @@ export default function App() {
     };
   }, [variableId]);
 
-  const variable = manifest?.variables.find((v) => v.id === variableId) ?? null;
+  const variable = manifest?.variables.find((v) => v.id === variableId) ?? null; // null until the user picks one
   const seriesReady = series && series.var === variableId ? series : null;
 
   const pinStates = useMemo(() => {
@@ -66,8 +79,12 @@ export default function App() {
 
   function selectVariable(id: string) {
     setVariableId(id);
-    // hotspots belong to one variable; regions stay selected
-    if (target?.kind === 'hotspot') setTarget(null);
+    setGuide(null);
+    // hotspots belong to one variable; a selected region stays, otherwise show the global result on the right
+    if (!target || target.kind === 'hotspot') {
+      setTarget({ kind: 'region', id: 'global' });
+      setAutoRotate(false);
+    }
   }
 
   function select(t: Target | null) {
@@ -75,10 +92,44 @@ export default function App() {
     if (t) setAutoRotate(false);
   }
 
-  function goTo(vid: string, regionId: string | null) {
+  function goTo(vid: string, regionId: string | null, ex: Example | null = null) {
+    setGuide(ex);
     setVariableId(vid);
     setTarget(regionId ? { kind: 'region', id: regionId } : null);
     setAutoRotate(false);
+    setStarted(true);
+    setPhase(null);
+  }
+
+  function startTour() {
+    tourBefore.current = { started, hadVariable: !!variableId };
+    setStarted(true);
+    setTourStep(0);
+    setPhase('tour');
+  }
+
+  function goToStep(i: number) {
+    setTourStep(i);
+    // the colour legend and detail panel only exist once a variable is chosen: show an example while touring
+    if (TOUR_STEPS_NEED_DEMO.includes(i) && !variableId) {
+      setVariableId('t2m');
+      setTarget({ kind: 'region', id: 'global' });
+      setAutoRotate(false);
+    }
+  }
+
+  function endTour() {
+    const before = tourBefore.current;
+    if (before && !before.hadVariable) {
+      setVariableId(null);
+      setTarget(null);
+      setMapData(null);
+      setSeries(null);
+      setAutoRotate(true);
+    }
+    if (before && !before.started) setStarted(false);
+    tourBefore.current = null;
+    setPhase('home');
   }
 
   if (error) {
@@ -90,7 +141,7 @@ export default function App() {
       </div>
     );
   }
-  if (!manifest || !variable) return <div className="splash"><p className="muted">Loading the Earth…</p></div>;
+  if (!manifest) return <div className="splash"><p className="muted">Loading the Earth…</p></div>;
 
   return (
     <div className="app">
@@ -111,11 +162,13 @@ export default function App() {
             <input type="checkbox" checked={autoRotate} onChange={(e) => setAutoRotate(e.target.checked)} />
             Auto-rotate
           </label>
+          <button className="ghost-btn" onClick={startTour}>Tour</button>
+          <button className="ghost-btn" onClick={() => setPhase('examples')}>Guided examples</button>
           <button className="ghost-btn" onClick={() => setAboutOpen(true)}>Methods &amp; data</button>
         </div>
       </header>
 
-      <main className="layout">
+      <main className={`layout ${started ? '' : 'layout--intro'}`}>
         <Catalog
           manifest={manifest}
           interesting={interesting}
@@ -124,45 +177,79 @@ export default function App() {
           onSelectVariable={selectVariable}
           onGoTo={goTo}
           onSelectHotspot={(id) => select({ kind: 'hotspot', id })}
+          onOpenMethods={() => setAboutOpen(true)}
         />
 
         <div className="stage">
           <Globe
             regions={manifest.regions}
             pinStates={pinStates}
-            mapData={mapData && mapData.var === variableId ? mapData : null}
-            scheme={variable.scheme}
-            units={variable.units}
-            showNonSig={showNonSig}
+            mapData={variable && mapData && mapData.var === variableId ? mapData : null}
+            scheme={variable?.scheme ?? 'neutral'}
+            units={variable?.units ?? ''}
+            showNonSig
             showHotspots={showHotspots}
-            showPins={showPins}
+            showPins={showPins && !!variable}
             hotspots={seriesReady?.hotspots ?? []}
             target={target}
-            highlightCells={target?.kind === 'hotspot' ? rec?.cells ?? null : null}
+            highlightCells={
+              target?.kind === 'hotspot'
+                ? rec?.cells ?? null
+                : target?.kind === 'tile'
+                  ? [target.id.split(',').map(Number) as [number, number]]
+                  : null
+            }
             showImagery={showImagery}
             autoRotate={autoRotate}
             onSelect={select}
             onUserInteract={() => setAutoRotate(false)}
           />
 
-          <Legend
+          {started && variable && <Legend
             variable={variable}
             limit={mapData?.color_limit ?? variable.map_color_limit}
-            showNonSig={showNonSig}
-            onToggleNonSig={setShowNonSig}
             showHotspots={showHotspots}
             onToggleHotspots={setShowHotspots}
             showPins={showPins}
             onTogglePins={setShowPins}
-          />
+          />}
 
-          <div className="hint">Drag to rotate · scroll to zoom · hover for values · click a pin or ▲▼ hotspot</div>
+          {started && !guide && (
+            <div className="hint">
+              {variable ? 'Drag to rotate · scroll to zoom · hover for values · click a pin or ▲▼ marker' : 'Drag to rotate · scroll to zoom · pick a variable on the left'}
+            </div>
+          )}
 
-          <button className="global-btn" onClick={() => select({ kind: 'region', id: 'global' })}>
-            Global result for this variable
-          </button>
+          {guide && (
+            <div className="guide" role="note">
+              <div>
+                <span className="eyebrow">Guided example</span>
+                <strong>{guide.question}</strong>
+                <span className="small muted">Showing {guide.variableName} · {guide.placeName}. The answer is in the panel on the right.</span>
+              </div>
+              <button className="icon-btn" onClick={() => setGuide(null)} aria-label="Dismiss">✕</button>
+            </div>
+          )}
 
-          {target && (
+          {started && variable && (
+            <button className="global-btn" onClick={() => select({ kind: 'region', id: 'global' })}>
+              Global result
+            </button>
+          )}
+
+          {target?.kind === 'tile' && variable && (
+            <TilePanel
+              tileId={target.id}
+              mapData={mapData && mapData.var === variableId ? mapData : null}
+              variable={variable}
+              regions={manifest.regions}
+              hotspots={seriesReady?.hotspots ?? []}
+              onOpenRegion={(id) => select({ kind: 'region', id })}
+              onOpenHotspot={(id) => select({ kind: 'hotspot', id })}
+              onClose={() => setTarget(null)}
+            />
+          )}
+          {target && target.kind !== 'tile' && variable && (
             <DetailPanel
               target={target}
               rec={rec}
@@ -176,6 +263,23 @@ export default function App() {
         </div>
       </main>
 
+      {phase === 'ask' && (
+        <TourAsk
+          onStart={startTour}
+          onSkip={() => setPhase('home')}
+        />
+      )}
+      {phase === 'tour' && <Tour step={tourStep} onStep={goToStep} onDone={endTour} />}
+      {(phase === 'home' || phase === 'examples') && (
+        <Welcome
+          start={phase}
+          onPick={(ex) => goTo(ex.variable, ex.region, ex)}
+          onBrowse={() => {
+            setStarted(true);
+            setPhase(null);
+          }}
+        />
+      )}
       {aboutOpen && <About manifest={manifest} onClose={() => setAboutOpen(false)} />}
     </div>
   );

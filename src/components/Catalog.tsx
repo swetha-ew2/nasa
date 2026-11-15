@@ -5,26 +5,29 @@ import { fmtSigned } from '../lib/data';
 interface Props {
   manifest: Manifest;
   interesting: Interesting | null;
-  variableId: string;
+  variableId: string | null;
   hotspots: SeriesRecord[];
   onSelectHotspot: (id: string) => void;
   onSelectVariable: (id: string) => void;
   onGoTo: (variableId: string, regionId: string | null) => void;
+  onOpenMethods: () => void;
 }
 
-const EXAMPLES: { label: string; blurb: string; variable: string; region: string | null }[] = [
-  { label: 'Is the planet warming?', blurb: 'Global air temperature, 2005–2024.', variable: 't2m', region: 'global' },
-  { label: 'How fast is the sea rising?', blurb: 'Sea level from satellite altimeters.', variable: 'sea_level', region: 'global' },
-  { label: 'Is the Mediterranean drying?', blurb: 'Soil moisture over the Mediterranean.', variable: 'soil_moist_10_40', region: 'med' },
-  { label: 'Is the Sahel greening?', blurb: 'Vegetation over the Sahel.', variable: 'ndvi', region: 'sahel' },
-];
-
-export default function Catalog({ manifest, interesting, variableId, hotspots, onSelectHotspot, onSelectVariable, onGoTo }: Props) {
-  const [tab, setTab] = useState<'variables' | 'watch'>('variables');
+export default function Catalog({ manifest, interesting, variableId, hotspots, onSelectHotspot, onSelectVariable, onGoTo, onOpenMethods }: Props) {
+  const [tab, setTab] = useState<'variables' | 'signs'>('variables');
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('All');
+  const [showAll, setShowAll] = useState(false);
   const cats = useMemo(() => ['All', ...Array.from(new Set(manifest.variables.map((v) => v.category)))], [manifest]);
-  const nameOf = (id: string) => manifest.variables.find((v) => v.id === id)?.name ?? id;
+  const groups = useMemo(() => {
+    const m = new Map<string, { region: string; name: string; items: Interesting['items'] }>();
+    interesting?.items.forEach((it) => {
+      const g = m.get(it.region) ?? { region: it.region, name: it.region === 'global' ? 'Worldwide' : it.region_name, items: [] };
+      g.items.push(it);
+      m.set(it.region, g);
+    });
+    return Array.from(m.values()).sort((a, b) => b.items.length - a.items.length);
+  }, [interesting]);
 
   const filtered = manifest.variables.filter((v) => {
     if (category !== 'All' && v.category !== category) return false;
@@ -33,30 +36,19 @@ export default function Catalog({ manifest, interesting, variableId, hotspots, o
   });
 
   return (
-    <section className="catalog" aria-label="Variables and findings">
+    <section className="catalog" aria-label="Variables and early signs">
       <div className="tabs" role="tablist">
         <button role="tab" aria-selected={tab === 'variables'} className={tab === 'variables' ? 'on' : ''} onClick={() => setTab('variables')}>
           Variables
         </button>
-        <button role="tab" aria-selected={tab === 'watch'} className={tab === 'watch' ? 'on' : ''} onClick={() => setTab('watch')}>
-          Worth watching
+        <button role="tab" aria-selected={tab === 'signs'} className={tab === 'signs' ? 'on' : ''} onClick={() => setTab('signs')}>
+          Early signs
           {interesting && <span className="count">{interesting.items.length}</span>}
         </button>
       </div>
 
       {tab === 'variables' && (
         <>
-          <div className="examples">
-            <div className="eyebrow">Try an example</div>
-            <div className="examples__row">
-              {EXAMPLES.map((ex) => (
-                <button key={ex.label} className="example" onClick={() => onGoTo(ex.variable, ex.region)} title={ex.blurb}>
-                  {ex.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
           <input className="search" type="search" placeholder="Search (e.g. rain, smoke, ice)…" value={query} onChange={(e) => setQuery(e.target.value)} />
           <div className="chips" role="group" aria-label="Filter by category">
             {cats.map((c) => (
@@ -64,47 +56,46 @@ export default function Catalog({ manifest, interesting, variableId, hotspots, o
             ))}
           </div>
 
+          <div className="list-head">
+            <span>Variable</span>
+            <span title="Faint numbers are not statistically significant">Worldwide change per decade</span>
+          </div>
           <ul className="cards">
             {filtered.map((v) => {
               const on = v.id === variableId;
+              const s = v.global_slope_per_decade;
               return (
                 <li key={v.id}>
                   <button className={`card ${on ? 'card--on' : ''}`} onClick={() => onSelectVariable(v.id)} aria-pressed={on}>
-                    <div className="card__top">
-                      <span className="card__name">{v.name}</span>
-                      <span className={`badge badge--${v.role === 'headline' ? 'headline' : 'data'}`} title={v.role === 'headline' ? 'Chosen by hand because it is a core indicator' : 'Chosen by the data-driven selection'}>
-                        {v.role === 'headline' ? 'Headline' : 'Data-picked'}
+                    <span className={`dot dot--${v.category.replace(/\s+/g, '-').toLowerCase()}`} title={v.category} />
+                    <span className="card__name">{v.name}</span>
+                    {s !== null && (
+                      <span
+                        className={`card__val ${v.global_p !== null && v.global_p >= 0.05 ? 'card__val--ns' : ''}`}
+                        title={`Worldwide: ${fmtSigned(s)} ${v.units} per decade${v.global_p !== null && v.global_p >= 0.05 ? ' (not statistically significant)' : ''}`}
+                      >
+                        <b>{s > 0 ? '▲' : '▼'} {fmtSigned(s)}</b>
+                        <small>{v.units}/decade</small>
                       </span>
-                    </div>
-                    <div className="card__meta">
-                      <span className={`dot dot--${v.category.replace(/\s+/g, '-').toLowerCase()}`} />
-                      {v.category} ·{' '}
-                      {v.global_slope_per_decade !== null && (
-                        <span>
-                          global {fmtSigned(v.global_slope_per_decade)} {v.units}/decade
-                        </span>
-                      )}
-                    </div>
-                    {on && (
-                      <div className="card__detail">
-                        <p>{v.definition}</p>
-                        <p>{v.finding}</p>
-                        <p className="muted small">{v.source} · {v.record}</p>
-                      </div>
                     )}
                   </button>
                   {on && hotspots.length > 0 && (
                     <div className="hs-list">
-                      <div className="eyebrow">Where it is changing most (exploratory)</div>
-                      {hotspots.slice(0, 6).map((h) => (
+                      <div className="eyebrow">Hotspots the data found</div>
+                      {(showAll ? hotspots : hotspots.slice(0, 5)).map((h) => (
                         <button key={h.id} className="hs-item" onClick={() => onSelectHotspot(h.id)}>
                           <span className={`hs-item__dir hs-item__dir--${h.direction === 'increasing' ? 'up' : 'down'}`}>
                             {h.direction === 'increasing' ? '▲' : '▼'}
                           </span>
                           <span className="hs-item__name">{h.name}</span>
-                          <span className="hs-item__val">{fmtSigned(h.slope_per_decade)} {v.units}/dec</span>
+                          <span className="hs-item__val">{fmtSigned(h.slope_per_decade)} {v.units}/decade</span>
                         </button>
                       ))}
+                      {hotspots.length > 5 && (
+                        <button className="show-all" onClick={() => setShowAll(!showAll)}>
+                          {showAll ? 'Show fewer' : `Show all ${hotspots.length}`}
+                        </button>
+                      )}
                     </div>
                   )}
                 </li>
@@ -115,40 +106,26 @@ export default function Catalog({ manifest, interesting, variableId, hotspots, o
         </>
       )}
 
-      {tab === 'watch' && (
+      {tab === 'signs' && (
         <div className="watch">
-          <p className="small">
-            These changes look real but <strong>did not pass the strict test</strong> once we account for checking many regions at once
-            (p between 0.05 and 0.10, or significant only before the correction). They are leads, not conclusions: a longer record or
-            better data could settle them.
+          <p className="small muted">
+            Changes that point one way but are not yet statistically significant.{' '}
+            <button className="link-btn" onClick={onOpenMethods}>Why?</button>
           </p>
-          {interesting?.stories.map((s) => (
-            <div className="story" key={s.region}>
-              <div className="story__title">{s.region === 'global' ? 'Worldwide' : s.region_name}: {s.n_variables} variables</div>
-              <p className="small">{s.text}</p>
+          {groups.map((g) => (
+            <div className="story" key={g.region}>
+              <div className="story__title">
+                {g.name} <span className="muted">· {g.items.length}</span>
+              </div>
               <div className="chips">
-                {s.variables.map((vid) => (
-                  <button key={vid} className="chip" onClick={() => onGoTo(vid, s.region)}>{nameOf(vid)}</button>
+                {g.items.map((it) => (
+                  <button key={it.var} className="chip" onClick={() => onGoTo(it.var, g.region)}>
+                    <span className={it.slope_per_decade > 0 ? 'up' : 'down'}>{it.slope_per_decade > 0 ? '▲' : '▼'}</span> {it.var_name}
+                  </button>
                 ))}
               </div>
             </div>
           ))}
-          <div className="eyebrow">All individual hints</div>
-          <ul className="cards">
-            {interesting?.items.map((it) => (
-              <li key={`${it.var}:${it.region}`}>
-                <button className="card" onClick={() => onGoTo(it.var, it.region)}>
-                  <div className="card__top">
-                    <span className="card__name">{it.var_name}</span>
-                    <span className="badge badge--hint">p = {it.p.toFixed(3)}</span>
-                  </div>
-                  <div className="card__meta">
-                    {it.region === 'global' ? 'Worldwide' : it.region_name} · {fmtSigned(it.slope_per_decade)} {it.units}/decade
-                  </div>
-                </button>
-              </li>
-            ))}
-          </ul>
         </div>
       )}
     </section>

@@ -129,7 +129,8 @@ export interface Interesting {
   stories: Story[];
 }
 
-export type Target = { kind: 'region' | 'hotspot'; id: string };
+/** a tile's id is its centre as "lat,lon" */
+export type Target = { kind: 'region' | 'hotspot' | 'tile'; id: string };
 
 /** Legacy shape used by src/data/regions.ts, which the analysis pipeline still reads for the region boxes. */
 export interface Region {

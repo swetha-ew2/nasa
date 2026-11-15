@@ -2,7 +2,7 @@
  "M2TMNXSLV.T2M": [
   {
    "id": "M2TMNXSLV.T2M#inc1",
-   "name": "Widespread: Asia, Western Pacific, Maritime Continent",
+   "name": "Asia, Western Pacific & Indonesia\u2013Philippines",
    "direction": "increasing",
    "n_cells": 457,
    "slope_per_decade": 0.4317,
@@ -19,7 +19,7 @@
   },
   {
    "id": "M2TMNXSLV.T2M#inc2",
-   "name": "Widespread: Southern Ocean, Indian Ocean, South Atlantic",
+   "name": "Southern Ocean, Indian Ocean & South Atlantic",
    "direction": "increasing",
    "n_cells": 88,
    "slope_per_decade": 0.3028,
@@ -52,8 +52,8 @@
    ]
   },
   {
-   "id": "M2TMNXSLV.T2M#dec4",
-   "name": "Africa",
+   "id": "M2TMNXSLV.T2M#dec9",
+   "name": "Central Africa",
    "direction": "decreasing",
    "n_cells": 8,
    "slope_per_decade": -0.635,
@@ -69,27 +69,95 @@
    ]
   },
   {
-   "id": "M2TMNXSLV.T2M#dec5",
-   "name": "East Antarctica",
-   "direction": "decreasing",
-   "n_cells": 2,
-   "slope_per_decade": -0.7156,
+   "id": "M2TMNXSLV.T2M#inc4",
+   "name": "Indian Ocean",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 0.3218,
    "ci95": [
-    -1.183,
-    -0.2307
+    0.1032,
+    0.5476
    ],
-   "p": 0.004169,
+   "p": 0.005317,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -22.5,
+    85.0
+   ]
+  },
+  {
+   "id": "M2TMNXSLV.T2M#inc5",
+   "name": "Arctic Ocean (wide area)",
+   "direction": "increasing",
+   "n_cells": 53,
+   "slope_per_decade": 1.021,
+   "ci95": [
+    0.5232,
+    1.57
+   ],
+   "p": 4.671e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    82.2,
+    -111.2
+   ]
+  },
+  {
+   "id": "M2TMNXSLV.T2M#inc6",
+   "name": "South-eastern Africa",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 0.2714,
+   "ci95": [
+    0.13,
+    0.4135
+   ],
+   "p": 0.0002903,
    "consistent_in_both_halves": false,
    "centroid": [
-    -67.5,
-    115.0
+    -20.8,
+    45.9
+   ]
+  },
+  {
+   "id": "M2TMNXSLV.T2M#inc7",
+   "name": "South Atlantic",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 0.3068,
+   "ci95": [
+    0.1046,
+    0.5122
+   ],
+   "p": 0.003268,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -42.5,
+    -42.5
+   ]
+  },
+  {
+   "id": "M2TMNXSLV.T2M#inc8",
+   "name": "Siberia",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 0.8544,
+   "ci95": [
+    0.2221,
+    1.505
+   ],
+   "p": 0.008748,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    62.5,
+    112.5
    ]
   }
  ],
  "REYNOLDS_NCDC_L4_MONTHLY_V5.sst": [
   {
    "id": "REYNOLDS_NCDC_L4_MONTHLY_V5.sst#inc1",
-   "name": "Widespread: Asia, North Pacific, North Atlantic",
+   "name": "Asia, North Pacific & North Atlantic",
    "direction": "increasing",
    "n_cells": 266,
    "slope_per_decade": 0.4294,
@@ -97,7 +165,7 @@
     0.3804,
     0.4794
    ],
-   "p": 0.0,
+   "p": 1e-16,
    "consistent_in_both_halves": true,
    "centroid": [
     29.3,
@@ -106,7 +174,7 @@
   },
   {
    "id": "REYNOLDS_NCDC_L4_MONTHLY_V5.sst#inc2",
-   "name": "Southern Ocean (widespread)",
+   "name": "Southern Ocean (wide area)",
    "direction": "increasing",
    "n_cells": 99,
    "slope_per_decade": 0.2262,
@@ -123,7 +191,7 @@
   },
   {
    "id": "REYNOLDS_NCDC_L4_MONTHLY_V5.sst#inc3",
-   "name": "Widespread: Southern Ocean, South Pacific, New Zealand",
+   "name": "Southern Ocean, South Pacific & New Zealand",
    "direction": "increasing",
    "n_cells": 55,
    "slope_per_decade": 0.3459,
@@ -137,12 +205,131 @@
     -47.4,
     174.3
    ]
+  },
+  {
+   "id": "REYNOLDS_NCDC_L4_MONTHLY_V5.sst#inc4",
+   "name": "South Atlantic (east)",
+   "direction": "increasing",
+   "n_cells": 26,
+   "slope_per_decade": 0.2978,
+   "ci95": [
+    0.132,
+    0.474
+   ],
+   "p": 0.0009027,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -10.8,
+    2.4
+   ]
+  },
+  {
+   "id": "REYNOLDS_NCDC_L4_MONTHLY_V5.sst#inc5",
+   "name": "North Pacific (east)",
+   "direction": "increasing",
+   "n_cells": 8,
+   "slope_per_decade": 0.484,
+   "ci95": [
+    0.1934,
+    0.7748
+   ],
+   "p": 0.002298,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    31.7,
+    -140.8
+   ]
+  },
+  {
+   "id": "REYNOLDS_NCDC_L4_MONTHLY_V5.sst#inc6",
+   "name": "Eastern Australia",
+   "direction": "increasing",
+   "n_cells": 5,
+   "slope_per_decade": 0.35,
+   "ci95": [
+    0.1198,
+    0.5796
+   ],
+   "p": 0.004924,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -15.5,
+    144.5
+   ]
+  },
+  {
+   "id": "REYNOLDS_NCDC_L4_MONTHLY_V5.sst#inc7",
+   "name": "Indian Ocean",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 0.3833,
+   "ci95": [
+    0.1074,
+    0.6448
+   ],
+   "p": 0.008295,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -20.0,
+    80.0
+   ]
+  },
+  {
+   "id": "REYNOLDS_NCDC_L4_MONTHLY_V5.sst#inc8",
+   "name": "North-eastern Oceania",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 0.1723,
+   "ci95": [
+    0.0886,
+    0.2618
+   ],
+   "p": 0.0002369,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -11.2,
+    170.0
+   ]
+  },
+  {
+   "id": "REYNOLDS_NCDC_L4_MONTHLY_V5.sst#inc9",
+   "name": "Canadian Arctic",
+   "direction": "increasing",
+   "n_cells": 14,
+   "slope_per_decade": 0.3038,
+   "ci95": [
+    0.1787,
+    0.4479
+   ],
+   "p": 6.74e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    69.9,
+    -83.0
+   ]
+  },
+  {
+   "id": "REYNOLDS_NCDC_L4_MONTHLY_V5.sst#inc10",
+   "name": "South Atlantic (west)",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 0.4114,
+   "ci95": [
+    0.143,
+    0.68
+   ],
+   "p": 0.003778,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -46.2,
+    -53.8
+   ]
   }
  ],
  "NASA_SSH_REF_SIMPLE_GRID_V11.ssha": [
   {
    "id": "NASA_SSH_REF_SIMPLE_GRID_V11.ssha#inc1",
-   "name": "Widespread: Southern Ocean, Indian Ocean, South Pacific",
+   "name": "Southern Ocean, Indian Ocean & South Pacific",
    "direction": "increasing",
    "n_cells": 1357,
    "slope_per_decade": 0.03891,
@@ -150,7 +337,7 @@
     0.03684,
     0.04107
    ],
-   "p": 0.0,
+   "p": 1e-16,
    "consistent_in_both_halves": true,
    "centroid": [
     -5.9,
@@ -178,7 +365,7 @@
  "GPM_3IMERGM.precipitation": [
   {
    "id": "GPM_3IMERGM.precipitation#inc1",
-   "name": "Southern Ocean (widespread)",
+   "name": "Southern Ocean (wide area)",
    "direction": "increasing",
    "n_cells": 184,
    "slope_per_decade": 0.0121,
@@ -186,7 +373,7 @@
     0.009857,
     0.01427
    ],
-   "p": 4.095e-33,
+   "p": 1e-16,
    "consistent_in_both_halves": true,
    "centroid": [
     -64.0,
@@ -194,8 +381,8 @@
    ]
   },
   {
-   "id": "GPM_3IMERGM.precipitation#dec4",
-   "name": "Eastern Pacific (widespread)",
+   "id": "GPM_3IMERGM.precipitation#dec11",
+   "name": "Eastern Pacific (wide area)",
    "direction": "decreasing",
    "n_cells": 43,
    "slope_per_decade": -0.006736,
@@ -211,7 +398,7 @@
    ]
   },
   {
-   "id": "GPM_3IMERGM.precipitation#dec5",
+   "id": "GPM_3IMERGM.precipitation#dec12",
    "name": "Tropical Atlantic",
    "direction": "decreasing",
    "n_cells": 15,
@@ -245,7 +432,7 @@
    ]
   },
   {
-   "id": "GPM_3IMERGM.precipitation#dec6",
+   "id": "GPM_3IMERGM.precipitation#dec13",
    "name": "Amazon Basin",
    "direction": "decreasing",
    "n_cells": 9,
@@ -259,6 +446,40 @@
    "centroid": [
     -11.8,
     -57.6
+   ]
+  },
+  {
+   "id": "GPM_3IMERGM.precipitation#dec14",
+   "name": "Central America & Caribbean",
+   "direction": "decreasing",
+   "n_cells": 15,
+   "slope_per_decade": -0.01473,
+   "ci95": [
+    -0.0228,
+    -0.006985
+   ],
+   "p": 0.0001894,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    16.7,
+    -54.5
+   ]
+  },
+  {
+   "id": "GPM_3IMERGM.precipitation#dec15",
+   "name": "Southern Ocean",
+   "direction": "decreasing",
+   "n_cells": 11,
+   "slope_per_decade": -0.01348,
+   "ci95": [
+    -0.01833,
+    -0.008865
+   ],
+   "p": 9.207e-11,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -44.3,
+    115.3
    ]
   },
   {
@@ -277,12 +498,216 @@
     39.6,
     108.7
    ]
+  },
+  {
+   "id": "GPM_3IMERGM.precipitation#dec16",
+   "name": "Central North America",
+   "direction": "decreasing",
+   "n_cells": 10,
+   "slope_per_decade": -0.01442,
+   "ci95": [
+    -0.01998,
+    -0.00872
+   ],
+   "p": 2.589e-06,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    55.8,
+    -126.6
+   ]
+  },
+  {
+   "id": "GPM_3IMERGM.precipitation#inc4",
+   "name": "South Atlantic",
+   "direction": "increasing",
+   "n_cells": 6,
+   "slope_per_decade": 0.03305,
+   "ci95": [
+    0.02233,
+    0.04427
+   ],
+   "p": 4.577e-08,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -39.1,
+    -36.8
+   ]
+  },
+  {
+   "id": "GPM_3IMERGM.precipitation#inc5",
+   "name": "North Atlantic (west)",
+   "direction": "increasing",
+   "n_cells": 5,
+   "slope_per_decade": 0.03298,
+   "ci95": [
+    0.02061,
+    0.04503
+   ],
+   "p": 3.026e-07,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    40.4,
+    -58.5
+   ]
+  },
+  {
+   "id": "GPM_3IMERGM.precipitation#inc6",
+   "name": "Siberia",
+   "direction": "increasing",
+   "n_cells": 8,
+   "slope_per_decade": 0.01427,
+   "ci95": [
+    0.00769,
+    0.02104
+   ],
+   "p": 2.549e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    57.9,
+    177.7
+   ]
+  },
+  {
+   "id": "GPM_3IMERGM.precipitation#dec17",
+   "name": "Eastern North America",
+   "direction": "decreasing",
+   "n_cells": 8,
+   "slope_per_decade": -0.01156,
+   "ci95": [
+    -0.01604,
+    -0.007291
+   ],
+   "p": 2.737e-07,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    55.2,
+    -63.4
+   ]
+  },
+  {
+   "id": "GPM_3IMERGM.precipitation#dec18",
+   "name": "North Atlantic (east)",
+   "direction": "decreasing",
+   "n_cells": 7,
+   "slope_per_decade": -0.00654,
+   "ci95": [
+    -0.01108,
+    -0.002781
+   ],
+   "p": 0.0002115,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    28.8,
+    -21.1
+   ]
+  },
+  {
+   "id": "GPM_3IMERGM.precipitation#dec19",
+   "name": "Southern Africa",
+   "direction": "decreasing",
+   "n_cells": 6,
+   "slope_per_decade": -0.01039,
+   "ci95": [
+    -0.02154,
+    -0.003366
+   ],
+   "p": 5.644e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -14.1,
+    24.2
+   ]
+  },
+  {
+   "id": "GPM_3IMERGM.precipitation#dec20",
+   "name": "Sahara",
+   "direction": "decreasing",
+   "n_cells": 6,
+   "slope_per_decade": -0.002876,
+   "ci95": [
+    -0.004461,
+    -0.00145
+   ],
+   "p": 0.0001032,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    29.0,
+    2.5
+   ]
+  },
+  {
+   "id": "GPM_3IMERGM.precipitation#inc7",
+   "name": "Eastern Australia",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 0.0212,
+   "ci95": [
+    0.01202,
+    0.03042
+   ],
+   "p": 9.879e-06,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -42.3,
+    154.9
+   ]
+  },
+  {
+   "id": "GPM_3IMERGM.precipitation#inc8",
+   "name": "Indian Ocean",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 0.02151,
+   "ci95": [
+    0.01251,
+    0.03067
+   ],
+   "p": 6.59e-06,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -45.7,
+    39.1
+   ]
+  },
+  {
+   "id": "GPM_3IMERGM.precipitation#inc9",
+   "name": "Arctic Ocean",
+   "direction": "increasing",
+   "n_cells": 9,
+   "slope_per_decade": 0.004757,
+   "ci95": [
+    0.002985,
+    0.006609
+   ],
+   "p": 2.739e-07,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    73.5,
+    -142.9
+   ]
+  },
+  {
+   "id": "GPM_3IMERGM.precipitation#inc10",
+   "name": "Greenland",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 0.01492,
+   "ci95": [
+    0.00856,
+    0.02139
+   ],
+   "p": 8.247e-06,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    68.5,
+    -31.5
+   ]
   }
  ],
  "MOD10CM.Snow_Cover_Monthly_CMG": [
   {
    "id": "MOD10CM.Snow_Cover_Monthly_CMG#inc1",
-   "name": "Africa",
+   "name": "Eastern Africa",
    "direction": "increasing",
    "n_cells": 3,
    "slope_per_decade": 0.01035,
@@ -296,46 +721,12 @@
     -0.8,
     35.8
    ]
-  },
-  {
-   "id": "MOD10CM.Snow_Cover_Monthly_CMG#dec2",
-   "name": "Asia",
-   "direction": "decreasing",
-   "n_cells": 2,
-   "slope_per_decade": -0.207,
-   "ci95": [
-    -0.3892,
-    -0.0867
-   ],
-   "p": 0.0001491,
-   "consistent_in_both_halves": true,
-   "centroid": [
-    32.5,
-    135.0
-   ]
-  },
-  {
-   "id": "MOD10CM.Snow_Cover_Monthly_CMG#dec3",
-   "name": "Asia",
-   "direction": "decreasing",
-   "n_cells": 2,
-   "slope_per_decade": -0.5848,
-   "ci95": [
-    -1.212,
-    -0.2439
-   ],
-   "p": 0.0005501,
-   "consistent_in_both_halves": true,
-   "centroid": [
-    44.9,
-    49.9
-   ]
   }
  ],
  "MOD13C2.CMG 0.05 Deg Monthly NDVI": [
   {
    "id": "MOD13C2.CMG 0.05 Deg Monthly NDVI#inc1",
-   "name": "Widespread: Asia, Indian Subcontinent, Eastern China",
+   "name": "Asia, Indian Subcontinent & Eastern China",
    "direction": "increasing",
    "n_cells": 113,
    "slope_per_decade": 0.02181,
@@ -343,7 +734,7 @@
     0.01903,
     0.02468
    ],
-   "p": 0.0,
+   "p": 1e-16,
    "consistent_in_both_halves": true,
    "centroid": [
     27.5,
@@ -352,7 +743,7 @@
   },
   {
    "id": "MOD13C2.CMG 0.05 Deg Monthly NDVI#inc2",
-   "name": "Widespread: Congo Basin, Mediterranean, Sahel",
+   "name": "Congo Basin, Mediterranean & Sahel",
    "direction": "increasing",
    "n_cells": 50,
    "slope_per_decade": 0.01598,
@@ -385,8 +776,76 @@
    ]
   },
   {
-   "id": "MOD13C2.CMG 0.05 Deg Monthly NDVI#dec4",
-   "name": "Africa",
+   "id": "MOD13C2.CMG 0.05 Deg Monthly NDVI#inc4",
+   "name": "Eastern North America",
+   "direction": "increasing",
+   "n_cells": 15,
+   "slope_per_decade": 0.01385,
+   "ci95": [
+    0.009054,
+    0.01874
+   ],
+   "p": 2.162e-07,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    34.9,
+    -81.5
+   ]
+  },
+  {
+   "id": "MOD13C2.CMG 0.05 Deg Monthly NDVI#inc5",
+   "name": "Eastern Australia",
+   "direction": "increasing",
+   "n_cells": 9,
+   "slope_per_decade": 0.008493,
+   "ci95": [
+    0.004873,
+    0.01213
+   ],
+   "p": 0.0001019,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -8.0,
+    141.9
+   ]
+  },
+  {
+   "id": "MOD13C2.CMG 0.05 Deg Monthly NDVI#inc6",
+   "name": "Sahel",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 0.00669,
+   "ci95": [
+    0.002672,
+    0.01134
+   ],
+   "p": 0.001725,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    16.2,
+    1.2
+   ]
+  },
+  {
+   "id": "MOD13C2.CMG 0.05 Deg Monthly NDVI#inc7",
+   "name": "Canadian Arctic",
+   "direction": "increasing",
+   "n_cells": 24,
+   "slope_per_decade": 0.01076,
+   "ci95": [
+    0.006285,
+    0.01557
+   ],
+   "p": 8.932e-06,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    64.7,
+    -112.8
+   ]
+  },
+  {
+   "id": "MOD13C2.CMG 0.05 Deg Monthly NDVI#dec11",
+   "name": "South-eastern Africa",
    "direction": "decreasing",
    "n_cells": 3,
    "slope_per_decade": -0.02913,
@@ -402,7 +861,7 @@
    ]
   },
   {
-   "id": "MOD13C2.CMG 0.05 Deg Monthly NDVI#dec5",
+   "id": "MOD13C2.CMG 0.05 Deg Monthly NDVI#dec12",
    "name": "Sahara",
    "direction": "decreasing",
    "n_cells": 3,
@@ -419,26 +878,60 @@
    ]
   },
   {
-   "id": "MOD13C2.CMG 0.05 Deg Monthly NDVI#dec6",
-   "name": "Southern Africa",
-   "direction": "decreasing",
-   "n_cells": 2,
-   "slope_per_decade": -0.0161,
+   "id": "MOD13C2.CMG 0.05 Deg Monthly NDVI#inc8",
+   "name": "North-western Oceania",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 0.00913,
    "ci95": [
-    -0.02683,
-    -0.005706
+    0.005429,
+    0.01315
    ],
-   "p": 0.003126,
+   "p": 3.225e-06,
    "consistent_in_both_halves": true,
    "centroid": [
-    -20.0,
-    12.5
+    -15.8,
+    -179.2
+   ]
+  },
+  {
+   "id": "MOD13C2.CMG 0.05 Deg Monthly NDVI#inc9",
+   "name": "Alaska & Yukon",
+   "direction": "increasing",
+   "n_cells": 6,
+   "slope_per_decade": 0.02249,
+   "ci95": [
+    0.009997,
+    0.03529
+   ],
+   "p": 0.0007022,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    56.6,
+    -171.1
+   ]
+  },
+  {
+   "id": "MOD13C2.CMG 0.05 Deg Monthly NDVI#inc10",
+   "name": "Siberia",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 0.01408,
+   "ci95": [
+    0.007215,
+    0.02117
+   ],
+   "p": 0.0001546,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    53.6,
+    93.6
    ]
   }
  ],
  "GLDAS_CLSM10_M.TWS_inst": [
   {
-   "id": "GLDAS_CLSM10_M.TWS_inst#dec2",
+   "id": "GLDAS_CLSM10_M.TWS_inst#dec1",
    "name": "Amazon Basin",
    "direction": "decreasing",
    "n_cells": 15,
@@ -455,8 +948,8 @@
    ]
   },
   {
-   "id": "GLDAS_CLSM10_M.TWS_inst#dec3",
-   "name": "North America",
+   "id": "GLDAS_CLSM10_M.TWS_inst#dec2",
+   "name": "Eastern North America",
    "direction": "decreasing",
    "n_cells": 9,
    "slope_per_decade": -171.2,
@@ -472,7 +965,7 @@
    ]
   },
   {
-   "id": "GLDAS_CLSM10_M.TWS_inst#dec4",
+   "id": "GLDAS_CLSM10_M.TWS_inst#dec3",
    "name": "Southern Africa",
    "direction": "decreasing",
    "n_cells": 8,
@@ -489,27 +982,44 @@
    ]
   },
   {
-   "id": "GLDAS_CLSM10_M.TWS_inst#inc1",
-   "name": "Mongolia & Inner Asia",
-   "direction": "increasing",
-   "n_cells": 2,
-   "slope_per_decade": 45.24,
+   "id": "GLDAS_CLSM10_M.TWS_inst#dec4",
+   "name": "Mediterranean",
+   "direction": "decreasing",
+   "n_cells": 7,
+   "slope_per_decade": -21.96,
    "ci95": [
-    27.56,
-    62.06
+    -32.68,
+    -12.03
    ],
-   "p": 0.0002779,
+   "p": 0.0004496,
    "consistent_in_both_halves": true,
    "centroid": [
-    47.5,
-    105.0
+    30.8,
+    7.5
+   ]
+  },
+  {
+   "id": "GLDAS_CLSM10_M.TWS_inst#dec5",
+   "name": "North-western Asia",
+   "direction": "decreasing",
+   "n_cells": 3,
+   "slope_per_decade": -49.56,
+   "ci95": [
+    -72.38,
+    -30.25
+   ],
+   "p": 0.000104,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    76.2,
+    55.2
    ]
   }
  ],
  "M2TMNXRAD.SWGDN": [
   {
-   "id": "M2TMNXRAD.SWGDN#dec4",
-   "name": "Widespread: Southern Ocean, South Pacific, Indian Ocean",
+   "id": "M2TMNXRAD.SWGDN#dec10",
+   "name": "Southern Ocean, South Pacific & Indian Ocean",
    "direction": "decreasing",
    "n_cells": 274,
    "slope_per_decade": -4.016,
@@ -525,8 +1035,8 @@
    ]
   },
   {
-   "id": "M2TMNXRAD.SWGDN#dec5",
-   "name": "Southern Ocean (widespread)",
+   "id": "M2TMNXRAD.SWGDN#dec11",
+   "name": "Southern Ocean (wide area)",
    "direction": "decreasing",
    "n_cells": 63,
    "slope_per_decade": -2.958,
@@ -542,7 +1052,7 @@
    ]
   },
   {
-   "id": "M2TMNXRAD.SWGDN#dec6",
+   "id": "M2TMNXRAD.SWGDN#dec12",
    "name": "Congo Basin",
    "direction": "decreasing",
    "n_cells": 18,
@@ -560,7 +1070,7 @@
   },
   {
    "id": "M2TMNXRAD.SWGDN#inc1",
-   "name": "Oceania",
+   "name": "Northern Oceania",
    "direction": "increasing",
    "n_cells": 13,
    "slope_per_decade": 10.67,
@@ -573,6 +1083,23 @@
    "centroid": [
     -3.2,
     149.4
+   ]
+  },
+  {
+   "id": "M2TMNXRAD.SWGDN#dec13",
+   "name": "Central Asia",
+   "direction": "decreasing",
+   "n_cells": 15,
+   "slope_per_decade": -4.792,
+   "ci95": [
+    -6.091,
+    -3.484
+   ],
+   "p": 2.357e-15,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    32.4,
+    90.6
    ]
   },
   {
@@ -608,6 +1135,210 @@
     -0.2,
     89.8
    ]
+  },
+  {
+   "id": "M2TMNXRAD.SWGDN#dec14",
+   "name": "Western Pacific",
+   "direction": "decreasing",
+   "n_cells": 9,
+   "slope_per_decade": -8.343,
+   "ci95": [
+    -12.91,
+    -3.586
+   ],
+   "p": 0.0006091,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    9.7,
+    171.4
+   ]
+  },
+  {
+   "id": "M2TMNXRAD.SWGDN#inc4",
+   "name": "Eastern Pacific",
+   "direction": "increasing",
+   "n_cells": 8,
+   "slope_per_decade": 6.993,
+   "ci95": [
+    4.58,
+    9.539
+   ],
+   "p": 4.39e-12,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    20.5,
+    -121.8
+   ]
+  },
+  {
+   "id": "M2TMNXRAD.SWGDN#dec15",
+   "name": "North Atlantic",
+   "direction": "decreasing",
+   "n_cells": 17,
+   "slope_per_decade": -3.444,
+   "ci95": [
+    -5.214,
+    -1.853
+   ],
+   "p": 1.122e-05,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    49.9,
+    -27.0
+   ]
+  },
+  {
+   "id": "M2TMNXRAD.SWGDN#inc5",
+   "name": "Western Africa",
+   "direction": "increasing",
+   "n_cells": 8,
+   "slope_per_decade": 5.124,
+   "ci95": [
+    3.088,
+    7.305
+   ],
+   "p": 3.31e-06,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    7.5,
+    -10.0
+   ]
+  },
+  {
+   "id": "M2TMNXRAD.SWGDN#inc6",
+   "name": "Eastern Asia",
+   "direction": "increasing",
+   "n_cells": 14,
+   "slope_per_decade": 3.73,
+   "ci95": [
+    2.509,
+    4.939
+   ],
+   "p": 2.538e-09,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    36.5,
+    133.8
+   ]
+  },
+  {
+   "id": "M2TMNXRAD.SWGDN#inc7",
+   "name": "Southeast Asia",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 5.442,
+   "ci95": [
+    2.597,
+    8.306
+   ],
+   "p": 2.54e-06,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    19.1,
+    90.8
+   ]
+  },
+  {
+   "id": "M2TMNXRAD.SWGDN#inc8",
+   "name": "Tropical Atlantic",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 4.629,
+   "ci95": [
+    2.011,
+    7.266
+   ],
+   "p": 0.000157,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -12.5,
+    2.5
+   ]
+  },
+  {
+   "id": "M2TMNXRAD.SWGDN#inc9",
+   "name": "Sahara",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 2.72,
+   "ci95": [
+    0.9406,
+    4.573
+   ],
+   "p": 0.003154,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    27.5,
+    17.5
+   ]
+  },
+  {
+   "id": "M2TMNXRAD.SWGDN#dec16",
+   "name": "Mongolia & Inner Asia",
+   "direction": "decreasing",
+   "n_cells": 3,
+   "slope_per_decade": -2.783,
+   "ci95": [
+    -4.328,
+    -1.245
+   ],
+   "p": 0.0004526,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    47.5,
+    107.5
+   ]
+  },
+  {
+   "id": "M2TMNXRAD.SWGDN#dec17",
+   "name": "Arctic Ocean (west)",
+   "direction": "decreasing",
+   "n_cells": 11,
+   "slope_per_decade": -0.6194,
+   "ci95": [
+    -2.707,
+    -0.0001315
+   ],
+   "p": 0.004918,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    80.1,
+    -153.6
+   ]
+  },
+  {
+   "id": "M2TMNXRAD.SWGDN#dec18",
+   "name": "Arctic Ocean (east)",
+   "direction": "decreasing",
+   "n_cells": 11,
+   "slope_per_decade": -0.3089,
+   "ci95": [
+    -1.46,
+    -0.01521
+   ],
+   "p": 0.0003571,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    81.2,
+    107.7
+   ]
+  },
+  {
+   "id": "M2TMNXRAD.SWGDN#dec19",
+   "name": "Arctic Ocean (2)",
+   "direction": "decreasing",
+   "n_cells": 7,
+   "slope_per_decade": -0.3337,
+   "ci95": [
+    -1.703,
+    -0.003752
+   ],
+   "p": 0.001014,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    82.5,
+    22.5
+   ]
   }
  ],
  "M2TMNXLND.GWETTOP": [
@@ -630,7 +1361,7 @@
   },
   {
    "id": "M2TMNXLND.GWETTOP#inc2",
-   "name": "Asia",
+   "name": "Central Asia",
    "direction": "increasing",
    "n_cells": 8,
    "slope_per_decade": 0.05769,
@@ -646,7 +1377,7 @@
    ]
   },
   {
-   "id": "M2TMNXLND.GWETTOP#dec4",
+   "id": "M2TMNXLND.GWETTOP#dec8",
    "name": "Mediterranean",
    "direction": "decreasing",
    "n_cells": 10,
@@ -680,7 +1411,7 @@
    ]
   },
   {
-   "id": "M2TMNXLND.GWETTOP#dec5",
+   "id": "M2TMNXLND.GWETTOP#dec9",
    "name": "Amazon Basin",
    "direction": "decreasing",
    "n_cells": 4,
@@ -697,27 +1428,78 @@
    ]
   },
   {
-   "id": "M2TMNXLND.GWETTOP#dec6",
-   "name": "Eastern North America",
-   "direction": "decreasing",
-   "n_cells": 2,
-   "slope_per_decade": -0.03878,
+   "id": "M2TMNXLND.GWETTOP#inc4",
+   "name": "Alaska & Yukon",
+   "direction": "increasing",
+   "n_cells": 5,
+   "slope_per_decade": 0.03608,
    "ci95": [
-    -0.05472,
-    -0.02254
+    0.02627,
+    0.0463
    ],
-   "p": 8.271e-05,
+   "p": 3.348e-07,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    64.3,
+    -150.7
+   ]
+  },
+  {
+   "id": "M2TMNXLND.GWETTOP#inc5",
+   "name": "Andes",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 0.003641,
+   "ci95": [
+    0.002279,
+    0.005133
+   ],
+   "p": 9.808e-06,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -5.0,
+    -83.8
+   ]
+  },
+  {
+   "id": "M2TMNXLND.GWETTOP#inc6",
+   "name": "Eastern China",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 0.02948,
+   "ci95": [
+    0.01998,
+    0.03945
+   ],
+   "p": 1.444e-07,
    "consistent_in_both_halves": true,
    "centroid": [
-    47.5,
-    -65.0
+    37.5,
+    107.5
+   ]
+  },
+  {
+   "id": "M2TMNXLND.GWETTOP#inc7",
+   "name": "Siberia",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 0.01998,
+   "ci95": [
+    0.01148,
+    0.0305
+   ],
+   "p": 3.461e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    65.6,
+    174.1
    ]
   }
  ],
  "GLDAS_VIC10_M.Swnet_tavg": [
   {
    "id": "GLDAS_VIC10_M.Swnet_tavg#inc1",
-   "name": "Widespread: Southern Africa, Sahel, Sahara",
+   "name": "Southern Africa, Sahel & Sahara",
    "direction": "increasing",
    "n_cells": 126,
    "slope_per_decade": 6.625,
@@ -767,7 +1549,41 @@
    ]
   },
   {
-   "id": "GLDAS_VIC10_M.Swnet_tavg#dec4",
+   "id": "GLDAS_VIC10_M.Swnet_tavg#inc4",
+   "name": "Northern Oceania",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 15.3,
+   "ci95": [
+    8.671,
+    21.97
+   ],
+   "p": 2.489e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -5.0,
+    142.5
+   ]
+  },
+  {
+   "id": "GLDAS_VIC10_M.Swnet_tavg#inc5",
+   "name": "Indian Subcontinent",
+   "direction": "increasing",
+   "n_cells": 7,
+   "slope_per_decade": 5.226,
+   "ci95": [
+    2.881,
+    7.564
+   ],
+   "p": 1.483e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    19.5,
+    74.7
+   ]
+  },
+  {
+   "id": "GLDAS_VIC10_M.Swnet_tavg#dec7",
    "name": "Eastern North America",
    "direction": "decreasing",
    "n_cells": 5,
@@ -784,8 +1600,25 @@
    ]
   },
   {
-   "id": "GLDAS_VIC10_M.Swnet_tavg#dec5",
-   "name": "Widespread: Greenland, Canadian Arctic",
+   "id": "GLDAS_VIC10_M.Swnet_tavg#inc6",
+   "name": "Western Asia",
+   "direction": "increasing",
+   "n_cells": 5,
+   "slope_per_decade": 4.285,
+   "ci95": [
+    2.2,
+    6.354
+   ],
+   "p": 9.628e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    41.4,
+    50.5
+   ]
+  },
+  {
+   "id": "GLDAS_VIC10_M.Swnet_tavg#dec8",
+   "name": "Greenland & Canadian Arctic",
    "direction": "decreasing",
    "n_cells": 48,
    "slope_per_decade": -1.119,
@@ -801,7 +1634,7 @@
    ]
   },
   {
-   "id": "GLDAS_VIC10_M.Swnet_tavg#dec6",
+   "id": "GLDAS_VIC10_M.Swnet_tavg#dec9",
    "name": "Western Europe",
    "direction": "decreasing",
    "n_cells": 4,
@@ -821,7 +1654,7 @@
  "M2TMNXAER.TOTEXTTAU": [
   {
    "id": "M2TMNXAER.TOTEXTTAU#inc1",
-   "name": "Widespread: Southern Ocean, South Pacific, Indian Ocean",
+   "name": "Southern Ocean, South Pacific & Indian Ocean",
    "direction": "increasing",
    "n_cells": 597,
    "slope_per_decade": 0.006581,
@@ -837,8 +1670,8 @@
    ]
   },
   {
-   "id": "M2TMNXAER.TOTEXTTAU#dec4",
-   "name": "Widespread: Asia, North Pacific, Eastern China",
+   "id": "M2TMNXAER.TOTEXTTAU#dec6",
+   "name": "Asia, North Pacific & Eastern China",
    "direction": "decreasing",
    "n_cells": 159,
    "slope_per_decade": -0.02255,
@@ -854,8 +1687,8 @@
    ]
   },
   {
-   "id": "M2TMNXAER.TOTEXTTAU#dec5",
-   "name": "Widespread: Eastern Europe & Russia, Sahel, Sahara",
+   "id": "M2TMNXAER.TOTEXTTAU#dec7",
+   "name": "Eastern Europe & Russia, Sahel & Sahara",
    "direction": "decreasing",
    "n_cells": 91,
    "slope_per_decade": -0.02131,
@@ -871,7 +1704,7 @@
    ]
   },
   {
-   "id": "M2TMNXAER.TOTEXTTAU#dec6",
+   "id": "M2TMNXAER.TOTEXTTAU#dec8",
    "name": "Eastern North America",
    "direction": "decreasing",
    "n_cells": 38,
@@ -920,6 +1753,159 @@
     -4.8,
     20.2
    ]
+  },
+  {
+   "id": "M2TMNXAER.TOTEXTTAU#dec9",
+   "name": "Australia",
+   "direction": "decreasing",
+   "n_cells": 16,
+   "slope_per_decade": -0.01021,
+   "ci95": [
+    -0.01619,
+    -0.00413
+   ],
+   "p": 0.00246,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -23.0,
+    131.3
+   ]
+  },
+  {
+   "id": "M2TMNXAER.TOTEXTTAU#inc4",
+   "name": "Indian Subcontinent",
+   "direction": "increasing",
+   "n_cells": 17,
+   "slope_per_decade": 0.02976,
+   "ci95": [
+    0.01584,
+    0.04368
+   ],
+   "p": 4.253e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    17.6,
+    76.1
+   ]
+  },
+  {
+   "id": "M2TMNXAER.TOTEXTTAU#dec10",
+   "name": "Southern South America",
+   "direction": "decreasing",
+   "n_cells": 8,
+   "slope_per_decade": -0.00914,
+   "ci95": [
+    -0.01234,
+    -0.00568
+   ],
+   "p": 5.5e-07,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -38.4,
+    -64.3
+   ]
+  },
+  {
+   "id": "M2TMNXAER.TOTEXTTAU#dec11",
+   "name": "Tropical Pacific (El Ni\u00f1o region)",
+   "direction": "decreasing",
+   "n_cells": 8,
+   "slope_per_decade": -0.00491,
+   "ci95": [
+    -0.007897,
+    -0.001841
+   ],
+   "p": 0.0002009,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -8.7,
+    -140.0
+   ]
+  },
+  {
+   "id": "M2TMNXAER.TOTEXTTAU#dec12",
+   "name": "North Pacific (east)",
+   "direction": "decreasing",
+   "n_cells": 11,
+   "slope_per_decade": -0.005494,
+   "ci95": [
+    -0.009512,
+    -0.001499
+   ],
+   "p": 0.007307,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    37.7,
+    -139.1
+   ]
+  },
+  {
+   "id": "M2TMNXAER.TOTEXTTAU#dec13",
+   "name": "Alaska & Yukon",
+   "direction": "decreasing",
+   "n_cells": 11,
+   "slope_per_decade": -0.01,
+   "ci95": [
+    -0.01729,
+    -0.002882
+   ],
+   "p": 0.006989,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    59.5,
+    -155.8
+   ]
+  },
+  {
+   "id": "M2TMNXAER.TOTEXTTAU#dec14",
+   "name": "Northern South America",
+   "direction": "decreasing",
+   "n_cells": 3,
+   "slope_per_decade": -0.01711,
+   "ci95": [
+    -0.02899,
+    -0.005752
+   ],
+   "p": 0.004213,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    5.8,
+    -79.2
+   ]
+  },
+  {
+   "id": "M2TMNXAER.TOTEXTTAU#dec15",
+   "name": "Northern Oceania",
+   "direction": "decreasing",
+   "n_cells": 3,
+   "slope_per_decade": -0.008257,
+   "ci95": [
+    -0.01143,
+    -0.005124
+   ],
+   "p": 5.662e-07,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -9.1,
+    150.8
+   ]
+  },
+  {
+   "id": "M2TMNXAER.TOTEXTTAU#inc5",
+   "name": "Tibetan Plateau",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 0.0231,
+   "ci95": [
+    0.006892,
+    0.03986
+   ],
+   "p": 0.005792,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    40.8,
+    84.1
+   ]
   }
  ],
  "GLDAS_NOAH025_M.SoilMoi10_40cm_inst": [
@@ -941,7 +1927,7 @@
    ]
   },
   {
-   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#dec4",
+   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#dec9",
    "name": "Southern Africa",
    "direction": "decreasing",
    "n_cells": 30,
@@ -958,7 +1944,7 @@
    ]
   },
   {
-   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#dec5",
+   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#dec10",
    "name": "Amazon Basin",
    "direction": "decreasing",
    "n_cells": 24,
@@ -976,7 +1962,7 @@
   },
   {
    "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#inc2",
-   "name": "Asia",
+   "name": "Central Asia",
    "direction": "increasing",
    "n_cells": 19,
    "slope_per_decade": 6.767,
@@ -992,8 +1978,8 @@
    ]
   },
   {
-   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#dec6",
-   "name": "North America",
+   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#dec11",
+   "name": "Central North America",
    "direction": "decreasing",
    "n_cells": 24,
    "slope_per_decade": -8.163,
@@ -1009,8 +1995,25 @@
    ]
   },
   {
+   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#dec12",
+   "name": "Siberia (east)",
+   "direction": "decreasing",
+   "n_cells": 15,
+   "slope_per_decade": -11.86,
+   "ci95": [
+    -15.11,
+    -8.095
+   ],
+   "p": 1.665e-06,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    68.5,
+    136.5
+   ]
+  },
+  {
    "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#inc3",
-   "name": "Siberia",
+   "name": "Siberia (west)",
    "direction": "increasing",
    "n_cells": 12,
    "slope_per_decade": 10.58,
@@ -1024,12 +2027,182 @@
     49.8,
     73.0
    ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#dec13",
+   "name": "Central America & Caribbean",
+   "direction": "decreasing",
+   "n_cells": 9,
+   "slope_per_decade": -9.985,
+   "ci95": [
+    -15.72,
+    -4.333
+   ],
+   "p": 0.002039,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    16.9,
+    -77.0
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#dec14",
+   "name": "Mediterranean",
+   "direction": "decreasing",
+   "n_cells": 7,
+   "slope_per_decade": -5.286,
+   "ci95": [
+    -7.171,
+    -3.43
+   ],
+   "p": 4.246e-06,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    35.9,
+    4.3
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#inc4",
+   "name": "Sahara",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 2.776,
+   "ci95": [
+    1.606,
+    4.054
+   ],
+   "p": 0.0001787,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    29.9,
+    25.0
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#dec15",
+   "name": "10\u00b0N\u201320\u00b0N, 30\u00b0W\u201320\u00b0W",
+   "direction": "decreasing",
+   "n_cells": 3,
+   "slope_per_decade": -10.01,
+   "ci95": [
+    -12.61,
+    -7.481
+   ],
+   "p": 1.195e-06,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    15.8,
+    -24.2
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#dec16",
+   "name": "Tibetan Plateau",
+   "direction": "decreasing",
+   "n_cells": 5,
+   "slope_per_decade": -2.875,
+   "ci95": [
+    -3.943,
+    -1.779
+   ],
+   "p": 2.309e-05,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    34.3,
+    87.5
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#inc5",
+   "name": "Alaska & Yukon (east)",
+   "direction": "increasing",
+   "n_cells": 9,
+   "slope_per_decade": 5.726,
+   "ci95": [
+    2.72,
+    8.415
+   ],
+   "p": 0.0004611,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    62.6,
+    -143.2
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#inc6",
+   "name": "Southern South America",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 4.628,
+   "ci95": [
+    2.681,
+    6.731
+   ],
+   "p": 2.668e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -53.6,
+    -67.5
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#dec17",
+   "name": "Northern Oceania",
+   "direction": "decreasing",
+   "n_cells": 5,
+   "slope_per_decade": -2.482,
+   "ci95": [
+    -3.564,
+    -1.334
+   ],
+   "p": 0.0001445,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -8.5,
+    148.5
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#inc7",
+   "name": "Alaska & Yukon (west)",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 6.204,
+   "ci95": [
+    2.687,
+    10.31
+   ],
+   "p": 0.001427,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    64.0,
+    -169.3
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilMoi10_40cm_inst#inc8",
+   "name": "North-western Asia",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 4.766,
+   "ci95": [
+    1.435,
+    8.756
+   ],
+   "p": 0.003521,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    72.5,
+    27.5
+   ]
   }
  ],
  "M2TMNXSLV.H500": [
   {
    "id": "M2TMNXSLV.H500#inc1",
-   "name": "Widespread: Indian Ocean, Tropical Pacific (Nino region), Eastern Pacific",
+   "name": "Indian Ocean, Tropical Pacific (El Ni\u00f1o region) & Eastern Pacific",
    "direction": "increasing",
    "n_cells": 1193,
    "slope_per_decade": 9.805,
@@ -1048,7 +2221,7 @@
  "GLDAS_CLSM10_M.Qle_tavg": [
   {
    "id": "GLDAS_CLSM10_M.Qle_tavg#inc1",
-   "name": "Widespread: Asia, Mongolia & Inner Asia, Eastern China",
+   "name": "Asia, Mongolia & Inner Asia & Eastern China",
    "direction": "increasing",
    "n_cells": 40,
    "slope_per_decade": 4.822,
@@ -1064,7 +2237,7 @@
    ]
   },
   {
-   "id": "GLDAS_CLSM10_M.Qle_tavg#dec4",
+   "id": "GLDAS_CLSM10_M.Qle_tavg#dec8",
    "name": "Southern Africa",
    "direction": "decreasing",
    "n_cells": 16,
@@ -1081,7 +2254,7 @@
    ]
   },
   {
-   "id": "GLDAS_CLSM10_M.Qle_tavg#dec5",
+   "id": "GLDAS_CLSM10_M.Qle_tavg#dec9",
    "name": "Mediterranean",
    "direction": "decreasing",
    "n_cells": 11,
@@ -1132,27 +2305,146 @@
    ]
   },
   {
-   "id": "GLDAS_CLSM10_M.Qle_tavg#dec6",
-   "name": "Africa",
-   "direction": "decreasing",
-   "n_cells": 2,
-   "slope_per_decade": -8.469,
+   "id": "GLDAS_CLSM10_M.Qle_tavg#inc4",
+   "name": "Eastern North America",
+   "direction": "increasing",
+   "n_cells": 6,
+   "slope_per_decade": 2.926,
    "ci95": [
-    -13.51,
-    -3.399
+    1.698,
+    4.267
    ],
-   "p": 0.001412,
+   "p": 1.056e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    52.1,
+    -62.3
+   ]
+  },
+  {
+   "id": "GLDAS_CLSM10_M.Qle_tavg#dec10",
+   "name": "Western North America",
+   "direction": "decreasing",
+   "n_cells": 3,
+   "slope_per_decade": -3.648,
+   "ci95": [
+    -6.025,
+    -1.658
+   ],
+   "p": 0.0001381,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    52.5,
+    -107.5
+   ]
+  },
+  {
+   "id": "GLDAS_CLSM10_M.Qle_tavg#inc5",
+   "name": "Central Asia",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 2.594,
+   "ci95": [
+    1.145,
+    4.334
+   ],
+   "p": 0.0004184,
    "consistent_in_both_halves": false,
    "centroid": [
-    7.5,
-    5.0
+    47.3,
+    69.6
+   ]
+  },
+  {
+   "id": "GLDAS_CLSM10_M.Qle_tavg#dec11",
+   "name": "Siberia",
+   "direction": "decreasing",
+   "n_cells": 11,
+   "slope_per_decade": -0.6411,
+   "ci95": [
+    -1.867,
+    -0.0298
+   ],
+   "p": 0.0002368,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    65.7,
+    134.6
+   ]
+  },
+  {
+   "id": "GLDAS_CLSM10_M.Qle_tavg#inc6",
+   "name": "North-western Asia (east)",
+   "direction": "increasing",
+   "n_cells": 8,
+   "slope_per_decade": 0.6225,
+   "ci95": [
+    0.02856,
+    2.164
+   ],
+   "p": 0.000542,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    73.1,
+    64.2
+   ]
+  },
+  {
+   "id": "GLDAS_CLSM10_M.Qle_tavg#dec12",
+   "name": "Greenland",
+   "direction": "decreasing",
+   "n_cells": 13,
+   "slope_per_decade": -0.2812,
+   "ci95": [
+    -1.13,
+    -0.02843
+   ],
+   "p": 3.172e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    75.6,
+    -50.5
+   ]
+  },
+  {
+   "id": "GLDAS_CLSM10_M.Qle_tavg#inc7",
+   "name": "North-western Asia (west)",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 1.147,
+   "ci95": [
+    0.2724,
+    2.096
+   ],
+   "p": 0.00187,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    75.9,
+    20.7
+   ]
+  },
+  {
+   "id": "GLDAS_CLSM10_M.Qle_tavg#dec13",
+   "name": "Canadian Arctic",
+   "direction": "decreasing",
+   "n_cells": 4,
+   "slope_per_decade": -0.1066,
+   "ci95": [
+    -0.8082,
+    -0.001781
+   ],
+   "p": 0.005305,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    76.5,
+    -88.0
    ]
   }
  ],
  "M2TMNXSLV.CLDTMP": [
   {
    "id": "M2TMNXSLV.CLDTMP#inc1",
-   "name": "Oceania",
+   "name": "Northern Oceania",
    "direction": "increasing",
    "n_cells": 7,
    "slope_per_decade": 3.702,
@@ -1185,7 +2477,7 @@
    ]
   },
   {
-   "id": "M2TMNXSLV.CLDTMP#dec4",
+   "id": "M2TMNXSLV.CLDTMP#dec5",
    "name": "North Atlantic",
    "direction": "decreasing",
    "n_cells": 4,
@@ -1203,7 +2495,7 @@
   },
   {
    "id": "M2TMNXSLV.CLDTMP#inc3",
-   "name": "Africa",
+   "name": "Central Africa",
    "direction": "increasing",
    "n_cells": 3,
    "slope_per_decade": 2.031,
@@ -1219,20 +2511,20 @@
    ]
   },
   {
-   "id": "M2TMNXSLV.CLDTMP#dec5",
-   "name": "Western Pacific",
-   "direction": "decreasing",
-   "n_cells": 2,
-   "slope_per_decade": -5.183,
+   "id": "M2TMNXSLV.CLDTMP#inc4",
+   "name": "Central North America",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 1.079,
    "ci95": [
-    -7.863,
-    -2.339
+    0.5928,
+    1.579
    ],
-   "p": 0.0004838,
+   "p": 2.92e-05,
    "consistent_in_both_halves": false,
    "centroid": [
-    12.5,
-    170.0
+    57.5,
+    -112.5
    ]
   }
  ],
@@ -1306,6 +2598,74 @@
    ]
   },
   {
+   "id": "GLDAS_VIC10_M.Qs_acc#dec7",
+   "name": "Northern Oceania",
+   "direction": "decreasing",
+   "n_cells": 4,
+   "slope_per_decade": -0.01993,
+   "ci95": [
+    -0.02848,
+    -0.01149
+   ],
+   "p": 2.719e-07,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -5.0,
+    142.5
+   ]
+  },
+  {
+   "id": "GLDAS_VIC10_M.Qs_acc#dec8",
+   "name": "Eastern North America",
+   "direction": "decreasing",
+   "n_cells": 16,
+   "slope_per_decade": -0.006751,
+   "ci95": [
+    -0.01016,
+    -0.0038
+   ],
+   "p": 1.847e-07,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    53.2,
+    -87.8
+   ]
+  },
+  {
+   "id": "GLDAS_VIC10_M.Qs_acc#dec9",
+   "name": "Central America & Caribbean",
+   "direction": "decreasing",
+   "n_cells": 3,
+   "slope_per_decade": -0.01178,
+   "ci95": [
+    -0.0183,
+    -0.005939
+   ],
+   "p": 0.0001374,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    14.1,
+    -65.8
+   ]
+  },
+  {
+   "id": "GLDAS_VIC10_M.Qs_acc#dec10",
+   "name": "Central North America",
+   "direction": "decreasing",
+   "n_cells": 9,
+   "slope_per_decade": -0.01962,
+   "ci95": [
+    -0.0269,
+    -0.01225
+   ],
+   "p": 1.733e-07,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    58.4,
+    -127.3
+   ]
+  },
+  {
    "id": "GLDAS_VIC10_M.Qs_acc#inc2",
    "name": "Sahel",
    "direction": "increasing",
@@ -1338,12 +2698,46 @@
     49.4,
     76.4
    ]
+  },
+  {
+   "id": "GLDAS_VIC10_M.Qs_acc#dec11",
+   "name": "Greenland",
+   "direction": "decreasing",
+   "n_cells": 3,
+   "slope_per_decade": -0.02216,
+   "ci95": [
+    -0.03115,
+    -0.01355
+   ],
+   "p": 2.76e-06,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    64.0,
+    -20.7
+   ]
+  },
+  {
+   "id": "GLDAS_VIC10_M.Qs_acc#dec12",
+   "name": "Siberia",
+   "direction": "decreasing",
+   "n_cells": 6,
+   "slope_per_decade": -0.0002427,
+   "ci95": [
+    -0.0014,
+    -1.128e-17
+   ],
+   "p": 0.0001363,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    69.7,
+    137.5
+   ]
   }
  ],
  "FLDAS_NOAH01_C_GL_M.Evap_tavg": [
   {
    "id": "FLDAS_NOAH01_C_GL_M.Evap_tavg#inc1",
-   "name": "Oceania",
+   "name": "Northern Oceania",
    "direction": "increasing",
    "n_cells": 15,
    "slope_per_decade": 2.032e-06,
@@ -1393,7 +2787,7 @@
    ]
   },
   {
-   "id": "FLDAS_NOAH01_C_GL_M.Evap_tavg#dec4",
+   "id": "FLDAS_NOAH01_C_GL_M.Evap_tavg#dec11",
    "name": "Congo Basin",
    "direction": "decreasing",
    "n_cells": 5,
@@ -1410,7 +2804,24 @@
    ]
   },
   {
-   "id": "FLDAS_NOAH01_C_GL_M.Evap_tavg#dec5",
+   "id": "FLDAS_NOAH01_C_GL_M.Evap_tavg#inc4",
+   "name": "Eastern North America (south)",
+   "direction": "increasing",
+   "n_cells": 5,
+   "slope_per_decade": 2.416e-06,
+   "ci95": [
+    1.289e-06,
+    3.545e-06
+   ],
+   "p": 5.354e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    32.4,
+    -85.5
+   ]
+  },
+  {
+   "id": "FLDAS_NOAH01_C_GL_M.Evap_tavg#dec12",
    "name": "Mediterranean",
    "direction": "decreasing",
    "n_cells": 6,
@@ -1427,7 +2838,58 @@
    ]
   },
   {
-   "id": "FLDAS_NOAH01_C_GL_M.Evap_tavg#dec6",
+   "id": "FLDAS_NOAH01_C_GL_M.Evap_tavg#inc5",
+   "name": "Andes",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 1.335e-06,
+   "ci95": [
+    9.244e-07,
+    1.79e-06
+   ],
+   "p": 1.056e-10,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -17.4,
+    -75.0
+   ]
+  },
+  {
+   "id": "FLDAS_NOAH01_C_GL_M.Evap_tavg#inc6",
+   "name": "Eastern Africa",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 2.431e-06,
+   "ci95": [
+    1.351e-06,
+    3.479e-06
+   ],
+   "p": 7.381e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -5.8,
+    34.2
+   ]
+  },
+  {
+   "id": "FLDAS_NOAH01_C_GL_M.Evap_tavg#inc7",
+   "name": "Indian Subcontinent",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 2.513e-06,
+   "ci95": [
+    1.678e-06,
+    3.33e-06
+   ],
+   "p": 5.804e-08,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    27.4,
+    76.2
+   ]
+  },
+  {
+   "id": "FLDAS_NOAH01_C_GL_M.Evap_tavg#dec13",
    "name": "Southern Africa",
    "direction": "decreasing",
    "n_cells": 4,
@@ -1442,12 +2904,97 @@
     -19.8,
     15.0
    ]
+  },
+  {
+   "id": "FLDAS_NOAH01_C_GL_M.Evap_tavg#dec14",
+   "name": "Central Asia",
+   "direction": "decreasing",
+   "n_cells": 5,
+   "slope_per_decade": -8.048e-07,
+   "ci95": [
+    -1.153e-06,
+    -4.952e-07
+   ],
+   "p": 5.54e-07,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    30.3,
+    90.6
+   ]
+  },
+  {
+   "id": "FLDAS_NOAH01_C_GL_M.Evap_tavg#inc8",
+   "name": "Indonesia\u2013Philippines",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 1.121e-06,
+   "ci95": [
+    5.826e-07,
+    1.661e-06
+   ],
+   "p": 5.164e-05,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    2.5,
+    102.5
+   ]
+  },
+  {
+   "id": "FLDAS_NOAH01_C_GL_M.Evap_tavg#inc9",
+   "name": "New Zealand",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 8.678e-07,
+   "ci95": [
+    4.218e-07,
+    1.33e-06
+   ],
+   "p": 0.0001223,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -40.8,
+    170.9
+   ]
+  },
+  {
+   "id": "FLDAS_NOAH01_C_GL_M.Evap_tavg#inc10",
+   "name": "5\u00b0S\u20135\u00b0N, 95\u00b0W\u201385\u00b0W",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 3.569e-07,
+   "ci95": [
+    2.14e-07,
+    5.526e-07
+   ],
+   "p": 1.569e-06,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -0.8,
+    -90.8
+   ]
+  },
+  {
+   "id": "FLDAS_NOAH01_C_GL_M.Evap_tavg#dec15",
+   "name": "Eastern North America (north)",
+   "direction": "decreasing",
+   "n_cells": 3,
+   "slope_per_decade": -8e-07,
+   "ci95": [
+    -1.154e-06,
+    -4.551e-07
+   ],
+   "p": 5.647e-06,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    55.7,
+    -84.1
+   ]
   }
  ],
  "GLDAS_NOAH025_M.SoilTMP0_10cm_inst": [
   {
-   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#dec4",
-   "name": "Widespread: Maritime Continent, Indian Subcontinent, Southeast Asia",
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#dec11",
+   "name": "Indonesia\u2013Philippines, Indian Subcontinent & Southeast Asia",
    "direction": "decreasing",
    "n_cells": 42,
    "slope_per_decade": -0.7791,
@@ -1463,7 +3010,7 @@
    ]
   },
   {
-   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#dec5",
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#dec12",
    "name": "Amazon Basin",
    "direction": "decreasing",
    "n_cells": 37,
@@ -1481,7 +3028,7 @@
   },
   {
    "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#inc1",
-   "name": "Widespread: Mediterranean, Arabian Peninsula, Sahara",
+   "name": "Mediterranean, Arabian Peninsula & Sahara",
    "direction": "increasing",
    "n_cells": 45,
    "slope_per_decade": 0.8261,
@@ -1497,8 +3044,8 @@
    ]
   },
   {
-   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#dec6",
-   "name": "Africa",
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#dec13",
+   "name": "Central Africa",
    "direction": "decreasing",
    "n_cells": 23,
    "slope_per_decade": -0.6117,
@@ -1511,6 +3058,23 @@
    "centroid": [
     3.4,
     14.7
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#dec14",
+   "name": "Central America & Caribbean",
+   "direction": "decreasing",
+   "n_cells": 15,
+   "slope_per_decade": -0.7303,
+   "ci95": [
+    -1.035,
+    -0.4055
+   ],
+   "p": 0.0001201,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    17.4,
+    -91.3
    ]
   },
   {
@@ -1532,7 +3096,7 @@
   },
   {
    "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#inc3",
-   "name": "Oceania",
+   "name": "North-eastern Oceania",
    "direction": "increasing",
    "n_cells": 6,
    "slope_per_decade": 1.271,
@@ -1546,28 +3110,232 @@
     -15.7,
     165.0
    ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#inc4",
+   "name": "Tibetan Plateau",
+   "direction": "increasing",
+   "n_cells": 14,
+   "slope_per_decade": 1.15,
+   "ci95": [
+    0.868,
+    1.448
+   ],
+   "p": 6.522e-12,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    39.3,
+    94.8
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#inc5",
+   "name": "Australia",
+   "direction": "increasing",
+   "n_cells": 11,
+   "slope_per_decade": 0.8405,
+   "ci95": [
+    0.4614,
+    1.204
+   ],
+   "p": 4.338e-05,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -25.1,
+    125.6
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#dec15",
+   "name": "Northern Oceania (west)",
+   "direction": "decreasing",
+   "n_cells": 4,
+   "slope_per_decade": -0.7358,
+   "ci95": [
+    -1.059,
+    -0.3457
+   ],
+   "p": 0.002239,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -6.2,
+    143.8
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#inc6",
+   "name": "Southern South America (north)",
+   "direction": "increasing",
+   "n_cells": 7,
+   "slope_per_decade": 0.8685,
+   "ci95": [
+    0.5809,
+    1.157
+   ],
+   "p": 1.945e-07,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -29.0,
+    -69.1
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#dec16",
+   "name": "Greenland (west)",
+   "direction": "decreasing",
+   "n_cells": 9,
+   "slope_per_decade": -1.328,
+   "ci95": [
+    -1.712,
+    -0.9333
+   ],
+   "p": 5.502e-07,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    65.0,
+    -47.2
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#inc7",
+   "name": "Indonesia\u2013Philippines",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 1.089,
+   "ci95": [
+    0.5811,
+    1.597
+   ],
+   "p": 0.0002803,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -7.5,
+    122.5
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#dec17",
+   "name": "Southern South America (south)",
+   "direction": "decreasing",
+   "n_cells": 6,
+   "slope_per_decade": -0.9744,
+   "ci95": [
+    -1.222,
+    -0.7223
+   ],
+   "p": 5.366e-11,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -49.5,
+    -71.9
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#inc8",
+   "name": "Northern Oceania (east)",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 0.8107,
+   "ci95": [
+    0.3317,
+    1.236
+   ],
+   "p": 0.002933,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -7.5,
+    152.5
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#dec18",
+   "name": "Eastern North America",
+   "direction": "decreasing",
+   "n_cells": 11,
+   "slope_per_decade": -1.071,
+   "ci95": [
+    -1.549,
+    -0.579
+   ],
+   "p": 5.658e-05,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    53.6,
+    -80.0
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#inc9",
+   "name": "South-eastern Africa",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 1.354,
+   "ci95": [
+    0.677,
+    2.03
+   ],
+   "p": 0.0006707,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -25.8,
+    44.1
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#inc10",
+   "name": "Southern Africa",
+   "direction": "increasing",
+   "n_cells": 5,
+   "slope_per_decade": 0.763,
+   "ci95": [
+    0.4499,
+    1.084
+   ],
+   "p": 4.165e-06,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -26.4,
+    18.4
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#dec19",
+   "name": "Greenland (east)",
+   "direction": "decreasing",
+   "n_cells": 6,
+   "slope_per_decade": -1.103,
+   "ci95": [
+    -1.428,
+    -0.7624
+   ],
+   "p": 6.547e-09,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    64.8,
+    -17.5
+   ]
+  },
+  {
+   "id": "GLDAS_NOAH025_M.SoilTMP0_10cm_inst#dec20",
+   "name": "Scandinavia",
+   "direction": "decreasing",
+   "n_cells": 5,
+   "slope_per_decade": -0.7113,
+   "ci95": [
+    -1.052,
+    -0.3729
+   ],
+   "p": 7.202e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    64.3,
+    13.4
+   ]
   }
  ],
  "GLDAS_VIC10_M.SoilMoi_depth2_inst": [
   {
-   "id": "GLDAS_VIC10_M.SoilMoi_depth2_inst#dec4",
-   "name": "Sahara",
-   "direction": "decreasing",
-   "n_cells": 2,
-   "slope_per_decade": -0.7031,
-   "ci95": [
-    -0.7719,
-    -0.6354
-   ],
-   "p": 5.774e-07,
-   "consistent_in_both_halves": true,
-   "centroid": [
-    24.9,
-    17.5
-   ]
-  },
-  {
-   "id": "GLDAS_VIC10_M.SoilMoi_depth2_inst#dec5",
+   "id": "GLDAS_VIC10_M.SoilMoi_depth2_inst#dec3",
    "name": "Andes",
    "direction": "decreasing",
    "n_cells": 8,
@@ -1584,7 +3352,7 @@
    ]
   },
   {
-   "id": "GLDAS_VIC10_M.SoilMoi_depth2_inst#dec6",
+   "id": "GLDAS_VIC10_M.SoilMoi_depth2_inst#dec4",
    "name": "Southern Africa",
    "direction": "decreasing",
    "n_cells": 8,
@@ -1598,6 +3366,57 @@
    "centroid": [
     -15.6,
     26.2
+   ]
+  },
+  {
+   "id": "GLDAS_VIC10_M.SoilMoi_depth2_inst#dec5",
+   "name": "Siberia (east)",
+   "direction": "decreasing",
+   "n_cells": 21,
+   "slope_per_decade": -9.805,
+   "ci95": [
+    -12.49,
+    -6.976
+   ],
+   "p": 3.315e-08,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    68.9,
+    134.1
+   ]
+  },
+  {
+   "id": "GLDAS_VIC10_M.SoilMoi_depth2_inst#dec6",
+   "name": "Western North America",
+   "direction": "decreasing",
+   "n_cells": 5,
+   "slope_per_decade": -17.21,
+   "ci95": [
+    -24.91,
+    -10.82
+   ],
+   "p": 3.923e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    52.3,
+    -107.7
+   ]
+  },
+  {
+   "id": "GLDAS_VIC10_M.SoilMoi_depth2_inst#dec7",
+   "name": "Mediterranean",
+   "direction": "decreasing",
+   "n_cells": 4,
+   "slope_per_decade": -25.17,
+   "ci95": [
+    -35.63,
+    -14.8
+   ],
+   "p": 6.311e-05,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    37.5,
+    15.0
    ]
   },
   {
@@ -1618,24 +3437,75 @@
    ]
   },
   {
-   "id": "GLDAS_VIC10_M.SoilMoi_depth2_inst#inc2",
-   "name": "Sahel",
-   "direction": "increasing",
-   "n_cells": 2,
-   "slope_per_decade": 5.733,
+   "id": "GLDAS_VIC10_M.SoilMoi_depth2_inst#dec8",
+   "name": "Eastern South America",
+   "direction": "decreasing",
+   "n_cells": 3,
+   "slope_per_decade": -21.64,
    "ci95": [
-    2.662,
-    9.172
+    -31.29,
+    -12.14
    ],
-   "p": 0.0003285,
+   "p": 4.312e-05,
    "consistent_in_both_halves": true,
    "centroid": [
-    12.5,
-    25.0
+    -20.8,
+    -45.9
    ]
   },
   {
-   "id": "GLDAS_VIC10_M.SoilMoi_depth2_inst#inc3",
+   "id": "GLDAS_VIC10_M.SoilMoi_depth2_inst#dec9",
+   "name": "Central North America",
+   "direction": "decreasing",
+   "n_cells": 4,
+   "slope_per_decade": -22.76,
+   "ci95": [
+    -34.55,
+    -11.01
+   ],
+   "p": 0.0006779,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    54.2,
+    -128.8
+   ]
+  },
+  {
+   "id": "GLDAS_VIC10_M.SoilMoi_depth2_inst#dec10",
+   "name": "Eastern North America",
+   "direction": "decreasing",
+   "n_cells": 6,
+   "slope_per_decade": -6.063,
+   "ci95": [
+    -9.29,
+    -3.017
+   ],
+   "p": 9.734e-05,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    55.7,
+    -83.4
+   ]
+  },
+  {
+   "id": "GLDAS_VIC10_M.SoilMoi_depth2_inst#dec11",
+   "name": "Siberia (west)",
+   "direction": "decreasing",
+   "n_cells": 4,
+   "slope_per_decade": -41.02,
+   "ci95": [
+    -63.15,
+    -18.79
+   ],
+   "p": 0.00152,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    69.7,
+    68.6
+   ]
+  },
+  {
+   "id": "GLDAS_VIC10_M.SoilMoi_depth2_inst#inc2",
    "name": "Scandinavia",
    "direction": "increasing",
    "n_cells": 3,
@@ -1654,8 +3524,8 @@
  ],
  "M2TMNXFLX.EVAP": [
   {
-   "id": "M2TMNXFLX.EVAP#dec4",
-   "name": "Widespread: Tropical Atlantic, Amazon Basin, South America",
+   "id": "M2TMNXFLX.EVAP#dec8",
+   "name": "Tropical Atlantic, Amazon Basin & South America",
    "direction": "decreasing",
    "n_cells": 83,
    "slope_per_decade": -2.923e-06,
@@ -1663,7 +3533,7 @@
     -3.347e-06,
     -2.489e-06
    ],
-   "p": 1.171e-40,
+   "p": 1e-16,
    "consistent_in_both_halves": true,
    "centroid": [
     1.6,
@@ -1672,7 +3542,7 @@
   },
   {
    "id": "M2TMNXFLX.EVAP#inc1",
-   "name": "Widespread: Asia, Eastern China, Southeast Asia",
+   "name": "Asia, Eastern China & Southeast Asia",
    "direction": "increasing",
    "n_cells": 60,
    "slope_per_decade": 2.814e-06,
@@ -1680,7 +3550,7 @@
     2.428e-06,
     3.197e-06
    ],
-   "p": 0.0,
+   "p": 1e-16,
    "consistent_in_both_halves": true,
    "centroid": [
     35.7,
@@ -1688,8 +3558,8 @@
    ]
   },
   {
-   "id": "M2TMNXFLX.EVAP#dec5",
-   "name": "Widespread: Tropical Pacific (Nino region), Eastern Pacific, Western Pacific",
+   "id": "M2TMNXFLX.EVAP#dec9",
+   "name": "Tropical Pacific (El Ni\u00f1o region), Eastern Pacific & Western Pacific",
    "direction": "decreasing",
    "n_cells": 47,
    "slope_per_decade": -3.568e-06,
@@ -1706,7 +3576,7 @@
   },
   {
    "id": "M2TMNXFLX.EVAP#inc2",
-   "name": "Africa",
+   "name": "North-eastern Africa",
    "direction": "increasing",
    "n_cells": 39,
    "slope_per_decade": 2.661e-06,
@@ -1722,7 +3592,7 @@
    ]
   },
   {
-   "id": "M2TMNXFLX.EVAP#dec6",
+   "id": "M2TMNXFLX.EVAP#dec10",
    "name": "Eastern Pacific",
    "direction": "decreasing",
    "n_cells": 30,
@@ -1731,7 +3601,7 @@
     -4.129e-06,
     -2.422e-06
    ],
-   "p": 6.852e-17,
+   "p": 1e-16,
    "consistent_in_both_halves": true,
    "centroid": [
     -15.2,
@@ -1739,8 +3609,59 @@
    ]
   },
   {
+   "id": "M2TMNXFLX.EVAP#dec11",
+   "name": "Indian Ocean (east)",
+   "direction": "decreasing",
+   "n_cells": 20,
+   "slope_per_decade": -3.271e-06,
+   "ci95": [
+    -4.204e-06,
+    -2.279e-06
+   ],
+   "p": 1.566e-12,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -15.8,
+    80.2
+   ]
+  },
+  {
+   "id": "M2TMNXFLX.EVAP#dec12",
+   "name": "Indian Ocean (west)",
+   "direction": "decreasing",
+   "n_cells": 8,
+   "slope_per_decade": -2.491e-06,
+   "ci95": [
+    -3.432e-06,
+    -1.531e-06
+   ],
+   "p": 2.04e-09,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -3.1,
+    66.2
+   ]
+  },
+  {
+   "id": "M2TMNXFLX.EVAP#dec13",
+   "name": "Sahara",
+   "direction": "decreasing",
+   "n_cells": 8,
+   "slope_per_decade": -9.518e-07,
+   "ci95": [
+    -1.256e-06,
+    -6.419e-07
+   ],
+   "p": 5.449e-08,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    29.1,
+    2.5
+   ]
+  },
+  {
    "id": "M2TMNXFLX.EVAP#inc3",
-   "name": "Africa",
+   "name": "Western Africa",
    "direction": "increasing",
    "n_cells": 4,
    "slope_per_decade": 2.995e-06,
@@ -1753,6 +3674,142 @@
    "centroid": [
     8.7,
     -8.7
+   ]
+  },
+  {
+   "id": "M2TMNXFLX.EVAP#dec14",
+   "name": "Eastern Australia",
+   "direction": "decreasing",
+   "n_cells": 3,
+   "slope_per_decade": -4.336e-06,
+   "ci95": [
+    -6.036e-06,
+    -2.632e-06
+   ],
+   "p": 1.923e-06,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -19.1,
+    145.8
+   ]
+  },
+  {
+   "id": "M2TMNXFLX.EVAP#dec15",
+   "name": "Southern South America",
+   "direction": "decreasing",
+   "n_cells": 3,
+   "slope_per_decade": -1.591e-06,
+   "ci95": [
+    -2.453e-06,
+    -8.048e-07
+   ],
+   "p": 0.0001884,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -42.2,
+    -72.5
+   ]
+  },
+  {
+   "id": "M2TMNXFLX.EVAP#dec16",
+   "name": "North-western Oceania",
+   "direction": "decreasing",
+   "n_cells": 4,
+   "slope_per_decade": -2.326e-06,
+   "ci95": [
+    -3.499e-06,
+    -1.126e-06
+   ],
+   "p": 0.0001005,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -13.7,
+    176.3
+   ]
+  },
+  {
+   "id": "M2TMNXFLX.EVAP#dec17",
+   "name": "South-eastern Asia",
+   "direction": "decreasing",
+   "n_cells": 3,
+   "slope_per_decade": -2.583e-06,
+   "ci95": [
+    -3.852e-06,
+    -1.338e-06
+   ],
+   "p": 0.0001412,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    12.5,
+    142.5
+   ]
+  },
+  {
+   "id": "M2TMNXFLX.EVAP#inc4",
+   "name": "Southern Oceania",
+   "direction": "increasing",
+   "n_cells": 4,
+   "slope_per_decade": 2.033e-06,
+   "ci95": [
+    1.04e-06,
+    3.116e-06
+   ],
+   "p": 2.754e-05,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -44.9,
+    150.0
+   ]
+  },
+  {
+   "id": "M2TMNXFLX.EVAP#inc5",
+   "name": "Southern Ocean (east)",
+   "direction": "increasing",
+   "n_cells": 5,
+   "slope_per_decade": 7.703e-07,
+   "ci95": [
+    3.8e-07,
+    1.187e-06
+   ],
+   "p": 0.0001148,
+   "consistent_in_both_halves": true,
+   "centroid": [
+    -56.4,
+    -0.6
+   ]
+  },
+  {
+   "id": "M2TMNXFLX.EVAP#inc6",
+   "name": "Southern Ocean (2)",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 3.453e-07,
+   "ci95": [
+    1.774e-07,
+    5.138e-07
+   ],
+   "p": 0.000111,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -67.5,
+    -52.5
+   ]
+  },
+  {
+   "id": "M2TMNXFLX.EVAP#inc7",
+   "name": "Southern Ocean (west)",
+   "direction": "increasing",
+   "n_cells": 3,
+   "slope_per_decade": 7.192e-07,
+   "ci95": [
+    3.249e-07,
+    1.127e-06
+   ],
+   "p": 0.0004509,
+   "consistent_in_both_halves": false,
+   "centroid": [
+    -67.5,
+    -177.5
    ]
   }
  ]

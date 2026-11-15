@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { RegionInfo, SeriesRecord, Target, VariableInfo } from '../types';
-import { fmt, fmtP, fmtSigned, testName } from '../lib/data';
+import { fmt, fmtP, fmtSigned, testName, unitExplain } from '../lib/data';
 import TrendChart from './TrendChart';
 
 interface Props {
@@ -36,10 +36,9 @@ function verdict(rec: SeriesRecord, units: string, isHotspot: boolean): { tone: 
   if (isHotspot) {
     return {
       tone: s > 0 ? 'up' : 'down',
-      title: `Exploratory hotspot: ${dir}`,
+      title: `Hotspot: ${dir}`,
       text:
-        `${stat} ${total} This area was picked because its cells show a significant trend, so this p-value is optimistic. ` +
-        'Treat it as a lead to investigate, not as proof.',
+        `${stat} ${total} The p-value is optimistic because the area was picked for looking significant.`,
     };
   }
   if (rec.significant_fdr) {
@@ -80,7 +79,7 @@ export default function DetailPanel({ target, rec, region, variable, variables, 
     <aside className="panel" aria-label="Details">
       <header className="panel__head">
         <div>
-          <span className="eyebrow">{isHotspot ? 'Hotspot' : isGlobal ? 'Whole Earth' : 'Region'}</span>
+          <span className="eyebrow">{isHotspot ? 'Hotspot' : isGlobal ? 'Whole Earth' : 'Named region'}</span>
           <h2>{rec?.name ?? region?.name ?? '…'}</h2>
           {rec && !isGlobal && (
             <p className="muted small">
@@ -96,6 +95,15 @@ export default function DetailPanel({ target, rec, region, variable, variables, 
       </header>
 
       {region && region.blurb && !isHotspot && <p className="panel__blurb">{region.blurb}</p>}
+      {isHotspot && (
+        <p className="kind-note">
+          <strong>What is a hotspot?</strong> An area the data flagged, where neighbouring map cells all change in the same way.
+          A hotspot is a group of at least 3 touching tiles with a significant trend in the same direction. Unlike the fixed named regions, it was picked <em>because</em> it looks significant, so treat it as a lead.
+        </p>
+      )}
+      {!isHotspot && !isGlobal && (
+        <p className="kind-note">A named region is a fixed area we chose in advance, so its test is fair.</p>
+      )}
 
       <label className="field">
         <span>Variable</span>
@@ -106,10 +114,13 @@ export default function DetailPanel({ target, rec, region, variable, variables, 
         </select>
       </label>
 
-      <div className="var-info">
-        <p>{variable.definition}</p>
-        <p className="muted small">{variable.source}</p>
-      </div>
+      <section className="defn" aria-label="Definition">
+        <span className="eyebrow">Definition</span>
+        <p className="defn__text">{variable.definition}</p>
+        <p className="defn__unit"><strong>Unit:</strong> {variable.units === 'index' ? '' : `${variable.units}, `}{unitExplain(variable.id, variable.units)}</p>
+        {isGlobal && variable.finding && <p className="defn__finding">{variable.finding}</p>}
+        <p className="muted small">Dataset: {variable.source} · {variable.record}</p>
+      </section>
 
       {!rec && <p className="muted">Loading…</p>}
 
@@ -136,13 +147,13 @@ export default function DetailPanel({ target, rec, region, variable, variables, 
           <div className="stats">
             <div className="stat">
               <div className="stat__value">{fmtSigned(rec.slope_per_decade)}</div>
-              <div className="stat__label">Rate of change</div>
-              <div className="stat__hint">{variable.units} per decade (Sen slope)</div>
+              <div className="stat__label">Change per decade</div>
+              <div className="stat__hint">in {variable.units} (Sen slope)</div>
             </div>
             <div className="stat">
               <div className="stat__value stat__value--sm">{fmtSigned(rec.ci95?.[0])} to {fmtSigned(rec.ci95?.[1])}</div>
               <div className="stat__label">95% confidence interval</div>
-              <div className="stat__hint">{rec.ci_excludes_zero ? 'does not include zero' : 'includes zero'}</div>
+              <div className="stat__hint">{variable.units} per decade · {rec.ci_excludes_zero ? 'excludes zero' : 'includes zero'}</div>
             </div>
             <div className="stat">
               <div className="stat__value">{fmtP(rec.p)}</div>

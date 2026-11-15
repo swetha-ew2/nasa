@@ -22,7 +22,7 @@
   },
   {
    "id": "arctic",
-   "name": "Arctic Ocean (Beaufort\u2013Chukchi)",
+   "name": "Arctic Ocean (Alaska side)",
    "bbox": [
     -170.0,
     70.0,
@@ -82,7 +82,7 @@
   },
   {
    "id": "indo",
-   "name": "Indonesia & Maritime Continent",
+   "name": "Indonesia & Maritime Southeast Asia",
    "bbox": [
     95.0,
     -10.0,
@@ -92,7 +92,7 @@
   },
   {
    "id": "igp",
-   "name": "Indo-Gangetic Plain",
+   "name": "Indo-Gangetic Plain (northern India)",
    "bbox": [
     72.0,
     22.0,
