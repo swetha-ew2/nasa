@@ -28,15 +28,6 @@ export interface VariableInfo {
   stability: number | null;
 }
 
-export interface RegionInfo {
-  id: string;
-  name: string;
-  bbox: [number, number, number, number]; // west, south, east, north
-  blurb: string;
-  suggested_variables: string[];
-  analysed_variables: string[];
-}
-
 /** one IPCC AR6 reference region (outline in ipcc_regions.geojson) */
 export interface IpccInfo {
   id: string; // "ar6:NEU"
@@ -54,8 +45,8 @@ export interface Manifest {
   caveats: string[];
   not_available: string;
   variables: VariableInfo[];
-  regions: RegionInfo[];
   ipcc_regions: IpccInfo[];
+  hotspots: Record<string, { id: string; name: string; slope_per_decade: number }[]>;
 }
 
 export interface MapFile {
@@ -70,7 +61,7 @@ export interface MapFile {
   effect_size: (number | null)[];
 }
 
-/** One region (box or global) or one hotspot, with its series and statistics. */
+/** The globe, one IPCC region, a hotspot or a drawn area, with its series and statistics. */
 export interface SeriesRecord {
   id: string;
   name: string;
@@ -126,7 +117,22 @@ export interface InterestingItem {
   snr: number;
   ci_excludes_zero: boolean;
   text: string;
-  group?: 'spotlight' | 'ipcc';
+  group?: 'global' | 'ipcc';
+}
+
+export interface InterestingItem {
+  var: string;
+  var_name: string;
+  units: string;
+  region: string;
+  region_name: string;
+  slope_per_decade: number;
+  ci95: [number, number];
+  p: number;
+  snr: number;
+  ci_excludes_zero: boolean;
+  text: string;
+  group?: 'global' | 'ipcc';
 }
 
 export interface Story {
@@ -140,11 +146,10 @@ export interface Story {
 export interface Interesting {
   criteria: string;
   items: InterestingItem[];
-  stories: Story[];
 }
 
 /** a tile's id is its centre as "lat,lon" */
-export type Target = { kind: 'region' | 'hotspot' | 'tile'; id: string };
+export type Target = { kind: 'region' | 'hotspot' | 'tile' | 'custom'; id: string };
 
 /** Legacy shape used by src/data/regions.ts, which the analysis pipeline still reads for the region boxes. */
 export interface Region {

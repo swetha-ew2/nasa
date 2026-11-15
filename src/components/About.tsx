@@ -37,17 +37,24 @@ export default function About({ manifest, onClose }: Props) {
           ))}
         </dl>
 
-        <h3>Regions, IPCC regions and hotspots</h3>
+        <h3>Regions and hotspots</h3>
         <p className="small">
           <strong>IPCC regions</strong> are the 58 standard reference regions of the IPCC AR6 report (land and ocean), which together
-          cover the whole globe; they are shown by default. <strong>Spotlight regions</strong> are 11 fixed boxes around places where climate change is already easy to see, chosen in
-          advance; switch them on in the legend. Both are fixed before looking at the data, so their tests are fair. <strong>Hotspots</strong> are different: they
-          are found from the data, per variable, so they are exploratory.
+          cover the whole globe. They are fixed before looking at the data, so their tests are fair. <strong>Hotspots</strong> are
+          different: they are found from the data, per variable, so they are exploratory.
         </p>
         <p className="small">
           The map tiles are always the same 5° squares. A region&rsquo;s value is the average of the tiles whose centre lies inside
-          it, so a tile on a border is counted once. The 11 spotlight regions and the IPCC regions are corrected for multiple testing
-          separately, and IPCC regions with fewer than 3 tiles carrying data are not tested.
+          it, so a tile on a border is counted once. Regions with fewer than 3 tiles carrying data are not tested, and the regions
+          are corrected for multiple testing together.
+        </p>
+
+        <h3>Drawing your own area</h3>
+        <p className="small">
+          With a variable chosen, <strong>Draw an area</strong> lets you drag a box on the globe. Your browser averages the tiles whose
+          centre is inside the box (weighted by area) and tests the trend with the same Mann-Kendall method used for the regions.
+          Because you chose the box after looking at the map, the p-value is optimistic and nothing is corrected for testing many areas:
+          treat it as exploratory. A box needs at least 3 tiles with data.
         </p>
 
         <h3>Early signs</h3>

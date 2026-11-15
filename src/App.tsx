@@ -8,6 +8,7 @@ import About from './components/About';
 import Welcome from './components/Welcome';
 import Tour, { TourAsk } from './components/Tour';
 import type { Example } from './lib/examples';
+import { analyseTiles, boxId, loadTileSeries, parseBoxId, tilesInBox } from './lib/custom';
 import { TOUR_STEPS } from './components/Tour';
 import { loadInteresting, loadIpccGeo, loadIpccTiles, loadManifest, loadMap, loadSeries } from './lib/data';
 import type { Interesting, Manifest, MapFile, SeriesFile, SeriesRecord, Target } from './types';
@@ -25,7 +26,6 @@ export default function App() {
   const [target, setTarget] = useState<Target | null>(null);
 
   const [showHotspots, setShowHotspots] = useState(true);
-  const [showPins, setShowPins] = useState(false);
   const [showIpcc, setShowIpcc] = useState(true);
   const [ipccGeo, setIpccGeo] = useState<GeoJSON.FeatureCollection | null>(null);
   const [ipccTiles, setIpccTiles] = useState<Record<string, string> | null>(null);
@@ -33,11 +33,13 @@ export default function App() {
   const [autoRotate, setAutoRotate] = useState(true);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [started, setStarted] = useState(false); // false = intro: just the globe and the welcome popup
-  // ask = offer the site guide, tour = the guide, home/examples = the guided-example screens
+  // ask = offer the site guide, tour = the guide, home/examples = the question-flow screens
   const [phase, setPhase] = useState<'ask' | 'tour' | 'home' | 'examples' | null>('ask');
   const [tourStep, setTourStep] = useState(0);
   const tourBefore = useRef<{ started: boolean; hadVariable: boolean } | null>(null);
   const [guide, setGuide] = useState<Example | null>(null);
+  const [drawing, setDrawing] = useState(false);
+  const [customRec, setCustomRec] = useState<SeriesRecord | null>(null);
 
   useEffect(() => {
     loadManifest().then(setManifest).catch((e) => setError(String(e.message ?? e)));
@@ -62,17 +64,29 @@ export default function App() {
     };
   }, [variableId]);
 
+  // an area the user drew: computed in the browser from the per-tile series of the chosen variable
+  const customKey = target?.kind === 'custom' ? target.id : null;
+  useEffect(() => {
+    setCustomRec(null);
+    if (!customKey || !variableId || !manifest) return;
+    const v = manifest.variables.find((x) => x.id === variableId);
+    if (!v) return;
+    let cancelled = false;
+    loadTileSeries(v.id)
+      .then((ts) => {
+        if (cancelled) return;
+        const box = parseBoxId(customKey);
+        const r = analyseTiles(ts, tilesInBox(ts, box));
+        setCustomRec({ ...r, bbox: box });
+      })
+      .catch((e) => !cancelled && setError(String(e.message ?? e)));
+    return () => {
+      cancelled = true;
+    };
+  }, [customKey, variableId, manifest]);
+
   const variable = manifest?.variables.find((v) => v.id === variableId) ?? null; // null until the user picks one
   const seriesReady = series && series.var === variableId ? series : null;
-
-  const pinStates = useMemo(() => {
-    const out: Record<string, PinState> = {};
-    seriesReady?.regions.forEach((r) => {
-      out[r.id] =
-        r.status !== 'ok' ? 'nodata' : r.significant_fdr ? ((r.slope_per_decade ?? 0) > 0 ? 'up' : 'down') : 'none';
-    });
-    return out;
-  }, [seriesReady]);
 
   const ipccStates = useMemo(() => {
     const out: Record<string, PinState> = {};
@@ -84,13 +98,13 @@ export default function App() {
   }, [seriesReady]);
 
   const rec: SeriesRecord | null = useMemo(() => {
+    if (target?.kind === 'custom') return customRec;
     if (!target || !seriesReady) return null;
-    const list = target.kind === 'hotspot' ? seriesReady.hotspots : target.id.startsWith('ar6:') ? seriesReady.ipcc ?? [] : seriesReady.regions;
+    const list = target.kind === 'hotspot' ? seriesReady.hotspots : target.id.startsWith('ar6:') ? seriesReady.ipcc ?? [] : seriesReady.regions; // regions = the globe
     return list.find((r) => r.id === target.id) ?? null;
-  }, [target, seriesReady]);
+  }, [target, seriesReady, customRec]);
 
   const ipccInfo = manifest && target?.kind === 'region' ? manifest.ipcc_regions?.find((r) => r.id === target.id) ?? null : null;
-  const region = manifest && target?.kind === 'region' ? manifest.regions.find((r) => r.id === target.id) ?? null : null;
 
   function selectVariable(id: string) {
     setVariableId(id);
@@ -107,10 +121,10 @@ export default function App() {
     if (t) setAutoRotate(false);
   }
 
-  function goTo(vid: string, regionId: string | null, ex: Example | null = null) {
+  function goTo(vid: string, regionId: string | null, ex: Example | null = null, hotspotId: string | null = null) {
     setGuide(ex);
     setVariableId(vid);
-    setTarget(regionId ? { kind: 'region', id: regionId } : null);
+    setTarget(hotspotId ? { kind: 'hotspot', id: hotspotId } : regionId ? { kind: 'region', id: regionId } : null);
     setAutoRotate(false);
     setStarted(true);
     setPhase(null);
@@ -178,7 +192,7 @@ export default function App() {
             Auto-rotate
           </label>
           <button className="ghost-btn" onClick={startTour}>Tour</button>
-          <button className="ghost-btn" onClick={() => setPhase('examples')}>Guided examples</button>
+          <button className="ghost-btn" onClick={() => setPhase('examples')}>Ask a question</button>
           <button className="ghost-btn" onClick={() => setAboutOpen(true)}>Methods &amp; data</button>
         </div>
       </header>
@@ -197,14 +211,19 @@ export default function App() {
 
         <div className="stage">
           <Globe
-            regions={manifest.regions}
-            pinStates={pinStates}
             mapData={variable && mapData && mapData.var === variableId ? mapData : null}
             scheme={variable?.scheme ?? 'neutral'}
             units={variable?.units ?? ''}
             showNonSig
             showHotspots={showHotspots}
-            showPins={showPins && !!variable}
+            drawMode={drawing}
+            onDraw={(b) => {
+              setDrawing(false);
+              if (b) {
+                setTarget({ kind: 'custom', id: boxId(b) });
+                setAutoRotate(false);
+              }
+            }}
             showIpcc={showIpcc}
             ipccGeo={ipccGeo}
             ipccTiles={ipccTiles}
@@ -216,7 +235,9 @@ export default function App() {
                 ? rec?.cells ?? null
                 : target?.kind === 'tile'
                   ? [target.id.split(',').map(Number) as [number, number]]
-                  : null
+                  : target?.kind === 'custom'
+                    ? customRec?.cells ?? null
+                    : null
             }
             showImagery={showImagery}
             autoRotate={autoRotate}
@@ -229,13 +250,11 @@ export default function App() {
             limit={mapData?.color_limit ?? variable.map_color_limit}
             showHotspots={showHotspots}
             onToggleHotspots={setShowHotspots}
-            showPins={showPins}
-            onTogglePins={setShowPins}
             showIpcc={showIpcc}
             onToggleIpcc={setShowIpcc}
           />}
 
-          {started && !guide && (
+          {started && !guide && !drawing && (
             <div className="hint">
               {variable ? 'Drag to rotate · scroll to zoom · hover for values · click a tile or a region marker' : 'Drag to rotate · scroll to zoom · pick a variable on the left'}
             </div>
@@ -244,12 +263,29 @@ export default function App() {
           {guide && (
             <div className="guide" role="note">
               <div>
-                <span className="eyebrow">Guided example</span>
+                <span className="eyebrow">Your question</span>
                 <strong>{guide.question}</strong>
                 <span className="small muted">Showing {guide.variableName} · {guide.placeName}. The answer is in the panel on the right.</span>
               </div>
               <button className="icon-btn" onClick={() => setGuide(null)} aria-label="Dismiss">✕</button>
             </div>
+          )}
+
+          {drawing && (
+            <div className="guide guide--draw" role="note">
+              <div>
+                <span className="eyebrow">Draw an area</span>
+                <strong>Drag on the globe to draw a box</strong>
+                <span className="small muted">The trend of all tiles inside is computed. Press Esc or Cancel to stop.</span>
+              </div>
+              <button className="ghost-btn" onClick={() => setDrawing(false)}>Cancel</button>
+            </div>
+          )}
+
+          {started && variable && !drawing && (
+            <button className="global-btn draw-btn" onClick={() => { setDrawing(true); setTarget(null); setAutoRotate(false); }}>
+              ✎ Draw an area
+            </button>
           )}
 
           {started && variable && (
@@ -263,7 +299,6 @@ export default function App() {
               tileId={target.id}
               mapData={mapData && mapData.var === variableId ? mapData : null}
               variable={variable}
-              regions={manifest.regions}
               ipccRegions={manifest.ipcc_regions ?? []}
               ipccTiles={ipccTiles}
               hotspots={seriesReady?.hotspots ?? []}
@@ -276,7 +311,6 @@ export default function App() {
             <DetailPanel
               target={target}
               rec={rec}
-              region={region}
               ipcc={ipccInfo}
               variable={variable}
               variables={manifest.variables}
@@ -296,8 +330,9 @@ export default function App() {
       {phase === 'tour' && <Tour step={tourStep} onStep={goToStep} onDone={endTour} />}
       {(phase === 'home' || phase === 'examples') && (
         <Welcome
-          start={phase}
-          onPick={(ex) => goTo(ex.variable, ex.region, ex)}
+          manifest={manifest}
+          start={phase === 'examples' ? 'questions' : 'home'}
+          onPick={(ex) => goTo(ex.variable, ex.region, ex, ex.hotspot ?? null)}
           onBrowse={() => {
             setStarted(true);
             setPhase(null);

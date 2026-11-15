@@ -1,74 +1,6 @@
 {
- "criteria": "passes FDR at 10% but not at 5%, 95% CI excludes zero, same direction in both halves of the record (same rule for spotlight, global and IPCC regions)",
+ "criteria": "passes FDR at 10% but not at 5%, 95% CI excludes zero, same direction in both halves of the record (same rule for the globe and the IPCC regions)",
  "items": [
-  {
-   "var": "snow",
-   "var_name": "Snow cover",
-   "units": "% of area",
-   "region": "med",
-   "region_name": "Mediterranean Basin",
-   "slope_per_decade": -0.05575,
-   "ci95": [
-    -0.1814,
-    -0.005658
-   ],
-   "p": 0.01619,
-   "snr": -0.06135,
-   "ci_excludes_zero": true,
-   "text": "Snow cover over Mediterranean Basin is falling by 0.0558 % of area per decade (95% confidence interval -0.181 to -0.00566, p = 0.016). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance.",
-   "group": "spotlight"
-  },
-  {
-   "var": "snow",
-   "var_name": "Snow cover",
-   "units": "% of area",
-   "region": "antp",
-   "region_name": "Antarctic Peninsula",
-   "slope_per_decade": -0.00151,
-   "ci95": [
-    -0.003078,
-    -0.0002441
-   ],
-   "p": 0.01822,
-   "snr": -0.2073,
-   "ci_excludes_zero": true,
-   "text": "Snow cover over Antarctic Peninsula is falling by 0.00151 % of area per decade (95% confidence interval -0.00308 to -0.000244, p = 0.018). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance.",
-   "group": "spotlight"
-  },
-  {
-   "var": "soil_wetness_top",
-   "var_name": "Surface soil wetness",
-   "units": "fraction (0\u20131)",
-   "region": "arctic",
-   "region_name": "Arctic Ocean (Alaska side)",
-   "slope_per_decade": 0.004525,
-   "ci95": [
-    0.0001246,
-    0.01161
-   ],
-   "p": 0.04442,
-   "snr": 2.099,
-   "ci_excludes_zero": true,
-   "text": "Surface soil wetness over Arctic Ocean (Alaska side) is rising by 0.00453 fraction (0\u20131) per decade (95% confidence interval +0.000125 to +0.0116, p = 0.044). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance.",
-   "group": "spotlight"
-  },
-  {
-   "var": "soil_wetness_top",
-   "var_name": "Surface soil wetness",
-   "units": "fraction (0\u20131)",
-   "region": "med",
-   "region_name": "Mediterranean Basin",
-   "slope_per_decade": -0.00905,
-   "ci95": [
-    -0.0181,
-    -4.898e-05
-   ],
-   "p": 0.04887,
-   "snr": -1.193,
-   "ci_excludes_zero": true,
-   "text": "Surface soil wetness over Mediterranean Basin is falling by 0.00905 fraction (0\u20131) per decade (95% confidence interval -0.0181 to -4.9e-05, p = 0.049). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance.",
-   "group": "spotlight"
-  },
   {
    "var": "t2m",
    "var_name": "Near-surface air temperature",
@@ -443,6 +375,5 @@
    "ci_excludes_zero": true,
    "text": "Surface evaporation over Southern Ocean is rising by 0.0153 mm/day per decade (95% confidence interval +0.00103 to +0.0293, p = 0.036). It narrowly misses the strict test, but the direction is the same in both halves of the record."
   }
- ],
- "stories": []
+ ]
 }

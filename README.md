@@ -6,10 +6,10 @@ where, how much, and is it statistically significant?
 - Globe (MapLibre GL JS, NASA GIBS imagery) coloured by the trend of the chosen variable on a 5-degree grid; cells without
   a significant trend are faded
 - 20 variables chosen by a data-driven selection (plus 6 headline variables), each with a plain-language definition
-- 11 regions + global, and variable-specific hotspots (exploratory), each with a real time series, Sen slope, 95% interval,
-  Mann-Kendall / OLS p-value and effect size
-- "Worth watching": trends that did not pass the strict test but are interesting
-- Everything is precomputed: the site is static (`public/data`, about 3 MB). Regenerate it with `python export_frontend.py`.
+- The globe, the 58 IPCC AR6 regions, variable-specific hotspots (exploratory) and boxes drawn by the user, each with a real time
+  series, Sen slope, 95% interval, Mann-Kendall p-value and effect size
+- "Early signs": trends that just missed the strict test but are consistent over time
+- Everything is precomputed: the site is static (`public/data`, about 34 MB; about 1.3 MB loads per variable). Regenerate it with `python export_frontend.py`.
 
 ---
 

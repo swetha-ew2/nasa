@@ -1,11 +1,10 @@
-import type { IpccInfo, MapFile, RegionInfo, SeriesRecord, VariableInfo } from '../types';
+import type { IpccInfo, MapFile, SeriesRecord, VariableInfo } from '../types';
 import { fmt, fmtP, fmtSigned, unitExplain } from '../lib/data';
 
 interface Props {
   tileId: string;
   mapData: MapFile | null;
   variable: VariableInfo;
-  regions: RegionInfo[];
   ipccRegions: IpccInfo[];
   ipccTiles: Record<string, string> | null;
   hotspots: SeriesRecord[];
@@ -16,7 +15,7 @@ interface Props {
 
 const fl = (v: number, p: string, q: string) => `${Math.abs(v)}°${v >= 0 ? p : q}`;
 
-export default function TilePanel({ tileId, mapData, variable, regions, ipccRegions, ipccTiles, hotspots, onOpenRegion, onOpenHotspot, onClose }: Props) {
+export default function TilePanel({ tileId, mapData, variable, ipccRegions, ipccTiles, hotspots, onOpenRegion, onOpenHotspot, onClose }: Props) {
   const [la, lo] = tileId.split(',').map(Number);
   let slope: number | null = null;
   let p: number | null = null;
@@ -33,7 +32,6 @@ export default function TilePanel({ tileId, mapData, variable, regions, ipccRegi
       sig = mapData.significant[k] === 1;
     }
   }
-  const inRegions = regions.filter((r) => r.id !== 'global' && lo >= r.bbox[0] && lo <= r.bbox[2] && la >= r.bbox[1] && la <= r.bbox[3]);
   const ipccId = ipccTiles?.[`${la},${lo}`];
   const inIpcc = ipccId ? ipccRegions.find((r) => r.id === ipccId) : undefined;
   const inHotspot = hotspots.find((h) => h.cells?.some(([a, b]) => a === la && b === lo));
@@ -95,7 +93,7 @@ export default function TilePanel({ tileId, mapData, variable, regions, ipccRegi
         </>
       )}
 
-      {(inRegions.length > 0 || inHotspot || inIpcc) && (
+      {(inHotspot || inIpcc) && (
         <div className="belongs">
           <span className="eyebrow">This tile is part of</span>
           {inHotspot && (
@@ -114,13 +112,6 @@ export default function TilePanel({ tileId, mapData, variable, regions, ipccRegi
               <span className="hs-item__val">open →</span>
             </button>
           )}
-          {inRegions.map((r) => (
-            <button key={r.id} className="hs-item" onClick={() => onOpenRegion(r.id)}>
-              <span className="hs-item__dir">●</span>
-              <span className="hs-item__name">Region: {r.name}</span>
-              <span className="hs-item__val">open →</span>
-            </button>
-          ))}
         </div>
       )}
       <p className="muted small">

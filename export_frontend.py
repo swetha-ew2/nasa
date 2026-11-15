@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
 """Stage G: export everything the app needs as small static JSON files in public/data/.
 
-  manifest.json          variables (definition, units, source, global result), regions, hotspots index, notes
+  manifest.json          variables (definition, units, source, global result), IPCC region list, hotspots index, notes
   maps/<slug>.json       5-degree grids: trend per decade, FDR-significance, p-value, effect size
-  series/<slug>.json     monthly series + trend statistics for the 11 regions, global, and the variable's hotspots
-  interesting.json       "interesting but not significant" trends and the stories they form
+  series/<slug>.json     monthly series + trend statistics for the globe, the IPCC regions and the variable's hotspots
+  tiles/<slug>.bin|json  per-tile monthly series, for areas drawn in the app
+  interesting.json       early signs: trends that just miss the strict test but are consistent over time
 All numbers are converted to display units once here (factor/offset below), so the app never converts anything.
 
 Usage: python export_frontend.py
 """
 import json
 import os
-import re
 import shutil
-from collections import defaultdict
 
 import numpy as np
 from scipy.stats import theilslopes
@@ -112,11 +111,6 @@ def conv_series(rec, f, off):
     return rec
 
 
-def region_blurbs(path="src/data/regions.ts"):
-    txt = open(path, encoding="utf-8").read()
-    return {m.group(1): m.group(2) for m in re.finditer(r"id:\s*'([^']+)',.*?blurb:\s*'((?:[^'\\]|\\.)*)'", txt, re.S)}
-
-
 def early_sign(r, near):
     """one rule for every region type: just misses the strict test (passes FDR at 10%), 95% CI excludes zero,
     and the trend points the same way in both halves of the record"""
@@ -147,24 +141,20 @@ def sentence(name, vname, units, rec):
     direction = "rising" if s > 0 else "falling"
     return (f"{vname} over {name} is {direction} by {abs(s):.3g} {units} per decade "
             f"(95% confidence interval {lo:+.3g} to {hi:+.3g}, p = {p:.2g}). "
-            + ("The interval does not include zero, but the result is not significant once we correct for testing "
-               "11 regions at once, so it could still be chance." if rec["ci_excludes_zero"]
-               else "The interval includes zero, so this is only a hint."))
+            + ("The interval does not include zero, but the result just misses the strict test, so it could still be chance."
+               if rec["ci_excludes_zero"] else "The interval includes zero, so this is only a hint."))
 
 
 def main():
     sel = json.load(open("data/selection/selection.json"))
     ids = sel["headline"] + sel["data_driven"]
     assert set(ids) == set(V), set(ids) ^ set(V)
-    reg_def = json.load(open("data/regional/summary.json"))["regions"]
-    blurbs = region_blurbs()
     if os.path.exists(OUT):
         shutil.rmtree(OUT)
     os.makedirs(OUT + "/maps")
     os.makedirs(OUT + "/series")
 
     variables, hotspot_index = [], {}
-    region_vars = defaultdict(list)
     interesting = []
     for vid in ids:
         slug, name, definition, units, f, off, scheme, cat, source = V[vid]
@@ -183,17 +173,34 @@ def main():
                        p=flat(p_cell, 1.0, 3), effect_size=flat(z["snr"], 1.0, 3)),
                   open(f"{OUT}/maps/{slug}.json", "w"), separators=(",", ":"))
 
+        # ---- per-tile monthly series (display units) as 16-bit integers, for areas drawn in the app
+        os.makedirs(OUT + "/tiles", exist_ok=True)
+        cube = raw["data"].astype(np.float64) * f + off                       # (T, NY, NX)
+        T_, NY_, NX_ = cube.shape
+        flat_t = cube.reshape(T_, NY_ * NX_).T                                 # (tiles, T)
+        lo_ = np.nanmin(np.where(np.isfinite(flat_t), flat_t, np.nan), axis=1)
+        hi_ = np.nanmax(np.where(np.isfinite(flat_t), flat_t, np.nan), axis=1)
+        lo_ = np.where(np.isfinite(lo_), lo_, 0.0)
+        hi_ = np.where(np.isfinite(hi_), hi_, 0.0)
+        scale_ = np.where(hi_ > lo_, (hi_ - lo_) / 65000.0, 1.0)
+        q_ = np.where(np.isfinite(flat_t), np.round((flat_t - lo_[:, None]) / scale_[:, None]) - 32500, -32768).astype("<i2")
+        with open(f"{OUT}/tiles/{slug}.bin", "wb") as fh:
+            fh.write(lo_.astype("<f4").tobytes() + scale_.astype("<f4").tobytes() + q_.tobytes())
+        json.dump(dict(months=[int(m) for m in raw["months"]], nlat=int(NY_), nlon=int(NX_),
+                       lat0=float(raw["lat"][0]), lon0=float(raw["lon"][0]), step=5.0),
+                  open(f"{OUT}/tiles/{slug}.json", "w"), separators=(",", ":"))
+
         # ---- series: regions + hotspots
         rg = json.load(open(f"data/regional/{vid}.json"))
         hs = json.load(open(f"data/hotspots/{vid}.json"))
-        regions = [conv_series(r, f, off) for r in rg["regions"]]
+        regions = [conv_series(r, f, off) for r in rg["regions"] if r["id"] == "global"]   # the globe; the fixed regions are the IPCC ones
         hots = [conv_series(h, f, off) for h in hs["hotspots"]]
         ipcc = [conv_series(r, f, off) for r in json.load(open(f"data/regional_ipcc/{vid}.json"))["regions"]]
         for h in hots:
             h["cells"] = [[a, b] for a, b in h["cells"]]
         json.dump(dict(var=slug, units=units, months_start=rg["t0"], months_end=rg["t1"],
-                       fdr_family="the 11 regions of this variable (global is tested alone)",
-                       ipcc_fdr_family="the IPCC regions of this variable that have enough tiles (tested separately from the 11 regions)",
+                       fdr_family="the global mean is one pre-specified test",
+                       ipcc_fdr_family="the IPCC regions of this variable that have enough tiles",
                        regions=regions, ipcc=ipcc, hotspots=hots),
                   open(f"{OUT}/series/{slug}.json", "w"), separators=(",", ":"))
 
@@ -217,41 +224,17 @@ def main():
                                     centroid=h["centroid"], n_cells=h["n_cells"], slope_per_decade=h["slope_per_decade"],
                                     ci95=h["ci95"], p=h["p"], consistent_in_both_halves=h["consistent_in_both_halves"],
                                     exploratory=True) for h in hots]
-        near = near_miss(regions)
-        for r in regions:
-            if r.get("status") != "ok" or r["id"] == "global":
-                continue
-            region_vars[r["id"]].append(dict(var=slug, significant=bool(r["significant_fdr"]), direction=r["direction"],
-                                             slope_per_decade=r["slope_per_decade"], p=r["p"], snr=r["snr"]))
-            if early_sign(r, near[r["id"]]):
-                interesting.append(dict(var=slug, var_name=name, units=units, region=r["id"], region_name=r["name"],
-                                        slope_per_decade=r["slope_per_decade"], ci95=r["ci95"], p=r["p"], snr=r["snr"],
-                                        ci_excludes_zero=r["ci_excludes_zero"], text=sentence(r["name"], name, units, r)))
         if g.get("status") == "ok" and g["p"] < 0.10 and early_sign(g, True):
             interesting.append(dict(var=slug, var_name=name, units=units, region="global", region_name="Global",
                                     slope_per_decade=g["slope_per_decade"], ci95=g["ci95"], p=g["p"], snr=g["snr"],
                                     ci_excludes_zero=g["ci_excludes_zero"], text=sentence("the globe", name, units, g)))
 
-    # ---- stories: several variables pointing the same way in one region
     interesting.sort(key=lambda r: r["p"])
-    by_reg = defaultdict(list)
-    for it in interesting:
-        by_reg[it["region"]].append(it)
-    stories = []
-    for rid, items in by_reg.items():
-        if len(items) >= 3:
-            where = "the globe" if rid == "global" else items[0]["region_name"]
-            stories.append(dict(region=rid, region_name=items[0]["region_name"], n_variables=len(items),
-                                variables=[i["var"] for i in items],
-                                text=f"{len(items)} different variables show a hint of change over {where} "
-                                     f"(p between {min(i['p'] for i in items):.3f} and {max(i['p'] for i in items):.3f}). None passes "
-                                     "the strict test on its own, but several pointing the same way is worth watching. "
-                                     "Twenty years is short, and with this many tests a few p-values below 0.05 are expected by chance."))
     # ---- early signs among the IPCC regions: a tighter rule, because ~970 tests run and ~10% would pass p < 0.10 by chance.
     # Kept only if it (1) just misses the strict test but passes FDR at 10%, (2) has a 95% CI that excludes zero, and
     # (3) points the same way in both halves of the record.
     for it in interesting:
-        it["group"] = "spotlight"
+        it["group"] = "global"
     n_ipcc = 0
     for vid in ids:
         slug, name, _d, units, f, _o, *_ = V[vid]
@@ -268,8 +251,8 @@ def main():
                      f"(95% confidence interval {lo:+.3g} to {hi:+.3g}, p = {p_:.2g}). It narrowly misses the strict test, "
                      "but the direction is the same in both halves of the record."))
             n_ipcc += 1
-    print(f"early signs: {len(interesting) - n_ipcc} spotlight/global + {n_ipcc} IPCC")
-    json.dump(dict(criteria="passes FDR at 10% but not at 5%, 95% CI excludes zero, same direction in both halves of the record (same rule for spotlight, global and IPCC regions)", items=interesting, stories=stories),
+    print(f"early signs: {len(interesting) - n_ipcc} global + {n_ipcc} IPCC")
+    json.dump(dict(criteria="passes FDR at 10% but not at 5%, 95% CI excludes zero, same direction in both halves of the record (same rule for the globe and the IPCC regions)", items=interesting),
               open(f"{OUT}/interesting.json", "w"), indent=1)
 
     # ---- IPCC AR6 reference regions: outlines + which region each tile belongs to
@@ -279,33 +262,27 @@ def main():
                      kind=f["properties"]["kind"], n_tiles=f["properties"]["n_tiles"])
                 for f in json.load(open("data/ipcc_regions.geojson"))["features"]]
 
-    regions_out = []
-    for r in reg_def:
-        sig = sorted([v for v in region_vars[r["id"]] if v["significant"]], key=lambda v: -abs(v["snr"] or 0))
-        regions_out.append(dict(id=r["id"], name=r["name"], bbox=r["bbox"], blurb=blurbs.get(r["id"], ""),
-                                suggested_variables=[v["var"] for v in sig[:6]],
-                                analysed_variables=[v["var"] for v in region_vars[r["id"]]]))
     json.dump(dict(
         title="Earth System Trend Detective", window="2005-01 to 2024-12 (monthly)", grid="5° x 5°",
         methods=dict(
             anomalies="Monthly values minus the average for the same calendar month, so seasons do not look like trends.",
             rate="Sen slope (median of all pairwise slopes) per decade with a 95% confidence interval.",
             tests="Mann-Kendall test with the variance inflated for month-to-month autocorrelation (lag-1), or an OLS t-test when the residuals pass Durbin-Watson and Shapiro checks (in practice Mann-Kendall was used for every variable).",
-            multiple_testing="Benjamini-Hochberg false discovery rate at 5%: across cells for maps, across the 11 spotlight regions for each variable, and separately across the IPCC regions (the global mean is one separate test).",
+            multiple_testing="Benjamini-Hochberg false discovery rate at 5%: across cells for maps, and across the IPCC regions for each variable (the global mean is one separate test).",
             effect_size="Total change over the record divided by the month-to-month noise (SD of detrended anomalies)."),
         caveats=[
             "Twenty years is short; trends can reflect natural variability such as El Niño, not only long-term change.",
             "The Mann-Kendall correction is slightly liberal (about 6% false positives at a nominal 5% in simulation).",
-            "A 5° grid smooths small regions: a box smaller than a cell is averaged over the whole cell.",
+            "Regions and drawn boxes are averages of whole 5° tiles (a tile counts when its centre is inside), so small areas are coarse and regions with fewer than 3 tiles of data are not tested.",
             "Hotspots are chosen because their cells look significant, so their p-values are optimistic (exploratory).",
             "Land models disagree with each other for some variables; this is shown, not hidden.",
             "Variables were selected by a data-driven method plus six hand-picked headline variables; see 'role'."],
         not_available="AIRS products, MOD21C3 and tropospheric ozone were not used. Snow cover has 238 of 240 months.",
-        variables=variables, regions=regions_out, ipcc_regions=ipcc_out, hotspots=hotspot_index),
+        variables=variables, ipcc_regions=ipcc_out, hotspots=hotspot_index),
         open(f"{OUT}/manifest.json", "w"), indent=1)
     sizes = sum(os.path.getsize(os.path.join(d, f)) for d, _, fs in os.walk(OUT) for f in fs)
-    print(f"exported {len(variables)} variables, {len(regions_out)} regions, {sum(len(v) for v in hotspot_index.values())} hotspots, "
-          f"{len(interesting)} interesting items, {len(stories)} stories; {sizes/1e6:.2f} MB in {OUT}")
+    print(f"exported {len(variables)} variables, {len(ipcc_out)} IPCC regions, {sum(len(v) for v in hotspot_index.values())} hotspots, "
+          f"{len(interesting)} early signs; {sizes/1e6:.2f} MB in {OUT}")
 
 
 if __name__ == "__main__":

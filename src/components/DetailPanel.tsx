@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import type { IpccInfo, RegionInfo, SeriesRecord, Target, VariableInfo } from '../types';
+import type { IpccInfo, SeriesRecord, Target, VariableInfo } from '../types';
 import { fmt, fmtP, fmtSigned, testName, unitExplain } from '../lib/data';
 import TrendChart from './TrendChart';
 
 interface Props {
   target: Target;
   rec: SeriesRecord | null; // null while loading
-  region: RegionInfo | null;
   ipcc: IpccInfo | null;
   variable: VariableInfo;
   variables: VariableInfo[];
@@ -18,7 +17,7 @@ type Tone = 'up' | 'down' | 'hint' | 'none' | 'nodata';
 
 const pEq = (p: number | undefined) => (fmtP(p).startsWith('<') ? `p ${fmtP(p)}` : `p = ${fmtP(p)}`);
 
-function verdict(rec: SeriesRecord, units: string, isHotspot: boolean): { tone: Tone; title: string; text: string } {
+function verdict(rec: SeriesRecord, units: string, isHotspot: boolean, isCustom = false): { tone: Tone; title: string; text: string } {
   if (rec.status !== 'ok') {
     return {
       tone: 'nodata',
@@ -34,6 +33,16 @@ function verdict(rec: SeriesRecord, units: string, isHotspot: boolean): { tone: 
   const dir = s > 0 ? 'increasing' : 'decreasing';
   const total = `Over the 20-year record that adds up to roughly ${fmtSigned(s * 2)} ${units}.`;
   const stat = `${fmtSigned(s)} ${units} per decade (95% confidence interval ${fmtSigned(lo)} to ${fmtSigned(hi)}; ${pEq(rec.p)}).`;
+  if (isCustom) {
+    const sig = (rec.p ?? 1) < 0.05;
+    return {
+      tone: sig ? (s > 0 ? 'up' : 'down') : 'none',
+      title: sig ? `Exploratory: ${dir}` : 'No clear trend',
+      text:
+        `${stat} ${total} You chose this area after looking at the map, so the p-value is optimistic and nothing here is corrected for ` +
+        'testing many areas. Treat it as a lead, not a conclusion.',
+    };
+  }
   if (isHotspot) {
     return {
       tone: s > 0 ? 'up' : 'down',
@@ -67,25 +76,26 @@ function verdict(rec: SeriesRecord, units: string, isHotspot: boolean): { tone: 
   };
 }
 
-export default function DetailPanel({ target, rec, region, ipcc, variable, variables, onChangeVariable, onClose }: Props) {
+export default function DetailPanel({ target, rec, ipcc, variable, variables, onChangeVariable, onClose }: Props) {
   const [mode, setMode] = useState<'anomaly' | 'actual'>('anomaly');
   const isHotspot = target.kind === 'hotspot';
   const isGlobal = target.kind === 'region' && target.id === 'global';
-  const analysed = region ? region.analysed_variables : [];
-  const options = isHotspot ? [variable] : variables.filter((v) => analysed.length === 0 || analysed.includes(v.id) || v.id === variable.id);
-  const v = rec ? verdict(rec, variable.units, isHotspot) : null;
+  const isCustom = target.kind === 'custom';
+  const options = isHotspot ? [variable] : variables;
+  const v = rec ? verdict(rec, variable.units, isHotspot, isCustom) : null;
   const [w, s, e, n] = rec?.bbox ?? [0, 0, 0, 0];
 
   return (
     <aside className="panel" aria-label="Details">
       <header className="panel__head">
         <div>
-          <span className="eyebrow">{isHotspot ? 'Hotspot' : isGlobal ? 'Whole Earth' : ipcc ? 'IPCC region' : 'Spotlight region'}</span>
-          <h2>{rec?.name ?? region?.name ?? '…'}</h2>
+          <span className="eyebrow">{isHotspot ? 'Hotspot' : isGlobal ? 'Whole Earth' : isCustom ? 'Area you drew' : 'IPCC region'}</span>
+          <h2>{isCustom ? 'Area you drew' : rec?.name ?? ipcc?.name ?? '…'}</h2>
           {rec && !isGlobal && !ipcc && (
             <p className="muted small">
-              {s}° to {n}° lat, {w}° to {e}° lon
+              {s.toFixed(isCustom ? 1 : 0)}° to {n.toFixed(isCustom ? 1 : 0)}° lat, {(isCustom ? w : w).toFixed(isCustom ? 1 : 0)}° to {e.toFixed(isCustom ? 1 : 0)}° lon
               {isHotspot && rec.n_cells ? ` · ${rec.n_cells} grid cells` : ''}
+              {isCustom && rec.n_tiles !== undefined ? ` · ${rec.n_tiles_data} of ${rec.n_tiles} tiles have data` : ''}
             </p>
           )}
           {ipcc && (
@@ -101,21 +111,23 @@ export default function DetailPanel({ target, rec, region, ipcc, variable, varia
         <button className="icon-btn" onClick={onClose} aria-label="Close panel">✕</button>
       </header>
 
-      {region && region.blurb && !isHotspot && <p className="panel__blurb">{region.blurb}</p>}
       {isHotspot && (
         <p className="kind-note">
           <strong>What is a hotspot?</strong> An area the data flagged, where neighbouring map cells all change in the same way.
-          A hotspot is a group of at least 3 touching tiles with a significant trend in the same direction. Unlike the fixed IPCC and spotlight regions, it was picked <em>because</em> it looks significant, so treat it as a lead.
+          A hotspot is a group of at least 3 touching tiles with a significant trend in the same direction. Unlike the fixed IPCC regions, it was picked <em>because</em> it looks significant, so treat it as a lead.
         </p>
       )}
-      {!isHotspot && !isGlobal && !ipcc && (
-        <p className="kind-note">A spotlight region is one of 11 places where climate change is already easy to see (for example the Arctic or the Sahel). We chose them before looking at the results, so the test is fair.</p>
+      {isCustom && (
+        <p className="kind-note">
+          <strong>Your area.</strong> The average of all map tiles whose centre is inside the box you drew, weighted by area, tested the same way as the
+          regions (Mann-Kendall). Because you picked it, this is exploratory.
+        </p>
       )}
       {ipcc && (
         <p className="kind-note">
           <strong>What is an IPCC region?</strong> One of the 58 standard regions that IPCC climate reports use (AR6), together covering the whole globe.
-          It was fixed in advance, so its test is fair. Its value is the average of the map tiles whose centre lies inside it. Its significance is checked
-          across the IPCC regions only, separately from our 11 hand-picked spotlight regions.
+          It was fixed in advance, so its test is fair. Its value is the average of the map tiles whose centre lies inside it, and its significance is
+          checked across all the IPCC regions at once.
         </p>
       )}
 

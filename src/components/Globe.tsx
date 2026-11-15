@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import type { MapFile, RegionInfo, Scheme, SeriesRecord, Target } from '../types';
+import type { MapFile, Scheme, SeriesRecord, Target } from '../types';
 import { cellsGeoJSON, cellsOutline, endColors, fmt, fmtP } from '../lib/data';
 
 // NASA GIBS "Blue Marble" static imagery (no date needed, no login needed).
@@ -30,8 +30,16 @@ function angleDeg(lng1: number, lat1: number, lng2: number, lat2: number) {
   return Math.acos(Math.max(-1, Math.min(1, c))) / r;
 }
 
+/** is a screen point actually on the globe? Off the globe MapLibre snaps the pointer to the nearest edge, which made
+ *  hover read-outs and clicks pick up the tile or region closest to the pointer. A point on the globe projects back to itself. */
+function onGlobe(map: maplibregl.Map, pt: { x: number; y: number }) {
+  const q = map.project(map.unproject([pt.x, pt.y]));
+  return Math.hypot(q.x - pt.x, q.y - pt.y) < 3;
+}
+
+/** MapLibre draws the globe larger by 1 / cos(latitude of its centre) at the same zoom number, so a view centred near a pole looks
+ *  massively zoomed in. These convert between the zoom number and the "equator-equivalent" zoom that we design views in. */
 const bboxPoly = (b: [number, number, number, number]): number[][] => [[b[0], b[1]], [b[2], b[1]], [b[2], b[3]], [b[0], b[3]], [b[0], b[1]]];
-const bboxArea = (b: [number, number, number, number]) => (b[2] - b[0]) * (b[3] - b[1]);
 
 
 // ---- free (trackball) rotation: dragging can carry the globe over the poles ----
@@ -46,6 +54,8 @@ const norm = (a: V3): V3 => {
 const MAX_LAT = 85;
 /** time the last trackball drag ended; MapLibre still fires a click after it (its jumpTo resets the click guard) */
 let lastDragEnd = 0;
+/** draw mode: the trackball and clicks stand aside while the user drags out a box */
+let drawModeOn = false;
 
 /** the camera's centre direction and "up" direction, from the map's centre and bearing */
 function basisOf(lngDeg: number, latDeg: number, bearingDeg: number): { c: V3; up: V3 } {
@@ -78,6 +88,7 @@ function enableTrackball(map: maplibregl.Map, onStart: () => void) {
   let applied: { lng: number; lat: number; bearing: number } | null = null;
 
   const down = (e: PointerEvent) => {
+    if (drawModeOn) return;
     if (id !== null) { id = null; return; } // a second finger: leave it to pinch-zoom
     if (e.pointerType === 'mouse' && e.button !== 0) return;
     if ((e.target as HTMLElement).closest('.pin, .hs, .maplibregl-ctrl')) return;
@@ -139,14 +150,13 @@ function enableTrackball(map: maplibregl.Map, onStart: () => void) {
 export type PinState = 'up' | 'down' | 'none' | 'nodata';
 
 interface Props {
-  regions: RegionInfo[];
-  pinStates: Record<string, PinState>;
   mapData: MapFile | null;
   scheme: Scheme;
   units: string;
   showNonSig: boolean;
   showHotspots: boolean;
-  showPins: boolean;
+  drawMode: boolean;
+  onDraw: (box: [number, number, number, number] | null) => void; // null = cancelled
   showIpcc: boolean;
   ipccGeo: GeoJSON.FeatureCollection | null;
   ipccStates: Record<string, PinState>;
@@ -171,7 +181,6 @@ function zoomFor(spanDeg: number) {
 export default function Globe(p: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
-  const pinEls = useRef<Map<string, HTMLElement>>(new Map());
   const ipccEls = useRef<Map<string, HTMLElement>>(new Map());
   const hotspotMarkers = useRef<maplibregl.Marker[]>([]);
   const popupRef = useRef<maplibregl.Popup | null>(null);
@@ -182,14 +191,8 @@ export default function Globe(p: Props) {
   const hadTarget = useRef(false);
   const [ready, setReady] = useState(false);
 
-  const cb = useRef({ onSelect: p.onSelect, onUserInteract: p.onUserInteract, units: p.units, regions: p.regions, showPins: p.showPins, showIpcc: p.showIpcc, ipccTiles: p.ipccTiles, ipccGeo: p.ipccGeo });
-  cb.current = { onSelect: p.onSelect, onUserInteract: p.onUserInteract, units: p.units, regions: p.regions, showPins: p.showPins, showIpcc: p.showIpcc, ipccTiles: p.ipccTiles, ipccGeo: p.ipccGeo };
-
-  /** the smallest named region whose box contains a point (regions are rough boxes, not exact borders) */
-  const regionAt = (lng: number, lat: number) =>
-    cb.current.regions
-      .filter((r) => r.id !== 'global' && lng >= r.bbox[0] && lng <= r.bbox[2] && lat >= r.bbox[1] && lat <= r.bbox[3])
-      .sort((a, b) => bboxArea(a.bbox) - bboxArea(b.bbox))[0];
+  const cb = useRef({ onSelect: p.onSelect, onUserInteract: p.onUserInteract, units: p.units, showIpcc: p.showIpcc, ipccTiles: p.ipccTiles, ipccGeo: p.ipccGeo, onDraw: p.onDraw });
+  cb.current = { onSelect: p.onSelect, onUserInteract: p.onUserInteract, units: p.units, showIpcc: p.showIpcc, ipccTiles: p.ipccTiles, ipccGeo: p.ipccGeo, onDraw: p.onDraw };
 
   // ---- create the map once ----
   useEffect(() => {
@@ -241,13 +244,6 @@ export default function Globe(p: Props) {
       // dims everything outside the selected region, so its tiles read as one group
       map.addSource('region-mask', { type: 'geojson', data: EMPTY_FC });
       map.addLayer({ id: 'region-mask-fill', type: 'fill', source: 'region-mask', paint: { 'fill-color': '#02060e', 'fill-opacity': 0.55 } });
-      // every named region, always outlined, and clickable
-      map.addSource('regions-all', { type: 'geojson', data: EMPTY_FC });
-      map.addLayer({ id: 'regions-all-fill', type: 'fill', source: 'regions-all', paint: { 'fill-color': '#ffffff', 'fill-opacity': 0.01 } });
-      map.addLayer({
-        id: 'regions-all-line', type: 'line', source: 'regions-all',
-        paint: { 'line-color': '#ffffff', 'line-width': 1.2, 'line-opacity': 0.55, 'line-dasharray': [3, 2] },
-      });
       // IPCC AR6 reference regions: exact outlines, optional (off until switched on)
       map.addSource('ipcc', { type: 'geojson', data: EMPTY_FC });
       map.addLayer({ id: 'ipcc-fill', type: 'fill', source: 'ipcc', layout: { visibility: 'none' }, paint: { 'fill-color': '#ffffff', 'fill-opacity': 0.01 } });
@@ -276,14 +272,23 @@ export default function Globe(p: Props) {
         paint: { 'line-color': '#ffffff', 'line-width': 2, 'line-dasharray': [2, 1] },
       });
 
+      // the box being drawn
+      map.addSource('draw-box', { type: 'geojson', data: EMPTY_FC });
+      map.addLayer({ id: 'draw-box-fill', type: 'fill', source: 'draw-box', paint: { 'fill-color': '#5ad1ff', 'fill-opacity': 0.18 } });
+      map.addLayer({ id: 'draw-box-line', type: 'line', source: 'draw-box', paint: { 'line-color': '#5ad1ff', 'line-width': 2.5 } });
+
       // hover read-out for cells: what is changing here, and by how much
       const popup = new maplibregl.Popup({ closeButton: false, closeOnClick: false, className: 'cell-popup', offset: 10 });
       popupRef.current = popup;
       map.on('mousemove', 'cells-fill', (e) => {
         const f = e.features?.[0];
         if (!f) return;
+        if (!onGlobe(map, e.point)) {
+          popup.remove();
+          map.getCanvas().style.cursor = '';
+          return;
+        }
         const pr = f.properties as { v: number; sig: number; p: number | null };
-        const reg = cb.current.showPins ? regionAt(e.lngLat.lng, e.lngLat.lat) : undefined;
         const f0 = f.properties as { la?: number; lo?: number };
         const ipccId = cb.current.showIpcc && cb.current.ipccTiles ? cb.current.ipccTiles[`${f0.la},${f0.lo}`] : undefined;
         const ipccName = ipccId
@@ -297,7 +302,6 @@ export default function Globe(p: Props) {
                 ? '<span class="pop-sig">significant trend</span>'
                 : '<span class="pop-ns">not significant</span>') +
               (pr.p !== null && pr.p !== undefined ? ` · p = ${fmtP(Number(pr.p))}` : '') +
-              (reg ? `<br><span class="pop-reg">In <b>${reg.name}</b></span>` : '') +
               (ipccName ? `<br><span class="pop-reg">IPCC region: <b>${ipccName}</b></span>` : '') +
               '<br><span class="pop-hint">Click for details</span>',
           )
@@ -323,13 +327,14 @@ export default function Globe(p: Props) {
 
     // clicking a tile opens that tile; clicking empty space clears the selection
     map.on('click', (e) => {
-      if (performance.now() - lastDragEnd < 400) return; // that was the end of a drag, not a click
-      const hit = map.queryRenderedFeatures(e.point, { layers: ['cells-fill'] })[0];
+      if (drawModeOn || performance.now() - lastDragEnd < 400) return; // end of a drag / drawing, not a click
+      const off = !onGlobe(map, e.point); // empty space around the globe
+      const hit = off ? undefined : map.queryRenderedFeatures(e.point, { layers: ['cells-fill'] })[0];
       if (hit) {
         const { la, lo } = hit.properties as { la: number; lo: number };
         cb.current.onSelect({ kind: 'tile', id: `${la},${lo}` });
       } else {
-        const reg = cb.current.showIpcc ? map.queryRenderedFeatures(e.point, { layers: ['ipcc-fill'] })[0] : undefined;
+        const reg = cb.current.showIpcc && !off ? map.queryRenderedFeatures(e.point, { layers: ['ipcc-fill'] })[0] : undefined;
         cb.current.onSelect(reg ? { kind: 'region', id: (reg.properties as { id: string }).id } : null);
       }
     });
@@ -351,7 +356,6 @@ export default function Globe(p: Props) {
       stopTrackball();
       ro.disconnect();
       spinRef.current = false;
-      pinEls.current.clear();
       hotspotMarkers.current = [];
       markerPos.current.clear();
       map.remove();
@@ -360,72 +364,77 @@ export default function Globe(p: Props) {
     };
   }, []);
 
-  // ---- region pins (created once the regions are known) ----
+  // ---- draw mode: drag out a box; rotation and clicks are switched off meanwhile ----
   useEffect(() => {
     const map = mapRef.current;
-    if (!map || !ready) return;
-    const markers: maplibregl.Marker[] = [];
-    if (!p.showPins) return;
-    p.regions
-      .filter((r) => r.id !== 'global')
-      .forEach((r) => {
-        const el = document.createElement('button');
-        el.type = 'button';
-        el.className = 'pin pin--nodata';
-        el.setAttribute('aria-label', r.name);
-        const dot = document.createElement('span');
-        dot.className = 'pin__dot';
-        const label = document.createElement('span');
-        label.className = 'pin__label';
-        label.textContent = r.name;
-        el.append(dot, label);
-        el.addEventListener('click', (e) => {
-          e.stopPropagation();
-          cb.current.onSelect({ kind: 'region', id: r.id });
-        });
-        const [w, s, e2, n] = r.bbox;
-        const pos: [number, number] = [(w + e2) / 2, (s + n) / 2];
-        markers.push(new maplibregl.Marker({ element: el, anchor: 'center' }).setLngLat(pos).addTo(map));
-        markerPos.current.set(el, pos);
-        pinEls.current.set(r.id, el);
-      });
-    (map as unknown as { _updateMarkerVisibility?: () => void })._updateMarkerVisibility?.();
-    return () => {
-      markers.forEach((m) => {
-        markerPos.current.delete(m.getElement());
-        m.remove();
-      });
-      pinEls.current.clear();
+    const host = containerRef.current;
+    if (!map || !ready || !host) return;
+    drawModeOn = p.drawMode;
+    host.classList.toggle('globe--drawing', p.drawMode);
+    const preview = map.getSource('draw-box') as maplibregl.GeoJSONSource | undefined;
+    preview?.setData(EMPTY_FC);
+    if (!p.drawMode) return;
+    const el = map.getCanvasContainer();
+    el.style.touchAction = 'none';
+    let start: { x: number; y: number; id: number } | null = null;
+    const toLL = (x: number, y: number) => {
+      const r = el.getBoundingClientRect();
+      if (!onGlobe(map, { x: x - r.left, y: y - r.top })) return null;
+      const ll = map.unproject([x - r.left, y - r.top]);
+      const c = map.getCenter();
+      return angleDeg(c.lng, c.lat, ll.lng, ll.lat) > 80 ? null : ll; // beyond the visible globe
     };
-  }, [ready, p.regions, p.showPins]);
-
-  // ---- pin state + selection (toggle only our own classes: MapLibre adds its own positioning classes) ----
-  useEffect(() => {
-    pinEls.current.forEach((el, id) => {
-      el.classList.remove('pin--up', 'pin--down', 'pin--none', 'pin--nodata', 'is-selected');
-      el.classList.add(`pin--${p.pinStates[id] ?? 'nodata'}`);
-      if (p.target?.kind === 'region' && p.target.id === id) el.classList.add('is-selected');
-    });
-  }, [p.pinStates, p.target, ready, p.regions, p.showPins]);
-
-  // ---- all region outlines ----
-  useEffect(() => {
-    const map = mapRef.current;
-    if (!map || !ready) return;
-    const src = map.getSource('regions-all') as maplibregl.GeoJSONSource | undefined;
-    src?.setData({
-      type: 'FeatureCollection',
-      features: p.regions
-        .filter((r) => r.id !== 'global')
-        .map((r) => ({ type: 'Feature' as const, properties: { id: r.id }, geometry: { type: 'Polygon' as const, coordinates: [bboxPoly(r.bbox)] } })),
-    });
-  }, [p.regions, ready]);
-
-  useEffect(() => {
-    const map = mapRef.current;
-    if (!map || !ready) return;
-    ['regions-all-line', 'regions-all-fill'].forEach((id) => map.setLayoutProperty(id, 'visibility', p.showPins ? 'visible' : 'none'));
-  }, [p.showPins, ready]);
+    const boxOf = (x1: number, y1: number, x2: number, y2: number): [number, number, number, number] | null => {
+      const a = toLL(x1, y1);
+      const b = toLL(x2, y2);
+      if (!a || !b) return null;
+      let w = Math.min(a.lng, b.lng);
+      let e = Math.max(a.lng, b.lng);
+      if (e - w > 180) { const t = w; w = e; e = t + 360; } // the short way round: a box across the dateline
+      return [w, Math.max(-90, Math.min(a.lat, b.lat)), e, Math.min(90, Math.max(a.lat, b.lat))];
+    };
+    const down = (e: PointerEvent) => {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      if ((e.target as HTMLElement).closest('.maplibregl-ctrl')) return;
+      start = { x: e.clientX, y: e.clientY, id: e.pointerId };
+      try { el.setPointerCapture(e.pointerId); } catch { /* not needed */ }
+      e.preventDefault();
+    };
+    const move = (e: PointerEvent) => {
+      if (!start || start.id !== e.pointerId) return;
+      const b = boxOf(start.x, start.y, e.clientX, e.clientY);
+      preview?.setData(b ? { type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: [bboxPoly(b)] } } : EMPTY_FC);
+    };
+    const up = (e: PointerEvent) => {
+      if (!start || start.id !== e.pointerId) return;
+      const s0 = start;
+      start = null;
+      preview?.setData(EMPTY_FC);
+      if (Math.hypot(e.clientX - s0.x, e.clientY - s0.y) < 10) return; // a click, not a drag: keep waiting
+      const b = boxOf(s0.x, s0.y, e.clientX, e.clientY);
+      if (!b) return;
+      lastDragEnd = performance.now();
+      cb.current.onDraw(b);
+    };
+    const key = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') cb.current.onDraw(null);
+    };
+    el.addEventListener('pointerdown', down);
+    el.addEventListener('pointermove', move);
+    el.addEventListener('pointerup', up);
+    el.addEventListener('pointercancel', up);
+    window.addEventListener('keydown', key);
+    return () => {
+      el.removeEventListener('pointerdown', down);
+      el.removeEventListener('pointermove', move);
+      el.removeEventListener('pointerup', up);
+      el.removeEventListener('pointercancel', up);
+      window.removeEventListener('keydown', key);
+      el.style.touchAction = '';
+      drawModeOn = false;
+      host.classList.remove('globe--drawing');
+    };
+  }, [p.drawMode, ready]);
 
   // ---- IPCC region markers: one at the centre of each region, so every region can be clicked ----
   useEffect(() => {
@@ -573,11 +582,14 @@ export default function Globe(p: Props) {
     if (!map || !ready) return;
     const isIpcc = p.target?.kind === 'region' && p.target.id.startsWith('ar6:');
     const ipccFeat = isIpcc ? p.ipccGeo?.features.find((x) => (x.properties as { id: string }).id === p.target!.id) : undefined;
-    const region = p.target?.kind === 'region' && !isIpcc ? p.regions.find((r) => r.id === p.target!.id) : undefined;
     const outline = map.getSource('region-outline') as maplibregl.GeoJSONSource | undefined;
     const mask = map.getSource('region-mask') as maplibregl.GeoJSONSource | undefined;
     let flyBox: [number, number, number, number] | null = null;
-    if (ipccFeat) {
+    if (p.target?.kind === 'custom') {
+      const b = p.target.id.split(',').map(Number) as [number, number, number, number];
+      outline?.setData({ type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: [bboxPoly(b)] } });
+      mask?.setData(EMPTY_FC);
+    } else if (ipccFeat) {
       const polys: number[][][][] = ipccFeat.geometry.type === 'Polygon' ? [ipccFeat.geometry.coordinates] : (ipccFeat.geometry as GeoJSON.MultiPolygon).coordinates;
       const pts = polys.flatMap((pg) => pg[0]);
       flyBox = [Math.min(...pts.map((q) => q[0])), Math.min(...pts.map((q) => q[1])), Math.max(...pts.map((q) => q[0])), Math.max(...pts.map((q) => q[1]))];
@@ -588,28 +600,8 @@ export default function Globe(p: Props) {
         geometry: { type: 'Polygon', coordinates: [world, ...polys.map((pg) => [...pg[0]].reverse())] },
       });
     } else {
-      outline?.setData(
-        region && region.id !== 'global'
-          ? {
-              type: 'Feature',
-              properties: {},
-              geometry: {
-                type: 'Polygon',
-                coordinates: [[[region.bbox[0], region.bbox[1]], [region.bbox[2], region.bbox[1]], [region.bbox[2], region.bbox[3]], [region.bbox[0], region.bbox[3]], [region.bbox[0], region.bbox[1]]]],
-              },
-            }
-          : EMPTY_FC,
-      );
-      mask?.setData(
-        region && region.id !== 'global'
-          ? {
-              type: 'Feature',
-              properties: {},
-              geometry: { type: 'Polygon', coordinates: [[[-180, -85], [180, -85], [180, 85], [-180, 85], [-180, -85]], bboxPoly(region.bbox).reverse()] },
-            }
-          : EMPTY_FC,
-      );
-      if (region && region.id !== 'global') flyBox = region.bbox;
+      outline?.setData(EMPTY_FC);
+      mask?.setData(EMPTY_FC);
     }
     const hl = map.getSource('hotspot-cells') as maplibregl.GeoJSONSource | undefined;
     hl?.setData(p.highlightCells ? cellsOutline(p.highlightCells) : EMPTY_FC);

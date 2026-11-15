@@ -32,7 +32,7 @@ export const TOUR_STEPS: TourStep[] = [
   {
     target: '.legend__check--two',
     title: 'Regions and hotspots',
-    text: 'IPCC regions (yellow outlines and square markers) are 58 standard regions covering the whole globe; + or − marks a significant change. Spotlight regions (round pins, off by default) are 11 places where change is easy to see. Hotspots (▲▼) are groups of touching tiles that change the same way. Click a tile or marker for its numbers.',
+    text: 'IPCC regions (yellow outlines and square markers) are 58 standard regions covering the whole globe; + or − marks a significant change. Hotspots (▲▼) are groups of touching tiles that change the same way. Click a tile or a marker for its numbers.',
     demo: true,
   },
   {
@@ -42,9 +42,15 @@ export const TOUR_STEPS: TourStep[] = [
     demo: true,
   },
   {
+    target: '.draw-btn',
+    title: 'Draw your own area',
+    text: 'With a variable chosen, click here, then drag a box anywhere on the globe. The trend inside it is worked out on the spot and shown in the panel. Because you pick the box yourself, treat the result as a lead, not a conclusion.',
+    demo: true,
+  },
+  {
     target: '.toolbar',
     title: 'Top bar',
-    text: 'Turn satellite imagery or rotation off, replay this tour, open guided examples, or read how everything was calculated and where the data comes from.',
+    text: 'Turn satellite imagery or rotation off, replay this tour, ask a question, or read how everything was calculated and where the data comes from.',
   },
 ];
 

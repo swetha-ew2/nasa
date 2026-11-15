@@ -6,13 +6,11 @@ interface Props {
   limit: number;
   showHotspots: boolean;
   onToggleHotspots: (v: boolean) => void;
-  showPins: boolean;
-  onTogglePins: (v: boolean) => void;
   showIpcc: boolean;
   onToggleIpcc: (v: boolean) => void;
 }
 
-export default function Legend({ variable, limit, showHotspots, onToggleHotspots, showPins, onTogglePins, showIpcc, onToggleIpcc }: Props) {
+export default function Legend({ variable, limit, showHotspots, onToggleHotspots, showIpcc, onToggleIpcc }: Props) {
   return (
     <div className="legend" aria-label="Map legend">
       <div className="legend__title">{variable.name}</div>
@@ -23,11 +21,6 @@ export default function Legend({ variable, limit, showHotspots, onToggleHotspots
         <span>0</span>
         <span>+{fmt(limit, 2)}</span>
       </div>
-      <label className="legend__check legend__check--two">
-        <input type="checkbox" checked={showPins} onChange={(e) => onTogglePins(e.target.checked)} />
-        <i className="lg lg--region" />
-        <span><strong>Spotlight regions</strong><br /><span className="muted">places where change is already easy to see</span></span>
-      </label>
       <label className="legend__check legend__check--two">
         <input type="checkbox" checked={showIpcc} onChange={(e) => onToggleIpcc(e.target.checked)} />
         <i className="lg lg--ipcc" />

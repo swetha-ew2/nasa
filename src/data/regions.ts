@@ -1,7 +1,8 @@
 import type { Region } from '../types';
 
-// Reference regions: hand-picked by us (not an official list) because they are well known or climate-sensitive.
-// The boxes are rough rectangles. `placeholderTrend` is a leftover from the mock-up and is not a finding.
+// NOT shown in the app any more (the app uses the 58 IPCC AR6 regions). This file is read only by the Python pipeline:
+// hotspots.py uses these boxes to give hotspots readable names (e.g. "Amazon Basin"), and regional.py computes the global mean.
+// Hand-picked by us (not an official list). The boxes are rough rectangles. `placeholderTrend` is a leftover from the mock-up and is not a finding.
 export const REGIONS: Region[] = [
   {
     id: 'amazon',
