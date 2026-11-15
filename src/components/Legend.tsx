@@ -8,9 +8,11 @@ interface Props {
   onToggleHotspots: (v: boolean) => void;
   showPins: boolean;
   onTogglePins: (v: boolean) => void;
+  showIpcc: boolean;
+  onToggleIpcc: (v: boolean) => void;
 }
 
-export default function Legend({ variable, limit, showHotspots, onToggleHotspots, showPins, onTogglePins }: Props) {
+export default function Legend({ variable, limit, showHotspots, onToggleHotspots, showPins, onTogglePins, showIpcc, onToggleIpcc }: Props) {
   return (
     <div className="legend" aria-label="Map legend">
       <div className="legend__title">{variable.name}</div>
@@ -24,7 +26,12 @@ export default function Legend({ variable, limit, showHotspots, onToggleHotspots
       <label className="legend__check legend__check--two">
         <input type="checkbox" checked={showPins} onChange={(e) => onTogglePins(e.target.checked)} />
         <i className="lg lg--region" />
-        <span><strong>Named regions</strong><br /><span className="muted">fixed areas we chose in advance</span></span>
+        <span><strong>Spotlight regions</strong><br /><span className="muted">places where change is already easy to see</span></span>
+      </label>
+      <label className="legend__check legend__check--two">
+        <input type="checkbox" checked={showIpcc} onChange={(e) => onToggleIpcc(e.target.checked)} />
+        <i className="lg lg--ipcc" />
+        <span><strong>IPCC regions</strong><br /><span className="muted">58 standard regions covering the whole globe</span></span>
       </label>
       <label className="legend__check legend__check--two">
         <input type="checkbox" checked={showHotspots} onChange={(e) => onToggleHotspots(e.target.checked)} />

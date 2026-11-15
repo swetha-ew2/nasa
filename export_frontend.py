@@ -16,6 +16,9 @@ import shutil
 from collections import defaultdict
 
 import numpy as np
+from scipy.stats import theilslopes
+
+from trends import bh_fdr
 
 OUT = "public/data"
 
@@ -114,6 +117,31 @@ def region_blurbs(path="src/data/regions.ts"):
     return {m.group(1): m.group(2) for m in re.finditer(r"id:\s*'([^']+)',.*?blurb:\s*'((?:[^'\\]|\\.)*)'", txt, re.S)}
 
 
+def early_sign(r, near):
+    """one rule for every region type: just misses the strict test (passes FDR at 10%), 95% CI excludes zero,
+    and the trend points the same way in both halves of the record"""
+    if r.get("status") != "ok" or r["significant_fdr"] or not near or not r["ci_excludes_zero"]:
+        return False
+    a = np.array([np.nan if x is None else x for x in r["anomaly"]], float)
+    t = np.arange(a.size) / 12.0
+    h = a.size // 2
+    sg = np.sign(r["slope_per_decade"])
+    for sl in (slice(0, h), slice(h, None)):
+        m = np.isfinite(a[sl])
+        if np.sign(theilslopes(a[sl][m], t[sl][m])[0]) != sg:
+            return False
+    return True
+
+
+def near_miss(recs):
+    """id -> passes Benjamini-Hochberg at 10% among the non-global tested regions (global is a single test: p < 0.10)"""
+    ok = [r for r in recs if r.get("status") == "ok" and r["id"] != "global"]
+    q = bh_fdr(np.array([r["p"] for r in ok], float), 0.10) if ok else []
+    out = {r["id"]: bool(x) for r, x in zip(ok, q)}
+    out["global"] = True
+    return out
+
+
 def sentence(name, vname, units, rec):
     s, (lo, hi), p = rec["slope_per_decade"], rec["ci95"], rec["p"]
     direction = "rising" if s > 0 else "falling"
@@ -160,11 +188,13 @@ def main():
         hs = json.load(open(f"data/hotspots/{vid}.json"))
         regions = [conv_series(r, f, off) for r in rg["regions"]]
         hots = [conv_series(h, f, off) for h in hs["hotspots"]]
+        ipcc = [conv_series(r, f, off) for r in json.load(open(f"data/regional_ipcc/{vid}.json"))["regions"]]
         for h in hots:
             h["cells"] = [[a, b] for a, b in h["cells"]]
         json.dump(dict(var=slug, units=units, months_start=rg["t0"], months_end=rg["t1"],
                        fdr_family="the 11 regions of this variable (global is tested alone)",
-                       regions=regions, hotspots=hots),
+                       ipcc_fdr_family="the IPCC regions of this variable that have enough tiles (tested separately from the 11 regions)",
+                       regions=regions, ipcc=ipcc, hotspots=hots),
                   open(f"{OUT}/series/{slug}.json", "w"), separators=(",", ":"))
 
         # ---- manifest entry
@@ -187,16 +217,17 @@ def main():
                                     centroid=h["centroid"], n_cells=h["n_cells"], slope_per_decade=h["slope_per_decade"],
                                     ci95=h["ci95"], p=h["p"], consistent_in_both_halves=h["consistent_in_both_halves"],
                                     exploratory=True) for h in hots]
+        near = near_miss(regions)
         for r in regions:
             if r.get("status") != "ok" or r["id"] == "global":
                 continue
             region_vars[r["id"]].append(dict(var=slug, significant=bool(r["significant_fdr"]), direction=r["direction"],
                                              slope_per_decade=r["slope_per_decade"], p=r["p"], snr=r["snr"]))
-            if (not r["significant_fdr"]) and r["p"] < 0.10:
+            if early_sign(r, near[r["id"]]):
                 interesting.append(dict(var=slug, var_name=name, units=units, region=r["id"], region_name=r["name"],
                                         slope_per_decade=r["slope_per_decade"], ci95=r["ci95"], p=r["p"], snr=r["snr"],
                                         ci_excludes_zero=r["ci_excludes_zero"], text=sentence(r["name"], name, units, r)))
-        if g.get("status") == "ok" and (not g["significant_fdr"]) and g["p"] < 0.10:
+        if g.get("status") == "ok" and g["p"] < 0.10 and early_sign(g, True):
             interesting.append(dict(var=slug, var_name=name, units=units, region="global", region_name="Global",
                                     slope_per_decade=g["slope_per_decade"], ci95=g["ci95"], p=g["p"], snr=g["snr"],
                                     ci_excludes_zero=g["ci_excludes_zero"], text=sentence("the globe", name, units, g)))
@@ -216,8 +247,37 @@ def main():
                                      f"(p between {min(i['p'] for i in items):.3f} and {max(i['p'] for i in items):.3f}). None passes "
                                      "the strict test on its own, but several pointing the same way is worth watching. "
                                      "Twenty years is short, and with this many tests a few p-values below 0.05 are expected by chance."))
-    json.dump(dict(criteria="not significant after FDR across regions, but p < 0.10", items=interesting, stories=stories),
+    # ---- early signs among the IPCC regions: a tighter rule, because ~970 tests run and ~10% would pass p < 0.10 by chance.
+    # Kept only if it (1) just misses the strict test but passes FDR at 10%, (2) has a 95% CI that excludes zero, and
+    # (3) points the same way in both halves of the record.
+    for it in interesting:
+        it["group"] = "spotlight"
+    n_ipcc = 0
+    for vid in ids:
+        slug, name, _d, units, f, _o, *_ = V[vid]
+        recs = json.load(open(f"data/regional_ipcc/{vid}.json"))["regions"]
+        nm = near_miss(recs)
+        for r in recs:
+            if not early_sign(r, nm.get(r["id"], False)):
+                continue
+            s_, (lo, hi), p_ = r["slope_per_decade"] * f, [x * f for x in r["ci95"]], r["p"]
+            interesting.append(dict(
+                var=slug, var_name=name, units=units, region=r["id"], region_name=r["name"], group="ipcc",
+                slope_per_decade=rnd(s_), ci95=[rnd(lo), rnd(hi)], p=p_, snr=r["snr"], ci_excludes_zero=True,
+                text=f"{name} over {r['name']} is {'rising' if s_ > 0 else 'falling'} by {abs(s_):.3g} {units} per decade "
+                     f"(95% confidence interval {lo:+.3g} to {hi:+.3g}, p = {p_:.2g}). It narrowly misses the strict test, "
+                     "but the direction is the same in both halves of the record."))
+            n_ipcc += 1
+    print(f"early signs: {len(interesting) - n_ipcc} spotlight/global + {n_ipcc} IPCC")
+    json.dump(dict(criteria="passes FDR at 10% but not at 5%, 95% CI excludes zero, same direction in both halves of the record (same rule for spotlight, global and IPCC regions)", items=interesting, stories=stories),
               open(f"{OUT}/interesting.json", "w"), indent=1)
+
+    # ---- IPCC AR6 reference regions: outlines + which region each tile belongs to
+    shutil.copy("data/ipcc_regions.geojson", f"{OUT}/ipcc_regions.geojson")
+    shutil.copy("data/ipcc_tiles.json", f"{OUT}/ipcc_tiles.json")
+    ipcc_out = [dict(id=f["properties"]["id"], abbrev=f["properties"]["abbrev"], name=f["properties"]["name"],
+                     kind=f["properties"]["kind"], n_tiles=f["properties"]["n_tiles"])
+                for f in json.load(open("data/ipcc_regions.geojson"))["features"]]
 
     regions_out = []
     for r in reg_def:
@@ -231,7 +291,7 @@ def main():
             anomalies="Monthly values minus the average for the same calendar month, so seasons do not look like trends.",
             rate="Sen slope (median of all pairwise slopes) per decade with a 95% confidence interval.",
             tests="Mann-Kendall test with the variance inflated for month-to-month autocorrelation (lag-1), or an OLS t-test when the residuals pass Durbin-Watson and Shapiro checks (in practice Mann-Kendall was used for every variable).",
-            multiple_testing="Benjamini-Hochberg false discovery rate at 5%: across cells for maps, across the 11 regions for each variable (the global mean is one separate test).",
+            multiple_testing="Benjamini-Hochberg false discovery rate at 5%: across cells for maps, across the 11 spotlight regions for each variable, and separately across the IPCC regions (the global mean is one separate test).",
             effect_size="Total change over the record divided by the month-to-month noise (SD of detrended anomalies)."),
         caveats=[
             "Twenty years is short; trends can reflect natural variability such as El Niño, not only long-term change.",
@@ -241,7 +301,7 @@ def main():
             "Land models disagree with each other for some variables; this is shown, not hidden.",
             "Variables were selected by a data-driven method plus six hand-picked headline variables; see 'role'."],
         not_available="AIRS products, MOD21C3 and tropospheric ozone were not used. Snow cover has 238 of 240 months.",
-        variables=variables, regions=regions_out, hotspots=hotspot_index),
+        variables=variables, regions=regions_out, ipcc_regions=ipcc_out, hotspots=hotspot_index),
         open(f"{OUT}/manifest.json", "w"), indent=1)
     sizes = sum(os.path.getsize(os.path.join(d, f)) for d, _, fs in os.walk(OUT) for f in fs)
     print(f"exported {len(variables)} variables, {len(regions_out)} regions, {sum(len(v) for v in hotspot_index.values())} hotspots, "

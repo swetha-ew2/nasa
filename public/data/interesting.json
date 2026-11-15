@@ -1,22 +1,6 @@
 {
- "criteria": "not significant after FDR across regions, but p < 0.10",
+ "criteria": "passes FDR at 10% but not at 5%, 95% CI excludes zero, same direction in both halves of the record (same rule for spotlight, global and IPCC regions)",
  "items": [
-  {
-   "var": "soil_moist_10_40",
-   "var_name": "Soil moisture, 10\u201340 cm",
-   "units": "kg/m\u00b2",
-   "region": "med",
-   "region_name": "Mediterranean Basin",
-   "slope_per_decade": -1.598,
-   "ci95": [
-    -2.827,
-    -0.3701
-   ],
-   "p": 0.01206,
-   "snr": -1.39,
-   "ci_excludes_zero": true,
-   "text": "Soil moisture, 10\u201340 cm over Mediterranean Basin is falling by 1.6 kg/m\u00b2 per decade (95% confidence interval -2.83 to -0.37, p = 0.012). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
-  },
   {
    "var": "snow",
    "var_name": "Snow cover",
@@ -31,7 +15,8 @@
    "p": 0.01619,
    "snr": -0.06135,
    "ci_excludes_zero": true,
-   "text": "Snow cover over Mediterranean Basin is falling by 0.0558 % of area per decade (95% confidence interval -0.181 to -0.00566, p = 0.016). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
+   "text": "Snow cover over Mediterranean Basin is falling by 0.0558 % of area per decade (95% confidence interval -0.181 to -0.00566, p = 0.016). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance.",
+   "group": "spotlight"
   },
   {
    "var": "snow",
@@ -47,119 +32,8 @@
    "p": 0.01822,
    "snr": -0.2073,
    "ci_excludes_zero": true,
-   "text": "Snow cover over Antarctic Peninsula is falling by 0.00151 % of area per decade (95% confidence interval -0.00308 to -0.000244, p = 0.018). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
-  },
-  {
-   "var": "sw_down",
-   "var_name": "Sunlight reaching the surface",
-   "units": "W/m\u00b2",
-   "region": "antp",
-   "region_name": "Antarctic Peninsula",
-   "slope_per_decade": -0.7763,
-   "ci95": [
-    -1.809,
-    -0.08948
-   ],
-   "p": 0.01963,
-   "snr": -0.2385,
-   "ci_excludes_zero": true,
-   "text": "Sunlight reaching the surface over Antarctic Peninsula is falling by 0.776 W/m\u00b2 per decade (95% confidence interval -1.81 to -0.0895, p = 0.02). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
-  },
-  {
-   "var": "cloud_top_temp",
-   "var_name": "Cloud-top temperature",
-   "units": "K",
-   "region": "nsea",
-   "region_name": "North Sea & Low Countries",
-   "slope_per_decade": -0.7492,
-   "ci95": [
-    -1.479,
-    -0.02946
-   ],
-   "p": 0.03287,
-   "snr": -0.4614,
-   "ci_excludes_zero": true,
-   "text": "Cloud-top temperature over North Sea & Low Countries is falling by 0.749 K per decade (95% confidence interval -1.48 to -0.0295, p = 0.033). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
-  },
-  {
-   "var": "tws",
-   "var_name": "Terrestrial water storage",
-   "units": "mm of water",
-   "region": "med",
-   "region_name": "Mediterranean Basin",
-   "slope_per_decade": -25.39,
-   "ci95": [
-    -52.24,
-    -2.752
-   ],
-   "p": 0.03291,
-   "snr": -2.385,
-   "ci_excludes_zero": true,
-   "text": "Terrestrial water storage over Mediterranean Basin is falling by 25.4 mm of water per decade (95% confidence interval -52.2 to -2.75, p = 0.033). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
-  },
-  {
-   "var": "t2m",
-   "var_name": "Near-surface air temperature",
-   "units": "\u00b0C",
-   "region": "amazon",
-   "region_name": "Amazon Basin",
-   "slope_per_decade": 0.4518,
-   "ci95": [
-    0.03654,
-    0.8958
-   ],
-   "p": 0.0342,
-   "snr": 1.319,
-   "ci_excludes_zero": true,
-   "text": "Near-surface air temperature over Amazon Basin is rising by 0.452 \u00b0C per decade (95% confidence interval +0.0365 to +0.896, p = 0.034). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
-  },
-  {
-   "var": "tws",
-   "var_name": "Terrestrial water storage",
-   "units": "mm of water",
-   "region": "amazon",
-   "region_name": "Amazon Basin",
-   "slope_per_decade": -84.59,
-   "ci95": [
-    -160.6,
-    -6.947
-   ],
-   "p": 0.03745,
-   "snr": -3.087,
-   "ci_excludes_zero": true,
-   "text": "Terrestrial water storage over Amazon Basin is falling by 84.6 mm of water per decade (95% confidence interval -161 to -6.95, p = 0.037). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
-  },
-  {
-   "var": "snow",
-   "var_name": "Snow cover",
-   "units": "% of area",
-   "region": "amazon",
-   "region_name": "Amazon Basin",
-   "slope_per_decade": -0.000238,
-   "ci95": [
-    -0.0004498,
-    -1.22e-05
-   ],
-   "p": 0.03887,
-   "snr": -0.4259,
-   "ci_excludes_zero": true,
-   "text": "Snow cover over Amazon Basin is falling by 0.000238 % of area per decade (95% confidence interval -0.00045 to -1.22e-05, p = 0.039). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
-  },
-  {
-   "var": "cloud_top_temp",
-   "var_name": "Cloud-top temperature",
-   "units": "K",
-   "region": "igp",
-   "region_name": "Indo-Gangetic Plain (northern India)",
-   "slope_per_decade": 1.381,
-   "ci95": [
-    0.05193,
-    2.764
-   ],
-   "p": 0.04099,
-   "snr": 0.5124,
-   "ci_excludes_zero": true,
-   "text": "Cloud-top temperature over Indo-Gangetic Plain (northern India) is rising by 1.38 K per decade (95% confidence interval +0.0519 to +2.76, p = 0.041). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
+   "text": "Snow cover over Antarctic Peninsula is falling by 0.00151 % of area per decade (95% confidence interval -0.00308 to -0.000244, p = 0.018). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance.",
+   "group": "spotlight"
   },
   {
    "var": "soil_wetness_top",
@@ -175,23 +49,8 @@
    "p": 0.04442,
    "snr": 2.099,
    "ci_excludes_zero": true,
-   "text": "Surface soil wetness over Arctic Ocean (Alaska side) is rising by 0.00453 fraction (0\u20131) per decade (95% confidence interval +0.000125 to +0.0116, p = 0.044). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
-  },
-  {
-   "var": "cloud_top_temp",
-   "var_name": "Cloud-top temperature",
-   "units": "K",
-   "region": "antp",
-   "region_name": "Antarctic Peninsula",
-   "slope_per_decade": -0.468,
-   "ci95": [
-    -0.915,
-    -0.003534
-   ],
-   "p": 0.04791,
-   "snr": -0.5207,
-   "ci_excludes_zero": true,
-   "text": "Cloud-top temperature over Antarctic Peninsula is falling by 0.468 K per decade (95% confidence interval -0.915 to -0.00353, p = 0.048). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
+   "text": "Surface soil wetness over Arctic Ocean (Alaska side) is rising by 0.00453 fraction (0\u20131) per decade (95% confidence interval +0.000125 to +0.0116, p = 0.044). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance.",
+   "group": "spotlight"
   },
   {
    "var": "soil_wetness_top",
@@ -207,401 +66,383 @@
    "p": 0.04887,
    "snr": -1.193,
    "ci_excludes_zero": true,
-   "text": "Surface soil wetness over Mediterranean Basin is falling by 0.00905 fraction (0\u20131) per decade (95% confidence interval -0.0181 to -4.9e-05, p = 0.049). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance."
+   "text": "Surface soil wetness over Mediterranean Basin is falling by 0.00905 fraction (0\u20131) per decade (95% confidence interval -0.0181 to -4.9e-05, p = 0.049). The interval does not include zero, but the result is not significant once we correct for testing 11 regions at once, so it could still be chance.",
+   "group": "spotlight"
   },
   {
    "var": "t2m",
    "var_name": "Near-surface air temperature",
    "units": "\u00b0C",
-   "region": "tibet",
-   "region_name": "Tibetan Plateau",
-   "slope_per_decade": 0.2415,
+   "region": "ar6:EIO",
+   "region_name": "Equatorial Indian Ocean",
+   "group": "ipcc",
+   "slope_per_decade": 0.2148,
    "ci95": [
-    -0.007286,
-    0.483
+    0.009338,
+    0.4399
    ],
-   "p": 0.05642,
-   "snr": 0.6,
-   "ci_excludes_zero": false,
-   "text": "Near-surface air temperature over Tibetan Plateau is rising by 0.241 \u00b0C per decade (95% confidence interval -0.00729 to +0.483, p = 0.056). The interval includes zero, so this is only a hint."
-  },
-  {
-   "var": "sw_net",
-   "var_name": "Sunlight absorbed by land",
-   "units": "W/m\u00b2",
-   "region": "nsea",
-   "region_name": "North Sea & Low Countries",
-   "slope_per_decade": -2.204,
-   "ci95": [
-    -4.613,
-    0.05665
-   ],
-   "p": 0.05689,
-   "snr": -0.4468,
-   "ci_excludes_zero": false,
-   "text": "Sunlight absorbed by land over North Sea & Low Countries is falling by 2.2 W/m\u00b2 per decade (95% confidence interval -4.61 to +0.0566, p = 0.057). The interval includes zero, so this is only a hint."
-  },
-  {
-   "var": "soil_temp",
-   "var_name": "Soil temperature, top 10 cm",
-   "units": "\u00b0C",
-   "region": "tibet",
-   "region_name": "Tibetan Plateau",
-   "slope_per_decade": 0.3362,
-   "ci95": [
-    -0.01086,
-    0.6835
-   ],
-   "p": 0.05762,
-   "snr": 0.7605,
-   "ci_excludes_zero": false,
-   "text": "Soil temperature, top 10 cm over Tibetan Plateau is rising by 0.336 \u00b0C per decade (95% confidence interval -0.0109 to +0.683, p = 0.058). The interval includes zero, so this is only a hint."
-  },
-  {
-   "var": "sst",
-   "var_name": "Sea surface temperature",
-   "units": "\u00b0C",
-   "region": "indo",
-   "region_name": "Indonesia & Maritime Southeast Asia",
-   "slope_per_decade": 0.1962,
-   "ci95": [
-    -0.007822,
-    0.4005
-   ],
-   "p": 0.0595,
-   "snr": 1.371,
-   "ci_excludes_zero": false,
-   "text": "Sea surface temperature over Indonesia & Maritime Southeast Asia is rising by 0.196 \u00b0C per decade (95% confidence interval -0.00782 to +0.401, p = 0.059). The interval includes zero, so this is only a hint."
-  },
-  {
-   "var": "cloud_top_temp",
-   "var_name": "Cloud-top temperature",
-   "units": "K",
-   "region": "sahel",
-   "region_name": "Sahel",
-   "slope_per_decade": 0.6328,
-   "ci95": [
-    -0.02851,
-    1.3
-   ],
-   "p": 0.06034,
-   "snr": 0.4252,
-   "ci_excludes_zero": false,
-   "text": "Cloud-top temperature over Sahel is rising by 0.633 K per decade (95% confidence interval -0.0285 to +1.3, p = 0.06). The interval includes zero, so this is only a hint."
+   "p": 0.04203,
+   "snr": 1.679,
+   "ci_excludes_zero": true,
+   "text": "Near-surface air temperature over Equatorial Indian Ocean is rising by 0.215 \u00b0C per decade (95% confidence interval +0.00934 to +0.44, p = 0.042). It narrowly misses the strict test, but the direction is the same in both halves of the record."
   },
   {
    "var": "precip",
    "var_name": "Precipitation rate",
    "units": "mm/day",
-   "region": "global",
-   "region_name": "Global",
-   "slope_per_decade": 0.02246,
+   "region": "ar6:NSA",
+   "region_name": "Northern South America",
+   "group": "ipcc",
+   "slope_per_decade": -0.3005,
    "ci95": [
-    -0.001497,
-    0.04586
+    -0.5594,
+    -0.04781
    ],
-   "p": 0.06451,
-   "snr": 0.6438,
-   "ci_excludes_zero": false,
-   "text": "Precipitation rate over the globe is rising by 0.0225 mm/day per decade (95% confidence interval -0.0015 to +0.0459, p = 0.065). The interval includes zero, so this is only a hint."
-  },
-  {
-   "var": "sw_down",
-   "var_name": "Sunlight reaching the surface",
-   "units": "W/m\u00b2",
-   "region": "med",
-   "region_name": "Mediterranean Basin",
-   "slope_per_decade": 1.188,
-   "ci95": [
-    -0.077,
-    2.398
-   ],
-   "p": 0.0655,
-   "snr": 0.4438,
-   "ci_excludes_zero": false,
-   "text": "Sunlight reaching the surface over Mediterranean Basin is rising by 1.19 W/m\u00b2 per decade (95% confidence interval -0.077 to +2.4, p = 0.066). The interval includes zero, so this is only a hint."
-  },
-  {
-   "var": "sst",
-   "var_name": "Sea surface temperature",
-   "units": "\u00b0C",
-   "region": "cvalley",
-   "region_name": "California Central Valley",
-   "slope_per_decade": 0.4167,
-   "ci95": [
-    -0.03034,
-    0.8603
-   ],
-   "p": 0.06573,
-   "snr": 1.157,
-   "ci_excludes_zero": false,
-   "text": "Sea surface temperature over California Central Valley is rising by 0.417 \u00b0C per decade (95% confidence interval -0.0303 to +0.86, p = 0.066). The interval includes zero, so this is only a hint."
+   "p": 0.02012,
+   "snr": -0.7403,
+   "ci_excludes_zero": true,
+   "text": "Precipitation rate over Northern South America is falling by 0.3 mm/day per decade (95% confidence interval -0.559 to -0.0478, p = 0.02). It narrowly misses the strict test, but the direction is the same in both halves of the record."
   },
   {
    "var": "precip",
    "var_name": "Precipitation rate",
    "units": "mm/day",
-   "region": "med",
-   "region_name": "Mediterranean Basin",
-   "slope_per_decade": -0.08366,
+   "region": "ar6:SOO",
+   "region_name": "Southern Ocean",
+   "group": "ipcc",
+   "slope_per_decade": 0.08323,
    "ci95": [
-    -0.1657,
-    0.006377
+    0.01561,
+    0.1463
    ],
-   "p": 0.06777,
-   "snr": -0.4338,
-   "ci_excludes_zero": false,
-   "text": "Precipitation rate over Mediterranean Basin is falling by 0.0837 mm/day per decade (95% confidence interval -0.166 to +0.00638, p = 0.068). The interval includes zero, so this is only a hint."
+   "p": 0.01637,
+   "snr": 0.7581,
+   "ci_excludes_zero": true,
+   "text": "Precipitation rate over Southern Ocean is rising by 0.0832 mm/day per decade (95% confidence interval +0.0156 to +0.146, p = 0.016). It narrowly misses the strict test, but the direction is the same in both halves of the record."
   },
   {
    "var": "snow",
    "var_name": "Snow cover",
    "units": "% of area",
-   "region": "indo",
-   "region_name": "Indonesia & Maritime Southeast Asia",
-   "slope_per_decade": -0.003154,
+   "region": "ar6:MED",
+   "region_name": "Mediterranean",
+   "group": "ipcc",
+   "slope_per_decade": -0.06547,
    "ci95": [
-    -0.006675,
-    0.0002668
+    -0.2094,
+    -0.008498
    ],
-   "p": 0.07018,
-   "snr": -0.1081,
-   "ci_excludes_zero": false,
-   "text": "Snow cover over Indonesia & Maritime Southeast Asia is falling by 0.00315 % of area per decade (95% confidence interval -0.00668 to +0.000267, p = 0.07). The interval includes zero, so this is only a hint."
+   "p": 0.009346,
+   "snr": -0.07363,
+   "ci_excludes_zero": true,
+   "text": "Snow cover over Mediterranean is falling by 0.0655 % of area per decade (95% confidence interval -0.209 to -0.0085, p = 0.0093). It narrowly misses the strict test, but the direction is the same in both halves of the record."
   },
   {
-   "var": "soil_moist_10_40",
-   "var_name": "Soil moisture, 10\u201340 cm",
-   "units": "kg/m\u00b2",
-   "region": "global",
-   "region_name": "Global",
-   "slope_per_decade": -0.6873,
+   "var": "snow",
+   "var_name": "Snow cover",
+   "units": "% of area",
+   "region": "ar6:WCA",
+   "region_name": "West-Central Asia",
+   "group": "ipcc",
+   "slope_per_decade": -0.4449,
    "ci95": [
-    -1.489,
-    0.06288
+    -0.8782,
+    -0.1024
    ],
-   "p": 0.0705,
-   "snr": -1.477,
-   "ci_excludes_zero": false,
-   "text": "Soil moisture, 10\u201340 cm over the globe is falling by 0.687 kg/m\u00b2 per decade (95% confidence interval -1.49 to +0.0629, p = 0.07). The interval includes zero, so this is only a hint."
+   "p": 0.007379,
+   "snr": -0.2491,
+   "ci_excludes_zero": true,
+   "text": "Snow cover over West-Central Asia is falling by 0.445 % of area per decade (95% confidence interval -0.878 to -0.102, p = 0.0074). It narrowly misses the strict test, but the direction is the same in both halves of the record."
   },
   {
-   "var": "soil_moist_10_40",
-   "var_name": "Soil moisture, 10\u201340 cm",
-   "units": "kg/m\u00b2",
-   "region": "gbr",
-   "region_name": "Great Barrier Reef",
-   "slope_per_decade": -3.052,
+   "var": "ndvi",
+   "var_name": "Vegetation greenness (NDVI)",
+   "units": "index",
+   "region": "ar6:SCA",
+   "region_name": "Southern Central America",
+   "group": "ipcc",
+   "slope_per_decade": 0.005807,
    "ci95": [
-    -6.362,
-    0.2666
+    0.0003746,
+    0.01206
    ],
-   "p": 0.07056,
-   "snr": -1.018,
-   "ci_excludes_zero": false,
-   "text": "Soil moisture, 10\u201340 cm over Great Barrier Reef is falling by 3.05 kg/m\u00b2 per decade (95% confidence interval -6.36 to +0.267, p = 0.071). The interval includes zero, so this is only a hint."
+   "p": 0.03767,
+   "snr": 0.966,
+   "ci_excludes_zero": true,
+   "text": "Vegetation greenness (NDVI) over Southern Central America is rising by 0.00581 index per decade (95% confidence interval +0.000375 to +0.0121, p = 0.038). It narrowly misses the strict test, but the direction is the same in both halves of the record."
+  },
+  {
+   "var": "ndvi",
+   "var_name": "Vegetation greenness (NDVI)",
+   "units": "index",
+   "region": "ar6:NEU",
+   "region_name": "Northern Europe",
+   "group": "ipcc",
+   "slope_per_decade": 0.00724,
+   "ci95": [
+    0.001025,
+    0.01414
+   ],
+   "p": 0.02397,
+   "snr": 0.5819,
+   "ci_excludes_zero": true,
+   "text": "Vegetation greenness (NDVI) over Northern Europe is rising by 0.00724 index per decade (95% confidence interval +0.00103 to +0.0141, p = 0.024). It narrowly misses the strict test, but the direction is the same in both halves of the record."
+  },
+  {
+   "var": "ndvi",
+   "var_name": "Vegetation greenness (NDVI)",
+   "units": "index",
+   "region": "ar6:NEAF",
+   "region_name": "North-Eastern Africa",
+   "group": "ipcc",
+   "slope_per_decade": 0.01292,
+   "ci95": [
+    0.0006146,
+    0.02581
+   ],
+   "p": 0.04141,
+   "snr": 1.422,
+   "ci_excludes_zero": true,
+   "text": "Vegetation greenness (NDVI) over North-Eastern Africa is rising by 0.0129 index per decade (95% confidence interval +0.000615 to +0.0258, p = 0.041). It narrowly misses the strict test, but the direction is the same in both halves of the record."
+  },
+  {
+   "var": "tws",
+   "var_name": "Terrestrial water storage",
+   "units": "mm of water",
+   "region": "ar6:SSA",
+   "region_name": "Southern South America",
+   "group": "ipcc",
+   "slope_per_decade": -28.64,
+   "ci95": [
+    -53.13,
+    -4.124
+   ],
+   "p": 0.02854,
+   "snr": -3.06,
+   "ci_excludes_zero": true,
+   "text": "Terrestrial water storage over Southern South America is falling by 28.6 mm of water per decade (95% confidence interval -53.1 to -4.12, p = 0.029). It narrowly misses the strict test, but the direction is the same in both halves of the record."
+  },
+  {
+   "var": "tws",
+   "var_name": "Terrestrial water storage",
+   "units": "mm of water",
+   "region": "ar6:RAR",
+   "region_name": "Russian Arctic",
+   "group": "ipcc",
+   "slope_per_decade": -67.88,
+   "ci95": [
+    -113.6,
+    -20.2
+   ],
+   "p": 0.0182,
+   "snr": -5.029,
+   "ci_excludes_zero": true,
+   "text": "Terrestrial water storage over Russian Arctic is falling by 67.9 mm of water per decade (95% confidence interval -114 to -20.2, p = 0.018). It narrowly misses the strict test, but the direction is the same in both halves of the record."
+  },
+  {
+   "var": "tws",
+   "var_name": "Terrestrial water storage",
+   "units": "mm of water",
+   "region": "ar6:EAS",
+   "region_name": "East Asia",
+   "group": "ipcc",
+   "slope_per_decade": 34.46,
+   "ci95": [
+    5.311,
+    63.29
+   ],
+   "p": 0.02596,
+   "snr": 2.693,
+   "ci_excludes_zero": true,
+   "text": "Terrestrial water storage over East Asia is rising by 34.5 mm of water per decade (95% confidence interval +5.31 to +63.3, p = 0.026). It narrowly misses the strict test, but the direction is the same in both halves of the record."
+  },
+  {
+   "var": "sw_down",
+   "var_name": "Sunlight reaching the surface",
+   "units": "W/m\u00b2",
+   "region": "ar6:GIC",
+   "region_name": "Greenland & Iceland",
+   "group": "ipcc",
+   "slope_per_decade": -0.5768,
+   "ci95": [
+    -1.447,
+    -0.0206
+   ],
+   "p": 0.03761,
+   "snr": -0.2575,
+   "ci_excludes_zero": true,
+   "text": "Sunlight reaching the surface over Greenland & Iceland is falling by 0.577 W/m\u00b2 per decade (95% confidence interval -1.45 to -0.0206, p = 0.038). It narrowly misses the strict test, but the direction is the same in both halves of the record."
+  },
+  {
+   "var": "sw_down",
+   "var_name": "Sunlight reaching the surface",
+   "units": "W/m\u00b2",
+   "region": "ar6:SSA",
+   "region_name": "Southern South America",
+   "group": "ipcc",
+   "slope_per_decade": -0.9332,
+   "ci95": [
+    -1.795,
+    -0.04312
+   ],
+   "p": 0.03826,
+   "snr": -0.3956,
+   "ci_excludes_zero": true,
+   "text": "Sunlight reaching the surface over Southern South America is falling by 0.933 W/m\u00b2 per decade (95% confidence interval -1.79 to -0.0431, p = 0.038). It narrowly misses the strict test, but the direction is the same in both halves of the record."
+  },
+  {
+   "var": "sw_down",
+   "var_name": "Sunlight reaching the surface",
+   "units": "W/m\u00b2",
+   "region": "ar6:ARS",
+   "region_name": "Arabian Sea",
+   "group": "ipcc",
+   "slope_per_decade": -3.127,
+   "ci95": [
+    -5.98,
+    -0.3685
+   ],
+   "p": 0.02919,
+   "snr": -0.5708,
+   "ci_excludes_zero": true,
+   "text": "Sunlight reaching the surface over Arabian Sea is falling by 3.13 W/m\u00b2 per decade (95% confidence interval -5.98 to -0.368, p = 0.029). It narrowly misses the strict test, but the direction is the same in both halves of the record."
+  },
+  {
+   "var": "soil_wetness_top",
+   "var_name": "Surface soil wetness",
+   "units": "fraction (0\u20131)",
+   "region": "ar6:SAH",
+   "region_name": "Sahara",
+   "group": "ipcc",
+   "slope_per_decade": 0.005341,
+   "ci95": [
+    0.0007036,
+    0.01015
+   ],
+   "p": 0.02393,
+   "snr": 0.8028,
+   "ci_excludes_zero": true,
+   "text": "Surface soil wetness over Sahara is rising by 0.00534 fraction (0\u20131) per decade (95% confidence interval +0.000704 to +0.0101, p = 0.024). It narrowly misses the strict test, but the direction is the same in both halves of the record."
+  },
+  {
+   "var": "soil_wetness_top",
+   "var_name": "Surface soil wetness",
+   "units": "fraction (0\u20131)",
+   "region": "ar6:SEAF",
+   "region_name": "South-Eastern Africa",
+   "group": "ipcc",
+   "slope_per_decade": 0.02652,
+   "ci95": [
+    0.006541,
+    0.04796
+   ],
+   "p": 0.01241,
+   "snr": 1.608,
+   "ci_excludes_zero": true,
+   "text": "Surface soil wetness over South-Eastern Africa is rising by 0.0265 fraction (0\u20131) per decade (95% confidence interval +0.00654 to +0.048, p = 0.012). It narrowly misses the strict test, but the direction is the same in both halves of the record."
   },
   {
    "var": "aod",
    "var_name": "Aerosol optical depth",
    "units": "index",
-   "region": "amazon",
-   "region_name": "Amazon Basin",
-   "slope_per_decade": 0.01316,
+   "region": "ar6:SEA",
+   "region_name": "South-East Asia",
+   "group": "ipcc",
+   "slope_per_decade": -0.008293,
    "ci95": [
-    -0.001244,
-    0.02494
+    -0.01685,
+    -0.0004083
    ],
-   "p": 0.0706,
-   "snr": 0.4128,
-   "ci_excludes_zero": false,
-   "text": "Aerosol optical depth over Amazon Basin is rising by 0.0132 index per decade (95% confidence interval -0.00124 to +0.0249, p = 0.071). The interval includes zero, so this is only a hint."
+   "p": 0.03906,
+   "snr": -0.4899,
+   "ci_excludes_zero": true,
+   "text": "Aerosol optical depth over South-East Asia is falling by 0.00829 index per decade (95% confidence interval -0.0169 to -0.000408, p = 0.039). It narrowly misses the strict test, but the direction is the same in both halves of the record."
   },
   {
-   "var": "sw_net",
-   "var_name": "Sunlight absorbed by land",
-   "units": "W/m\u00b2",
-   "region": "global",
-   "region_name": "Global",
-   "slope_per_decade": 1.899,
-   "ci95": [
-    -0.2368,
-    4.12
-   ],
-   "p": 0.07538,
-   "snr": 0.9593,
-   "ci_excludes_zero": false,
-   "text": "Sunlight absorbed by land over the globe is rising by 1.9 W/m\u00b2 per decade (95% confidence interval -0.237 to +4.12, p = 0.075). The interval includes zero, so this is only a hint."
-  },
-  {
-   "var": "sw_net",
-   "var_name": "Sunlight absorbed by land",
-   "units": "W/m\u00b2",
-   "region": "igp",
-   "region_name": "Indo-Gangetic Plain (northern India)",
-   "slope_per_decade": 2.548,
-   "ci95": [
-    -0.2708,
-    5.465
-   ],
-   "p": 0.07598,
-   "snr": 0.5736,
-   "ci_excludes_zero": false,
-   "text": "Sunlight absorbed by land over Indo-Gangetic Plain (northern India) is rising by 2.55 W/m\u00b2 per decade (95% confidence interval -0.271 to +5.46, p = 0.076). The interval includes zero, so this is only a hint."
-  },
-  {
-   "var": "ndvi",
-   "var_name": "Vegetation greenness (NDVI)",
+   "var": "aod",
+   "var_name": "Aerosol optical depth",
    "units": "index",
-   "region": "nsea",
-   "region_name": "North Sea & Low Countries",
-   "slope_per_decade": 0.009734,
+   "region": "ar6:BOB",
+   "region_name": "Bay of Bengal",
+   "group": "ipcc",
+   "slope_per_decade": 0.009725,
    "ci95": [
-    -0.001068,
-    0.02207
+    0.0006505,
+    0.01887
    ],
-   "p": 0.07906,
-   "snr": 0.6785,
-   "ci_excludes_zero": false,
-   "text": "Vegetation greenness (NDVI) over North Sea & Low Countries is rising by 0.00973 index per decade (95% confidence interval -0.00107 to +0.0221, p = 0.079). The interval includes zero, so this is only a hint."
+   "p": 0.03714,
+   "snr": 0.5514,
+   "ci_excludes_zero": true,
+   "text": "Aerosol optical depth over Bay of Bengal is rising by 0.00972 index per decade (95% confidence interval +0.000651 to +0.0189, p = 0.037). It narrowly misses the strict test, but the direction is the same in both halves of the record."
   },
   {
-   "var": "cloud_top_temp",
-   "var_name": "Cloud-top temperature",
-   "units": "K",
-   "region": "med",
-   "region_name": "Mediterranean Basin",
-   "slope_per_decade": -0.6737,
+   "var": "runoff",
+   "var_name": "Storm surface runoff",
+   "units": "kg/m\u00b2 (\u2248 mm)",
+   "region": "ar6:WCA",
+   "region_name": "West-Central Asia",
+   "group": "ipcc",
+   "slope_per_decade": -0.001322,
    "ci95": [
-    -1.424,
-    0.08617
+    -0.00246,
+    -0.0001599
    ],
-   "p": 0.0793,
-   "snr": -0.431,
-   "ci_excludes_zero": false,
-   "text": "Cloud-top temperature over Mediterranean Basin is falling by 0.674 K per decade (95% confidence interval -1.42 to +0.0862, p = 0.079). The interval includes zero, so this is only a hint."
+   "p": 0.02616,
+   "snr": -0.5397,
+   "ci_excludes_zero": true,
+   "text": "Storm surface runoff over West-Central Asia is falling by 0.00132 kg/m\u00b2 (\u2248 mm) per decade (95% confidence interval -0.00246 to -0.00016, p = 0.026). It narrowly misses the strict test, but the direction is the same in both halves of the record."
   },
   {
    "var": "soil_temp",
    "var_name": "Soil temperature, top 10 cm",
    "units": "\u00b0C",
-   "region": "gbr",
-   "region_name": "Great Barrier Reef",
-   "slope_per_decade": 0.2435,
+   "region": "ar6:NCA",
+   "region_name": "Northern Central America",
+   "group": "ipcc",
+   "slope_per_decade": -0.2359,
    "ci95": [
-    -0.02512,
-    0.4913
+    -0.4669,
+    -0.005744
    ],
-   "p": 0.07934,
-   "snr": 0.7342,
-   "ci_excludes_zero": false,
-   "text": "Soil temperature, top 10 cm over Great Barrier Reef is rising by 0.243 \u00b0C per decade (95% confidence interval -0.0251 to +0.491, p = 0.079). The interval includes zero, so this is only a hint."
+   "p": 0.04342,
+   "snr": -0.7121,
+   "ci_excludes_zero": true,
+   "text": "Soil temperature, top 10 cm over Northern Central America is falling by 0.236 \u00b0C per decade (95% confidence interval -0.467 to -0.00574, p = 0.043). It narrowly misses the strict test, but the direction is the same in both halves of the record."
   },
   {
-   "var": "h500",
-   "var_name": "Height of the 500 hPa level",
-   "units": "m",
-   "region": "nsea",
-   "region_name": "North Sea & Low Countries",
-   "slope_per_decade": 11.06,
+   "var": "soil_temp",
+   "var_name": "Soil temperature, top 10 cm",
+   "units": "\u00b0C",
+   "region": "ar6:SEAF",
+   "region_name": "South-Eastern Africa",
+   "group": "ipcc",
+   "slope_per_decade": -0.4255,
    "ci95": [
-    -3.153,
-    25.46
+    -0.7949,
+    -0.04241
    ],
-   "p": 0.08591,
-   "snr": 0.3908,
-   "ci_excludes_zero": false,
-   "text": "Height of the 500 hPa level over North Sea & Low Countries is rising by 11.1 m per decade (95% confidence interval -3.15 to +25.5, p = 0.086). The interval includes zero, so this is only a hint."
+   "p": 0.03029,
+   "snr": -1.408,
+   "ci_excludes_zero": true,
+   "text": "Soil temperature, top 10 cm over South-Eastern Africa is falling by 0.425 \u00b0C per decade (95% confidence interval -0.795 to -0.0424, p = 0.03). It narrowly misses the strict test, but the direction is the same in both halves of the record."
   },
   {
-   "var": "ndvi",
-   "var_name": "Vegetation greenness (NDVI)",
-   "units": "index",
-   "region": "gbr",
-   "region_name": "Great Barrier Reef",
-   "slope_per_decade": 0.01433,
+   "var": "evap_surface",
+   "var_name": "Surface evaporation",
+   "units": "mm/day",
+   "region": "ar6:SOO",
+   "region_name": "Southern Ocean",
+   "group": "ipcc",
+   "slope_per_decade": 0.01531,
    "ci95": [
-    -0.002842,
-    0.03101
+    0.001027,
+    0.02927
    ],
-   "p": 0.09702,
-   "snr": 1.129,
-   "ci_excludes_zero": false,
-   "text": "Vegetation greenness (NDVI) over Great Barrier Reef is rising by 0.0143 index per decade (95% confidence interval -0.00284 to +0.031, p = 0.097). The interval includes zero, so this is only a hint."
+   "p": 0.03598,
+   "snr": 0.539,
+   "ci_excludes_zero": true,
+   "text": "Surface evaporation over Southern Ocean is rising by 0.0153 mm/day per decade (95% confidence interval +0.00103 to +0.0293, p = 0.036). It narrowly misses the strict test, but the direction is the same in both halves of the record."
   }
  ],
- "stories": [
-  {
-   "region": "med",
-   "region_name": "Mediterranean Basin",
-   "n_variables": 7,
-   "variables": [
-    "soil_moist_10_40",
-    "snow",
-    "tws",
-    "soil_wetness_top",
-    "sw_down",
-    "precip",
-    "cloud_top_temp"
-   ],
-   "text": "7 different variables show a hint of change over Mediterranean Basin (p between 0.012 and 0.079). None passes the strict test on its own, but several pointing the same way is worth watching. Twenty years is short, and with this many tests a few p-values below 0.05 are expected by chance."
-  },
-  {
-   "region": "antp",
-   "region_name": "Antarctic Peninsula",
-   "n_variables": 3,
-   "variables": [
-    "snow",
-    "sw_down",
-    "cloud_top_temp"
-   ],
-   "text": "3 different variables show a hint of change over Antarctic Peninsula (p between 0.018 and 0.048). None passes the strict test on its own, but several pointing the same way is worth watching. Twenty years is short, and with this many tests a few p-values below 0.05 are expected by chance."
-  },
-  {
-   "region": "nsea",
-   "region_name": "North Sea & Low Countries",
-   "n_variables": 4,
-   "variables": [
-    "cloud_top_temp",
-    "sw_net",
-    "ndvi",
-    "h500"
-   ],
-   "text": "4 different variables show a hint of change over North Sea & Low Countries (p between 0.033 and 0.086). None passes the strict test on its own, but several pointing the same way is worth watching. Twenty years is short, and with this many tests a few p-values below 0.05 are expected by chance."
-  },
-  {
-   "region": "amazon",
-   "region_name": "Amazon Basin",
-   "n_variables": 4,
-   "variables": [
-    "t2m",
-    "tws",
-    "snow",
-    "aod"
-   ],
-   "text": "4 different variables show a hint of change over Amazon Basin (p between 0.034 and 0.071). None passes the strict test on its own, but several pointing the same way is worth watching. Twenty years is short, and with this many tests a few p-values below 0.05 are expected by chance."
-  },
-  {
-   "region": "global",
-   "region_name": "Global",
-   "n_variables": 3,
-   "variables": [
-    "precip",
-    "soil_moist_10_40",
-    "sw_net"
-   ],
-   "text": "3 different variables show a hint of change over the globe (p between 0.065 and 0.075). None passes the strict test on its own, but several pointing the same way is worth watching. Twenty years is short, and with this many tests a few p-values below 0.05 are expected by chance."
-  },
-  {
-   "region": "gbr",
-   "region_name": "Great Barrier Reef",
-   "n_variables": 3,
-   "variables": [
-    "soil_moist_10_40",
-    "soil_temp",
-    "ndvi"
-   ],
-   "text": "3 different variables show a hint of change over Great Barrier Reef (p between 0.071 and 0.097). None passes the strict test on its own, but several pointing the same way is worth watching. Twenty years is short, and with this many tests a few p-values below 0.05 are expected by chance."
-  }
- ]
+ "stories": []
 }

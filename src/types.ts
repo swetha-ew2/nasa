@@ -37,6 +37,15 @@ export interface RegionInfo {
   analysed_variables: string[];
 }
 
+/** one IPCC AR6 reference region (outline in ipcc_regions.geojson) */
+export interface IpccInfo {
+  id: string; // "ar6:NEU"
+  abbrev: string;
+  name: string;
+  kind: 'land' | 'ocean';
+  n_tiles: number;
+}
+
 export interface Manifest {
   title: string;
   window: string;
@@ -46,6 +55,7 @@ export interface Manifest {
   not_available: string;
   variables: VariableInfo[];
   regions: RegionInfo[];
+  ipcc_regions: IpccInfo[];
 }
 
 export interface MapFile {
@@ -87,6 +97,8 @@ export interface SeriesRecord {
   variable?: string;
   centroid?: [number, number];
   n_cells?: number;
+  n_tiles?: number; // IPCC regions: tiles whose centre is inside
+  n_tiles_data?: number;
   cells?: [number, number][];
   exploratory?: boolean;
   note?: string;
@@ -98,6 +110,7 @@ export interface SeriesFile {
   var: string;
   units: string;
   regions: SeriesRecord[];
+  ipcc: SeriesRecord[];
   hotspots: SeriesRecord[];
 }
 
@@ -113,6 +126,7 @@ export interface InterestingItem {
   snr: number;
   ci_excludes_zero: boolean;
   text: string;
+  group?: 'spotlight' | 'ipcc';
 }
 
 export interface Story {

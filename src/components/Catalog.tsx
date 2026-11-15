@@ -20,9 +20,10 @@ export default function Catalog({ manifest, interesting, variableId, hotspots, o
   const [showAll, setShowAll] = useState(false);
   const cats = useMemo(() => ['All', ...Array.from(new Set(manifest.variables.map((v) => v.category)))], [manifest]);
   const groups = useMemo(() => {
-    const m = new Map<string, { region: string; name: string; items: Interesting['items'] }>();
+    const m = new Map<string, { region: string; name: string; ipcc: boolean; items: Interesting['items'] }>();
     interesting?.items.forEach((it) => {
-      const g = m.get(it.region) ?? { region: it.region, name: it.region === 'global' ? 'Worldwide' : it.region_name, items: [] };
+      const ipcc = it.group === 'ipcc';
+      const g = m.get(it.region) ?? { region: it.region, name: it.region === 'global' ? 'Worldwide' : it.region_name, ipcc, items: [] };
       g.items.push(it);
       m.set(it.region, g);
     });
@@ -109,10 +110,18 @@ export default function Catalog({ manifest, interesting, variableId, hotspots, o
       {tab === 'signs' && (
         <div className="watch">
           <p className="small muted">
-            Changes that point one way but are not yet statistically significant.{' '}
+            Changes that just missed the strict test but look consistent over time.{' '}
             <button className="link-btn" onClick={onOpenMethods}>Why?</button>
           </p>
-          {groups.map((g) => (
+          {[false, true].map((ipcc) => {
+            const list = groups.filter((g) => g.ipcc === ipcc);
+            if (!list.length) return null;
+            return (
+              <div key={String(ipcc)}>
+                <div className="eyebrow watch__head">
+                  {ipcc ? 'IPCC regions · just missed the strict test, same direction in both halves of the record' : 'Spotlight regions and worldwide'}
+                </div>
+                {list.map((g) => (
             <div className="story" key={g.region}>
               <div className="story__title">
                 {g.name} <span className="muted">· {g.items.length}</span>
@@ -125,7 +134,10 @@ export default function Catalog({ manifest, interesting, variableId, hotspots, o
                 ))}
               </div>
             </div>
-          ))}
+                ))}
+              </div>
+            );
+          })}
         </div>
       )}
     </section>

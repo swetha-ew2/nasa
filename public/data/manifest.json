@@ -6,7 +6,7 @@
   "anomalies": "Monthly values minus the average for the same calendar month, so seasons do not look like trends.",
   "rate": "Sen slope (median of all pairwise slopes) per decade with a 95% confidence interval.",
   "tests": "Mann-Kendall test with the variance inflated for month-to-month autocorrelation (lag-1), or an OLS t-test when the residuals pass Durbin-Watson and Shapiro checks (in practice Mann-Kendall was used for every variable).",
-  "multiple_testing": "Benjamini-Hochberg false discovery rate at 5%: across cells for maps, across the 11 regions for each variable (the global mean is one separate test).",
+  "multiple_testing": "Benjamini-Hochberg false discovery rate at 5%: across cells for maps, across the 11 spotlight regions for each variable, and separately across the IPCC regions (the global mean is one separate test).",
   "effect_size": "Total change over the record divided by the month-to-month noise (SD of detrended anomalies)."
  },
  "caveats": [
@@ -1023,6 +1023,414 @@
    "blurb": "",
    "suggested_variables": [],
    "analysed_variables": []
+  }
+ ],
+ "ipcc_regions": [
+  {
+   "id": "ar6:GIC",
+   "abbrev": "GIC",
+   "name": "Greenland & Iceland",
+   "kind": "land",
+   "n_tiles": 57
+  },
+  {
+   "id": "ar6:NWN",
+   "abbrev": "NWN",
+   "name": "North-West North America",
+   "kind": "land",
+   "n_tiles": 61
+  },
+  {
+   "id": "ar6:NEN",
+   "abbrev": "NEN",
+   "name": "North-East North America",
+   "kind": "land",
+   "n_tiles": 58
+  },
+  {
+   "id": "ar6:WNA",
+   "abbrev": "WNA",
+   "name": "Western North America",
+   "kind": "land",
+   "n_tiles": 13
+  },
+  {
+   "id": "ar6:CNA",
+   "abbrev": "CNA",
+   "name": "Central North America",
+   "kind": "land",
+   "n_tiles": 13
+  },
+  {
+   "id": "ar6:ENA",
+   "abbrev": "ENA",
+   "name": "Eastern North America",
+   "kind": "land",
+   "n_tiles": 23
+  },
+  {
+   "id": "ar6:NCA",
+   "abbrev": "NCA",
+   "name": "Northern Central America",
+   "kind": "land",
+   "n_tiles": 11
+  },
+  {
+   "id": "ar6:SCA",
+   "abbrev": "SCA",
+   "name": "Southern Central America",
+   "kind": "land",
+   "n_tiles": 13
+  },
+  {
+   "id": "ar6:CAR",
+   "abbrev": "CAR",
+   "name": "Caribbean",
+   "kind": "land",
+   "n_tiles": 12
+  },
+  {
+   "id": "ar6:NWS",
+   "abbrev": "NWS",
+   "name": "North-West South America",
+   "kind": "land",
+   "n_tiles": 13
+  },
+  {
+   "id": "ar6:NSA",
+   "abbrev": "NSA",
+   "name": "Northern South America",
+   "kind": "land",
+   "n_tiles": 16
+  },
+  {
+   "id": "ar6:NES",
+   "abbrev": "NES",
+   "name": "North-East South America",
+   "kind": "land",
+   "n_tiles": 12
+  },
+  {
+   "id": "ar6:SAM",
+   "abbrev": "SAM",
+   "name": "South American Monsoon",
+   "kind": "land",
+   "n_tiles": 8
+  },
+  {
+   "id": "ar6:SWS",
+   "abbrev": "SWS",
+   "name": "South-West South America",
+   "kind": "land",
+   "n_tiles": 8
+  },
+  {
+   "id": "ar6:SES",
+   "abbrev": "SES",
+   "name": "South-East South America",
+   "kind": "land",
+   "n_tiles": 19
+  },
+  {
+   "id": "ar6:SSA",
+   "abbrev": "SSA",
+   "name": "Southern South America",
+   "kind": "land",
+   "n_tiles": 13
+  },
+  {
+   "id": "ar6:NEU",
+   "abbrev": "NEU",
+   "name": "Northern Europe",
+   "kind": "land",
+   "n_tiles": 40
+  },
+  {
+   "id": "ar6:WCE",
+   "abbrev": "WCE",
+   "name": "Western & Central Europe",
+   "kind": "land",
+   "n_tiles": 20
+  },
+  {
+   "id": "ar6:EEU",
+   "abbrev": "EEU",
+   "name": "Eastern Europe",
+   "kind": "land",
+   "n_tiles": 16
+  },
+  {
+   "id": "ar6:MED",
+   "abbrev": "MED",
+   "name": "Mediterranean",
+   "kind": "land",
+   "n_tiles": 30
+  },
+  {
+   "id": "ar6:SAH",
+   "abbrev": "SAH",
+   "name": "Sahara",
+   "kind": "land",
+   "n_tiles": 34
+  },
+  {
+   "id": "ar6:WAF",
+   "abbrev": "WAF",
+   "name": "Western Africa",
+   "kind": "land",
+   "n_tiles": 15
+  },
+  {
+   "id": "ar6:CAF",
+   "abbrev": "CAF",
+   "name": "Central Africa",
+   "kind": "land",
+   "n_tiles": 14
+  },
+  {
+   "id": "ar6:NEAF",
+   "abbrev": "NEAF",
+   "name": "North-Eastern Africa",
+   "kind": "land",
+   "n_tiles": 16
+  },
+  {
+   "id": "ar6:SEAF",
+   "abbrev": "SEAF",
+   "name": "South-Eastern Africa",
+   "kind": "land",
+   "n_tiles": 8
+  },
+  {
+   "id": "ar6:WSAF",
+   "abbrev": "WSAF",
+   "name": "Western Southern Africa",
+   "kind": "land",
+   "n_tiles": 15
+  },
+  {
+   "id": "ar6:ESAF",
+   "abbrev": "ESAF",
+   "name": "Eastern Southern Africa",
+   "kind": "land",
+   "n_tiles": 14
+  },
+  {
+   "id": "ar6:MDG",
+   "abbrev": "MDG",
+   "name": "Madagascar",
+   "kind": "land",
+   "n_tiles": 8
+  },
+  {
+   "id": "ar6:RAR",
+   "abbrev": "RAR",
+   "name": "Russian Arctic",
+   "kind": "land",
+   "n_tiles": 74
+  },
+  {
+   "id": "ar6:WSB",
+   "abbrev": "WSB",
+   "name": "Western Siberia",
+   "kind": "land",
+   "n_tiles": 24
+  },
+  {
+   "id": "ar6:ESB",
+   "abbrev": "ESB",
+   "name": "Eastern Siberia",
+   "kind": "land",
+   "n_tiles": 32
+  },
+  {
+   "id": "ar6:RFE",
+   "abbrev": "RFE",
+   "name": "Russian Far East",
+   "kind": "land",
+   "n_tiles": 31
+  },
+  {
+   "id": "ar6:WCA",
+   "abbrev": "WCA",
+   "name": "West-Central Asia",
+   "kind": "land",
+   "n_tiles": 23
+  },
+  {
+   "id": "ar6:ECA",
+   "abbrev": "ECA",
+   "name": "East-Central Asia",
+   "kind": "land",
+   "n_tiles": 15
+  },
+  {
+   "id": "ar6:TIB",
+   "abbrev": "TIB",
+   "name": "Tibetan Plateau",
+   "kind": "land",
+   "n_tiles": 7
+  },
+  {
+   "id": "ar6:EAS",
+   "abbrev": "EAS",
+   "name": "East Asia",
+   "kind": "land",
+   "n_tiles": 35
+  },
+  {
+   "id": "ar6:ARP",
+   "abbrev": "ARP",
+   "name": "Arabian Peninsula",
+   "kind": "land",
+   "n_tiles": 11
+  },
+  {
+   "id": "ar6:SAS",
+   "abbrev": "SAS",
+   "name": "South Asia",
+   "kind": "land",
+   "n_tiles": 19
+  },
+  {
+   "id": "ar6:SEA",
+   "abbrev": "SEA",
+   "name": "South-East Asia",
+   "kind": "land",
+   "n_tiles": 50
+  },
+  {
+   "id": "ar6:NAU",
+   "abbrev": "NAU",
+   "name": "Northern Australia",
+   "kind": "land",
+   "n_tiles": 18
+  },
+  {
+   "id": "ar6:CAU",
+   "abbrev": "CAU",
+   "name": "Central Australia",
+   "kind": "land",
+   "n_tiles": 14
+  },
+  {
+   "id": "ar6:EAU",
+   "abbrev": "EAU",
+   "name": "Eastern Australia",
+   "kind": "land",
+   "n_tiles": 6
+  },
+  {
+   "id": "ar6:SAU",
+   "abbrev": "SAU",
+   "name": "Southern Australia",
+   "kind": "land",
+   "n_tiles": 22
+  },
+  {
+   "id": "ar6:NZ",
+   "abbrev": "NZ",
+   "name": "New Zealand",
+   "kind": "land",
+   "n_tiles": 20
+  },
+  {
+   "id": "ar6:EAN",
+   "abbrev": "EAN",
+   "name": "East Antarctica",
+   "kind": "land",
+   "n_tiles": 243
+  },
+  {
+   "id": "ar6:WAN",
+   "abbrev": "WAN",
+   "name": "West Antarctica",
+   "kind": "land",
+   "n_tiles": 81
+  },
+  {
+   "id": "ar6:ARO",
+   "abbrev": "ARO",
+   "name": "Arctic Ocean",
+   "kind": "ocean",
+   "n_tiles": 162
+  },
+  {
+   "id": "ar6:NPO",
+   "abbrev": "NPO",
+   "name": "Northern Pacific Ocean",
+   "kind": "ocean",
+   "n_tiles": 185
+  },
+  {
+   "id": "ar6:EPO",
+   "abbrev": "EPO",
+   "name": "Equatorial Pacific Ocean",
+   "kind": "ocean",
+   "n_tiles": 107
+  },
+  {
+   "id": "ar6:SPO",
+   "abbrev": "SPO",
+   "name": "Southern Pacific Ocean",
+   "kind": "ocean",
+   "n_tiles": 205
+  },
+  {
+   "id": "ar6:NAO",
+   "abbrev": "NAO",
+   "name": "Northern Atlantic Ocean",
+   "kind": "ocean",
+   "n_tiles": 95
+  },
+  {
+   "id": "ar6:EAO",
+   "abbrev": "EAO",
+   "name": "Equatorial Atlantic Ocean",
+   "kind": "ocean",
+   "n_tiles": 34
+  },
+  {
+   "id": "ar6:SAO",
+   "abbrev": "SAO",
+   "name": "Southern Atlantic Ocean",
+   "kind": "ocean",
+   "n_tiles": 76
+  },
+  {
+   "id": "ar6:ARS",
+   "abbrev": "ARS",
+   "name": "Arabian Sea",
+   "kind": "ocean",
+   "n_tiles": 12
+  },
+  {
+   "id": "ar6:BOB",
+   "abbrev": "BOB",
+   "name": "Bay of Bengal",
+   "kind": "ocean",
+   "n_tiles": 7
+  },
+  {
+   "id": "ar6:EIO",
+   "abbrev": "EIO",
+   "name": "Equatorial Indian Ocean",
+   "kind": "ocean",
+   "n_tiles": 30
+  },
+  {
+   "id": "ar6:SIO",
+   "abbrev": "SIO",
+   "name": "Southern Indian Ocean",
+   "kind": "ocean",
+   "n_tiles": 63
+  },
+  {
+   "id": "ar6:SOO",
+   "abbrev": "SOO",
+   "name": "Southern Ocean",
+   "kind": "ocean",
+   "n_tiles": 311
   }
  ],
  "hotspots": {

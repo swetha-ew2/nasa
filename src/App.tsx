@@ -9,7 +9,7 @@ import Welcome from './components/Welcome';
 import Tour, { TourAsk } from './components/Tour';
 import type { Example } from './lib/examples';
 import { TOUR_STEPS } from './components/Tour';
-import { loadInteresting, loadManifest, loadMap, loadSeries } from './lib/data';
+import { loadInteresting, loadIpccGeo, loadIpccTiles, loadManifest, loadMap, loadSeries } from './lib/data';
 import type { Interesting, Manifest, MapFile, SeriesFile, SeriesRecord, Target } from './types';
 
 const TOUR_STEPS_NEED_DEMO = TOUR_STEPS.flatMap((st, i) => (st.demo ? [i] : []));
@@ -25,7 +25,10 @@ export default function App() {
   const [target, setTarget] = useState<Target | null>(null);
 
   const [showHotspots, setShowHotspots] = useState(true);
-  const [showPins, setShowPins] = useState(true);
+  const [showPins, setShowPins] = useState(false);
+  const [showIpcc, setShowIpcc] = useState(true);
+  const [ipccGeo, setIpccGeo] = useState<GeoJSON.FeatureCollection | null>(null);
+  const [ipccTiles, setIpccTiles] = useState<Record<string, string> | null>(null);
   const [showImagery, setShowImagery] = useState(true);
   const [autoRotate, setAutoRotate] = useState(true);
   const [aboutOpen, setAboutOpen] = useState(false);
@@ -39,6 +42,8 @@ export default function App() {
   useEffect(() => {
     loadManifest().then(setManifest).catch((e) => setError(String(e.message ?? e)));
     loadInteresting().then(setInteresting).catch(() => setInteresting(null));
+    loadIpccGeo().then(setIpccGeo).catch(() => setIpccGeo(null));
+    loadIpccTiles().then(setIpccTiles).catch(() => setIpccTiles(null));
   }, []);
 
   // load the map and the series of the chosen variable together, so they never get out of step
@@ -69,12 +74,22 @@ export default function App() {
     return out;
   }, [seriesReady]);
 
+  const ipccStates = useMemo(() => {
+    const out: Record<string, PinState> = {};
+    seriesReady?.ipcc?.forEach((r) => {
+      out[r.id] =
+        r.status !== 'ok' ? 'nodata' : r.significant_fdr ? ((r.slope_per_decade ?? 0) > 0 ? 'up' : 'down') : 'none';
+    });
+    return out;
+  }, [seriesReady]);
+
   const rec: SeriesRecord | null = useMemo(() => {
     if (!target || !seriesReady) return null;
-    const list = target.kind === 'hotspot' ? seriesReady.hotspots : seriesReady.regions;
+    const list = target.kind === 'hotspot' ? seriesReady.hotspots : target.id.startsWith('ar6:') ? seriesReady.ipcc ?? [] : seriesReady.regions;
     return list.find((r) => r.id === target.id) ?? null;
   }, [target, seriesReady]);
 
+  const ipccInfo = manifest && target?.kind === 'region' ? manifest.ipcc_regions?.find((r) => r.id === target.id) ?? null : null;
   const region = manifest && target?.kind === 'region' ? manifest.regions.find((r) => r.id === target.id) ?? null : null;
 
   function selectVariable(id: string) {
@@ -190,6 +205,10 @@ export default function App() {
             showNonSig
             showHotspots={showHotspots}
             showPins={showPins && !!variable}
+            showIpcc={showIpcc}
+            ipccGeo={ipccGeo}
+            ipccTiles={ipccTiles}
+            ipccStates={ipccStates}
             hotspots={seriesReady?.hotspots ?? []}
             target={target}
             highlightCells={
@@ -212,11 +231,13 @@ export default function App() {
             onToggleHotspots={setShowHotspots}
             showPins={showPins}
             onTogglePins={setShowPins}
+            showIpcc={showIpcc}
+            onToggleIpcc={setShowIpcc}
           />}
 
           {started && !guide && (
             <div className="hint">
-              {variable ? 'Drag to rotate · scroll to zoom · hover for values · click a pin or ▲▼ marker' : 'Drag to rotate · scroll to zoom · pick a variable on the left'}
+              {variable ? 'Drag to rotate · scroll to zoom · hover for values · click a tile or a region marker' : 'Drag to rotate · scroll to zoom · pick a variable on the left'}
             </div>
           )}
 
@@ -243,6 +264,8 @@ export default function App() {
               mapData={mapData && mapData.var === variableId ? mapData : null}
               variable={variable}
               regions={manifest.regions}
+              ipccRegions={manifest.ipcc_regions ?? []}
+              ipccTiles={ipccTiles}
               hotspots={seriesReady?.hotspots ?? []}
               onOpenRegion={(id) => select({ kind: 'region', id })}
               onOpenHotspot={(id) => select({ kind: 'hotspot', id })}
@@ -254,6 +277,7 @@ export default function App() {
               target={target}
               rec={rec}
               region={region}
+              ipcc={ipccInfo}
               variable={variable}
               variables={manifest.variables}
               onChangeVariable={selectVariable}

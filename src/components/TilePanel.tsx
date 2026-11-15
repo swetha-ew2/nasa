@@ -1,4 +1,4 @@
-import type { MapFile, RegionInfo, SeriesRecord, VariableInfo } from '../types';
+import type { IpccInfo, MapFile, RegionInfo, SeriesRecord, VariableInfo } from '../types';
 import { fmt, fmtP, fmtSigned, unitExplain } from '../lib/data';
 
 interface Props {
@@ -6,6 +6,8 @@ interface Props {
   mapData: MapFile | null;
   variable: VariableInfo;
   regions: RegionInfo[];
+  ipccRegions: IpccInfo[];
+  ipccTiles: Record<string, string> | null;
   hotspots: SeriesRecord[];
   onOpenRegion: (id: string) => void;
   onOpenHotspot: (id: string) => void;
@@ -14,7 +16,7 @@ interface Props {
 
 const fl = (v: number, p: string, q: string) => `${Math.abs(v)}°${v >= 0 ? p : q}`;
 
-export default function TilePanel({ tileId, mapData, variable, regions, hotspots, onOpenRegion, onOpenHotspot, onClose }: Props) {
+export default function TilePanel({ tileId, mapData, variable, regions, ipccRegions, ipccTiles, hotspots, onOpenRegion, onOpenHotspot, onClose }: Props) {
   const [la, lo] = tileId.split(',').map(Number);
   let slope: number | null = null;
   let p: number | null = null;
@@ -32,6 +34,8 @@ export default function TilePanel({ tileId, mapData, variable, regions, hotspots
     }
   }
   const inRegions = regions.filter((r) => r.id !== 'global' && lo >= r.bbox[0] && lo <= r.bbox[2] && la >= r.bbox[1] && la <= r.bbox[3]);
+  const ipccId = ipccTiles?.[`${la},${lo}`];
+  const inIpcc = ipccId ? ipccRegions.find((r) => r.id === ipccId) : undefined;
   const inHotspot = hotspots.find((h) => h.cells?.some(([a, b]) => a === la && b === lo));
   const dir = (slope ?? 0) > 0 ? 'increasing' : 'decreasing';
   const tone = slope === null ? 'nodata' : sig ? ((slope ?? 0) > 0 ? 'up' : 'down') : 'none';
@@ -91,7 +95,7 @@ export default function TilePanel({ tileId, mapData, variable, regions, hotspots
         </>
       )}
 
-      {(inRegions.length > 0 || inHotspot) && (
+      {(inRegions.length > 0 || inHotspot || inIpcc) && (
         <div className="belongs">
           <span className="eyebrow">This tile is part of</span>
           {inHotspot && (
@@ -100,6 +104,13 @@ export default function TilePanel({ tileId, mapData, variable, regions, hotspots
                 {inHotspot.direction === 'increasing' ? '▲' : '▼'}
               </span>
               <span className="hs-item__name">Hotspot: {inHotspot.name}</span>
+              <span className="hs-item__val">open →</span>
+            </button>
+          )}
+          {inIpcc && (
+            <button className="hs-item" onClick={() => onOpenRegion(inIpcc.id)}>
+              <span className="hs-item__dir">◌</span>
+              <span className="hs-item__name">IPCC region: {inIpcc.name}</span>
               <span className="hs-item__val">open →</span>
             </button>
           )}
@@ -113,7 +124,7 @@ export default function TilePanel({ tileId, mapData, variable, regions, hotspots
         </div>
       )}
       <p className="muted small">
-        A single tile has no monthly chart. Open its region or hotspot to see the time series and trend line.
+        A single tile has no monthly chart. Open its region or hotspot to see the time series and trend line. A tile counts toward the IPCC region that contains its centre, so a tile on a border is counted once.
       </p>
     </aside>
   );

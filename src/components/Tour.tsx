@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 
 export interface TourStep {
   target: string; // CSS selector; several matches are highlighted together
@@ -21,7 +21,7 @@ export const TOUR_STEPS: TourStep[] = [
   {
     target: '.tabs',
     title: 'Early signs',
-    text: 'Changes that point one way but are not yet statistically significant. They are leads worth a closer look, not conclusions.',
+    text: 'Changes that just missed the strict statistical test but point the same way throughout the 20 years. They are leads worth a closer look, not conclusions.',
   },
   {
     target: '.legend',
@@ -32,7 +32,7 @@ export const TOUR_STEPS: TourStep[] = [
   {
     target: '.legend__check--two',
     title: 'Regions and hotspots',
-    text: 'Named regions (round pins with dashed boxes; + or − marks a significant change) are fixed areas we chose in advance. Hotspots (▲▼ squares) are groups of touching tiles that change the same way. Click any single tile, a marker or a pin to see its numbers.',
+    text: 'IPCC regions (yellow outlines and square markers) are 58 standard regions covering the whole globe; + or − marks a significant change. Spotlight regions (round pins, off by default) are 11 places where change is easy to see. Hotspots (▲▼) are groups of touching tiles that change the same way. Click a tile or marker for its numbers.',
     demo: true,
   },
   {
@@ -75,12 +75,15 @@ export default function Tour({ step, onStep, onDone }: Props) {
   const s = TOUR_STEPS[step];
   const [box, setBox] = useState<Box | null>(null);
   const [vp, setVp] = useState({ w: window.innerWidth, h: window.innerHeight });
+  const tipRef = useRef<HTMLDivElement>(null);
+  const [tipH, setTipH] = useState(240); // real height of the tooltip, so it never runs off the bottom
 
   // layouts animate and panels appear after a step starts, so keep measuring while the tour is open
   useLayoutEffect(() => {
     const tick = () => {
       setBox(measure(s.target));
       setVp({ w: window.innerWidth, h: window.innerHeight });
+      if (tipRef.current) setTipH(tipRef.current.offsetHeight);
     };
     tick();
     const id = window.setInterval(tick, 150);
@@ -108,13 +111,13 @@ export default function Tour({ step, onStep, onDone }: Props) {
   let tip: { left: number; top: number } = { left: vp.w / 2 - TIP_W / 2, top: vp.h / 2 - 90 };
   if (box) {
     const big = box.width > vp.w * 0.55 && box.height > vp.h * 0.4;
-    if (big) tip = { left: box.left + box.width / 2 - TIP_W / 2, top: box.top + box.height - 230 };
+    if (big) tip = { left: box.left + box.width / 2 - TIP_W / 2, top: box.top + box.height - tipH - 20 };
     else if (box.left + box.width + TIP_W + 24 < vp.w) tip = { left: box.left + box.width + 16, top: box.top + 8 };
     else if (box.left - TIP_W - 24 > 0) tip = { left: box.left - TIP_W - 16, top: box.top + 8 };
     else tip = { left: box.left + box.width / 2 - TIP_W / 2, top: box.top + box.height + 14 };
   }
   tip.left = Math.max(10, Math.min(vp.w - TIP_W - 10, tip.left));
-  tip.top = Math.max(10, Math.min(vp.h - 240, tip.top));
+  tip.top = Math.max(10, Math.min(vp.h - tipH - 12, tip.top));
 
   return (
     <div className="tour" role="dialog" aria-modal="true" aria-label="Website guide">
@@ -126,7 +129,7 @@ export default function Tour({ step, onStep, onDone }: Props) {
       ) : (
         <div className="tour__shade" />
       )}
-      <div className="tour__tip" style={{ left: tip.left, top: tip.top, width: TIP_W }}>
+      <div className="tour__tip" ref={tipRef} style={{ left: tip.left, top: tip.top, width: TIP_W }}>
         <span className="eyebrow">Guide · {step + 1} of {TOUR_STEPS.length}</span>
         <strong>{s.title}</strong>
         <p>{s.text}</p>

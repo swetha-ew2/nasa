@@ -147,6 +147,10 @@ interface Props {
   showNonSig: boolean;
   showHotspots: boolean;
   showPins: boolean;
+  showIpcc: boolean;
+  ipccGeo: GeoJSON.FeatureCollection | null;
+  ipccStates: Record<string, PinState>;
+  ipccTiles: Record<string, string> | null; // tile "lat,lon" -> IPCC region id
   hotspots: SeriesRecord[];
   target: Target | null;
   highlightCells: [number, number][] | null;
@@ -168,6 +172,7 @@ export default function Globe(p: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const pinEls = useRef<Map<string, HTMLElement>>(new Map());
+  const ipccEls = useRef<Map<string, HTMLElement>>(new Map());
   const hotspotMarkers = useRef<maplibregl.Marker[]>([]);
   const popupRef = useRef<maplibregl.Popup | null>(null);
   /** DOM marker -> [lng, lat]; used to hide markers on the far side of the globe */
@@ -177,8 +182,8 @@ export default function Globe(p: Props) {
   const hadTarget = useRef(false);
   const [ready, setReady] = useState(false);
 
-  const cb = useRef({ onSelect: p.onSelect, onUserInteract: p.onUserInteract, units: p.units, regions: p.regions, showPins: p.showPins });
-  cb.current = { onSelect: p.onSelect, onUserInteract: p.onUserInteract, units: p.units, regions: p.regions, showPins: p.showPins };
+  const cb = useRef({ onSelect: p.onSelect, onUserInteract: p.onUserInteract, units: p.units, regions: p.regions, showPins: p.showPins, showIpcc: p.showIpcc, ipccTiles: p.ipccTiles, ipccGeo: p.ipccGeo });
+  cb.current = { onSelect: p.onSelect, onUserInteract: p.onUserInteract, units: p.units, regions: p.regions, showPins: p.showPins, showIpcc: p.showIpcc, ipccTiles: p.ipccTiles, ipccGeo: p.ipccGeo };
 
   /** the smallest named region whose box contains a point (regions are rough boxes, not exact borders) */
   const regionAt = (lng: number, lat: number) =>
@@ -243,6 +248,13 @@ export default function Globe(p: Props) {
         id: 'regions-all-line', type: 'line', source: 'regions-all',
         paint: { 'line-color': '#ffffff', 'line-width': 1.2, 'line-opacity': 0.55, 'line-dasharray': [3, 2] },
       });
+      // IPCC AR6 reference regions: exact outlines, optional (off until switched on)
+      map.addSource('ipcc', { type: 'geojson', data: EMPTY_FC });
+      map.addLayer({ id: 'ipcc-fill', type: 'fill', source: 'ipcc', layout: { visibility: 'none' }, paint: { 'fill-color': '#ffffff', 'fill-opacity': 0.01 } });
+      map.addLayer({
+        id: 'ipcc-line', type: 'line', source: 'ipcc', layout: { visibility: 'none' },
+        paint: { 'line-color': '#ffd479', 'line-width': 1.1, 'line-opacity': 0.8 },
+      });
       map.addSource('hotspot-cells', { type: 'geojson', data: EMPTY_FC });
       map.addLayer({
         id: 'hotspot-cells-line',
@@ -272,6 +284,11 @@ export default function Globe(p: Props) {
         if (!f) return;
         const pr = f.properties as { v: number; sig: number; p: number | null };
         const reg = cb.current.showPins ? regionAt(e.lngLat.lng, e.lngLat.lat) : undefined;
+        const f0 = f.properties as { la?: number; lo?: number };
+        const ipccId = cb.current.showIpcc && cb.current.ipccTiles ? cb.current.ipccTiles[`${f0.la},${f0.lo}`] : undefined;
+        const ipccName = ipccId
+          ? (cb.current.ipccGeo?.features.find((x) => (x.properties as { id: string }).id === ipccId)?.properties as { name: string } | undefined)?.name
+          : undefined;
         popup
           .setLngLat(e.lngLat)
           .setHTML(
@@ -281,6 +298,7 @@ export default function Globe(p: Props) {
                 : '<span class="pop-ns">not significant</span>') +
               (pr.p !== null && pr.p !== undefined ? ` · p = ${fmtP(Number(pr.p))}` : '') +
               (reg ? `<br><span class="pop-reg">In <b>${reg.name}</b></span>` : '') +
+              (ipccName ? `<br><span class="pop-reg">IPCC region: <b>${ipccName}</b></span>` : '') +
               '<br><span class="pop-hint">Click for details</span>',
           )
           .addTo(map);
@@ -311,7 +329,8 @@ export default function Globe(p: Props) {
         const { la, lo } = hit.properties as { la: number; lo: number };
         cb.current.onSelect({ kind: 'tile', id: `${la},${lo}` });
       } else {
-        cb.current.onSelect(null);
+        const reg = cb.current.showIpcc ? map.queryRenderedFeatures(e.point, { layers: ['ipcc-fill'] })[0] : undefined;
+        cb.current.onSelect(reg ? { kind: 'region', id: (reg.properties as { id: string }).id } : null);
       }
     });
     const stopSpin = () => cb.current.onUserInteract();
@@ -408,6 +427,76 @@ export default function Globe(p: Props) {
     ['regions-all-line', 'regions-all-fill'].forEach((id) => map.setLayoutProperty(id, 'visibility', p.showPins ? 'visible' : 'none'));
   }, [p.showPins, ready]);
 
+  // ---- IPCC region markers: one at the centre of each region, so every region can be clicked ----
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !ready || !p.showIpcc || !p.ipccGeo) return;
+    const markers: maplibregl.Marker[] = [];
+    p.ipccGeo.features.forEach((f) => {
+      const pr = f.properties as { id: string; name: string; center: [number, number] };
+      if (!pr.center) return;
+      const el = document.createElement('button');
+      el.type = 'button';
+      el.className = 'pin pin--ipcc pin--nodata';
+      el.setAttribute('aria-label', `IPCC region: ${pr.name}`);
+      const dot = document.createElement('span');
+      dot.className = 'pin__dot';
+      const label = document.createElement('span');
+      label.className = 'pin__label';
+      label.textContent = pr.name;
+      el.append(dot, label);
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        cb.current.onSelect({ kind: 'region', id: pr.id });
+      });
+      markers.push(new maplibregl.Marker({ element: el, anchor: 'center' }).setLngLat(pr.center).addTo(map));
+      markerPos.current.set(el, pr.center);
+      ipccEls.current.set(pr.id, el);
+    });
+    (map as unknown as { _updateMarkerVisibility?: () => void })._updateMarkerVisibility?.();
+    return () => {
+      markers.forEach((m) => {
+        markerPos.current.delete(m.getElement());
+        m.remove();
+      });
+      ipccEls.current.clear();
+    };
+  }, [ready, p.showIpcc, p.ipccGeo]);
+
+  useEffect(() => {
+    ipccEls.current.forEach((el, id) => {
+      el.classList.remove('pin--up', 'pin--down', 'pin--none', 'pin--nodata', 'is-selected');
+      el.classList.add(`pin--${p.ipccStates[id] ?? 'nodata'}`);
+      if (p.target?.kind === 'region' && p.target.id === id) el.classList.add('is-selected');
+    });
+  }, [p.ipccStates, p.target, ready, p.showIpcc, p.ipccGeo]);
+
+  // names of the IPCC regions appear on the globe once zoomed in; they always appear on hover or when selected
+  useEffect(() => {
+    const map = mapRef.current;
+    const el = containerRef.current;
+    if (!map || !ready || !el) return;
+    const upd = () => el.classList.toggle('globe--zoomed', map.getZoom() >= 2.6);
+    upd();
+    map.on('zoom', upd);
+    return () => {
+      map.off('zoom', upd);
+    };
+  }, [ready]);
+
+  // ---- IPCC region outlines ----
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !ready) return;
+    (map.getSource('ipcc') as maplibregl.GeoJSONSource | undefined)?.setData(p.ipccGeo ?? EMPTY_FC);
+  }, [p.ipccGeo, ready]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !ready) return;
+    ['ipcc-fill', 'ipcc-line'].forEach((id) => map.setLayoutProperty(id, 'visibility', p.showIpcc ? 'visible' : 'none'));
+  }, [p.showIpcc, ready]);
+
   // ---- trend map cells ----
   useEffect(() => {
     const map = mapRef.current;
@@ -482,37 +571,53 @@ export default function Globe(p: Props) {
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !ready) return;
-    const region = p.target?.kind === 'region' ? p.regions.find((r) => r.id === p.target!.id) : undefined;
+    const isIpcc = p.target?.kind === 'region' && p.target.id.startsWith('ar6:');
+    const ipccFeat = isIpcc ? p.ipccGeo?.features.find((x) => (x.properties as { id: string }).id === p.target!.id) : undefined;
+    const region = p.target?.kind === 'region' && !isIpcc ? p.regions.find((r) => r.id === p.target!.id) : undefined;
     const outline = map.getSource('region-outline') as maplibregl.GeoJSONSource | undefined;
-    outline?.setData(
-      region && region.id !== 'global'
-        ? {
-            type: 'Feature',
-            properties: {},
-            geometry: {
-              type: 'Polygon',
-              coordinates: [[[region.bbox[0], region.bbox[1]], [region.bbox[2], region.bbox[1]], [region.bbox[2], region.bbox[3]], [region.bbox[0], region.bbox[3]], [region.bbox[0], region.bbox[1]]]],
-            },
-          }
-        : EMPTY_FC,
-    );
     const mask = map.getSource('region-mask') as maplibregl.GeoJSONSource | undefined;
-    mask?.setData(
-      region && region.id !== 'global'
-        ? {
-            type: 'Feature',
-            properties: {},
-            geometry: { type: 'Polygon', coordinates: [[[-180, -85], [180, -85], [180, 85], [-180, 85], [-180, -85]], bboxPoly(region.bbox).reverse()] },
-          }
-        : EMPTY_FC,
-    );
+    let flyBox: [number, number, number, number] | null = null;
+    if (ipccFeat) {
+      const polys: number[][][][] = ipccFeat.geometry.type === 'Polygon' ? [ipccFeat.geometry.coordinates] : (ipccFeat.geometry as GeoJSON.MultiPolygon).coordinates;
+      const pts = polys.flatMap((pg) => pg[0]);
+      flyBox = [Math.min(...pts.map((q) => q[0])), Math.min(...pts.map((q) => q[1])), Math.max(...pts.map((q) => q[0])), Math.max(...pts.map((q) => q[1]))];
+      outline?.setData(ipccFeat as GeoJSON.Feature);
+      const world = [[-180, -85], [180, -85], [180, 85], [-180, 85], [-180, -85]];
+      mask?.setData({
+        type: 'Feature', properties: {},
+        geometry: { type: 'Polygon', coordinates: [world, ...polys.map((pg) => [...pg[0]].reverse())] },
+      });
+    } else {
+      outline?.setData(
+        region && region.id !== 'global'
+          ? {
+              type: 'Feature',
+              properties: {},
+              geometry: {
+                type: 'Polygon',
+                coordinates: [[[region.bbox[0], region.bbox[1]], [region.bbox[2], region.bbox[1]], [region.bbox[2], region.bbox[3]], [region.bbox[0], region.bbox[3]], [region.bbox[0], region.bbox[1]]]],
+              },
+            }
+          : EMPTY_FC,
+      );
+      mask?.setData(
+        region && region.id !== 'global'
+          ? {
+              type: 'Feature',
+              properties: {},
+              geometry: { type: 'Polygon', coordinates: [[[-180, -85], [180, -85], [180, 85], [-180, 85], [-180, -85]], bboxPoly(region.bbox).reverse()] },
+            }
+          : EMPTY_FC,
+      );
+      if (region && region.id !== 'global') flyBox = region.bbox;
+    }
     const hl = map.getSource('hotspot-cells') as maplibregl.GeoJSONSource | undefined;
     hl?.setData(p.highlightCells ? cellsOutline(p.highlightCells) : EMPTY_FC);
 
-    if (region && region.id !== 'global') {
+    if (flyBox) {
       map.flyTo({
-        center: [(region.bbox[0] + region.bbox[2]) / 2, (region.bbox[1] + region.bbox[3]) / 2],
-        zoom: zoomFor(spanOf(region.bbox)),
+        center: [(flyBox[0] + flyBox[2]) / 2, (flyBox[1] + flyBox[3]) / 2],
+        zoom: zoomFor(spanOf(flyBox)),
         speed: 0.9,
         offset: [-190, 0],
       });
@@ -532,7 +637,7 @@ export default function Globe(p: Props) {
     hadTarget.current = !!p.target;
     // camera should move only when the selection changes, not when hotspots reload
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [p.target, p.highlightCells, ready]);
+  }, [p.target, p.highlightCells, ready, p.ipccGeo]);
 
   function resetView() {
     const map = mapRef.current;

@@ -19,6 +19,8 @@ function getJson<T>(path: string): Promise<T> {
 export const loadManifest = () => getJson<Manifest>('manifest.json');
 export const loadMap = (id: string) => getJson<MapFile>(`maps/${id}.json`);
 export const loadSeries = (id: string) => getJson<SeriesFile>(`series/${id}.json`);
+export const loadIpccGeo = () => getJson<GeoJSON.FeatureCollection>('ipcc_regions.geojson');
+export const loadIpccTiles = () => getJson<Record<string, string>>('ipcc_tiles.json');
 export const loadInteresting = () => getJson<Interesting>('interesting.json');
 
 // ---------------------------------------------------------------- colour scales

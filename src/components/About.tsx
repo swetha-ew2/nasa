@@ -37,15 +37,28 @@ export default function About({ manifest, onClose }: Props) {
           ))}
         </dl>
 
-        <h3>Early signs</h3>
+        <h3>Regions, IPCC regions and hotspots</h3>
         <p className="small">
-          The <strong>Early signs</strong> tab lists changes that look real but did not pass the strict test once we account for
-          checking many regions at once (p between 0.05 and 0.10, or significant only before the correction). They are leads, not
-          conclusions: a longer record or better data could settle them.
+          <strong>IPCC regions</strong> are the 58 standard reference regions of the IPCC AR6 report (land and ocean), which together
+          cover the whole globe; they are shown by default. <strong>Spotlight regions</strong> are 11 fixed boxes around places where climate change is already easy to see, chosen in
+          advance; switch them on in the legend. Both are fixed before looking at the data, so their tests are fair. <strong>Hotspots</strong> are different: they
+          are found from the data, per variable, so they are exploratory.
         </p>
         <p className="small">
-          No single one passes on its own, but several pointing the same way in one region is worth a closer look. Twenty years is
-          short, and with this many tests a few p-values below 0.05 are expected by chance.
+          The map tiles are always the same 5° squares. A region&rsquo;s value is the average of the tiles whose centre lies inside
+          it, so a tile on a border is counted once. The 11 spotlight regions and the IPCC regions are corrected for multiple testing
+          separately, and IPCC regions with fewer than 3 tiles carrying data are not tested.
+        </p>
+
+        <h3>Early signs</h3>
+        <p className="small">
+          The <strong>Early signs</strong> tab lists changes that just missed the strict test. One rule applies to every region: the
+          change passes a looser 10% correction for testing many regions (but not the strict 5% one), its 95% confidence interval
+          excludes zero, and it points the same way in both the first and the second half of the record.
+        </p>
+        <p className="small">
+          They are leads, not conclusions: a longer record or better data could settle them. Twenty years is short, and with about a
+          thousand tests a few promising results are expected by chance.
         </p>
 
         <h3>Honest caveats</h3>

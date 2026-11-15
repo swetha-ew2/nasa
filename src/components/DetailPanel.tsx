@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { RegionInfo, SeriesRecord, Target, VariableInfo } from '../types';
+import type { IpccInfo, RegionInfo, SeriesRecord, Target, VariableInfo } from '../types';
 import { fmt, fmtP, fmtSigned, testName, unitExplain } from '../lib/data';
 import TrendChart from './TrendChart';
 
@@ -7,6 +7,7 @@ interface Props {
   target: Target;
   rec: SeriesRecord | null; // null while loading
   region: RegionInfo | null;
+  ipcc: IpccInfo | null;
   variable: VariableInfo;
   variables: VariableInfo[];
   onChangeVariable: (id: string) => void;
@@ -25,7 +26,7 @@ function verdict(rec: SeriesRecord, units: string, isHotspot: boolean): { tone: 
       text:
         rec.status === 'no_data'
           ? 'This variable has no measurements for this place (for example a land-only variable over the ocean, or an ocean-only one over land).'
-          : 'Too little of this box has data to compute a reliable trend.',
+          : 'Too few tiles in this area have data to compute a reliable trend.',
     };
   }
   const s = rec.slope_per_decade ?? 0;
@@ -66,7 +67,7 @@ function verdict(rec: SeriesRecord, units: string, isHotspot: boolean): { tone: 
   };
 }
 
-export default function DetailPanel({ target, rec, region, variable, variables, onChangeVariable, onClose }: Props) {
+export default function DetailPanel({ target, rec, region, ipcc, variable, variables, onChangeVariable, onClose }: Props) {
   const [mode, setMode] = useState<'anomaly' | 'actual'>('anomaly');
   const isHotspot = target.kind === 'hotspot';
   const isGlobal = target.kind === 'region' && target.id === 'global';
@@ -79,12 +80,18 @@ export default function DetailPanel({ target, rec, region, variable, variables, 
     <aside className="panel" aria-label="Details">
       <header className="panel__head">
         <div>
-          <span className="eyebrow">{isHotspot ? 'Hotspot' : isGlobal ? 'Whole Earth' : 'Named region'}</span>
+          <span className="eyebrow">{isHotspot ? 'Hotspot' : isGlobal ? 'Whole Earth' : ipcc ? 'IPCC region' : 'Spotlight region'}</span>
           <h2>{rec?.name ?? region?.name ?? '…'}</h2>
-          {rec && !isGlobal && (
+          {rec && !isGlobal && !ipcc && (
             <p className="muted small">
               {s}° to {n}° lat, {w}° to {e}° lon
               {isHotspot && rec.n_cells ? ` · ${rec.n_cells} grid cells` : ''}
+            </p>
+          )}
+          {ipcc && (
+            <p className="muted small">
+              {ipcc.kind === 'ocean' ? 'Ocean' : 'Land'} region ({ipcc.abbrev}) · {ipcc.n_tiles} tiles
+              {rec?.n_tiles_data !== undefined && rec.n_tiles_data < ipcc.n_tiles ? `, ${rec.n_tiles_data} with data for this variable` : ''}
             </p>
           )}
           {rec && isGlobal && rec.cover !== null && rec.cover < 0.9 && (
@@ -98,11 +105,18 @@ export default function DetailPanel({ target, rec, region, variable, variables, 
       {isHotspot && (
         <p className="kind-note">
           <strong>What is a hotspot?</strong> An area the data flagged, where neighbouring map cells all change in the same way.
-          A hotspot is a group of at least 3 touching tiles with a significant trend in the same direction. Unlike the fixed named regions, it was picked <em>because</em> it looks significant, so treat it as a lead.
+          A hotspot is a group of at least 3 touching tiles with a significant trend in the same direction. Unlike the fixed IPCC and spotlight regions, it was picked <em>because</em> it looks significant, so treat it as a lead.
         </p>
       )}
-      {!isHotspot && !isGlobal && (
-        <p className="kind-note">A named region is a fixed area we chose in advance, so its test is fair.</p>
+      {!isHotspot && !isGlobal && !ipcc && (
+        <p className="kind-note">A spotlight region is one of 11 places where climate change is already easy to see (for example the Arctic or the Sahel). We chose them before looking at the results, so the test is fair.</p>
+      )}
+      {ipcc && (
+        <p className="kind-note">
+          <strong>What is an IPCC region?</strong> One of the 58 standard regions that IPCC climate reports use (AR6), together covering the whole globe.
+          It was fixed in advance, so its test is fair. Its value is the average of the map tiles whose centre lies inside it. Its significance is checked
+          across the IPCC regions only, separately from our 11 hand-picked spotlight regions.
+        </p>
       )}
 
       <label className="field">
